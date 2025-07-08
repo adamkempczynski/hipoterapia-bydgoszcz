@@ -6,7 +6,7 @@ description: "Wspaniały wakacyjny biwak z mnóstwem atrakcji i Mszą Świętą.
 
 import Gallery from '../../../components/Gallery.astro';
 
-Witamy wakacje biwakowaniem! Chętnych nie brakowało. Planowa zbiórka o 16.
+Witamy wakacje biwakowaniem!!! Chętnych nie brakowało. Planowa zbiórka o 16.
 Rozpoczynamy polową Mszą Świętą, którą poprowadził ksiądz Henryk Michalski. Serdeczne podziękowania dla Marii i Romana Durzyńskich z nagłośnienie i oprawę muzyczną. Dziękujemy ministrantom, obu Mateuszom za pomoc w sprawowaniu Mszy Świętej. 
 Po nabożeństwie uzupełniliśmy energię plackiem maślanym i ciepłą herbatą. Szybki podział na grupy i marsz na podchody.
 Jaka to była przygoda i wyzwanie by znaleźć 13 kopert ukrytych w lesie. „Koń Alfik” prowadząc nas po okolicy wykazał się niezłą kreatywnością w wymyślaniu poleceń. Motywował nas wspólny cel - ukryty skarb. A wszystko to dzięki p. Jagodzie - dziękujemy za możliwość poznania Alfika i wspólną przygodę.
