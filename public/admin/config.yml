@@ -1,0 +1,25 @@
+# Backend - sposób zapisu i autoryzacji.
+# Używamy git-gateway, który będzie działał automatycznie po wdrożeniu na Netlify.
+backend:
+  name: git-gateway
+  branch: main # lub master, w zależności od nazwy Twojej głównej gałęzi na GitHub
+
+# Folder, do którego będą trafiać wgrywane zdjęcia.
+media_folder: "public/uploads"
+# Publiczna ścieżka do tego folderu, używana w plikach .md
+public_folder: "/uploads"
+
+# Kolekcje - czyli zestawy treści, które można edytować.
+collections:
+  # Nasza pierwsza i jedyna na razie kolekcja: Aktualności
+  - name: "aktualnosci" # Nazwa techniczna - musi pasować do folderu w src/content/
+    label: "Aktualności" # Nazwa wyświetlana w panelu
+    folder: "src/content/aktualnosci" # Ścieżka do plików z treścią
+    create: true # Pozwól na tworzenie nowych wpisów
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Format nazwy nowego pliku, np. 2025-07-08-tytul-wpisu.md
+    fields: # Pola formularza do edycji
+      - { label: "Tytuł", name: "title", widget: "string" }
+      - { label: "Data publikacji", name: "pubDate", widget: "datetime" }
+      - { label: "Krótki opis (opcjonalnie)", name: "description", widget: "string", required: false }
+      - { label: "Zdjęcie główne (opcjonalnie)", name: "image", widget: "image", required: false }
+      - { label: "Treść wpisu", name: "body", widget: "markdown" }

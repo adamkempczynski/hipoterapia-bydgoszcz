@@ -1,0 +1,29 @@
+---
+title: "Biwak i wycieczka do Biskupina – 28-29.06.2025"
+pubDate: 2025-06-29
+description: "Wspaniały wakacyjny biwak z mnóstwem atrakcji i Mszą Świętą."
+---
+
+Witamy wakacje biwakowaniem! Chętnych nie brakowało. Planowa zbiórka o 16.
+Rozpoczynamy polową Mszą Świętą, którą poprowadził ksiądz Henryk Michalski. Serdeczne podziękowania dla Marii i Romana Durzyńskich z nagłośnienie i oprawę muzyczną. Dziękujemy ministrantom, obu Mateuszom za pomoc w sprawowaniu Mszy Świętej. 
+Po nabożeństwie uzupełniliśmy energię plackiem maślanym i ciepłą herbatą. Szybki podział na grupy i marsz na podchody.
+Jaka to była przygoda i wyzwanie by znaleźć 13 kopert ukrytych w lesie. „Koń Alfik” prowadząc nas po okolicy wykazał się niezłą kreatywnością w wymyślaniu poleceń. Motywował nas wspólny cel - ukryty skarb. A wszystko to dzięki p. Jagodzie - dziękujemy za możliwość poznania Alfika i wspólną przygodę.
+Skarb znaleziony a więc czas na ognisko! Kiełbaski szybko znikały a dzieci zadowolone ruszyły do wspólnych zabaw przy ognisku. Ileż Wy macie siły?
+Godzina 22 a dzieci pełne energii...
+Szybkie mycie i układanie się do snu na materacach ułożonych w hali. 
+A noc? Noc dla niektórych była krótka, ale w końcu to wakacje więc kiedyś odeśpimy…..
+Rano pobudka o 7. Szykowanie się do śniadania, które najlepiej smakuje na świeżym powietrzu.
+Najedzeni, uśmiechnięci pakujemy swoje rzeczy i wsiadamy do autokaru.
+Autokaru? Tak, bo dziś jedziemy na wycieczkę do Biskupina.
+W czasie drogi niektórych zmógł sen. Zupełnie nie wiemy dlaczego. Podróż minęła szybko. Jeszcze tylko przekąska i wędrujemy na spotkanie z przewodnikiem.
+Ale mieliśmy szczęście spotkać panią Hanię. Przekazana przez nią wiedza dała nam wiele do myślenia jak żyli ludzie w tamtych czasach, więc tym bardziej doceniamy nasze biwakowe warunki. Pani Hania oprowadziła nas po Muzeum Archeologicznym i zdradziła nam wiele ciekawostek. Bardzo dziękujemy za zarażenie nas historią.
+W tym miejscu chcemy bardzo podziękować również Dyrektorowi Muzeum Archeologicznego w Biskupinie za możliwość zwiedzania dla naszej grupy. 
+Po dwóch godzinach poznawania pradawnych osad udaliśmy się na wyczekiwany obiad. I tu z całego serca pragniemy podziękować firmie IMS Polska za opłacenie obiadów dla dzieci i opiekunów.
+Wszystko co dobre kiedyś się kończy więc i my wsiedliśmy do autokaru w podróż powrotną.
+
+Dziękujemy podsekretarzowi stanu Ministerstwa Obrony Narodowej Panu Stanisławowi Wziątek za bezpłatne udostępnienie autokaru na czas naszej wycieczki. Dla nas to ogromne wsparcie. 
+Dziękujemy dowódcy batalionu dowodzenia IWsp SZ za wydzielenie autokaru wraz z kierowcą panem Dawidem, który profesjonalnie i bezpiecznie powiózł nas na wycieczkę
+Dziękujemy Rodzicom za zaufanie i wolontariuszom za nieocenioną pomoc w całym biwaku.
+Natalio i Piotrze cieszymy się, że byliście z nami i mogliśmy kolejny raz liczyć na Waszą pomoc.
+W ten weekend świat stał się dla nas bardziej kolorowy!
+

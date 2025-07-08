@@ -1,11 +1,62 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const allPosts = await getCollection('aktualnosci');
+
+const sortedPosts = allPosts.sort((
+    a: CollectionEntry<'aktualnosci'>,
+    b: CollectionEntry<'aktualnosci'>
+) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout title="Strona Główna">
+	<h2>Ostatnie aktualności</h2>
+
+	<div class="posts-list">
+		{sortedPosts.map((post: CollectionEntry<'aktualnosci'>) => (
+			<article class="post-preview">
+				<h3>
+					<a href={`/aktualnosci/${post.slug}/`}>{post.data.title}</a>
+				</h3>
+				<p><small>Opublikowano: {post.data.pubDate.toLocaleDateString('pl-PL')}</small></p>
+				{post.data.description && <p>{post.data.description}</p>}
+				<a href={`/aktualnosci/${post.slug}/`} class="read-more">Czytaj więcej...</a>
+			</article>
+		))}
+	</div>
+</MainLayout>
+
+<style>
+	.posts-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+	.post-preview {
+		border: 1px solid #ddd;
+		padding: 1.5rem;
+		border-radius: 8px;
+		transition: box-shadow 0.2s ease-in-out;
+	}
+	.post-preview:hover {
+		box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+	}
+	.post-preview h3 {
+		margin-top: 0;
+	}
+	.post-preview h3 a {
+		text-decoration: none;
+		color: var(--primary-color);
+	}
+	.post-preview .read-more {
+		display: inline-block;
+		margin-top: 1rem;
+		font-weight: bold;
+		color: var(--primary-color);
+		text-decoration: none;
+	}
+    .post-preview .read-more:hover {
+        text-decoration: underline;
+    }
+</style>

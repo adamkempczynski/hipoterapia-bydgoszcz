@@ -1,0 +1,29 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('aktualnosci');
+  // Dodajemy typ do parametru 'post', aby pomóc TypeScriptowi
+  return allPosts.map((post: CollectionEntry<'aktualnosci'>) => ({ // <--- TUTAJ JEST POPRAWKA
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<'aktualnosci'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<MainLayout title={post.data.title}>
+	<article>
+		<p>
+			<a href="/">&larr; Wróć do aktualności</a>
+		</p>
+		<Content />
+	</article>
+</MainLayout>
