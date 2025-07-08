@@ -4,6 +4,8 @@ pubDate: 2025-06-29
 description: "Wspaniały wakacyjny biwak z mnóstwem atrakcji i Mszą Świętą."
 ---
 
+import Gallery from '../../../components/Gallery.astro';
+
 Witamy wakacje biwakowaniem! Chętnych nie brakowało. Planowa zbiórka o 16.
 Rozpoczynamy polową Mszą Świętą, którą poprowadził ksiądz Henryk Michalski. Serdeczne podziękowania dla Marii i Romana Durzyńskich z nagłośnienie i oprawę muzyczną. Dziękujemy ministrantom, obu Mateuszom za pomoc w sprawowaniu Mszy Świętej. 
 Po nabożeństwie uzupełniliśmy energię plackiem maślanym i ciepłą herbatą. Szybki podział na grupy i marsz na podchody.
@@ -27,3 +29,25 @@ Dziękujemy Rodzicom za zaufanie i wolontariuszom za nieocenioną pomoc w całym
 Natalio i Piotrze cieszymy się, że byliście z nami i mogliśmy kolejny raz liczyć na Waszą pomoc.
 W ten weekend świat stał się dla nas bardziej kolorowy!
 
+<Gallery imagePaths={[
+    "/uploads/biwak_06_2025/biwak-00.jpg",
+    "/uploads/biwak_06_2025/biwak-01.jpg",
+    "/uploads/biwak_06_2025/biwak-02.jpg",
+    "/uploads/biwak_06_2025/biwak-03.jpg",
+    "/uploads/biwak_06_2025/biwak-04.jpg",
+    "/uploads/biwak_06_2025/biwak-05.jpg",
+    "/uploads/biwak_06_2025/biwak-06.jpg",
+    "/uploads/biwak_06_2025/biwak-07.jpg",
+    "/uploads/biwak_06_2025/biwak-08.jpg",
+    "/uploads/biwak_06_2025/biwak-09.jpg",
+    "/uploads/biwak_06_2025/biwak-10.jpg",
+    "/uploads/biwak_06_2025/biwak-11.jpg",
+    "/uploads/biwak_06_2025/biwak-12.jpg",
+    "/uploads/biwak_06_2025/biwak-13.jpg",
+    "/uploads/biwak_06_2025/biwak-14.jpg",
+    "/uploads/biwak_06_2025/biwak-15.jpg",
+    "/uploads/biwak_06_2025/biwak-16.jpg",
+    "/uploads/biwak_06_2025/biwak-17.jpg",
+    "/uploads/biwak_06_2025/biwak-18.jpg",
+    "/uploads/biwak_06_2025/biwak-19.jpg"
+]} />

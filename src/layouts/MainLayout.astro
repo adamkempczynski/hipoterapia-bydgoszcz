@@ -13,6 +13,8 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+</head>
     <title>{title} | Hipoterapia Bydgoszcz</title>
 </head>
 	<body>
@@ -34,7 +36,15 @@ const { title } = Astro.props;
 		<footer>
 			<p>&copy; {new Date().getFullYear()} Hipoterapia Bydgoszcz. Wszelkie prawa zastrzeżone.</p>
 		</footer>
-	</body>
+		<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script type="text/javascript">
+    const lightbox = GLightbox({
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true
+    });
+</script>
+</body>
 </html>
 
 <style is:global>
