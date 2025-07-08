@@ -8,13 +8,13 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="pl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Profesjonalna hipoterapia w Bydgoszczy. Terapia z udziałem koni dla dzieci i dorosłych." />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title} | Hipoterapia Bydgoszcz</title>
-	</head>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>{title} | Hipoterapia Bydgoszcz</title>
+</head>
 	<body>
 		<header>
 			<nav>
@@ -38,56 +38,97 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
+	/* -- Definicja kolorów i czcionek -- */
 	:root {
-		--primary-color: #4a7c00;
-		--secondary-color: #f1f1f1;
-		--text-color: #333;
+		--primary-color: #386641; /* Ciemniejsza, leśna zieleń */
+		--secondary-color: #a7c957; /* Żywa, jasna zieleń jako akcent */
+		--bg-color: #f2e8cf; /* Kolor tła - bardzo jasny beż/kremowy */
+		--text-color: #3a3a3a; /* Ciemnoszary dla tekstu */
+		--light-gray: #e6e6e6; /* Jasnoszary dla obramowań */
+
+		--font-heading: 'Montserrat', sans-serif;
+		--font-body: 'Lato', sans-serif;
 	}
+
+	/* -- Reset i podstawowe style -- */
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+
 	body {
-		font-family: sans-serif;
-		line-height: 1.6;
+		font-family: var(--font-body);
+		line-height: 1.7;
 		margin: 0;
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
 		color: var(--text-color);
+		background-color: var(--bg-color);
 	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--font-heading);
+		color: var(--primary-color);
+		font-weight: 700;
+	}
+
+	/* -- Układ i kontenery -- */
+	header, footer {
+		padding: 1.5rem 1rem;
+		background-color: white;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+	}
+
 	main {
 		flex-grow: 1;
 		width: 100%;
-		max-width: 800px;
-		margin: 2rem auto;
-		padding: 0 1rem;
+		max-width: 900px;
+		margin: 2.5rem auto;
+		padding: 0 1.5rem;
 	}
+
+	/* -- Nagłówek i Nawigacja -- */
 	header {
-		background-color: var(--secondary-color);
-		padding: 1rem 0;
-		border-bottom: 3px solid var(--primary-color);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 4px solid var(--primary-color);
 	}
     nav {
-        max-width: 800px;
-        margin: 0 auto;
-        display: flex;
+		display: flex;
         justify-content: center;
         flex-wrap: wrap;
+		gap: 0.5rem 1.5rem;
     }
 	nav a {
-		margin: 0 1rem;
 		text-decoration: none;
 		color: var(--primary-color);
-		font-weight: bold;
+		font-weight: 700;
         padding: 0.5rem;
+		border-radius: 6px;
+		transition: all 0.2s ease-in-out;
 	}
     nav a:hover {
-        text-decoration: underline;
+        background-color: var(--secondary-color);
+		color: white;
     }
+
+	/* -- Stopka -- */
 	footer {
-		background-color: var(--secondary-color);
-		padding: 1rem;
 		text-align: center;
-        margin-top: 2rem;
+		margin-top: 3rem;
+		background-color: var(--primary-color);
+		color: white;
+		font-size: 0.9rem;
 	}
-    h1, h2, h3 {
-        color: var(--primary-color);
-    }
+
+	/* -- Poprawki dla listy aktualności -- */
+	/* Ten kod jest w index.astro, ale odniesie się do niego ta globalna stylizacja */
+	.post-preview {
+		background-color: white;
+		border: 1px solid var(--light-gray);
+		border-left: 5px solid var(--secondary-color);
+		box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+		border-radius: 8px;
+	}
 </style>
