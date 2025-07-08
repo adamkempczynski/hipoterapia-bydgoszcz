@@ -4,6 +4,9 @@ interface Props {
 }
 
 const { imagePaths } = Astro.props;
+
+// Debug - sprawdź czy obrazy są przekazywane
+console.log('Gallery received paths:', imagePaths);
 ---
 
 <div class="photo-gallery">
