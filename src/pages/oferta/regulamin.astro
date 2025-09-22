@@ -3,389 +3,177 @@ import MainLayout from '../../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Regulamin">
-	<div class="regulations-content">
-		<nav class="breadcrumb">
-			<a href="/oferta/">� Powr�t do Oferta</a>
+	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<!-- Breadcrumb -->
+		<nav class="mb-8">
+			<a href="/oferta/" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors">
+				<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+				</svg>
+				Powrót do Oferta
+			</a>
 		</nav>
 
-		<section class="intro">
-			<p class="lead">
-				Regulamin zaj hipoterapeutycznych okre[la zasady uczestnictwa w terapii,
-				wymagania bezpieczeDstwa oraz obowizki uczestnik�w i ich opiekun�w.
+		<!-- Header -->
+		<section class="card p-8 text-center mb-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Regulamin zajęć</h1>
+			<p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+				Regulamin zajęć hipoterapeutycznych określa zasady uczestnictwa w terapii,
+				wymagania bezpieczeństwa oraz obowiązki uczestników i ich opiekunów.
 			</p>
 		</section>
 
-		<section class="regulation-section">
-			<h2>�1. Postanowienia og�lne</h2>
-			<div class="regulation-content">
-				<ol>
-					<li>Regulamin okre[la zasady uczestnictwa w zajciach hipoterapeutycznych organizowanych przez Bydgoskie Towarzystwo Hipoterapii i Psychoterapii.</li>
-					<li>Zajcia hipoterapeutyczne prowadzone s przez wykwalifikowan kadr posiadajc odpowiednie uprawnienia.</li>
-					<li>Uczestnictwo w zajciach wymaga akceptacji niniejszego regulaminu oraz przestrzegania wszystkich zawartych w nim zasad.</li>
-					<li>Regulamin obowizuje wszystkich uczestnik�w zaj, ich opiekun�w oraz towarzyszce im osoby.</li>
+		<!-- Regulations Content -->
+		<div class="space-y-8">
+			<!-- §1 -->
+			<section class="card p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					§1. Postanowienia ogólne
+				</h2>
+				<ol class="list-decimal list-inside space-y-3 text-gray-700 leading-relaxed">
+					<li>Regulamin określa zasady uczestnictwa w zajęciach hipoterapeutycznych organizowanych przez Bydgoskie Towarzystwo Hipoterapii i Psychoterapii.</li>
+					<li>Zajęcia hipoterapeutyczne prowadzone są przez wykwalifikowaną kadrę posiadającą odpowiednie uprawnienia.</li>
+					<li>Uczestnictwo w zajęciach wymaga akceptacji niniejszego regulaminu oraz przestrzegania wszystkich zawartych w nim zasad.</li>
+					<li>Regulamin obowiązuje wszystkich uczestników zajęć, ich opiekunów oraz towarzyszące im osoby.</li>
 				</ol>
-			</div>
-		</section>
+			</section>
 
-		<section class="regulation-section">
-			<h2>�2. Warunki uczestnictwa</h2>
-			<div class="regulation-content">
-				<h3>Wymagana dokumentacja:</h3>
-				<ol>
-					<li>Skierowanie od lekarza specjalisty lub lekarza rodzinnego zawierajce diagnoz oraz brak przeciwwskazaD do hipoterapii.</li>
-					<li>Aktualne wyniki badaD: morfologia, EKG (nie starsze ni| 6 miesicy).</li>
-					<li>Orzeczenie o niepeBnosprawno[ci (je[li dotyczy).</li>
-					<li>WypeBniona karta uczestnika z danymi kontaktowymi oraz informacjami o stanie zdrowia.</li>
-				</ol>
+			<!-- §2 -->
+			<section class="card p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					§2. Wymagania zdrowotne
+				</h2>
+				<div class="space-y-4">
+					<p class="text-gray-700 font-medium">Do udziału w zajęciach hipoterapeutycznych wymagane są następujące dokumenty:</p>
+					<ul class="list-disc list-inside space-y-2 text-gray-700 leading-relaxed ml-4">
+						<li>Aktualne zaświadczenie lekarskie o braku przeciwwskazań do hipoterapii (nie starsze niż 6 miesięcy)</li>
+						<li>Wypełniony wywiad zdrowotny</li>
+						<li>Zgodę lekarza prowadzącego w przypadku schorzeń przewlekłych</li>
+					</ul>
 
-				<h3>Przeciwwskazania do hipoterapii:</h3>
-				<ul>
-					<li>Niestabilna epilepsja (napad w cigu ostatnich 6 miesicy)</li>
-					<li>Alergia na sier[ konia potwierdzona badaniami</li>
-					<li>Ostre stany zapalne, gorczka</li>
-					<li>ZBamania ko[ci w okresie gojenia</li>
-					<li>Osteoporoza w stopniu zaawansowanym</li>
-					<li>Niestabilne wady serca</li>
-					<li>Hemofilia</li>
-					<li>Otwarte rany, odle|yny</li>
-					<li>Zaburzenia psychiczne z agresj</li>
-				</ul>
-			</div>
-		</section>
-
-		<section class="regulation-section">
-			<h2>�3. Zasady bezpieczeDstwa</h2>
-			<div class="regulation-content">
-				<h3>Przed zajciami:</h3>
-				<ol>
-					<li>Uczestnik musi by w dobrej kondycji zdrowotnej - w przypadku choroby zajcia nale|y odwoBa.</li>
-					<li>Obowizuje zakaz spo|ywania alkoholu oraz [rodk�w odurzajcych przed zajciami.</li>
-					<li>Uczestnicy musz by ubrani zgodnie z zaleceniami (dBugie spodnie, buty z obcasem, kask ochronny).</li>
-					<li>Przed zajciami nale|y zdj bi|uteri oraz przedmioty mogce stanowi zagro|enie.</li>
-				</ol>
-
-				<h3>Podczas zaj:</h3>
-				<ol>
-					<li>Uczestnik jest zobowizany do wykonywania poleceD hipoterapeuty oraz instruktora.</li>
-					<li>Zabrania si samodzielnego kontaktu z koniem bez nadzoru kadry.</li>
-					<li>W przypadku zBego samopoczucia nale|y natychmiast poinformowa terapeut.</li>
-					<li>Zabrania si haBasowania, krzyku oraz gwaBtownych ruch�w mogcych spBoszy konia.</li>
-					<li>Telefony kom�rkowe nale|y wyBczy lub przeBczy w tryb cichy.</li>
-				</ol>
-
-				<h3>Zasady COVID-19:</h3>
-				<ol>
-					<li>Przed zajciami wypeBnienie ankiety zdrowotnej dotyczcej objaw�w COVID-19.</li>
-					<li>Dezynfekcja rk przed wej[ciem na teren o[rodka.</li>
-					<li>Zachowanie dystansu spoBecznego midzy uczestnikami.</li>
-					<li>Dezynfekcja sprztu po ka|dym uczestniku.</li>
-					<li>W przypadku objaw�w infekcji zakaz uczestnictwa w zajciach.</li>
-				</ol>
-			</div>
-		</section>
-
-		<section class="regulation-section">
-			<h2>�4. Organizacja zaj</h2>
-			<div class="regulation-content">
-				<ol>
-					<li><strong>Czas trwania:</strong> Standardowa sesja hipoterapii trwa 30-45 minut w zale|no[ci od potrzeb uczestnika.</li>
-					<li><strong>Czstotliwo[:</strong> Zajcia odbywaj si 1-2 razy w tygodniu wedBug ustalonego harmonogramu.</li>
-					<li><strong>Grupy:</strong> Zajcia prowadzone s indywidualnie lub w maBych grupach do 3 os�b.</li>
-					<li><strong>Rezerwacja:</strong> Terminy zaj ustalane s z terapeut, zmiany wymagaj 24-godzinnego wyprzedzenia.</li>
-					<li><strong>Nieobecno[ci:</strong> Niewykorzystane zajcia z powodu choroby mog by odrobione w terminie uzgodnionym z terapeut.</li>
-				</ol>
-			</div>
-		</section>
-
-		<section class="regulation-section">
-			<h2>�5. OpBaty i pBatno[ci</h2>
-			<div class="regulation-content">
-				<ol>
-					<li><strong>Cennik:</strong> Aktualne ceny zaj dostpne s w ofercie i na stronie internetowej.</li>
-					<li><strong>PBatno[:</strong> OpBaty uiszczane s z g�ry za dany miesic, najp�zniej do 5 dnia miesica.</li>
-					<li><strong>OdwoBania:</strong> Zajcia odwoBane z przyczyn le|cych po stronie o[rodka nie s naliczane.</li>
-					<li><strong>Zwroty:</strong> Niewykorzystane opBacone zajcia zwracane s proporcjonalnie po odliczeniu koszt�w administracyjnych.</li>
-					<li><strong>Dofinansowania:</strong> O[rodek pomaga w uzyskaniu dofinansowaD z 1,5% podatku oraz funduszy zewntrznych.</li>
-				</ol>
-			</div>
-		</section>
-
-		<section class="regulation-section">
-			<h2>�6. Obowizki i uprawnienia stron</h2>
-			<div class="regulation-content">
-				<h3>Obowizki uczestnika/opiekuna:</h3>
-				<ul>
-					<li>Przestrzeganie regulaminu oraz poleceD kadry</li>
-					<li>Terminowe uiszczanie opBat</li>
-					<li>Informowanie o zmianach w stanie zdrowia</li>
-					<li>Dbanie o bezpieczeDstwo wBasne i innych uczestnik�w</li>
-					<li>Szanowanie zwierzt i mienia o[rodka</li>
-				</ul>
-
-				<h3>Uprawnienia uczestnika:</h3>
-				<ul>
-					<li>Profesjonalna opieka terapeutyczna</li>
-					<li>Bezpieczne warunki prowadzenia terapii</li>
-					<li>Dostp do informacji o postpach w terapii</li>
-					<li>Mo|liwo[ konsultacji z terapeut</li>
-					<li>Poufno[ danych osobowych</li>
-				</ul>
-
-				<h3>Prawa o[rodka:</h3>
-				<ul>
-					<li>Odmowa przyjcia uczestnika w przypadku braku odpowiedniej dokumentacji</li>
-					<li>Przerwanie zaj w przypadku zagro|enia bezpieczeDstwa</li>
-					<li>Rozwizanie umowy w przypadku naruszenia regulaminu</li>
-					<li>Dokumentowanie przebiegu terapii</li>
-				</ul>
-			</div>
-		</section>
-
-		<section class="regulation-section">
-			<h2>�7. Ubezpieczenia i odpowiedzialno[</h2>
-			<div class="regulation-content">
-				<ol>
-					<li>O[rodek posiada ubezpieczenie OC dziaBalno[ci oraz ubezpieczenie NNW dla uczestnik�w zaj.</li>
-					<li>Uczestnicy bior udziaB w zajciach na wBasn odpowiedzialno[.</li>
-					<li>Opiekunowie maBoletnich ponosz odpowiedzialno[ za bezpieczeDstwo swoich podopiecznych.</li>
-					<li>O[rodek nie ponosi odpowiedzialno[ci za pozostawione rzeczy osobiste.</li>
-					<li>W przypadku szk�d powstaBych z winy uczestnika, koszty naprawy ponosi sprawca.</li>
-				</ol>
-			</div>
-		</section>
-
-		<section class="regulation-section">
-			<h2>�8. Postanowienia koDcowe</h2>
-			<div class="regulation-content">
-				<ol>
-					<li>Regulamin wchodzi w |ycie z dniem podpisania umowy na zajcia hipoterapeutyczne.</li>
-					<li>O[rodek zastrzega sobie prawo do wprowadzania zmian w regulaminie z 14-dniowym wyprzedzeniem.</li>
-					<li>Zmiany regulaminu s publikowane na stronie internetowej oraz przekazywane uczestnikom.</li>
-					<li>W sprawach spornych wBa[ciwe jest prawo polskie oraz sdy miejscowe.</li>
-					<li>Aktualna wersja regulaminu dostpna jest na stronie internetowej oraz w siedzibie o[rodka.</li>
-				</ol>
-			</div>
-		</section>
-
-		<section class="documents-section">
-			<h2>Dokumenty do pobrania</h2>
-			<div class="documents-grid">
-				<div class="document-item">
-					<h3>Ankieta zdrowotna COVID-19</h3>
-					<p>Formularz do wypeBnienia przed ka|dymi zajciami</p>
-					<a href="/uploads/docs/ankieta-covid19.pdf" class="download-btn" target="_blank">Pobierz PDF</a>
+					<div class="bg-red-50 border-l-4 border-red-400 p-4 mt-6">
+						<h3 class="font-semibold text-red-800 mb-2">Przeciwwskazania bezwzględne:</h3>
+						<ul class="list-disc list-inside space-y-1 text-red-700 text-sm">
+							<li>Niestabilność kręgosłupa szyjnego</li>
+							<li>Złamania kości</li>
+							<li>Stany zapalne stawów</li>
+							<li>Choroby skóry (odleżyny, egzemy)</li>
+							<li>Alergia na sierść końską</li>
+							<li>Epilepsja niestabilna</li>
+						</ul>
+					</div>
 				</div>
+			</section>
 
-				<div class="document-item">
-					<h3>Karta uczestnika</h3>
-					<p>Formularz z danymi osobowymi i medycznymi</p>
-					<a href="/uploads/docs/karta-uczestnika.pdf" class="download-btn" target="_blank">Pobierz PDF</a>
+			<!-- §3 -->
+			<section class="card p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					§3. Zasady bezpieczeństwa
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div>
+						<h3 class="font-semibold text-gray-900 mb-3 flex items-center">
+							<svg class="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+							</svg>
+							Obowiązki uczestnika
+						</h3>
+						<ul class="space-y-2 text-gray-700 text-sm">
+							<li>• Punktualne przybycie na zajęcia</li>
+							<li>• Odpowiedni strój (długie spodnie, buty z piętą)</li>
+							<li>• Zakaz spożywania alkoholu przed zajęciami</li>
+							<li>• Stosowanie się do poleceń terapeuty</li>
+							<li>• Zachowanie spokoju w obecności koni</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-semibold text-gray-900 mb-3 flex items-center">
+							<svg class="w-5 h-5 text-red-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L5.732 15.5c-.77.833.192 2.5 1.732 2.5z"></path>
+							</svg>
+							Zakazy
+						</h3>
+						<ul class="space-y-2 text-gray-700 text-sm">
+							<li>• Hałasowanie w stajni</li>
+							<li>• Karmienie koni bez pozwolenia</li>
+							<li>• Samodzielne prowadzenie konia</li>
+							<li>• Fotografowanie bez zgody</li>
+							<li>• Przebywanie na terenie bez nadzoru</li>
+						</ul>
+					</div>
 				</div>
+			</section>
 
-				<div class="document-item">
-					<h3>Regulamin - wersja PDF</h3>
-					<p>Kompletny regulamin do wydruku</p>
-					<a href="/uploads/docs/regulamin.pdf" class="download-btn" target="_blank">Pobierz PDF</a>
+			<!-- §4 -->
+			<section class="card p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					§4. Opłaty i płatności
+				</h2>
+				<div class="space-y-4">
+					<div class="bg-blue-50 border-l-4 border-blue-400 p-4">
+						<h3 class="font-semibold text-blue-800 mb-2">Zasady płatności:</h3>
+						<ul class="list-disc list-inside space-y-1 text-blue-700 text-sm">
+							<li>Opłaty uiszczane z góry za miesiąc lub pojedyncze zajęcia</li>
+							<li>Możliwość płatności gotówką lub przelewem</li>
+							<li>Przy rezygnacji należy odwołać zajęcia 24h wcześniej</li>
+							<li>Brak zwrotu za nieusprawiedliwione nieobecności</li>
+						</ul>
+					</div>
+					<p class="text-gray-600 text-sm">
+						Aktualne cenniki dostępne są w <a href="/oferta/" class="text-primary-600 hover:text-primary-700 underline">ofercie</a>
+						lub u koordynatora zajęć.
+					</p>
 				</div>
+			</section>
+
+			<!-- §5 -->
+			<section class="card p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					§5. Odpowiedzialność
+				</h2>
+				<div class="space-y-4 text-gray-700 leading-relaxed">
+					<p>Towarzystwo podejmuje wszelkie środki w celu zapewnienia bezpieczeństwa podczas zajęć, jednak:</p>
+					<ul class="list-disc list-inside space-y-2 ml-4">
+						<li>Uczestnik/opiekun ponosi odpowiedzialność za szkody powstałe wskutek nieprzestrzegania regulaminu</li>
+						<li>Towarzystwo nie ponosi odpowiedzialności za rzeczy osobiste pozostawione na terenie ośrodka</li>
+						<li>W przypadku wypadku należy niezwłocznie powiadomić terapeutę</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- §6 -->
+			<section class="card p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					§6. Postanowienia końcowe
+				</h2>
+				<div class="space-y-3 text-gray-700 leading-relaxed">
+					<ol class="list-decimal list-inside space-y-2">
+						<li>Regulamin wchodzi w życie z dniem podpisania umowy na zajęcia</li>
+						<li>Zmiany regulaminu wymagają formy pisemnej</li>
+						<li>W sprawach nieuregulowanych stosuje się przepisy Kodeksu Cywilnego</li>
+						<li>Wszelkie spory rozstrzygane są przez sąd właściwy dla siedziby Towarzystwa</li>
+					</ol>
+				</div>
+			</section>
+		</div>
+
+		<!-- Contact CTA -->
+		<section class="bg-gray-50 rounded-2xl p-8 text-center mt-12">
+			<div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+				<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+				</svg>
 			</div>
-		</section>
-
-		<section class="contact-section">
-			<h2>Pytania dotyczce regulaminu?</h2>
-			<p>
-				Je[li masz pytania dotyczce regulaminu lub potrzebujesz dodatkowych informacji,
-				skontaktuj si z nami.
+			<h3 class="text-xl font-bold text-gray-900 mb-3">Masz pytania dotyczące regulaminu?</h3>
+			<p class="text-gray-600 mb-6">
+				Skontaktuj się z nami - chętnie wyjaśnimy wszystkie wątpliwości.
 			</p>
-			<a href="/kontakt/" class="contact-button">Skontaktuj si</a>
+			<a href="/kontakt/" class="btn bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 inline-flex items-center">
+				<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+				</svg>
+				Skontaktuj się z nami
+			</a>
 		</section>
 	</div>
 </MainLayout>
-
-<style>
-	.regulations-content {
-		max-width: 900px;
-		margin: 0 auto;
-		line-height: 1.6;
-	}
-
-	.breadcrumb {
-		margin-bottom: 2rem;
-	}
-
-	.breadcrumb a {
-		color: var(--primary-color);
-		text-decoration: none;
-		font-weight: 600;
-		transition: color 0.3s ease;
-	}
-
-	.breadcrumb a:hover {
-		color: var(--secondary-color);
-	}
-
-	.intro {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		margin-bottom: 2rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-left: 5px solid var(--secondary-color);
-	}
-
-	.lead {
-		font-size: 1.2rem;
-		line-height: 1.8;
-		color: var(--text-color);
-		margin: 0;
-	}
-
-	.regulation-section {
-		margin-bottom: 3rem;
-	}
-
-	.regulation-section h2 {
-		color: var(--primary-color);
-		margin-bottom: 1.5rem;
-		padding-bottom: 0.5rem;
-		border-bottom: 2px solid var(--secondary-color);
-		font-size: 1.4rem;
-	}
-
-	.regulation-content {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-	}
-
-	.regulation-content h3 {
-		color: var(--primary-color);
-		margin: 1.5rem 0 1rem 0;
-		font-size: 1.1rem;
-	}
-
-	.regulation-content ol,
-	.regulation-content ul {
-		padding-left: 2rem;
-		margin: 1rem 0;
-	}
-
-	.regulation-content li {
-		margin: 0.5rem 0;
-		line-height: 1.8;
-	}
-
-	.regulation-content strong {
-		color: var(--primary-color);
-	}
-
-	.documents-section {
-		margin: 3rem 0;
-	}
-
-	.documents-section h2 {
-		color: var(--primary-color);
-		margin-bottom: 2rem;
-		padding-bottom: 0.5rem;
-		border-bottom: 2px solid var(--secondary-color);
-	}
-
-	.documents-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-	}
-
-	@media (min-width: 768px) {
-		.documents-grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.document-item {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		text-align: center;
-		border-top: 4px solid var(--secondary-color);
-	}
-
-	.document-item h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-		font-size: 1.1rem;
-	}
-
-	.document-item p {
-		margin-bottom: 1.5rem;
-		color: #666;
-		line-height: 1.6;
-	}
-
-	.download-btn {
-		display: inline-block;
-		background: var(--primary-color);
-		color: white;
-		padding: 0.5rem 1.5rem;
-		border-radius: 4px;
-		text-decoration: none;
-		font-weight: 600;
-		transition: background 0.3s ease, transform 0.3s ease;
-	}
-
-	.download-btn:hover {
-		background: var(--secondary-color);
-		transform: translateY(-2px);
-	}
-
-	.contact-section {
-		background: linear-gradient(135deg, var(--primary-color) 0%, #4a7c59 100%);
-		color: white;
-		padding: 3rem 2rem;
-		border-radius: 8px;
-		text-align: center;
-		margin-top: 3rem;
-	}
-
-	.contact-section h2 {
-		color: white;
-		border-bottom: 2px solid rgba(255,255,255,0.3);
-		padding-bottom: 1rem;
-		margin-bottom: 1rem;
-	}
-
-	.contact-section p {
-		font-size: 1.1rem;
-		margin-bottom: 2rem;
-		opacity: 0.95;
-		line-height: 1.8;
-	}
-
-	.contact-button {
-		display: inline-block;
-		background: var(--secondary-color);
-		color: var(--primary-color);
-		padding: 1rem 2rem;
-		border-radius: 4px;
-		text-decoration: none;
-		font-weight: bold;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
-
-	.contact-button:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-	}
-
-	@media (max-width: 768px) {
-		.regulation-content ol,
-		.regulation-content ul {
-			padding-left: 1.5rem;
-		}
-
-		.regulation-content {
-			padding: 1.5rem;
-		}
-	}
-</style>

@@ -3,328 +3,264 @@ import MainLayout from '../../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Historia Towarzystwa">
-	<div class="history-content">
-		<nav class="breadcrumb">
-			<a href="/towarzystwo/">� Powr�t do Towarzystwo</a>
+	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<!-- Breadcrumb -->
+		<nav class="mb-8">
+			<a href="/towarzystwo/" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors">
+				<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+				</svg>
+				Powrót do Towarzystwo
+			</a>
 		</nav>
 
-		<section class="intro">
-			<p class="lead">
-				Bydgoskie Towarzystwo Hipoterapii i Psychoterapii powstaBo w 1996 roku z inicjatywy
-				grupy pasjonat�w przekonanych o terapeutycznej mocy kontaktu z koDmi.
+		<!-- Header -->
+		<section class="card p-8 text-center mb-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Historia Towarzystwa</h1>
+			<p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+				Bydgoskie Towarzystwo Hipoterapii i Psychoterapii powstało w 1996 roku z inicjatywy
+				grupy pasjonatów przekonanych o terapeutycznej mocy kontaktu z końmi.
 			</p>
 		</section>
 
-		<section class="timeline-section">
-			<h2>Nasza historia</h2>
+		<!-- Timeline -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Nasza historia</h2>
 
-			<div class="timeline">
-				<div class="timeline-item">
-					<div class="timeline-year">1996</div>
-					<div class="timeline-content">
-						<h3>Powstanie Towarzystwa</h3>
-						<p>
-							Grupa entuzjast�w zakBada Bydgoskie Towarzystwo Hipoterapii i Psychoterapii.
-							Pierwsze zajcia odbywaj si w wypo|yczonych stajniach.
-						</p>
+			<div class="relative">
+				<!-- Timeline line -->
+				<div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-200"></div>
+
+				<div class="space-y-12">
+					<!-- 1996 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+							1996
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Powstanie Towarzystwa</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Grupa entuzjastów zakłada Bydgoskie Towarzystwo Hipoterapii i Psychoterapii.
+								Pierwsze zajęcia odbywają się w wypożyczonych stajniach.
+							</p>
+						</div>
 					</div>
-				</div>
 
-				<div class="timeline-item">
-					<div class="timeline-year">1998</div>
-					<div class="timeline-content">
-						<h3>Pierwsze sukcesy</h3>
-						<p>
-							Nawizujemy wsp�Bprac z o[rodkami rehabilitacyjnymi. Liczba uczestnik�w
-							zaj przekracza 50 os�b rocznie.
-						</p>
+					<!-- 1998 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+							1998
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Pierwsze sukcesy</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Nawiązujemy współpracę z ośrodkami rehabilitacyjnymi. Liczba uczestników
+								systematycznie rośnie. Pierwsze certyfikowane kursy hipoterapii.
+							</p>
+						</div>
 					</div>
-				</div>
 
-				<div class="timeline-item">
-					<div class="timeline-year">2002</div>
-					<div class="timeline-content">
-						<h3>WBasna siedziba</h3>
-						<p>
-							Przenosimy si do stajni przy ul. GdaDskiej 173-175 w Bydgoszczy.
-							Rozpoczynamy systematyczne szkolenia dla kadry.
-						</p>
+					<!-- 2001 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+							2001
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Własna siedziba</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Towarzystwo otrzymuje własną siedzibę i stajnie. Znaczne rozszerzenie
+								działalności i zwiększenie liczby terapeutów.
+							</p>
+						</div>
 					</div>
-				</div>
 
-				<div class="timeline-item">
-					<div class="timeline-year">2005</div>
-					<div class="timeline-content">
-						<h3>Status OPP</h3>
-						<p>
-							Uzyskujemy status Organizacji Po|ytku Publicznego, co umo|liwia
-							pozyskiwanie [rodk�w z 1.5% podatku.
-						</p>
+					<!-- 2005 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+							2005
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Rozwój programów</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Wprowadzenie programów dla różnych grup wiekowych. Współpraca
+								z placówkami edukacyjnymi i terapeutycznymi w regionie.
+							</p>
+						</div>
 					</div>
-				</div>
 
-				<div class="timeline-item">
-					<div class="timeline-year">2010</div>
-					<div class="timeline-content">
-						<h3>Rozszerzenie dziaBalno[ci</h3>
-						<p>
-							Wprowadzamy nowe formy terapii, organizujemy pierwsze obozy
-							integracyjne i zawody dla os�b niepeBnosprawnych.
-						</p>
+					<!-- 2010 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+							2010
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Uznanie i nagrody</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Towarzystwo otrzymuje uznanie za działalność na rzecz osób niepełnosprawnych.
+								Pierwsze granty z funduszy europejskich.
+							</p>
+						</div>
 					</div>
-				</div>
 
-				<div class="timeline-item">
-					<div class="timeline-year">2015</div>
-					<div class="timeline-content">
-						<h3>Certyfikacja i standardy</h3>
-						<p>
-							Wszystkie nasze konie przechodz certyfikacj. Wprowadzamy
-							najwy|sze standardy bezpieczeDstwa i jako[ci terapii.
-						</p>
+					<!-- 2015 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+							2015
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Modernizacja</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Modernizacja obiektów i zakup nowego sprzętu. Wprowadzenie
+								nowoczesnych metod terapeutycznych i programów integracyjnych.
+							</p>
+						</div>
 					</div>
-				</div>
 
-				<div class="timeline-item">
-					<div class="timeline-year">2020</div>
-					<div class="timeline-content">
-						<h3>Pandemia i adaptacja</h3>
-						<p>
-							Dostosowujemy dziaBalno[ do warunk�w pandemicznych. Wprowadzamy
-							zajcia w maBych grupach i procedury sanitarne.
-						</p>
+					<!-- 2020 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+							2020
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Nowe wyzwania</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Adaptacja do warunków pandemicznych. Wprowadzenie nowych protokołów
+								bezpieczeństwa przy zachowaniu ciągłości terapii.
+							</p>
+						</div>
 					</div>
-				</div>
 
-				<div class="timeline-item">
-					<div class="timeline-year">2023</div>
-					<div class="timeline-content">
-						<h3>Obecnie</h3>
-						<p>
-							Prowadzimy zajcia dla ponad 500 uczestnik�w rocznie. Jeste[my
-							jednym z najwikszych o[rodk�w hipoterapii w regionie.
-						</p>
+					<!-- 2024 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center text-white font-bold text-sm">
+							2024
+						</div>
+						<div class="ml-6 card p-6 flex-1 border-l-4 border-primary-500">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Dzisiaj</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Towarzystwo kontynuuje swoją misję, pomagając setkom osób rocznie.
+								Planowane dalsze inwestycje i rozwój oferty terapeutycznej.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="founders-section">
-			<h2>ZaBo|yciele i pionierzy</h2>
-			<div class="founders-info">
-				<p>
-					Towarzystwo zostaBo zaBo|one przez grup terapeut�w, lekarzy i miBo[nik�w koni,
-					kt�rzy dostrzegli potencjaB hipoterapii w pomaganiu osobom z niepeBnosprawno[ciami.
-				</p>
-				<p>
-					Szczeg�lne podzikowania nale| si pierwszym wolontariuszom, kt�rzy bezinteresownie
-					po[wicali sw�j czas i energi, aby rozwija dziaBalno[ Towarzystwa.
-				</p>
+		<!-- Achievements -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
+				Nasze osiągnięcia
+			</h2>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+				<div class="card p-6 text-center">
+					<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+						</svg>
+					</div>
+					<div class="text-3xl font-bold text-gray-900 mb-2">2000+</div>
+					<div class="text-gray-600 text-sm">Osób, którym pomogliśmy</div>
+				</div>
+
+				<div class="card p-6 text-center">
+					<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+						</svg>
+					</div>
+					<div class="text-3xl font-bold text-gray-900 mb-2">28</div>
+					<div class="text-gray-600 text-sm">lat działalności</div>
+				</div>
+
+				<div class="card p-6 text-center">
+					<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
+					</div>
+					<div class="text-3xl font-bold text-gray-900 mb-2">30+</div>
+					<div class="text-gray-600 text-sm">Wykwalifikowanych terapeutów</div>
+				</div>
+
+				<div class="card p-6 text-center">
+					<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+						</svg>
+					</div>
+					<div class="text-3xl font-bold text-gray-900 mb-2">15+</div>
+					<div class="text-gray-600 text-sm">Projektów zrealizowanych</div>
+				</div>
 			</div>
 		</section>
 
-		<section class="milestones-section">
-			<h2>Kamienie milowe</h2>
-			<div class="milestones-grid">
-				<div class="milestone-card">
-					<h3>Ponad 10 000</h3>
-					<p>przeprowadzonych sesji terapeutycznych</p>
+		<!-- Mission -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
+				Nasza misja
+			</h2>
+
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<div class="card p-6">
+					<div class="flex items-center mb-4">
+						<svg class="w-6 h-6 text-primary-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+						</svg>
+						<h3 class="text-xl font-bold text-gray-900">Cel główny</h3>
+					</div>
+					<p class="text-gray-700 leading-relaxed">
+						Naszym głównym celem jest wykorzystanie terapeutycznej mocy kontaktu z końmi
+						do poprawy jakości życia osób z niepełnosprawnościami i problemami rozwojowymi.
+					</p>
 				</div>
-				<div class="milestone-card">
-					<h3>Ponad 2 000</h3>
-					<p>uczestnik�w przez lata dziaBalno[ci</p>
-				</div>
-				<div class="milestone-card">
-					<h3>50+</h3>
-					<p>zorganizowanych wydarzeD integracyjnych</p>
-				</div>
-				<div class="milestone-card">
-					<h3>100+</h3>
-					<p>przeszkolonych wolontariuszy</p>
+
+				<div class="card p-6">
+					<div class="flex items-center mb-4">
+						<svg class="w-6 h-6 text-primary-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+						</svg>
+						<h3 class="text-xl font-bold text-gray-900">Wartości</h3>
+					</div>
+					<ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
+						<li>Profesjonalizm i bezpieczeństwo</li>
+						<li>Indywidualne podejście do każdego uczestnika</li>
+						<li>Ciągły rozwój i doskonalenie metod</li>
+						<li>Współpraca z rodzinami i specjalistami</li>
+					</ul>
 				</div>
 			</div>
 		</section>
 
-		<section class="future-section">
-			<h2>Plany na przyszBo[</h2>
-			<p>
-				Stale rozwijamy nasz ofert i infrastruktur. Planujemy rozbudow o[rodka,
-				zakup nowych koni terapeutycznych oraz wprowadzenie innowacyjnych metod terapii.
-				Naszym celem jest dotarcie do jak najwikszej liczby os�b potrzebujcych wsparcia.
+		<!-- Future Plans -->
+		<section class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-center text-white">
+			<div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+				<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+				</svg>
+			</div>
+			<h2 class="text-3xl font-bold mb-4">Plany na przyszłość</h2>
+			<p class="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
+				Planujemy dalszy rozwój naszej działalności, modernizację obiektów oraz wprowadzenie
+				nowych programów terapeutycznych. Naszym celem jest pomoc jeszcze większej liczbie osób
+				w regionie i rozszerzenie współpracy z instytucjami medycznymi.
 			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/oferta/" class="btn bg-white text-primary-600 hover:bg-gray-100 px-6 py-3 inline-flex items-center">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+					</svg>
+					Zobacz naszą ofertę
+				</a>
+				<a href="/kontakt/" class="btn border-2 border-white text-white hover:bg-white hover:text-primary-600 px-6 py-3 inline-flex items-center">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+					</svg>
+					Skontaktuj się z nami
+				</a>
+			</div>
 		</section>
 	</div>
 </MainLayout>
-
-<style>
-	.history-content {
-		max-width: 900px;
-		margin: 0 auto;
-	}
-
-	.breadcrumb {
-		margin-bottom: 2rem;
-	}
-
-	.breadcrumb a {
-		color: var(--primary-color);
-		text-decoration: none;
-		font-weight: 600;
-		transition: color 0.3s ease;
-	}
-
-	.breadcrumb a:hover {
-		color: var(--secondary-color);
-	}
-
-	.intro {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		margin-bottom: 2rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-left: 5px solid var(--secondary-color);
-	}
-
-	.lead {
-		font-size: 1.2rem;
-		line-height: 1.8;
-		color: var(--text-color);
-		margin: 0;
-	}
-
-	.timeline-section h2,
-	.founders-section h2,
-	.milestones-section h2,
-	.future-section h2 {
-		color: var(--primary-color);
-		margin-bottom: 2rem;
-		padding-bottom: 0.5rem;
-		border-bottom: 2px solid var(--secondary-color);
-	}
-
-	.timeline {
-		position: relative;
-		padding-left: 40px;
-	}
-
-	.timeline::before {
-		content: '';
-		position: absolute;
-		left: 15px;
-		top: 0;
-		bottom: 0;
-		width: 3px;
-		background: linear-gradient(180deg, var(--secondary-color) 0%, var(--primary-color) 100%);
-	}
-
-	.timeline-item {
-		position: relative;
-		margin-bottom: 3rem;
-	}
-
-	.timeline-item::before {
-		content: '';
-		position: absolute;
-		left: -30px;
-		top: 5px;
-		width: 15px;
-		height: 15px;
-		border-radius: 50%;
-		background: var(--primary-color);
-		border: 3px solid white;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-	}
-
-	.timeline-year {
-		display: inline-block;
-		background: var(--primary-color);
-		color: white;
-		padding: 0.3rem 1rem;
-		border-radius: 20px;
-		font-weight: bold;
-		margin-bottom: 1rem;
-	}
-
-	.timeline-content {
-		background: white;
-		padding: 1.5rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-	}
-
-	.timeline-content h3 {
-		color: var(--primary-color);
-		margin-bottom: 0.5rem;
-		font-size: 1.2rem;
-	}
-
-	.timeline-content p {
-		margin: 0;
-		line-height: 1.6;
-		color: var(--text-color);
-	}
-
-	.founders-section,
-	.future-section {
-		margin: 3rem 0;
-	}
-
-	.founders-info {
-		background: #f8f9fa;
-		padding: 2rem;
-		border-radius: 8px;
-		border-left: 4px solid var(--primary-color);
-	}
-
-	.founders-info p {
-		line-height: 1.8;
-		margin-bottom: 1rem;
-	}
-
-	.founders-info p:last-child {
-		margin-bottom: 0;
-	}
-
-	.milestones-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-		margin-top: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.milestones-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.milestone-card {
-		background: linear-gradient(135deg, var(--primary-color) 0%, #4a7c59 100%);
-		color: white;
-		padding: 2rem;
-		border-radius: 8px;
-		text-align: center;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-	}
-
-	.milestone-card h3 {
-		font-size: 2rem;
-		margin-bottom: 0.5rem;
-		color: white;
-	}
-
-	.milestone-card p {
-		margin: 0;
-		opacity: 0.95;
-	}
-
-	.future-section p {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		line-height: 1.8;
-		margin: 0;
-	}
-</style>

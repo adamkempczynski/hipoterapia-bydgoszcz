@@ -4,303 +4,265 @@ import Gallery from '../../components/Gallery.astro';
 ---
 
 <MainLayout title="Galeria">
-	<div class="gallery-content">
-		<section class="intro">
-			<p class="lead">
-				Zapraszamy do oglądania zdjęć z naszych wydarzeń, zajęć hipoterapeutycznych
-				i życia codziennego naszego Towarzystwa. Wszystkie zdjęcia pochodzą z naszych prawdziwych wydarzeń.
+	<!-- Hero Section -->
+	<section class="py-16 bg-gradient-to-r from-primary-600 to-primary-700">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+				<span class="text-primary-200">Galeria</span> zdjęć
+			</h1>
+			<p class="text-xl text-primary-100 max-w-4xl mx-auto leading-relaxed">
+				Zapraszamy do oglądania zdjęć z naszych wydarzeń, zajęć hipoterapeutycznych i życia codziennego naszego Towarzystwa. Wszystkie zdjęcia pochodzą z naszych prawdziwych wydarzeń.
 			</p>
+			<div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+				<div class="inline-flex items-center text-primary-200">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+					</svg>
+					Kliknij zdjęcie, aby powiększyć
+				</div>
+				<div class="inline-flex items-center text-primary-200">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+					Użyj strzałek do nawigacji
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+		<section class="mb-16">
+			<div class="card p-8">
+				<div class="flex items-center mb-6">
+					<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
+					</div>
+					<div>
+						<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Spływ kajakowy 2025</h2>
+						<p class="text-gray-600">Wspaniała integracja na wodzie - spływ kajakowy z uczestnikami i rodzinami.</p>
+					</div>
+				</div>
+				<Gallery imagePaths={[
+					"/uploads/splyw_2025/splyw_2025_01.jpg",
+					"/uploads/splyw_2025/splyw_2025_02.jpg",
+					"/uploads/splyw_2025/splyw_2025_03.jpg",
+					"/uploads/splyw_2025/splyw_2025_04.jpg",
+					"/uploads/splyw_2025/splyw_2025_05.jpg",
+					"/uploads/splyw_2025/splyw_2025_06.jpg",
+					"/uploads/splyw_2025/splyw_2025_07.jpg",
+					"/uploads/splyw_2025/splyw_2025_08.jpg"
+				]} galleryId="splyw-2025" />
+			</div>
 		</section>
 
-		<section class="gallery-section">
-			<h2>Spływ kajakowy 2025</h2>
-			<p>Wspaniała integracja na wodzie - spływ kajakowy z uczestnikami i rodzinami.</p>
-			<Gallery imagePaths={[
-				"/uploads/splyw_2025/splyw_2025_01.jpg",
-				"/uploads/splyw_2025/splyw_2025_02.jpg",
-				"/uploads/splyw_2025/splyw_2025_03.jpg",
-				"/uploads/splyw_2025/splyw_2025_04.jpg",
-				"/uploads/splyw_2025/splyw_2025_05.jpg",
-				"/uploads/splyw_2025/splyw_2025_06.jpg",
-				"/uploads/splyw_2025/splyw_2025_07.jpg",
-				"/uploads/splyw_2025/splyw_2025_08.jpg"
-			]} />
+		<section class="mb-16">
+			<div class="card p-8">
+				<div class="flex items-center mb-6">
+					<div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+						<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+						</svg>
+					</div>
+					<div>
+						<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Bal Jubileuszowy 2025</h2>
+						<p class="text-gray-600">Eleganckie święto z okazji jubileuszu działalności Towarzystwa.</p>
+					</div>
+				</div>
+				<Gallery imagePaths={[
+					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_01.jpg",
+					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_02.jpg",
+					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_03.jpg",
+					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_04.jpg",
+					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_05.jpg",
+					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_06.jpg",
+					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_07.jpg",
+					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_08.jpg",
+					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_09.jpg",
+					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_10.jpg",
+					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_11.jpg"
+				]} galleryId="bal-jubileuszowy-2025" />
+			</div>
 		</section>
 
-		<section class="gallery-section">
-			<h2>Bal Jubileuszowy 2025</h2>
-			<p>Eleganckie święto z okazji jubileuszu działalności Towarzystwa.</p>
-			<Gallery imagePaths={[
-				"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_01.jpg",
-				"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_02.jpg",
-				"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_03.jpg",
-				"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_04.jpg",
-				"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_05.jpg",
-				"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_06.jpg",
-				"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_07.jpg",
-				"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_08.jpg",
-				"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_09.jpg",
-				"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_10.jpg",
-				"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_11.jpg"
-			]} />
+		<section class="mb-16">
+			<div class="card p-8">
+				<div class="flex items-center mb-6">
+					<div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+						<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
+					</div>
+					<div>
+						<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Mecz piłki nożnej z Zeelandią</h2>
+						<p class="text-gray-600">Sportowa rywalizacja i integracja podczas meczu piłkarskiego - 28.09.2024</p>
+					</div>
+				</div>
+				<Gallery imagePaths={[
+					"/uploads/mecz_28_09_2024/mecz2024-1.jpg",
+					"/uploads/mecz_28_09_2024/mecz2024-2.jpg",
+					"/uploads/mecz_28_09_2024/mecz2024-3.jpg",
+					"/uploads/mecz_28_09_2024/mecz2024-4.jpg",
+					"/uploads/mecz_28_09_2024/mecz2024-5.jpg"
+				]} galleryId="mecz-zeelandia-2024" />
+			</div>
 		</section>
 
-		<section class="gallery-section">
-			<h2>Mecz piłki nożnej z Zeelandią - 28.09.2024</h2>
-			<p>Sportowa rywalizacja i integracja podczas meczu piłkarskiego.</p>
-			<Gallery imagePaths={[
-				"/uploads/mecz_28_09_2024/mecz2024-1.jpg",
-				"/uploads/mecz_28_09_2024/mecz2024-2.jpg",
-				"/uploads/mecz_28_09_2024/mecz2024-3.jpg",
-				"/uploads/mecz_28_09_2024/mecz2024-4.jpg",
-				"/uploads/mecz_28_09_2024/mecz2024-5.jpg"
-			]} />
+		<section class="mb-16">
+			<div class="card p-8">
+				<div class="flex items-center mb-6">
+					<div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+						<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
+					</div>
+					<div>
+						<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Biwak w Jarużynie 2024</h2>
+						<p class="text-gray-600">Letni obóz z końmi w malowniczej okolicy Jarużyna.</p>
+					</div>
+				</div>
+				<Gallery imagePaths={[
+					"/uploads/biwak_jaruzyn_2024/biwak1.jpg",
+					"/uploads/biwak_jaruzyn_2024/biwak2.jpg",
+					"/uploads/biwak_jaruzyn_2024/biwak3.jpg",
+					"/uploads/biwak_jaruzyn_2024/biwak4.jpg",
+					"/uploads/biwak_jaruzyn_2024/biwak5.jpg",
+					"/uploads/biwak_jaruzyn_2024/biwak6.jpg",
+					"/uploads/biwak_jaruzyn_2024/biwak7.jpg",
+					"/uploads/biwak_jaruzyn_2024/biwak8.jpg"
+				]} galleryId="biwak-jaruzyn-2024" />
+			</div>
 		</section>
 
-		<section class="gallery-section">
-			<h2>Biwak w Jarużynie 2024</h2>
-			<p>Letni obóz z końmi w malowniczej okolicy Jarużyna.</p>
-			<Gallery imagePaths={[
-				"/uploads/biwak_jaruzyn_2024/biwak1.jpg",
-				"/uploads/biwak_jaruzyn_2024/biwak2.jpg",
-				"/uploads/biwak_jaruzyn_2024/biwak3.jpg",
-				"/uploads/biwak_jaruzyn_2024/biwak4.jpg",
-				"/uploads/biwak_jaruzyn_2024/biwak5.jpg",
-				"/uploads/biwak_jaruzyn_2024/biwak6.jpg",
-				"/uploads/biwak_jaruzyn_2024/biwak7.jpg",
-				"/uploads/biwak_jaruzyn_2024/biwak8.jpg"
-			]} />
+		<section class="mb-16">
+			<div class="card p-8">
+				<div class="flex items-center mb-6">
+					<div class="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mr-4">
+						<svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+						</svg>
+					</div>
+					<div>
+						<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Spływ kajakowy 2024</h2>
+						<p class="text-gray-600">Wcześniejszy spływ kajakowy z czerwca 2024 roku - 9.06.2024</p>
+					</div>
+				</div>
+				<Gallery imagePaths={[
+					"/uploads/splyw_09_06_2024/splyw1_09_06_2024.jpg",
+					"/uploads/splyw_09_06_2024/splyw2_09_06_2024.jpg",
+					"/uploads/splyw_09_06_2024/splyw3_09_06_2024.jpg",
+					"/uploads/splyw_09_06_2024/splyw4_09_06_2024.jpg",
+					"/uploads/splyw_09_06_2024/splyw5_09_06_2024.jpg",
+					"/uploads/splyw_09_06_2024/splyw6_09_06_2024.jpg",
+					"/uploads/splyw_09_06_2024/splyw7_09_06_2024.jpg"
+				]} galleryId="splyw-czerwiec-2024" />
+			</div>
 		</section>
 
-		<section class="gallery-section">
-			<h2>Spływ kajakowy - 9.06.2024</h2>
-			<p>Wcześniejszy spływ kajakowy z czerwca 2024 roku.</p>
-			<Gallery imagePaths={[
-				"/uploads/splyw_09_06_2024/splyw1_09_06_2024.jpg",
-				"/uploads/splyw_09_06_2024/splyw2_09_06_2024.jpg",
-				"/uploads/splyw_09_06_2024/splyw3_09_06_2024.jpg",
-				"/uploads/splyw_09_06_2024/splyw4_09_06_2024.jpg",
-				"/uploads/splyw_09_06_2024/splyw5_09_06_2024.jpg",
-				"/uploads/splyw_09_06_2024/splyw6_09_06_2024.jpg",
-				"/uploads/splyw_09_06_2024/splyw7_09_06_2024.jpg"
-			]} />
-		</section>
-
-		<section class="gallery-section">
-			<h2>Archiwum wydarzeń</h2>
-			<div class="events-grid">
-				<div class="event-card">
-					<img src="/uploads/wydarzenia/wielkanoc2022.png" alt="Wielkanoc 2022" />
-					<h3>Wielkanoc 2022</h3>
-					<p>Świąteczne spotkanie z uczestnikami hipoterapii.</p>
+		<section class="mb-16">
+			<div class="card p-8">
+				<div class="text-center mb-8">
+					<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+						Archiwum <span class="text-primary-600">wydarzeń</span>
+					</h2>
+					<p class="text-gray-600 max-w-2xl mx-auto">
+						Wybrane momenty z historii naszego Towarzystwa
+					</p>
 				</div>
 
-				<div class="event-card">
-					<img src="/uploads/wydarzenia/balony.png" alt="Wydarzenie z balonami" />
-					<h3>Kolorowe święto</h3>
-					<p>Radosne wydarzenie z balonami dla najmłodszych.</p>
-				</div>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+						<div class="relative overflow-hidden">
+							<img src="/uploads/wydarzenia/wielkanoc2022.png" alt="Wielkanoc 2022" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" />
+							<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">Wielkanoc 2022</h3>
+							<p class="text-gray-600 text-sm leading-relaxed">Świąteczne spotkanie z uczestnikami hipoterapii.</p>
+						</div>
+					</div>
 
-				<div class="event-card">
-					<img src="/uploads/index_na_koniu.jpg" alt="Dziecko na koniu" />
-					<h3>Zajęcia hipoterapeutyczne</h3>
-					<p>Codzienne zajęcia z naszymi terapeutycznymi końmi.</p>
+					<div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+						<div class="relative overflow-hidden">
+							<img src="/uploads/wydarzenia/balony.png" alt="Wydarzenie z balonami" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" />
+							<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">Kolorowe święto</h3>
+							<p class="text-gray-600 text-sm leading-relaxed">Radosne wydarzenie z balonami dla najmłodszych.</p>
+						</div>
+					</div>
+
+					<div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+						<div class="relative overflow-hidden">
+							<img src="/uploads/index_na_koniu.jpg" alt="Dziecko na koniu" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" />
+							<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">Zajęcia hipoterapeutyczne</h3>
+							<p class="text-gray-600 text-sm leading-relaxed">Codzienne zajęcia z naszymi terapeutycznymi końmi.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="stats-section">
-			<h2>Nasza galeria w liczbach</h2>
-			<div class="stats-grid">
-				<div class="stat-item">
-					<span class="stat-number">71</span>
-					<span class="stat-label">Zdjęć w galerii</span>
+		<section class="mb-16">
+			<div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-white">
+				<div class="text-center mb-8">
+					<h2 class="text-2xl md:text-3xl font-bold mb-4">
+						Nasza galeria w <span class="text-primary-200">liczbach</span>
+					</h2>
+					<p class="text-primary-100 max-w-2xl mx-auto">
+						Każde zdjęcie to wspomnienie, każde wspomnienie to część naszej historii
+					</p>
 				</div>
-				<div class="stat-item">
-					<span class="stat-number">6</span>
-					<span class="stat-label">Różnych wydarzeń</span>
-				</div>
-				<div class="stat-item">
-					<span class="stat-number">2024-2025</span>
-					<span class="stat-label">Lata wydarzeń</span>
-				</div>
-				<div class="stat-item">
-					<span class="stat-number">66MB</span>
-					<span class="stat-label">Wspomnień</span>
+
+				<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
+						<div class="text-3xl md:text-4xl font-bold mb-2">71</div>
+						<div class="text-primary-100 text-sm">Zdjęć w galerii</div>
+					</div>
+					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
+						<div class="text-3xl md:text-4xl font-bold mb-2">6</div>
+						<div class="text-primary-100 text-sm">Różnych wydarzeń</div>
+					</div>
+					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
+						<div class="text-2xl md:text-3xl font-bold mb-2">2024-2025</div>
+						<div class="text-primary-100 text-sm">Lata wydarzeń</div>
+					</div>
+					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
+						<div class="text-3xl md:text-4xl font-bold mb-2">66MB</div>
+						<div class="text-primary-100 text-sm">Wspomnień</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="upload-section">
-			<h2>Masz zdjęcia z naszych wydarzeń?</h2>
-			<p>
-				Jeśli uczestniczyłeś w naszych wydarzeniach i masz zdjęcia, które chciałbyś się z nami podzielić,
-				skontaktuj się z nami. Chętnie dodamy je do galerii!
-			</p>
-			<a href="/kontakt/" class="upload-button">Wyślij zdjęcia</a>
+		<section>
+			<div class="card p-8 text-center">
+				<div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+					<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+					</svg>
+				</div>
+				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+					Masz zdjęcia z naszych <span class="text-primary-600">wydarzeń</span>?
+				</h2>
+				<p class="text-gray-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+					Jeśli uczestniczyłeś w naszych wydarzeniach i masz zdjęcia, które chciałbyś się z nami podzielić, skontaktuj się z nami. Chętnie dodamy je do galerii!
+				</p>
+				<a href="/kontakt/" class="btn bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 text-lg inline-flex items-center">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+					</svg>
+					Wyślij zdjęcia
+				</a>
+			</div>
 		</section>
 	</div>
 </MainLayout>
 
-<style>
-	.gallery-content {
-		max-width: 1200px;
-		margin: 0 auto;
-	}
-
-	.intro {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		margin-bottom: 2rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-left: 5px solid var(--secondary-color);
-	}
-
-	.lead {
-		font-size: 1.2rem;
-		line-height: 1.8;
-		color: var(--text-color);
-		margin: 0;
-	}
-
-	.gallery-section {
-		margin-bottom: 4rem;
-	}
-
-	.gallery-section h2 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-		padding-bottom: 0.5rem;
-		border-bottom: 2px solid var(--secondary-color);
-	}
-
-	.gallery-section p {
-		margin-bottom: 2rem;
-		line-height: 1.6;
-		color: #666;
-	}
-
-	.events-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.events-grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.event-card {
-		background: white;
-		border-radius: 8px;
-		overflow: hidden;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-		transition: transform 0.3s ease;
-	}
-
-	.event-card:hover {
-		transform: translateY(-5px);
-	}
-
-	.event-card img {
-		width: 100%;
-		height: 200px;
-		object-fit: cover;
-	}
-
-	.event-card h3 {
-		color: var(--primary-color);
-		margin: 1rem;
-		margin-bottom: 0.5rem;
-	}
-
-	.event-card p {
-		margin: 0 1rem 1rem;
-		font-size: 0.9rem;
-		line-height: 1.6;
-	}
-
-	.stats-section {
-		margin: 4rem 0;
-	}
-
-	.stats-section h2 {
-		color: var(--primary-color);
-		text-align: center;
-		margin-bottom: 2rem;
-		padding-bottom: 0.5rem;
-		border-bottom: 2px solid var(--secondary-color);
-	}
-
-	.stats-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-
-	.stat-item {
-		background: linear-gradient(135deg, var(--primary-color) 0%, #4a7c59 100%);
-		color: white;
-		padding: 2rem 1rem;
-		border-radius: 8px;
-		text-align: center;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-	}
-
-	.stat-number {
-		display: block;
-		font-size: 2.5rem;
-		font-weight: bold;
-		margin-bottom: 0.5rem;
-	}
-
-	.stat-label {
-		display: block;
-		font-size: 0.9rem;
-		opacity: 0.95;
-	}
-
-	.upload-section {
-		background: linear-gradient(135deg, var(--primary-color) 0%, #4a7c59 100%);
-		color: white;
-		padding: 3rem 2rem;
-		border-radius: 8px;
-		text-align: center;
-		margin-top: 3rem;
-	}
-
-	.upload-section h2 {
-		color: white;
-		border-bottom: 2px solid rgba(255,255,255,0.3);
-		padding-bottom: 1rem;
-		margin-bottom: 1rem;
-	}
-
-	.upload-section p {
-		font-size: 1.1rem;
-		margin-bottom: 2rem;
-		opacity: 0.95;
-		line-height: 1.8;
-	}
-
-	.upload-button {
-		display: inline-block;
-		background: var(--secondary-color);
-		color: var(--primary-color);
-		padding: 1rem 2rem;
-		border-radius: 4px;
-		text-decoration: none;
-		font-weight: bold;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
-
-	.upload-button:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-	}
-</style>

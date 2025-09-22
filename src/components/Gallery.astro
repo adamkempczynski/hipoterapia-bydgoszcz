@@ -1,16 +1,39 @@
 ---
 interface Props {
   imagePaths: string[];
+  galleryId: string;
 }
 
-const { imagePaths } = Astro.props;
+const { imagePaths, galleryId } = Astro.props;
 
 ---
 
 <div class="photo-gallery">
-  {imagePaths.map((path) => (
-    <a href={path} class="glightbox" data-gallery="gallery-biwak">
-      <img src={path} alt="Zdjęcie z galerii" loading="lazy" />
+  {imagePaths.map((path, index) => (
+    <a
+      href={path}
+      class="glightbox group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+      data-gallery={galleryId}
+      data-title={`Zdjęcie ${index + 1} z ${imagePaths.length}`}
+    >
+      <img
+        src={path}
+        alt={`Zdjęcie ${index + 1} z galerii ${galleryId}`}
+        loading="lazy"
+        class="w-full h-64 md:h-72 object-cover group-hover:scale-110 transition-transform duration-500"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="absolute bottom-3 right-3 bg-black/70 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        {index + 1}/{imagePaths.length}
+      </div>
     </a>
   ))}
 </div>
@@ -18,29 +41,15 @@ const { imagePaths } = Astro.props;
 <style>
   .photo-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
     margin-top: 2rem;
   }
 
-  .photo-gallery a {
-    display: block;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  }
-
-  .photo-gallery a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  }
-
-  .photo-gallery img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Gwarantuje, że obrazki wypełnią kwadrat */
-    aspect-ratio: 1 / 1; /* Tworzy kwadratowe miniatury */
+  @media (max-width: 640px) {
+    .photo-gallery {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
   }
 </style>

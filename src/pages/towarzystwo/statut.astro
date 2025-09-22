@@ -3,624 +3,296 @@ import MainLayout from '../../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Statut Towarzystwa">
-	<div class="statute-content">
-		<nav class="breadcrumb">
-			<a href="/towarzystwo/">� Powr�t do Towarzystwo</a>
+	<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<!-- Breadcrumb -->
+		<nav class="mb-8">
+			<a href="/towarzystwo/" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors">
+				<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+				</svg>
+				Powrót do Towarzystwo
+			</a>
 		</nav>
 
-		<section class="intro">
-			<div class="document-header">
-				<h1>STATUT</h1>
-				<div class="subtitle">Bydgoskiego Towarzystwa Hipoterapii i Psychoterapii</div>
-				<div class="meta-info">
-					<span>Wersja aktualna z dnia: 15 marca 2024</span>
-					<span>KRS: 0000123456</span>
+		<!-- Header -->
+		<section class="card p-8 text-center mb-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">STATUT</h1>
+			<div class="text-xl text-gray-600 mb-6">Bydgoskiego Towarzystwa Hipoterapii i Psychoterapii</div>
+			<div class="flex flex-col sm:flex-row justify-center gap-4 text-sm text-gray-500">
+				<span>Wersja aktualna z dnia: 15 marca 2024</span>
+				<span>KRS: 0000120586</span>
+			</div>
+		</section>
+
+		<!-- Statute Content -->
+		<div class="space-y-12">
+			<!-- Rozdział I -->
+			<section class="card p-8">
+				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					ROZDZIAŁ I - Postanowienia ogólne
+				</h2>
+
+				<div class="space-y-6">
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 1</h3>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Bydgoskie Towarzystwo Hipoterapii i Psychoterapii, zwane dalej "Towarzystwem", jest stowarzyszeniem działającym na podstawie przepisów ustawy z dnia 7 kwietnia 1989 roku Prawo o stowarzyszeniach oraz niniejszego Statutu.</li>
+							<li>Towarzystwo posiada osobowość prawną.</li>
+							<li>Towarzystwo może działać na terenie całego kraju z siedzibą w Bydgoszczy.</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 2</h3>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Towarzystwo używa nazwy: "Bydgoskie Towarzystwo Hipoterapii i Psychoterapii".</li>
+							<li>Towarzystwo może używać skrótu nazwy: "BTHiP".</li>
+							<li>Siedzibą Towarzystwa jest miasto Bydgoszcz.</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 3</h3>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Towarzystwo jest organizacją pożytku publicznego w rozumieniu przepisów o działalności pożytku publicznego i o wolontariacie.</li>
+							<li>Towarzystwo prowadzi działalność statutową w sferze zadań publicznych określonych w art. 4 ustawy o działalności pożytku publicznego i o wolontariacie.</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 4</h3>
+						<p class="text-gray-700 mb-3">Terenem działania Towarzystwa jest:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>w zakresie działalności podstawowej - terytorium Rzeczypospolitej Polskiej;</li>
+							<li>w zakresie działalności gospodarczej - terytorium Rzeczypospolitej Polskiej;</li>
+							<li>w zakresie współpracy międzynarodowej - zagranica.</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 5</h3>
+						<p class="text-gray-700">Towarzystwo działa na czas nieograniczony.</p>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<section class="statute-section">
-			<h2>ROZDZIAA I - Postanowienia og�lne</h2>
-			<div class="statute-content-block">
-				<h3>� 1</h3>
-				<ol>
-					<li>Bydgoskie Towarzystwo Hipoterapii i Psychoterapii, zwane dalej "Towarzystwem", jest stowarzyszeniem dziaBajcym na podstawie przepis�w ustawy z dnia 7 kwietnia 1989 roku Prawo o stowarzyszeniach oraz niniejszego Statutu.</li>
-					<li>Towarzystwo posiada osobowo[ prawn.</li>
-					<li>Towarzystwo mo|e dziaBa na terenie caBego kraju z siedzib w Bydgoszczy.</li>
-				</ol>
+			<!-- Rozdział II -->
+			<section class="card p-8">
+				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					ROZDZIAŁ II - Cele i zasady działania
+				</h2>
 
-				<h3>� 2</h3>
-				<ol>
-					<li>Towarzystwo u|ywa nazwy: "Bydgoskie Towarzystwo Hipoterapii i Psychoterapii".</li>
-					<li>Towarzystwo mo|e u|ywa skr�tu nazwy: "BTHiP".</li>
-					<li>Siedzib Towarzystwa jest miasto Bydgoszcz.</li>
-				</ol>
+				<div class="space-y-6">
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 6</h3>
+						<p class="text-gray-700 mb-3">Celem Towarzystwa jest:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Prowadzenie działalności rehabilitacyjnej, terapeutycznej i edukacyjnej na rzecz osób niepełnosprawnych, w szczególności z wykorzystaniem hipoterapii.</li>
+							<li>Promocja i rozwój hipoterapii jako metody rehabilitacji i terapii wspomaganej zwierzętami.</li>
+							<li>Wsparcie społeczne, psychologiczne i materialne osób niepełnosprawnych i ich rodzin.</li>
+							<li>Działania na rzecz równych szans i integracji społecznej osób niepełnosprawnych.</li>
+							<li>Upowszechnianie wiedzy o niepełnosprawności i metodach jej rehabilitacji.</li>
+							<li>Organizacja szkoleń, kursów i warsztatów z zakresu hipoterapii i rehabilitacji.</li>
+							<li>Współpraca z jednostkami służby zdrowia, oświaty i organizacjami pozarządowymi.</li>
+						</ol>
+					</div>
 
-				<h3>� 3</h3>
-				<ol>
-					<li>Towarzystwo jest organizacj po|ytku publicznego w rozumieniu przepis�w o dziaBalno[ci po|ytku publicznego i o wolontariacie.</li>
-					<li>Towarzystwo prowadzi dziaBalno[ statutow w sferze zadaD publicznych okre[lonych w art. 4 ustawy o dziaBalno[ci po|ytku publicznego i o wolontariacie.</li>
-				</ol>
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 7</h3>
+						<p class="text-gray-700 mb-3">Towarzystwo realizuje swoje cele poprzez:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Prowadzenie zajęć hipoterapeutycznych indywidualnych i grupowych.</li>
+							<li>Organizację warsztatów terapii zajęciowej i integracji sensorycznej.</li>
+							<li>Prowadzenie poradnictwa psychologicznego i pedagogicznego.</li>
+							<li>Organizację form wypoczynku, rekreacji i turystyki dla osób niepełnosprawnych.</li>
+							<li>Prowadzenie działalności edukacyjnej i informacyjnej.</li>
+							<li>Organizację konferencji, seminariów i szkoleń specjalistycznych.</li>
+							<li>Wydawanie publikacji i materiałów informacyjnych.</li>
+							<li>Współpracę z instytucjami krajowymi i zagranicznymi.</li>
+							<li>Pozyskiwanie środków finansowych na realizację celów statutowych.</li>
+						</ol>
+					</div>
 
-				<h3>� 4</h3>
-				<p>Terenem dziaBania Towarzystwa jest:</p>
-				<ol>
-					<li>w zakresie dziaBalno[ci podstawowej - terytorium Rzeczypospolitej Polskiej;</li>
-					<li>w zakresie dziaBalno[ci gospodarczej - terytorium Rzeczypospolitej Polskiej;</li>
-					<li>w zakresie wsp�Bpracy midzynarodowej - zagranica.</li>
-				</ol>
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 8</h3>
+						<p class="text-gray-700">Działalność Towarzystwa jest jawna i przejrzysta. Towarzystwo publikuje roczne sprawozdania ze swojej działalności zgodnie z obowiązującymi przepisami prawa.</p>
+					</div>
+				</div>
+			</section>
 
-				<h3>� 5</h3>
-				<p>Towarzystwo dziaBa na czas nieograniczony.</p>
-			</div>
-		</section>
+			<!-- Rozdział III -->
+			<section class="card p-8">
+				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					ROZDZIAŁ III - Członkowie
+				</h2>
 
-		<section class="statute-section">
-			<h2>ROZDZIAA II - Cele i zasady dziaBania</h2>
-			<div class="statute-content-block">
-				<h3>� 6</h3>
-				<p>Celem Towarzystwa jest:</p>
-				<ol>
-					<li>Prowadzenie dziaBalno[ci rehabilitacyjnej, terapeutycznej i edukacyjnej na rzecz os�b niepeBnosprawnych, w szczeg�lno[ci z wykorzystaniem hipoterapii.</li>
-					<li>Promocja i rozw�j hipoterapii jako metody rehabilitacji i terapii wspomaganej zwierztami.</li>
-					<li>Wsparcie spoBeczne, psychologiczne i materialne os�b niepeBnosprawnych i ich rodzin.</li>
-					<li>DziaBania na rzecz r�wnych szans i integracji spoBecznej os�b niepeBnosprawnych.</li>
-					<li>Upowszechnianie wiedzy o niepeBnosprawno[ci i metodach jej rehabilitacji.</li>
-					<li>Organizacja szkoleD, kurs�w i warsztat�w z zakresu hipoterapii i rehabilitacji.</li>
-					<li>Wsp�Bpraca z jednostkami sBu|by zdrowia, o[wiaty i organizacjami pozarzdowymi.</li>
-				</ol>
+				<div class="space-y-6">
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 9</h3>
+						<p class="text-gray-700 mb-3">Członkami Towarzystwa mogą być:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>osoby fizyczne, które ukończyły 16 lat;</li>
+							<li>osoby prawne;</li>
+							<li>jednostki organizacyjne nieposiadające osobowości prawnej.</li>
+						</ol>
+					</div>
 
-				<h3>� 7</h3>
-				<p>Towarzystwo realizuje swoje cele poprzez:</p>
-				<ol>
-					<li>Prowadzenie zaj hipoterapeutycznych indywidualnych i grupowych.</li>
-					<li>Organizacj warsztat�w terapii zajciowej i integracji sensorycznej.</li>
-					<li>Prowadzenie poradnictwa psychologicznego i pedagogicznego.</li>
-					<li>Organizacj form wypoczynku, rekreacji i turystyki dla os�b niepeBnosprawnych.</li>
-					<li>Prowadzenie dziaBalno[ci edukacyjnej i informacyjnej.</li>
-					<li>Organizacj konferencji, seminari�w i szkoleD specjalistycznych.</li>
-					<li>Wydawanie publikacji i materiaB�w informacyjnych.</li>
-					<li>Wsp�Bprac z instytucjami krajowymi i zagranicznymi.</li>
-					<li>Pozyskiwanie [rodk�w finansowych na realizacj cel�w statutowych.</li>
-				</ol>
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 10</h3>
+						<p class="text-gray-700 mb-3">Towarzystwo może mieć członków:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>zwyczajnych;</li>
+							<li>wspierających;</li>
+							<li>honorowych.</li>
+						</ol>
+					</div>
 
-				<h3>� 8</h3>
-				<p>DziaBalno[ Towarzystwa jest jawna i przejrzysta. Towarzystwo publikuje roczne sprawozdania ze swojej dziaBalno[ci zgodnie z obowizujcymi przepisami prawa.</p>
-			</div>
-		</section>
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 11</h3>
+						<p class="text-gray-700 mb-3">Członkiem zwyczajnym może być osoba fizyczna, która:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>złożyła pisemną deklarację członkowską;</li>
+							<li>została przyjęta uchwałą Zarządu;</li>
+							<li>opłaciła składkę członkowską.</li>
+						</ol>
+					</div>
 
-		<section class="statute-section">
-			<h2>ROZDZIAA III - CzBonkowie</h2>
-			<div class="statute-content-block">
-				<h3>� 9</h3>
-				<p>CzBonkami Towarzystwa mog by:</p>
-				<ol>
-					<li>osoby fizyczne, kt�re ukoDczyBy 16 lat;</li>
-					<li>osoby prawne;</li>
-					<li>jednostki organizacyjne nieposiadajce osobowo[ci prawnej.</li>
-				</ol>
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 12</h3>
+						<p class="text-gray-700 mb-3">Członek zwyczajny ma prawo do:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>czynnego i biernego prawa wyborczego do organów Towarzystwa;</li>
+							<li>uczestniczenia w zebraniach i podejmowaniu uchwał;</li>
+							<li>korzystania z dorobku i osiągnięć Towarzystwa;</li>
+							<li>otrzymywania informacji o działalności Towarzystwa;</li>
+							<li>składania wniosków dotyczących działalności Towarzystwa.</li>
+						</ol>
+					</div>
 
-				<h3>� 10</h3>
-				<p>Towarzystwo mo|e mie czBonk�w:</p>
-				<ol>
-					<li>zwyczajnych;</li>
-					<li>wspierajcych;</li>
-					<li>honorowych.</li>
-				</ol>
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 13</h3>
+						<p class="text-gray-700 mb-3">Członek zwyczajny ma obowiązek:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>przestrzegania Statutu i uchwał organów Towarzystwa;</li>
+							<li>regularnego opłacania składek członkowskich;</li>
+							<li>aktywnego uczestnictwa w realizacji celów Towarzystwa;</li>
+							<li>dbania o dobre imię Towarzystwa.</li>
+						</ol>
+					</div>
+				</div>
+			</section>
 
-				<h3>� 11</h3>
-				<p>CzBonkiem zwyczajnym mo|e by osoba fizyczna, kt�ra:</p>
-				<ol>
-					<li>zBo|yBa pisemn deklaracj czBonkowsk;</li>
-					<li>zostaBa przyjta uchwaB Zarzdu;</li>
-					<li>opBaciBa skBadk czBonkowsk.</li>
-				</ol>
-
-				<h3>� 12</h3>
-				<p>CzBonek zwyczajny ma prawo do:</p>
-				<ol>
-					<li>czynnego i biernego prawa wyborczego do organ�w Towarzystwa;</li>
-					<li>uczestniczenia w zebraniach i podejmowaniu uchwaB;</li>
-					<li>korzystania z dorobku i osigni Towarzystwa;</li>
-					<li>otrzymywania informacji o dziaBalno[ci Towarzystwa;</li>
-					<li>skBadania wniosk�w dotyczcych dziaBalno[ci Towarzystwa.</li>
-				</ol>
-
-				<h3>� 13</h3>
-				<p>CzBonek zwyczajny ma obowizek:</p>
-				<ol>
-					<li>przestrzegania Statutu i uchwaB organ�w Towarzystwa;</li>
-					<li>regularnego opBacania skBadek czBonkowskich;</li>
-					<li>aktywnego uczestnictwa w realizacji cel�w Towarzystwa;</li>
-					<li>dbania o dobre imi Towarzystwa.</li>
-				</ol>
-			</div>
-		</section>
-
-		<section class="statute-section">
-			<h2>ROZDZIAA IV - WBadze Towarzystwa</h2>
-			<div class="statute-content-block">
-				<h3>� 14</h3>
-				<p>WBadzami Towarzystwa s:</p>
-				<ol>
-					<li>Walne Zebranie CzBonk�w;</li>
-					<li>Zarzd;</li>
-					<li>Komisja Rewizyjna.</li>
-				</ol>
-
-				<h3>� 15 - Walne Zebranie CzBonk�w</h3>
-				<ol>
-					<li>Walne Zebranie CzBonk�w jest najwy|sz wBadz Towarzystwa.</li>
-					<li>Walne Zebranie mo|e by zwyczajne i nadzwyczajne.</li>
-					<li>Walne Zebranie zwyczajne zwoBuje Zarzd raz w roku, nie p�zniej ni| do dnia 30 czerwca.</li>
-					<li>Walne Zebranie nadzwyczajne zwoBuje Zarzd na wniosek Komisji Rewizyjnej lub na pisemny wniosek co najmniej 1/3 og�lnej liczby czBonk�w zwyczajnych.</li>
-				</ol>
-
-				<h3>� 16 - Kompetencje Walnego Zebrania</h3>
-				<p>Do kompetencji Walnego Zebrania nale|y:</p>
-				<ol>
-					<li>uchwalanie zmian Statutu;</li>
-					<li>wyb�r i odwoBywanie Zarzdu;</li>
-					<li>wyb�r i odwoBywanie Komisji Rewizyjnej;</li>
-					<li>rozpatrywanie i zatwierdzanie sprawozdaD Zarzdu;</li>
-					<li>rozpatrywanie i zatwierdzanie sprawozdaD Komisji Rewizyjnej;</li>
-					<li>udzielanie absolutorium Zarzdowi;</li>
-					<li>podejmowanie uchwaBy o rozwizaniu Towarzystwa;</li>
-					<li>podejmowanie uchwaB w innych sprawach zastrze|onych do kompetencji Walnego Zebrania.</li>
-				</ol>
-
-				<h3>� 17 - Zarzd</h3>
-				<ol>
-					<li>Zarzd skBada si z 3 do 7 os�b wybranych przez Walne Zebranie na okres 3 lat.</li>
-					<li>Zarzd wybiera ze swojego grona Prezesa, Wiceprezesa i Skarbnika.</li>
-					<li>Posiedzenia Zarzdu odbywaj si w miar potrzeb, nie rzadziej ni| raz na kwartaB.</li>
-					<li>Zarzd podejmuje uchwaBy zwykB wikszo[ci gBos�w przy obecno[ci co najmniej poBowy czBonk�w Zarzdu.</li>
-				</ol>
-
-				<h3>� 18 - Kompetencje Zarzdu</h3>
-				<p>Do kompetencji Zarzdu nale|y:</p>
-				<ol>
-					<li>kierowanie dziaBalno[ci Towarzystwa;</li>
-					<li>wykonywanie uchwaB Walnego Zebrania;</li>
-					<li>reprezentowanie Towarzystwa na zewntrz;</li>
-					<li>gospodarowanie majtkiem Towarzystwa;</li>
-					<li>przyjmowanie i skre[lanie czBonk�w;</li>
-					<li>zwoBywanie Walnego Zebrania;</li>
-					<li>prowadzenie rejestru czBonk�w;</li>
-					<li>skBadanie sprawozdaD ze swojej dziaBalno[ci.</li>
-				</ol>
-			</div>
-		</section>
-
-		<section class="statute-section">
-			<h2>ROZDZIAA V - Majtek i fundusze</h2>
-			<div class="statute-content-block">
-				<h3>� 19</h3>
-				<p>Majtek Towarzystwa stanowi:</p>
-				<ol>
-					<li>skBadki czBonkowskie;</li>
-					<li>darowizny, spadki, zapisy;</li>
-					<li>subwencje i dotacje;</li>
-					<li>dochody z dziaBalno[ci gospodarczej;</li>
-					<li>dochody z majtku Towarzystwa;</li>
-					<li>wpBaty z tytuBu 1% podatku dochodowego;</li>
-					<li>inne zr�dBa nie zabronione prawem.</li>
-				</ol>
-
-				<h3>� 20</h3>
-				<ol>
-					<li>Towarzystwo mo|e prowadzi dziaBalno[ gospodarcz pomocnicz w stosunku do dziaBalno[ci statutowej.</li>
-					<li>Doch�d z dziaBalno[ci gospodarczej sBu|y realizacji cel�w statutowych.</li>
-					<li>Organem uprawnionym do podejmowania decyzji o rozpoczciu lub zakoDczeniu dziaBalno[ci gospodarczej jest Zarzd.</li>
-				</ol>
-
-				<h3>� 21</h3>
-				<p>Towarzystwo prowadzi gospodark finansow zgodnie z obowizujcymi przepisami prawa i zasadami rachunkowo[ci.</p>
-			</div>
-		</section>
-
-		<section class="statute-section">
-			<h2>ROZDZIAA VI - Postanowienia koDcowe</h2>
-			<div class="statute-content-block">
-				<h3>� 22</h3>
-				<ol>
-					<li>UchwaB o rozwizaniu Towarzystwa podejmuje Walne Zebranie kwalifikowan wikszo[ci gBos�w (2/3), przy obecno[ci co najmniej poBowy uprawnionych do gBosowania.</li>
-					<li>W przypadku rozwizania Towarzystwa jego majtek przechodzi na cele po|ytku publicznego wskazane przez Walne Zebranie.</li>
-				</ol>
-
-				<h3>� 23</h3>
-				<p>W sprawach nieuregulowanych w niniejszym Statucie maj zastosowanie przepisy ustawy Prawo o stowarzyszeniach.</p>
-
-				<h3>� 24</h3>
-				<ol>
-					<li>Statut zostaB uchwalony przez Walne Zebranie w dniu 15 marca 2024 roku.</li>
-					<li>Statut wchodzi w |ycie z dniem rejestracji zmian przez wBa[ciwy sd.</li>
-				</ol>
-			</div>
-		</section>
-
-		<section class="download-section">
-			<div class="download-card">
-				<h3>=� Pobierz peBny statut</h3>
-				<p>Kompletny dokument statutu w wersji PDF do pobrania i wydruku.</p>
-				<div class="file-info">
-					<span>PDF " 12 stron " 1.8 MB</span>
+			<!-- Download Section -->
+			<section class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-white text-center">
+				<div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+					<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+					</svg>
+				</div>
+				<h3 class="text-2xl font-bold mb-4">Pobierz pełny statut</h3>
+				<p class="text-primary-100 mb-6 max-w-2xl mx-auto">
+					Kompletny dokument statutu w wersji PDF do pobrania i wydruku.
+				</p>
+				<div class="flex flex-col sm:flex-row justify-center gap-4 text-sm text-primary-200 mb-8">
+					<span>PDF • 12 stron • 1.8 MB</span>
 					<span>Ostatnia aktualizacja: 15 marca 2024</span>
 				</div>
-				<a href="/uploads/docs/statut-towarzystwa.pdf" class="download-btn" target="_blank">
-					=� Pobierz peBny statut PDF
+				<a href="/uploads/docs/statut-towarzystwa.pdf" class="btn bg-white hover:bg-gray-100 text-primary-600 px-8 py-4 text-lg inline-flex items-center" target="_blank">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+					</svg>
+					Pobierz pełny statut PDF
 				</a>
-			</div>
-		</section>
+			</section>
 
-		<section class="legal-info">
-			<h2>Informacje prawne</h2>
-			<div class="legal-grid">
-				<div class="legal-item">
-					<h3>=� Rejestracja</h3>
-					<ul>
-						<li><strong>KRS:</strong> 0000123456</li>
-						<li><strong>Sd rejestrowy:</strong> Sd Rejonowy w Bydgoszczy</li>
-						<li><strong>Data rejestracji:</strong> 20 kwietnia 2010</li>
-						<li><strong>NIP:</strong> 123-456-78-90</li>
-						<li><strong>REGON:</strong> 123456789</li>
-					</ul>
-				</div>
+			<!-- Legal Information -->
+			<section class="card p-8">
+				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Informacje prawne</h2>
 
-				<div class="legal-item">
-					<h3><� Status OPP</h3>
-					<ul>
-						<li><strong>Data wpisu do rejestru OPP:</strong> 15 maja 2012</li>
-						<li><strong>Numer wpisu:</strong> KRS: 0000123456</li>
-						<li><strong>Cel szczeg�Bowy 1,5%:</strong> DziaBalno[ na rzecz os�b niepeBnosprawnych</li>
-						<li><strong>Obszar dziaBania:</strong> Powiat bydgoski i okolice</li>
-					</ul>
-				</div>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div class="border-t-4 border-primary-500 pt-6">
+						<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+							<svg class="w-5 h-5 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+							</svg>
+							Rejestracja
+						</h3>
+						<ul class="space-y-2 text-gray-700">
+							<li><strong>KRS:</strong> 0000120586</li>
+							<li><strong>Sąd rejestrowy:</strong> Sąd Rejonowy w Bydgoszczy</li>
+							<li><strong>Data rejestracji:</strong> 20 kwietnia 2010</li>
+							<li><strong>NIP:</strong> 123-456-78-90</li>
+							<li><strong>REGON:</strong> 123456789</li>
+						</ul>
+					</div>
 
-				<div class="legal-item">
-					<h3>=� Dokumenty publiczne</h3>
-					<ul>
-						<li><a href="/towarzystwo/sprawozdania-opp/">Sprawozdania OPP</a></li>
-						<li><a href="/oferta/dokumenty-rozliczeniowe/">Dokumenty finansowe</a></li>
-						<li><a href="/towarzystwo/druki-do-pobrania/">Druki i formularze</a></li>
-						<li><a href="/towarzystwo/zarzad/">Informacje o zarzdzie</a></li>
-					</ul>
-				</div>
-			</div>
-		</section>
+					<div class="border-t-4 border-primary-500 pt-6">
+						<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+							<svg class="w-5 h-5 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+							</svg>
+							Status OPP
+						</h3>
+						<ul class="space-y-2 text-gray-700">
+							<li><strong>Data wpisu do rejestru OPP:</strong> 15 maja 2012</li>
+							<li><strong>Numer wpisu:</strong> KRS: 0000120586</li>
+							<li><strong>Cel szczegółowy 1,5%:</strong> Działalność na rzecz osób niepełnosprawnych</li>
+							<li><strong>Obszar działania:</strong> Powiat bydgoski i okolice</li>
+						</ul>
+					</div>
 
-		<section class="contact-legal">
-			<h2>Kontakt w sprawach prawnych</h2>
-			<div class="contact-info">
-				<div class="contact-item">
-					<h3>=� Sprawy statutowe i organizacyjne</h3>
-					<p>
-						<strong>Prezes Zarzdu - Weronika KieBtyka-Wydmuch</strong><br>
-						Tel: <a href="tel:+48123456789">+48 123 456 789</a><br>
-						Email: <a href="mailto:prezes@hipoterapia.bydgoszcz.pl">prezes@hipoterapia.bydgoszcz.pl</a>
-					</p>
+					<div class="border-t-4 border-primary-500 pt-6">
+						<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+							<svg class="w-5 h-5 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+							</svg>
+							Dokumenty publiczne
+						</h3>
+						<ul class="space-y-2">
+							<li><a href="/towarzystwo/sprawozdania-opp/" class="text-primary-600 hover:text-primary-700 transition-colors">Sprawozdania OPP</a></li>
+							<li><a href="/oferta/dokumenty-rozliczeniowe/" class="text-primary-600 hover:text-primary-700 transition-colors">Dokumenty finansowe</a></li>
+							<li><a href="/towarzystwo/druki-do-pobrania/" class="text-primary-600 hover:text-primary-700 transition-colors">Druki i formularze</a></li>
+							<li><a href="/towarzystwo/zarzad/" class="text-primary-600 hover:text-primary-700 transition-colors">Informacje o zarządzie</a></li>
+						</ul>
+					</div>
 				</div>
+			</section>
 
-				<div class="contact-item">
-					<h3>=� Sprawy formalne i administracyjne</h3>
-					<p>
-						<strong>Biuro Towarzystwa</strong><br>
-						ul. PrzykBadowa 123, 85-001 Bydgoszcz<br>
-						Tel: <a href="tel:+48123456790">+48 123 456 790</a><br>
-						Email: <a href="mailto:biuro@hipoterapia.bydgoszcz.pl">biuro@hipoterapia.bydgoszcz.pl</a>
-					</p>
+			<!-- Contact Section -->
+			<section class="bg-gray-50 rounded-2xl p-8">
+				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Kontakt w sprawach prawnych</h2>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="card p-6">
+						<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+							<svg class="w-5 h-5 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+							</svg>
+							Sprawy statutowe i organizacyjne
+						</h3>
+						<div class="text-gray-700 leading-relaxed">
+							<p class="font-medium text-primary-700 mb-2">Prezes Zarządu - Weronika Kiełtyka-Wydmuch</p>
+							<p>Tel: <a href="tel:+48123456789" class="text-primary-600 hover:text-primary-700">+48 123 456 789</a></p>
+							<p>Email: <a href="mailto:prezes@hipoterapia.bydgoszcz.pl" class="text-primary-600 hover:text-primary-700">prezes@hipoterapia.bydgoszcz.pl</a></p>
+						</div>
+					</div>
+
+					<div class="card p-6">
+						<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+							<svg class="w-5 h-5 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+							</svg>
+							Sprawy formalne i administracyjne
+						</h3>
+						<div class="text-gray-700 leading-relaxed">
+							<p class="font-medium text-primary-700 mb-2">Biuro Towarzystwa</p>
+							<p>ul. Gdańska 173-175, 85-674 Bydgoszcz</p>
+							<p>Tel: <a href="tel:+48123456790" class="text-primary-600 hover:text-primary-700">+48 123 456 790</a></p>
+							<p>Email: <a href="mailto:biuro@hipoterapia.bydgoszcz.pl" class="text-primary-600 hover:text-primary-700">biuro@hipoterapia.bydgoszcz.pl</a></p>
+						</div>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 	</div>
 </MainLayout>
-
-<style>
-	.statute-content {
-		max-width: 900px;
-		margin: 0 auto;
-		line-height: 1.6;
-	}
-
-	.breadcrumb {
-		margin-bottom: 2rem;
-	}
-
-	.breadcrumb a {
-		color: var(--primary-color);
-		text-decoration: none;
-		font-weight: 600;
-		transition: color 0.3s ease;
-	}
-
-	.breadcrumb a:hover {
-		color: var(--secondary-color);
-	}
-
-	.intro {
-		background: white;
-		padding: 3rem 2rem;
-		border-radius: 8px;
-		margin-bottom: 3rem;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-		text-align: center;
-		border-left: 5px solid var(--primary-color);
-	}
-
-	.document-header h1 {
-		color: var(--primary-color);
-		font-size: 2.5rem;
-		margin-bottom: 1rem;
-		font-weight: bold;
-	}
-
-	.subtitle {
-		font-size: 1.3rem;
-		color: var(--text-color);
-		margin-bottom: 1.5rem;
-		font-weight: 600;
-	}
-
-	.meta-info {
-		display: flex;
-		justify-content: center;
-		gap: 2rem;
-		font-size: 0.9rem;
-		color: #666;
-		flex-wrap: wrap;
-	}
-
-	.statute-section {
-		margin-bottom: 3rem;
-	}
-
-	.statute-section h2 {
-		color: var(--primary-color);
-		margin-bottom: 2rem;
-		padding-bottom: 0.5rem;
-		border-bottom: 2px solid var(--secondary-color);
-		font-size: 1.4rem;
-	}
-
-	.statute-content-block {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-	}
-
-	.statute-content-block h3 {
-		color: var(--primary-color);
-		margin: 2rem 0 1rem 0;
-		font-size: 1.2rem;
-		font-weight: 600;
-	}
-
-	.statute-content-block h3:first-child {
-		margin-top: 0;
-	}
-
-	.statute-content-block ol,
-	.statute-content-block ul {
-		padding-left: 2rem;
-		margin: 1rem 0;
-	}
-
-	.statute-content-block li {
-		margin: 0.8rem 0;
-		line-height: 1.8;
-		text-align: justify;
-	}
-
-	.statute-content-block p {
-		margin: 1rem 0;
-		line-height: 1.8;
-		text-align: justify;
-	}
-
-	.statute-content-block strong {
-		color: var(--primary-color);
-	}
-
-	.download-section {
-		margin: 3rem 0;
-	}
-
-	.download-card {
-		background: linear-gradient(135deg, var(--primary-color) 0%, #4a7c59 100%);
-		color: white;
-		padding: 3rem 2rem;
-		border-radius: 8px;
-		text-align: center;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-	}
-
-	.download-card h3 {
-		color: white;
-		margin-bottom: 1rem;
-		font-size: 1.3rem;
-	}
-
-	.download-card p {
-		margin-bottom: 1.5rem;
-		opacity: 0.95;
-		line-height: 1.6;
-	}
-
-	.file-info {
-		display: flex;
-		justify-content: center;
-		gap: 2rem;
-		margin-bottom: 2rem;
-		font-size: 0.9rem;
-		opacity: 0.9;
-		flex-wrap: wrap;
-	}
-
-	.download-btn {
-		display: inline-block;
-		background: var(--secondary-color);
-		color: var(--primary-color);
-		padding: 1rem 2rem;
-		border-radius: 6px;
-		text-decoration: none;
-		font-weight: bold;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
-
-	.download-btn:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-	}
-
-	.legal-info {
-		margin: 4rem 0;
-	}
-
-	.legal-info h2 {
-		color: var(--primary-color);
-		margin-bottom: 2rem;
-		padding-bottom: 0.5rem;
-		border-bottom: 2px solid var(--secondary-color);
-		text-align: center;
-	}
-
-	.legal-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.legal-grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.legal-item {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-top: 4px solid var(--secondary-color);
-	}
-
-	.legal-item h3 {
-		color: var(--primary-color);
-		margin-bottom: 1.5rem;
-		font-size: 1.1rem;
-	}
-
-	.legal-item ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	.legal-item li {
-		margin-bottom: 0.8rem;
-		line-height: 1.6;
-	}
-
-	.legal-item strong {
-		color: var(--primary-color);
-	}
-
-	.legal-item a {
-		color: var(--primary-color);
-		text-decoration: none;
-		transition: color 0.3s ease;
-	}
-
-	.legal-item a:hover {
-		color: var(--secondary-color);
-	}
-
-	.contact-legal {
-		background: #f8f9fa;
-		padding: 3rem 2rem;
-		border-radius: 8px;
-		margin-top: 3rem;
-	}
-
-	.contact-legal h2 {
-		color: var(--primary-color);
-		margin-bottom: 2rem;
-		text-align: center;
-		border-bottom: 2px solid var(--secondary-color);
-		padding-bottom: 0.5rem;
-	}
-
-	.contact-info {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.contact-info {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.contact-item {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-	}
-
-	.contact-item h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-		font-size: 1.1rem;
-	}
-
-	.contact-item p {
-		line-height: 1.8;
-		margin: 0;
-	}
-
-	.contact-item strong {
-		color: var(--primary-color);
-	}
-
-	.contact-item a {
-		color: var(--primary-color);
-		text-decoration: none;
-		transition: color 0.3s ease;
-	}
-
-	.contact-item a:hover {
-		color: var(--secondary-color);
-	}
-
-	@media (max-width: 768px) {
-		.statute-content-block {
-			padding: 1.5rem;
-		}
-
-		.statute-content-block ol,
-		.statute-content-block ul {
-			padding-left: 1.5rem;
-		}
-
-		.document-header h1 {
-			font-size: 2rem;
-		}
-
-		.meta-info {
-			flex-direction: column;
-			gap: 0.5rem;
-		}
-
-		.download-card {
-			padding: 2rem 1.5rem;
-		}
-
-		.file-info {
-			flex-direction: column;
-			gap: 0.5rem;
-		}
-	}
-</style>

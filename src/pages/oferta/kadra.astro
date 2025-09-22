@@ -3,204 +3,293 @@ import MainLayout from '../../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Nasza Kadra">
-	<div class="staff-content">
-		<nav class="breadcrumb">
-			<a href="/oferta/">� Powr�t do Oferta</a>
+	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<!-- Breadcrumb -->
+		<nav class="mb-8">
+			<a href="/oferta/" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors">
+				<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+				</svg>
+				Powrót do Oferta
+			</a>
 		</nav>
 
-		<section class="intro">
-			<p class="lead">
-				Nasz zesp�B skBada si z wykwalifikowanych specjalist�w z wieloletnim do[wiadczeniem
-				w pracy z osobami niepeBnosprawnymi. Ka|dy z naszych terapeut�w posiada odpowiednie
-				kwalifikacje i certyfikaty uprawniajce do prowadzenia hipoterapii.
+		<!-- Header -->
+		<section class="card p-8 text-center mb-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Nasza Kadra</h1>
+			<p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+				Nasz zespół składa się z wykwalifikowanych specjalistów z wieloletnim doświadczeniem
+				w pracy z osobami niepełnosprawnymi. Każdy z naszych terapeutów posiada odpowiednie
+				kwalifikacje i certyfikaty uprawniające do prowadzenia hipoterapii.
 			</p>
 		</section>
 
-		<section class="leadership-section">
-			<h2>Zarzd i Kierownictwo</h2>
-			<div class="leadership-grid">
-				<div class="leader-card featured">
-					<h3>Weronika KieBtyka-Wydmuch</h3>
-					<div class="role">Prezes Towarzystwa</div>
-					<div class="term">Kadencja: 2022-2025</div>
-					<p>
-						Do[wiadczony hipoterapeuta i lider organizacji. Odpowiedzialna za strategi rozwoju
-						Towarzystwa, nadz�r nad jako[ci terapii oraz wsp�Bprac z instytucjami zewntrznymi.
-						Pod jej kierownictwem Towarzystwo realizuje ambitne programy terapeutyczne.
-					</p>
-					<div class="qualifications">
-						<h4>Kwalifikacje:</h4>
-						<ul>
-							<li>Certyfikowany hipoterapeuta</li>
-							<li>Wieloletnie do[wiadczenie w pracy z niepeBnosprawnymi</li>
-							<li>Specjalizacja w terapii dzieci i mBodzie|y</li>
-						</ul>
+		<!-- Leadership Section -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
+				Zarząd i Kierownictwo
+			</h2>
+			<div class="card p-8 border-l-4 border-primary-500">
+				<div class="flex items-start space-x-4">
+					<div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
+						<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+						</svg>
+					</div>
+					<div class="flex-1">
+						<h3 class="text-2xl font-bold text-gray-900 mb-2">Weronika Kiełtyka-Wydmuch</h3>
+						<div class="inline-block bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-2">
+							Prezes Towarzystwa
+						</div>
+						<div class="text-gray-500 text-sm mb-4">Kadencja: 2022-2025</div>
+						<p class="text-gray-700 leading-relaxed mb-6">
+							Doświadczony hipoterapeuta i lider organizacji. Odpowiedzialna za strategię rozwoju
+							Towarzystwa, nadzór nad jakością terapii oraz współpracę z instytucjami zewnętrznymi.
+							Pod jej kierownictwem Towarzystwo realizuje ambitne programy terapeutyczne.
+						</p>
+						<div class="bg-gray-50 p-4 rounded-lg">
+							<h4 class="font-semibold text-gray-900 mb-3">Kwalifikacje:</h4>
+							<ul class="list-disc list-inside space-y-1 text-gray-700">
+								<li>Certyfikowany hipoterapeuta</li>
+								<li>Wieloletnie doświadczenie w pracy z niepełnosprawnymi</li>
+								<li>Specjalizacja w terapii dzieci i młodzieży</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="therapists-section">
-			<h2>Nasz Zesp�B Terapeutyczny</h2>
-			<p class="section-intro">
-				Wszyscy nasi terapeuci przeszli specjalistyczne szkolenia i posiadaj aktualne certyfikaty.
-				Regularnie uczestnicz w kursach doskonalcych i konferencjach naukowych.
-			</p>
+		<!-- Team Categories -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+				Nasz Zespół Terapeutyczny
+			</h2>
+			<div class="bg-blue-50 border-l-4 border-blue-400 p-6 mb-8">
+				<p class="text-gray-700 leading-relaxed">
+					Wszyscy nasi terapeuci przeszli specjalistyczne szkolenia i posiadają aktualne certyfikaty.
+					Regularnie uczestniczą w kursach doskonalących i konferencjach naukowych.
+				</p>
+			</div>
 
-			<div class="staff-categories">
-				<div class="category-card">
-					<h3>Hipoterapeuci</h3>
-					<div class="category-stats">
-						<span class="number">12</span>
-						<span class="label">certyfikowanych specjalist�w</span>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<!-- Hipoterapeuci -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="text-center mb-6">
+						<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+							<span class="text-2xl font-bold text-white">12</span>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900">Hipoterapeuci</h3>
+						<p class="text-gray-500">certyfikowanych specjalistów</p>
 					</div>
-					<div class="category-details">
-						<h4>Specjalizacje:</h4>
-						<ul>
-							<li>Hipoterapia neurologiczna</li>
-							<li>Terapia dzieci z autyzmem</li>
-							<li>Rehabilitacja pourazowa</li>
-							<li>Psychopedagogiczna jazda konna</li>
-						</ul>
-						<h4>Wymagane kwalifikacje:</h4>
-						<ul>
-							<li>UkoDczone studia medyczne/rehabilitacyjne</li>
-							<li>Certyfikat hipoterapeuty</li>
-							<li>Kurs pierwszej pomocy</li>
-							<li>Regularne szkolenia doskonalce</li>
-						</ul>
+					<div class="space-y-4">
+						<div>
+							<h4 class="font-semibold text-gray-900 mb-2">Specjalizacje:</h4>
+							<ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+								<li>Hipoterapia neurologiczna</li>
+								<li>Terapia dzieci z autyzmem</li>
+								<li>Rehabilitacja pourazowa</li>
+								<li>Psychopedagogiczna jazda konna</li>
+							</ul>
+						</div>
+						<div>
+							<h4 class="font-semibold text-gray-900 mb-2">Wymagane kwalifikacje:</h4>
+							<ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+								<li>Ukończone studia medyczne/rehabilitacyjne</li>
+								<li>Certyfikat hipoterapeuty</li>
+								<li>Kurs pierwszej pomocy</li>
+								<li>Regularne szkolenia doskonalące</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 
-				<div class="category-card">
-					<h3>Fizjoterapeuci</h3>
-					<div class="category-stats">
-						<span class="number">8</span>
-						<span class="label">licencjonowanych fizjoterapeut�w</span>
+				<!-- Fizjoterapeuci -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="text-center mb-6">
+						<div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+							<span class="text-2xl font-bold text-white">8</span>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900">Fizjoterapeuci</h3>
+						<p class="text-gray-500">licencjonowanych fizjoterapeutów</p>
 					</div>
-					<div class="category-details">
-						<h4>Obszary specjalizacji:</h4>
-						<ul>
-							<li>Rehabilitacja neuromotoryczna</li>
-							<li>Terapia NDT-Bobath</li>
-							<li>Integracja sensoryczna</li>
-							<li>Kinesioterapia</li>
-						</ul>
-						<h4>Kwalifikacje:</h4>
-						<ul>
-							<li>Wy|sze wyksztaBcenie - fizjoterapia</li>
-							<li>Prawo wykonywania zawodu</li>
-							<li>Kursy specjalistyczne</li>
-							<li>Do[wiadczenie z niepeBnosprawnymi</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="category-card">
-					<h3>Pedagodzy Specjalni</h3>
-					<div class="category-stats">
-						<span class="number">6</span>
-						<span class="label">pedagog�w specjalnych</span>
-					</div>
-					<div class="category-details">
-						<h4>Specjalizacje:</h4>
-						<ul>
-							<li>Oligofrenopedagogika</li>
-							<li>Pedagogika lecznicza</li>
-							<li>Autyzm i ADHD</li>
-							<li>Wczesne wspomaganie rozwoju</li>
-						</ul>
-						<h4>Kompetencje:</h4>
-						<ul>
-							<li>Studia pedagogiczne specjalne</li>
-							<li>Znajomo[ metod terapeutycznych</li>
-							<li>Do[wiadczenie z dziemi specjalnej troski</li>
-							<li>Kursy z zakresu hipoterapii</li>
-						</ul>
+					<div class="space-y-4">
+						<div>
+							<h4 class="font-semibold text-gray-900 mb-2">Obszary specjalizacji:</h4>
+							<ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+								<li>Rehabilitacja neuromotoryczna</li>
+								<li>Terapia NDT-Bobath</li>
+								<li>Integracja sensoryczna</li>
+								<li>Kinesioterapia</li>
+							</ul>
+						</div>
+						<div>
+							<h4 class="font-semibold text-gray-900 mb-2">Kwalifikacje:</h4>
+							<ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+								<li>Wyższe wykształcenie - fizjoterapia</li>
+								<li>Prawo wykonywania zawodu</li>
+								<li>Kursy specjalistyczne</li>
+								<li>Doświadczenie z niepełnosprawnymi</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 
-				<div class="category-card">
-					<h3>Instruktorzy Jazdy</h3>
-					<div class="category-stats">
-						<span class="number">4</span>
-						<span class="label">instruktor�w jazdy konnej</span>
+				<!-- Pedagodzy Specjalni -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="text-center mb-6">
+						<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+							<span class="text-2xl font-bold text-white">6</span>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900">Pedagodzy Specjalni</h3>
+						<p class="text-gray-500">pedagogów specjalnych</p>
 					</div>
-					<div class="category-details">
-						<h4>Umiejtno[ci:</h4>
-						<ul>
-							<li>Instruktor jazdy konnej</li>
-							<li>Treser koni terapeutycznych</li>
-							<li>Znajomo[ psychologii konia</li>
-							<li>BezpieczeDstwo jezdzieckie</li>
-						</ul>
-						<h4>Certyfikaty:</h4>
-						<ul>
-							<li>Licencja instruktora PZJ</li>
-							<li>Kurs treningu koni do hipoterapii</li>
-							<li>Pierwsza pomoc</li>
-							<li>Bhp przy pracy z koDmi</li>
-						</ul>
+					<div class="space-y-4">
+						<div>
+							<h4 class="font-semibold text-gray-900 mb-2">Specjalizacje:</h4>
+							<ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+								<li>Oligofrenopedagogika</li>
+								<li>Pedagogika lecznicza</li>
+								<li>Autyzm i ADHD</li>
+								<li>Wczesne wspomaganie rozwoju</li>
+							</ul>
+						</div>
+						<div>
+							<h4 class="font-semibold text-gray-900 mb-2">Kompetencje:</h4>
+							<ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+								<li>Studia pedagogiczne specjalne</li>
+								<li>Znajomość metod terapeutycznych</li>
+								<li>Doświadczenie z dziećmi specjalnej troski</li>
+								<li>Kursy z zakresu hipoterapii</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Instruktorzy Jazdy -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="text-center mb-6">
+						<div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+							<span class="text-2xl font-bold text-white">4</span>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900">Instruktorzy Jazdy</h3>
+						<p class="text-gray-500">instruktorów jazdy konnej</p>
+					</div>
+					<div class="space-y-4">
+						<div>
+							<h4 class="font-semibold text-gray-900 mb-2">Umiejętności:</h4>
+							<ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+								<li>Instruktor jazdy konnej</li>
+								<li>Treser koni terapeutycznych</li>
+								<li>Znajomość psychologii konia</li>
+								<li>Bezpieczeństwo jeździeckie</li>
+							</ul>
+						</div>
+						<div>
+							<h4 class="font-semibold text-gray-900 mb-2">Certyfikaty:</h4>
+							<ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+								<li>Licencja instruktora PZJ</li>
+								<li>Kurs treningu koni do hipoterapii</li>
+								<li>Pierwsza pomoc</li>
+								<li>BHP przy pracy z końmi</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="support-staff-section">
-			<h2>Personel Wspierajcy</h2>
-			<div class="support-grid">
-				<div class="support-item">
-					<h3>Wolontariusze</h3>
-					<p>
-						Nasz zesp�B wspiera 30+ wolontariuszy - student�w, mBodzie| i dorosBych
-						po[wicajcych sw�j czas dla dobra naszych podopiecznych.
+		<!-- Support Staff -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
+				Personel Wspierający
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				<div class="card p-6 text-center">
+					<div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-bold text-gray-900 mb-3">Wolontariusze</h3>
+					<p class="text-gray-600 text-sm">
+						Nasz zespół wspiera 30+ wolontariuszy - studentów, młodzieży i dorosłych
+						poświęcających swój czas dla dobra naszych podopiecznych.
 					</p>
 				</div>
-				<div class="support-item">
-					<h3>Opiekunowie Koni</h3>
-					<p>
-						Profesjonalni opiekunowie dbaj o nasze konie terapeutyczne,
-						zapewniajc im wBa[ciw pielgnacj i przygotowanie do zaj.
+				<div class="card p-6 text-center">
+					<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-bold text-gray-900 mb-3">Opiekunowie Koni</h3>
+					<p class="text-gray-600 text-sm">
+						Profesjonalni opiekunowie dbają o nasze konie terapeutyczne,
+						zapewniając im właściwą pielęgnację i przygotowanie do zajęć.
 					</p>
 				</div>
-				<div class="support-item">
-					<h3>Administracja</h3>
-					<p>
-						Zesp�B administracyjny zajmuje si organizacj zaj, dokumentacj
-						medyczn i kontaktem z rodzicami.
+				<div class="card p-6 text-center">
+					<div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-bold text-gray-900 mb-3">Administracja</h3>
+					<p class="text-gray-600 text-sm">
+						Zespół administracyjny zajmuje się organizacją zajęć, dokumentacją
+						medyczną i kontaktem z rodzicami.
 					</p>
 				</div>
 			</div>
 		</section>
 
-		<section class="requirements-section">
-			<h2>Standardy Naszej Kadry</h2>
-			<div class="standards-content">
-				<div class="standard-item">
-					<h3>Kwalifikacje</h3>
-					<ul>
-						<li>Wy|sze wyksztaBcenie w obszarze medycznym, rehabilitacyjnym lub pedagogicznym</li>
+		<!-- Standards Section -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
+				Standardy Naszej Kadry
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				<div class="bg-gray-50 p-6 rounded-xl border-l-4 border-green-500">
+					<div class="flex items-center mb-4">
+						<svg class="w-6 h-6 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
+						<h3 class="text-lg font-bold text-gray-900">Kwalifikacje</h3>
+					</div>
+					<ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
+						<li>Wyższe wykształcenie w obszarze medycznym, rehabilitacyjnym lub pedagogicznym</li>
 						<li>Specjalistyczne kursy z zakresu hipoterapii</li>
 						<li>Aktualne certyfikaty i uprawnienia</li>
-						<li>Regularne szkolenia doskonalce</li>
+						<li>Regularne szkolenia doskonalące</li>
 					</ul>
 				</div>
 
-				<div class="standard-item">
-					<h3>Do[wiadczenie</h3>
-					<ul>
-						<li>Minimum 2 lata pracy z osobami niepeBnosprawnymi</li>
-						<li>Do[wiadczenie w pracy z koDmi</li>
-						<li>Znajomo[ metod terapeutycznych</li>
-						<li>Umiejtno[ci komunikacyjne</li>
+				<div class="bg-gray-50 p-6 rounded-xl border-l-4 border-blue-500">
+					<div class="flex items-center mb-4">
+						<svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+						</svg>
+						<h3 class="text-lg font-bold text-gray-900">Doświadczenie</h3>
+					</div>
+					<ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
+						<li>Minimum 2 lata pracy z osobami niepełnosprawnymi</li>
+						<li>Doświadczenie w pracy z końmi</li>
+						<li>Znajomość metod terapeutycznych</li>
+						<li>Umiejętności komunikacyjne</li>
 					</ul>
 				</div>
 
-				<div class="standard-item">
-					<h3>BezpieczeDstwo</h3>
-					<ul>
+				<div class="bg-gray-50 p-6 rounded-xl border-l-4 border-red-500">
+					<div class="flex items-center mb-4">
+						<svg class="w-6 h-6 text-red-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+						</svg>
+						<h3 class="text-lg font-bold text-gray-900">Bezpieczeństwo</h3>
+					</div>
+					<ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
 						<li>Aktualne szkolenie z pierwszej pomocy</li>
-						<li>Znajomo[ przepis�w BHP</li>
+						<li>Znajomość przepisów BHP</li>
 						<li>Ubezpieczenie OC</li>
 						<li>Badania lekarskie</li>
 					</ul>
@@ -208,296 +297,32 @@ import MainLayout from '../../layouts/MainLayout.astro';
 			</div>
 		</section>
 
-		<section class="join-team-section">
-			<h2>DoBcz do naszego zespoBu</h2>
-			<p>
-				Szukamy pasjonat�w, kt�rzy chc pomaga osobom niepeBnosprawnym i rozwija
-				hipoterapi w naszym regionie.
+		<!-- Join Team CTA -->
+		<section class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-center text-white">
+			<div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+				<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+				</svg>
+			</div>
+			<h2 class="text-3xl font-bold mb-4">Dołącz do naszego zespołu</h2>
+			<p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+				Szukamy pasjonatów, którzy chcą pomagać osobom niepełnosprawnym i rozwijać
+				hipoterapię w naszym regionie.
 			</p>
-			<div class="join-buttons">
-				<a href="/oferta/wolontariusze/" class="join-button">ZostaD wolontariuszem</a>
-				<a href="/kontakt/" class="join-button secondary">Wy[lij CV</a>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/oferta/wolontariusze/" class="btn bg-white text-primary-600 hover:bg-gray-100 px-6 py-3 inline-flex items-center">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+					</svg>
+					Zostań wolontariuszem
+				</a>
+				<a href="/kontakt/" class="btn border-2 border-white text-white hover:bg-white hover:text-primary-600 px-6 py-3 inline-flex items-center">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+					</svg>
+					Wyślij CV
+				</a>
 			</div>
 		</section>
 	</div>
 </MainLayout>
-
-<style>
-	.staff-content {
-		max-width: 1000px;
-		margin: 0 auto;
-	}
-
-	.breadcrumb {
-		margin-bottom: 2rem;
-	}
-
-	.breadcrumb a {
-		color: var(--primary-color);
-		text-decoration: none;
-		font-weight: 600;
-		transition: color 0.3s ease;
-	}
-
-	.breadcrumb a:hover {
-		color: var(--secondary-color);
-	}
-
-	.intro {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		margin-bottom: 2rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-left: 5px solid var(--secondary-color);
-	}
-
-	.lead {
-		font-size: 1.2rem;
-		line-height: 1.8;
-		color: var(--text-color);
-		margin: 0;
-	}
-
-	h2 {
-		color: var(--primary-color);
-		margin-bottom: 2rem;
-		padding-bottom: 0.5rem;
-		border-bottom: 2px solid var(--secondary-color);
-	}
-
-	.leader-card {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-		margin-bottom: 2rem;
-	}
-
-	.featured {
-		border: 2px solid var(--secondary-color);
-	}
-
-	.leader-card h3 {
-		color: var(--primary-color);
-		font-size: 1.5rem;
-		margin-bottom: 0.5rem;
-	}
-
-	.role {
-		background: var(--secondary-color);
-		color: white;
-		padding: 0.3rem 1rem;
-		border-radius: 15px;
-		font-size: 0.9rem;
-		font-weight: 600;
-		display: inline-block;
-		margin-bottom: 0.5rem;
-	}
-
-	.term {
-		color: #666;
-		font-size: 0.9rem;
-		margin-bottom: 1.5rem;
-	}
-
-	.qualifications h4 {
-		color: var(--primary-color);
-		margin: 1.5rem 0 0.5rem 0;
-	}
-
-	.qualifications ul {
-		list-style-position: inside;
-		line-height: 1.8;
-	}
-
-	.section-intro {
-		background: #f8f9fa;
-		padding: 1.5rem;
-		border-radius: 8px;
-		margin-bottom: 2rem;
-		line-height: 1.8;
-	}
-
-	.staff-categories {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.staff-categories {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.category-card {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-top: 4px solid var(--secondary-color);
-	}
-
-	.category-card h3 {
-		color: var(--primary-color);
-		margin-bottom: 1.5rem;
-		font-size: 1.3rem;
-	}
-
-	.category-stats {
-		text-align: center;
-		margin-bottom: 2rem;
-		padding: 1rem;
-		background: linear-gradient(135deg, var(--primary-color) 0%, #4a7c59 100%);
-		color: white;
-		border-radius: 8px;
-	}
-
-	.number {
-		display: block;
-		font-size: 2.5rem;
-		font-weight: bold;
-		margin-bottom: 0.5rem;
-	}
-
-	.label {
-		font-size: 0.9rem;
-		opacity: 0.95;
-	}
-
-	.category-details h4 {
-		color: var(--primary-color);
-		margin: 1.5rem 0 0.5rem 0;
-		font-size: 1rem;
-	}
-
-	.category-details ul {
-		list-style-position: inside;
-		line-height: 1.6;
-		margin-bottom: 1rem;
-		color: #666;
-	}
-
-	.support-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.support-grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.support-item {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		text-align: center;
-	}
-
-	.support-item h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-	}
-
-	.support-item p {
-		line-height: 1.6;
-		margin: 0;
-	}
-
-	.standards-content {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.standards-content {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.standard-item {
-		background: #f8f9fa;
-		padding: 2rem;
-		border-radius: 8px;
-		border-left: 4px solid var(--primary-color);
-	}
-
-	.standard-item h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-	}
-
-	.standard-item ul {
-		list-style-position: inside;
-		line-height: 1.8;
-		margin: 0;
-	}
-
-	.join-team-section {
-		background: linear-gradient(135deg, var(--primary-color) 0%, #4a7c59 100%);
-		color: white;
-		padding: 3rem 2rem;
-		border-radius: 8px;
-		text-align: center;
-		margin-top: 3rem;
-	}
-
-	.join-team-section h2 {
-		color: white;
-		border-bottom: 2px solid rgba(255,255,255,0.3);
-		padding-bottom: 1rem;
-		margin-bottom: 1rem;
-	}
-
-	.join-team-section p {
-		font-size: 1.1rem;
-		margin-bottom: 2rem;
-		opacity: 0.95;
-		line-height: 1.8;
-	}
-
-	.join-buttons {
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	.join-button {
-		padding: 0.75rem 2rem;
-		border-radius: 4px;
-		text-decoration: none;
-		font-weight: 600;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-		display: inline-block;
-	}
-
-	.join-button:not(.secondary) {
-		background: var(--secondary-color);
-		color: var(--primary-color);
-	}
-
-	.join-button.secondary {
-		background: transparent;
-		color: white;
-		border: 2px solid white;
-	}
-
-	.join-button:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-	}
-
-	.join-button.secondary:hover {
-		background: white;
-		color: var(--primary-color);
-	}
-</style>

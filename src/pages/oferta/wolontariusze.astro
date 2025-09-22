@@ -3,678 +3,318 @@ import MainLayout from '../../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Wolontariusze">
-	<div class="volunteers-content">
-		<nav class="breadcrumb">
-			<a href="/oferta/">� Powr�t do Oferta</a>
+	<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<!-- Breadcrumb -->
+		<nav class="mb-8">
+			<a href="/oferta/" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors">
+				<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+				</svg>
+				Powrót do Oferta
+			</a>
 		</nav>
 
-		<section class="intro">
-			<p class="lead">
-				Wolontariusze to serce naszego Towarzystwa. Dziki ich zaanga|owaniu i po[wiceniu
-				mo|emy realizowa nasz misj pomagania osobom niepeBnosprawnym. DoBcz do naszego zespoBu!
+		<!-- Hero Section -->
+		<section class="card p-8 text-center mb-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Zostań wolontariuszem</h1>
+			<p class="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+				Wolontariusze to serce naszego Towarzystwa. Dzięki ich zaangażowaniu i poświęceniu
+				możemy realizować naszą misję pomagania osobom niepełnosprawnym. Dołącz do naszego zespołu!
 			</p>
 		</section>
 
-		<section class="why-volunteer-section">
-			<h2>Dlaczego warto zosta wolontariuszem?</h2>
-			<div class="benefits-grid">
-				<div class="benefit-card">
-					<div class="benefit-icon">d</div>
-					<h3>Pomagasz innym</h3>
-					<p>Twoje dziaBania bezpo[rednio wpBywaj na popraw jako[ci |ycia os�b niepeBnosprawnych i ich rodzin.</p>
-				</div>
-
-				<div class="benefit-card">
-					<div class="benefit-icon"><1</div>
-					<h3>Rozwijasz si</h3>
-					<p>Zdobywasz cenne do[wiadczenia, rozwijasz umiejtno[ci interpersonalne i uczysz si odpowiedzialno[ci.</p>
-				</div>
-
-				<div class="benefit-card">
-					<div class="benefit-icon">></div>
-					<h3>Poznajesz ludzi</h3>
-					<p>Nawizujesz przyjaznie z podobnie my[lcymi osobami i stajesz si cz[ci wsp�lnoty.</p>
-				</div>
-
-				<div class="benefit-card">
-					<div class="benefit-icon">=4</div>
-					<h3>Kontakt z koDmi</h3>
-					<p>Pracujesz z piknymi zwierztami, uczysz si o ich naturze i budCjesz z nimi wiz.</p>
-				</div>
-
-				<div class="benefit-card">
-					<div class="benefit-icon"><�</div>
-					<h3>Satysfakcja</h3>
-					<p>Do[wiadczasz rado[ci z pomagania i widzisz konkretne efekty swojej pracy.</p>
-				</div>
-
-				<div class="benefit-card">
-					<div class="benefit-icon">=�</div>
-					<h3>Certyfikaty</h3>
-					<p>Otrzymujesz za[wiadczenia o wolontariacie przydatne w CV i podczas rekrutacji.</p>
-				</div>
+		<!-- Why Volunteer Section -->
+		<section class="mb-16">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+					Dlaczego warto zostać <span class="text-primary-600">wolontariuszem</span>?
+				</h2>
+				<p class="text-gray-600 max-w-2xl mx-auto">
+					Wolontariat to nie tylko pomaganie innym, ale także osobisty rozwój i niezapomniane doświadczenia.
+				</p>
 			</div>
-		</section>
 
-		<section class="tasks-section">
-			<h2>Czym zajmuj si nasi wolontariusze?</h2>
-			<div class="tasks-container">
-				<div class="task-category">
-					<h3>=4 Opieka nad koDmi</h3>
-					<ul>
-						<li>Karmienie i pojenie koni</li>
-						<li>Czyszczenie i pielgnacja</li>
-						<li>Przygotowywanie koni do zaj</li>
-						<li>Pomoc przy treningu podstawowym</li>
-						<li>Utrzymanie czysto[ci w stajni</li>
-					</ul>
-				</div>
-
-				<div class="task-category">
-					<h3>=h� Wsparcie podczas terapii</h3>
-					<ul>
-						<li>Asystowanie hipoterapeucie</li>
-						<li>Prowadzenie konia pod nadzorem</li>
-						<li>Pomoc w przygotowaniu sprztu</li>
-						<li>Opieka nad uczestnikami</li>
-						<li>Dokumentowanie postp�w</li>
-					</ul>
-				</div>
-
-				<div class="task-category">
-					<h3><� Organizacja wydarzeD</h3>
-					<ul>
-						<li>Przygotowywanie biw0k�w</li>
-						<li>Pomoc podczas spByw�w kajakowych</li>
-						<li>Organizacja mecz�w piBkarskich</li>
-						<li>Wsp�Btworzenie imprez integracyjnych</li>
-						<li>Pomoc w wydarzeniach fundraisingowych</li>
-					</ul>
-				</div>
-
-				<div class="task-category">
-					<h3>=� Zadania administracyjne</h3>
-					<ul>
-						<li>Prowadzenie dokumentacji</li>
-						<li>Pomoc w kontakcie z rodzicami</li>
-						<li>Wsparcie przy zapisach</li>
-						<li>Promocja w mediach spoBeczno[ciowych</li>
-						<li>TBumaczenia i korekty tekst�w</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<section class="requirements-section">
-			<h2>KB> mo|e zosta wolontariuszem?</h2>
-			<div class="requirements-content">
-				<div class="requirement-group">
-					<h3>Wymagania podstawowe</h3>
-					<ul>
-						<li><strong>Wiek:</strong> Minimum 16 lat (mBodsi za zgod rodzic�w)</li>
-						<li><strong>Zaanga|owanie:</strong> Minimum 4 godziny miesicznie</li>
-						<li><strong>Regularno[:</strong> StaBa dostpno[ w uzgodnionych terminach</li>
-						<li><strong>Odpowiedzialno[:</strong> Punktualno[ i rzetelno[</li>
-						<li><strong>Komunikacja:</strong> Podstawowa znajomo[ jzyka polskiego</li>
-					</ul>
-				</div>
-
-				<div class="requirement-group">
-					<h3>Cechy osobowo[ci</h3>
-					<ul>
-						<li><strong>Empatia:</strong> Zrozumienie dla potrzeb os�b niepeBnosprawnych</li>
-						<li><strong>Cierpliwo[:</strong> Spok�j w trudnych sytuacjach</li>
-						<li><strong>Pozytywne nastawienie:</strong> Optymizm i energia</li>
-						<li><strong>Praca w zespole:</strong> Umiejtno[ wsp�Bpracy</li>
-						<li><strong>Otwarto[:</strong> Ch nauki i rozwoju</li>
-					</ul>
-				</div>
-
-				<div class="requirement-group">
-					<h3>Przygotowanie</h3>
-					<ul>
-						<li><strong>Szkolenie:</strong> UdziaB w bezpBatnym szkoleniu dla wolontariuszy</li>
-						<li><strong>BezpieczeDstwo:</strong> Podstawy BHP i pierwszej pomocy</li>
-						<li><strong>Konie:</strong> Wprowadzenie do pracy z koDmi</li>
-						<li><strong>NiepeBnosprawno[:</strong> Podstawowa wiedza o dysfunkcjach</li>
-						<li><strong>Procedury:</strong> Zapoznanie z regulaminem organizacji</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<section class="types-section">
-			<h2>Rodzaje wolontariatu</h2>
-			<div class="types-grid">
-				<div class="type-card">
-					<h3><� Studencki</h3>
-					<p><strong>Dla student�w</strong> kierunk�w medycznych, pedagogicznych, weterynaryjnych</p>
-					<ul>
-						<li>Elastyczne godziny</li>
-						<li>Zwizane z kierunkiem studi�w</li>
-						<li>Mo|liwo[ praktyk</li>
-						<li>Mentoring od specjalist�w</li>
-					</ul>
-				</div>
-
-				<div class="type-card">
-					<h3>=h=� DorosBy</h3>
-					<p><strong>Dla os�b pracujcych</strong> chccych pomaga w wolnym czasie</p>
-					<ul>
-						<li>Weekendy i wieczory</li>
-						<li>Wykorzystanie umiejtno[ci zawodowych</li>
-						<li>Mo|liwo[ specjalizacji</li>
-						<li>Mentoring mBodszych wolontariuszy</li>
-					</ul>
-				</div>
-
-				<div class="type-card">
-					<h3>=h=i=g=f Rodzinny</h3>
-					<p><strong>Dla caBych rodzin</strong> z dziemi od 12. roku |ycia</p>
-					<ul>
-						<li>Wsp�lne dziaBania</li>
-						<li>Budowanie warto[ci</li>
-						<li>Nauka odpowiedzialno[ci</li>
-						<li>Pozytywny przykBad</li>
-					</ul>
-				</div>
-
-				<div class="type-card">
-					<h3><� Korporacyjny</h3>
-					<p><strong>Dla firm</strong> realizujcych programy CSR</p>
-					<ul>
-						<li>ZespoBowe projekty</li>
-						<li>Wydarzenia integracyjne</li>
-						<li>Wsparcie finansowe</li>
-						<li>PR i marketing</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<section class="testimonials-section">
-			<h2>Co m�wi nasi wolontariusze?</h2>
-			<div class="testimonials-grid">
-				<div class="testimonial-card">
-					<div class="quote">"Wolontariat w hipoterapii to najlepsze do[wiadczenie w moim |yciu. Widz, jak konie pomagaj dzieciom, i to dodaje mi siBy do dziaBania."</div>
-					<div class="author"> Anna, studentka psychologii</div>
-				</div>
-
-				<div class="testimonial-card">
-					<div class="quote">"Jako in|ynier rzadko mam kontakt z ludzmi. Tutaj ucz si empatii i cierpliwo[ci. To bezcenne."</div>
-					<div class="author"> Marek, wolontariusz od 3 lat</div>
-				</div>
-
-				<div class="testimonial-card">
-					<div class="quote">"Moja c�rka bardzo si zmieniBa, odkd pomagamy razem. NauczyBa si odpowiedzialno[ci i wsp�Bczucia."</div>
-					<div class="author"> Joanna, wolontariuszka z c�rk</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="steps-section">
-			<h2>Jak zosta wolontariuszem?</h2>
-			<div class="steps-timeline">
-				<div class="step-item">
-					<div class="step-number">1</div>
-					<div class="step-content">
-						<h3>Aplikacja</h3>
-						<p>WypeBnij formularz zgBoszeniowy online lub skontaktuj si z nami telefonicznie.</p>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div class="card p-6 text-center group hover:shadow-lg transition-all duration-300">
+					<div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-200 transition-colors">
+						<svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+						</svg>
 					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Pomagasz innym</h3>
+					<p class="text-gray-600 leading-relaxed">
+						Twoje działania bezpośrednio wpływają na poprawę jakości życia osób niepełnosprawnych i ich rodzin.
+					</p>
 				</div>
 
-				<div class="step-item">
-					<div class="step-number">2</div>
-					<div class="step-content">
-						<h3>Rozmowa</h3>
-						<p>Spotkanie z koordynatorem wolontariuszy - poznajemy si i omawiamy oczekiwania.</p>
+				<div class="card p-6 text-center group hover:shadow-lg transition-all duration-300">
+					<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
+						<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+						</svg>
 					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Rozwijasz się</h3>
+					<p class="text-gray-600 leading-relaxed">
+						Zdobywasz cenne doświadczenia, rozwijasz umiejętności interpersonalne i uczysz się odpowiedzialności.
+					</p>
 				</div>
 
-				<div class="step-item">
-					<div class="step-number">3</div>
-					<div class="step-content">
-						<h3>Szkolenie</h3>
-						<p>2-dniowe bezpBatne szkolenie: BHP, praca z koDmi, podstawy hipoterapii.</p>
+				<div class="card p-6 text-center group hover:shadow-lg transition-all duration-300">
+					<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
+						<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+						</svg>
 					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Poznajesz ludzi</h3>
+					<p class="text-gray-600 leading-relaxed">
+						Nawiązujesz przyjaźnie z podobnie myślącymi osobami i stajesz się częścią wspólnoty.
+					</p>
 				</div>
 
-				<div class="step-item">
-					<div class="step-number">4</div>
-					<div class="step-content">
-						<h3>Pierwsze kroki</h3>
-						<p>Zaczynasz pod opiek do[wiadczonego wolontariusza lub pracownika.</p>
+				<div class="card p-6 text-center group hover:shadow-lg transition-all duration-300">
+					<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-200 transition-colors">
+						<svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
 					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Kontakt z końmi</h3>
+					<p class="text-gray-600 leading-relaxed">
+						Pracujesz z pięknymi zwierzętami, uczysz się o ich naturze i budujesz z nimi więź.
+					</p>
 				</div>
 
-				<div class="step-item">
-					<div class="step-number">5</div>
-					<div class="step-content">
-						<h3>Samodzielno[</h3>
-						<p>Po okresie wprowadzajcym pracujesz samodzielnie w wybranym obszarze.</p>
+				<div class="card p-6 text-center group hover:shadow-lg transition-all duration-300">
+					<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
+						<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h8m-5-14S5 5 5 10.5a7.5 7.5 0 1015 0C20 5 14 5 14 5z"></path>
+						</svg>
 					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Satysfakcja</h3>
+					<p class="text-gray-600 leading-relaxed">
+						Doświadczasz radości z pomagania i widzisz konkretne efekty swojej pracy.
+					</p>
+				</div>
+
+				<div class="card p-6 text-center group hover:shadow-lg transition-all duration-300">
+					<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-200 transition-colors">
+						<svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Zdobywasz wiedzę</h3>
+					<p class="text-gray-600 leading-relaxed">
+						Uczysz się o hipoterapii, rehabilitacji i pracy z osobami niepełnosprawnymi.
+					</p>
 				</div>
 			</div>
 		</section>
 
-		<section class="current-volunteers-section">
-			<h2>Nasz zesp�B wolontariuszy</h2>
-			<div class="team-stats">
-				<div class="stat-item">
-					<span class="stat-number">30+</span>
-					<span class="stat-label">Aktywnych wolontariuszy</span>
+		<!-- Who Can Volunteer Section -->
+		<section class="card p-8 mb-16">
+			<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+				Kto może zostać <span class="text-primary-600">wolontariuszem</span>?
+			</h2>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+						<svg class="w-6 h-6 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
+						Wymagania podstawowe
+					</h3>
+					<ul class="space-y-3 text-gray-700">
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+							</svg>
+							Ukończone 16 lat (osoby niepełnoletnie za zgodą rodziców)
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+							</svg>
+							Chęć niesienia pomocy osobom niepełnosprawnym
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+							</svg>
+							Cierpliwość i empatia
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+							</svg>
+							Systematyczność i odpowiedzialność
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+							</svg>
+							Dobry stan zdrowia (zaświadczenie lekarskie)
+						</li>
+					</ul>
 				</div>
-				<div class="stat-item">
-					<span class="stat-number">15</span>
-					<span class="stat-label">Student�w</span>
-				</div>
-				<div class="stat-item">
-					<span class="stat-number">8</span>
-					<span class="stat-label">Os�b pracujcych</span>
-				</div>
-				<div class="stat-item">
-					<span class="stat-number">5</span>
-					<span class="stat-label">Rodzin</span>
+
+				<div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+						<svg class="w-6 h-6 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+						</svg>
+						Mile widziane
+					</h3>
+					<ul class="space-y-3 text-gray-700">
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+							</svg>
+							Doświadczenie w pracy z końmi
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+							</svg>
+							Wykształcenie w kierunku rehabilitacji lub pedagogiki
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+							</svg>
+							Doświadczenie w pracy z osobami niepełnosprawnymi
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+							</svg>
+							Znajomość języka migowego (PJM)
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+							</svg>
+							Prawo jazdy (pomoc w transporcie)
+						</li>
+					</ul>
 				</div>
 			</div>
-			<p class="team-description">
-				Nasz zesp�B to r�|norodna grupa os�b z r�|nym do[wiadczeniem i umiejtno[ciami.
-				Aczy nas wsp�lna pasja do pomagania i miBo[ do koni.
+		</section>
+
+		<!-- How to Join Section -->
+		<section class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-white mb-16">
+			<div class="text-center mb-8">
+				<h2 class="text-2xl md:text-3xl font-bold mb-4">
+					Jak zostać <span class="text-primary-200">wolontariuszem</span>?
+				</h2>
+				<p class="text-primary-100 max-w-2xl mx-auto">
+					Proces rekrutacji jest prosty i przyjazny. Zadbamy o to, żebyś czuł się przygotowany do pracy.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+				<div class="text-center">
+					<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-xl font-bold">1</span>
+					</div>
+					<h3 class="font-semibold mb-2">Zgłoś się</h3>
+					<p class="text-primary-100 text-sm">Skontaktuj się z nami telefonicznie lub mailowo</p>
+				</div>
+
+				<div class="text-center">
+					<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-xl font-bold">2</span>
+					</div>
+					<h3 class="font-semibold mb-2">Spotkanie</h3>
+					<p class="text-primary-100 text-sm">Umówimy się na rozmowę i poznanie ośrodka</p>
+				</div>
+
+				<div class="text-center">
+					<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-xl font-bold">3</span>
+					</div>
+					<h3 class="font-semibold mb-2">Szkolenie</h3>
+					<p class="text-primary-100 text-sm">Przeszkolenie z podstaw hipoterapii i bezpieczeństwa</p>
+				</div>
+
+				<div class="text-center">
+					<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-xl font-bold">4</span>
+					</div>
+					<h3 class="font-semibold mb-2">Start!</h3>
+					<p class="text-primary-100 text-sm">Rozpoczynasz pracę pod opieką doświadczonego terapeuty</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Current Volunteers Section -->
+		<section class="card p-8 mb-16">
+			<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+				Nasi <span class="text-primary-600">wolontariusze</span>
+			</h2>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div class="text-center">
+					<div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-2xl font-bold text-white">AK</span>
+					</div>
+					<h3 class="font-semibold text-gray-900 mb-2">Anna Kowalska</h3>
+					<p class="text-primary-600 text-sm mb-3">Wolontariusz od 2019</p>
+					<p class="text-gray-600 text-sm leading-relaxed">
+						"Hipoterapia to moja pasja. Każdy dzień przynosi nowe wyzwania i radość z pomagania."
+					</p>
+				</div>
+
+				<div class="text-center">
+					<div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-2xl font-bold text-white">MN</span>
+					</div>
+					<h3 class="font-semibold text-gray-900 mb-2">Marcin Nowak</h3>
+					<p class="text-primary-600 text-sm mb-3">Wolontariusz od 2020</p>
+					<p class="text-gray-600 text-sm leading-relaxed">
+						"Praca z końmi i dziećmi daje niesamowitą satysfakcję. To zmienia życie - moje i uczestników."
+					</p>
+				</div>
+
+				<div class="text-center">
+					<div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-2xl font-bold text-white">KW</span>
+					</div>
+					<h3 class="font-semibold text-gray-900 mb-2">Katarzyna Wiśniewska</h3>
+					<p class="text-primary-600 text-sm mb-3">Wolontariusz od 2021</p>
+					<p class="text-gray-600 text-sm leading-relaxed">
+						"Każdy uśmiech dziecka na koniu to nagroda za poświęcony czas. Warto być częścią tego zespołu."
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact CTA -->
+		<section class="bg-gray-50 rounded-2xl p-8 text-center">
+			<div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+				<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+				</svg>
+			</div>
+			<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+				Chcesz zostać <span class="text-primary-600">wolontariuszem</span>?
+			</h2>
+			<p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+				Skontaktuj się z nami już dziś! Chętnie odpowiemy na wszystkie pytania i umówimy się na spotkanie.
 			</p>
-		</section>
-
-		<section class="join-section">
-			<h2>ZostaD cz[ci naszej rodziny!</h2>
-			<p>
-				Je[li chcesz robi co[ znaczcego, pomaga innym i rozwija si osobi[cie,
-				czekamy na Ciebie. DoBcz do nas ju| dzi[!
-			</p>
-			<div class="join-buttons">
-				<a href="/kontakt/" class="join-button primary">Aplikuj teraz</a>
-				<a href="/kontakt/" class="join-button secondary">Zadaj pytanie</a>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/kontakt/" class="btn bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 text-lg inline-flex items-center">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+					</svg>
+					Skontaktuj się z nami
+				</a>
+				<a href="mailto:wolontariat@hipoterapia.bydgoszcz.pl" class="btn bg-white hover:bg-gray-100 text-primary-600 border border-primary-600 px-8 py-4 text-lg inline-flex items-center">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+					</svg>
+					Napisz e-mail
+				</a>
 			</div>
 		</section>
 	</div>
 </MainLayout>
-
-<style>
-	.volunteers-content {
-		max-width: 1000px;
-		margin: 0 auto;
-	}
-
-	.breadcrumb {
-		margin-bottom: 2rem;
-	}
-
-	.breadcrumb a {
-		color: var(--primary-color);
-		text-decoration: none;
-		font-weight: 600;
-		transition: color 0.3s ease;
-	}
-
-	.breadcrumb a:hover {
-		color: var(--secondary-color);
-	}
-
-	.intro {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		margin-bottom: 2rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-left: 5px solid var(--secondary-color);
-	}
-
-	.lead {
-		font-size: 1.2rem;
-		line-height: 1.8;
-		color: var(--text-color);
-		margin: 0;
-	}
-
-	h2 {
-		color: var(--primary-color);
-		margin-bottom: 2rem;
-		padding-bottom: 0.5rem;
-		border-bottom: 2px solid var(--secondary-color);
-	}
-
-	.benefits-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-		margin-top: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.benefits-grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.benefit-card {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		text-align: center;
-		transition: transform 0.3s ease;
-	}
-
-	.benefit-card:hover {
-		transform: translateY(-5px);
-	}
-
-	.benefit-icon {
-		font-size: 3rem;
-		margin-bottom: 1rem;
-	}
-
-	.benefit-card h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-	}
-
-	.benefit-card p {
-		margin: 0;
-		line-height: 1.6;
-	}
-
-	.tasks-container {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.tasks-container {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.task-category {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-top: 4px solid var(--secondary-color);
-	}
-
-	.task-category h3 {
-		color: var(--primary-color);
-		margin-bottom: 1.5rem;
-		font-size: 1.2rem;
-	}
-
-	.task-category ul {
-		list-style-position: inside;
-		line-height: 1.8;
-		margin: 0;
-	}
-
-	.requirements-content {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.requirements-content {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.requirement-group {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-	}
-
-	.requirement-group h3 {
-		color: var(--primary-color);
-		margin-bottom: 1.5rem;
-		text-align: center;
-	}
-
-	.requirement-group ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	.requirement-group li {
-		padding: 0.5rem 0;
-		border-bottom: 1px solid #eee;
-		line-height: 1.6;
-	}
-
-	.requirement-group li:last-child {
-		border-bottom: none;
-	}
-
-	.types-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.types-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.type-card {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-left: 4px solid var(--secondary-color);
-	}
-
-	.type-card h3 {
-		color: var(--primary-color);
-		margin-bottom: 0.5rem;
-		font-size: 1.3rem;
-	}
-
-	.type-card p {
-		margin-bottom: 1.5rem;
-		font-weight: 600;
-		color: #666;
-	}
-
-	.type-card ul {
-		list-style-position: inside;
-		line-height: 1.6;
-		margin: 0;
-	}
-
-	.testimonials-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.testimonials-grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.testimonial-card {
-		background: #f8f9fa;
-		padding: 2rem;
-		border-radius: 8px;
-		border-left: 4px solid var(--primary-color);
-	}
-
-	.quote {
-		font-style: italic;
-		margin-bottom: 1rem;
-		line-height: 1.8;
-		color: #444;
-	}
-
-	.author {
-		font-weight: 600;
-		color: var(--primary-color);
-	}
-
-	.steps-timeline {
-		margin-top: 2rem;
-	}
-
-	.step-item {
-		display: flex;
-		margin-bottom: 2rem;
-		position: relative;
-	}
-
-	.step-item:not(:last-child):after {
-		content: "";
-		position: absolute;
-		left: 20px;
-		top: 50px;
-		height: calc(100% + 1rem);
-		width: 2px;
-		background: var(--secondary-color);
-		opacity: 0.3;
-	}
-
-	.step-number {
-		min-width: 40px;
-		height: 40px;
-		background: var(--primary-color);
-		color: white;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-weight: bold;
-		margin-right: 1.5rem;
-		flex-shrink: 0;
-	}
-
-	.step-content {
-		flex: 1;
-		background: white;
-		padding: 1.5rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-	}
-
-	.step-content h3 {
-		color: var(--primary-color);
-		margin-bottom: 0.5rem;
-	}
-
-	.step-content p {
-		margin: 0;
-		line-height: 1.6;
-	}
-
-	.team-stats {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 2rem;
-		margin: 2rem 0;
-	}
-
-	.stat-item {
-		background: linear-gradient(135deg, var(--primary-color) 0%, #4a7c59 100%);
-		color: white;
-		padding: 2rem 1rem;
-		border-radius: 8px;
-		text-align: center;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-	}
-
-	.stat-number {
-		display: block;
-		font-size: 2.5rem;
-		font-weight: bold;
-		margin-bottom: 0.5rem;
-	}
-
-	.stat-label {
-		display: block;
-		font-size: 0.9rem;
-		opacity: 0.95;
-	}
-
-	.team-description {
-		text-align: center;
-		font-size: 1.1rem;
-		line-height: 1.8;
-		color: #666;
-		margin-top: 2rem;
-	}
-
-	.join-section {
-		background: linear-gradient(135deg, var(--primary-color) 0%, #4a7c59 100%);
-		color: white;
-		padding: 3rem 2rem;
-		border-radius: 8px;
-		text-align: center;
-		margin-top: 3rem;
-	}
-
-	.join-section h2 {
-		color: white;
-		border-bottom: 2px solid rgba(255,255,255,0.3);
-		padding-bottom: 1rem;
-		margin-bottom: 1rem;
-	}
-
-	.join-section p {
-		font-size: 1.1rem;
-		margin-bottom: 2rem;
-		opacity: 0.95;
-		line-height: 1.8;
-	}
-
-	.join-buttons {
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	.join-button {
-		padding: 0.75rem 2rem;
-		border-radius: 4px;
-		text-decoration: none;
-		font-weight: 600;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-		display: inline-block;
-	}
-
-	.join-button.primary {
-		background: var(--secondary-color);
-		color: var(--primary-color);
-	}
-
-	.join-button.secondary {
-		background: transparent;
-		color: white;
-		border: 2px solid white;
-	}
-
-	.join-button:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-	}
-
-	.join-button.secondary:hover {
-		background: white;
-		color: var(--primary-color);
-	}
-</style>

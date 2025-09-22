@@ -3,435 +3,258 @@ import MainLayout from '../../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Nasze konie">
-	<div class="horses-content">
-		<nav class="breadcrumb">
-			<a href="/oferta/">� Powr�t do Oferta</a>
+	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<!-- Breadcrumb -->
+		<nav class="mb-8">
+			<a href="/oferta/" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors">
+				<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+				</svg>
+				Powrót do Oferta
+			</a>
 		</nav>
 
-		<section class="intro">
-			<p class="lead">
-				Nasze konie to najwa|niejsi czBonkowie zespoBu terapeutycznego. Ka|dy z nich przeszedB
-				specjalne szkolenie i certyfikacj, aby m�c bezpiecznie pracowa z osobami niepeBnosprawnymi.
+		<!-- Header -->
+		<section class="card p-8 text-center mb-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Nasze konie</h1>
+			<p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+				Nasze konie to najważniejsi członkowie zespołu terapeutycznego. Każdy z nich przeszedł
+				specjalne szkolenie i certyfikację, aby móc bezpiecznie pracować z osobami niepełnosprawnymi.
 			</p>
 		</section>
 
-		<section class="horses-section">
-			<h2>Poznaj nasze konie terapeutyczne</h2>
+		<!-- Active Horses -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
+				Poznaj nasze konie terapeutyczne
+			</h2>
 
-			<div class="horse-card featured">
-				<div class="horse-info">
-					<h3>Nepal</h3>
-					<div class="horse-details">
-						<span class="horse-breed">Konik Hucul</span>
-						<span class="horse-age">WaBach, ur. 2014</span>
-					</div>
-					<p>
-						Nasz najnowszy czBonek zespoBu, kt�ry doBczyB do nas niedawno. Nepal to spokojny
-						i cierpliwy koD rasy huculskiej, idealny do pracy z dziemi i osobami z niepeBnosprawno[ciami.
-						HucuBy s znane ze swojego Bagodnego charakteru i wytrzymaBo[ci.
-					</p>
-					<div class="horse-traits">
-						<span class="trait">Spokojny</span>
-						<span class="trait">Cierpliwy</span>
-						<span class="trait">Przyjazny dzieciom</span>
+			<div class="space-y-8">
+				<!-- Nepal -->
+				<div class="card p-6 border-l-4 border-green-500">
+					<div class="flex items-start space-x-4">
+						<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+							<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+							</svg>
+						</div>
+						<div class="flex-1">
+							<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+								<h3 class="text-2xl font-bold text-gray-900">Nepal</h3>
+								<div class="inline-block bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+									Wałach, ur. 2014
+								</div>
+							</div>
+							<p class="text-gray-700 leading-relaxed mb-4">
+								Nasz najnowszy członek zespołu, który dołączył do nas niedawno. Nepal to spokojny
+								i cierpliwy koń rasy huculskiej, idealny do pracy z dziećmi i osobami z niepełnosprawnościami.
+								Hucuły są znane ze swojego łagodnego charakteru i wytrzymałości.
+							</p>
+							<div class="bg-gray-50 p-4 rounded-lg">
+								<h4 class="font-semibold text-gray-900 mb-2">Cechy charakterystyczne:</h4>
+								<ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+									<li>Rasa: Hucuł</li>
+									<li>Wiek: 10 lat (doświadczony koń w sile wieku)</li>
+									<li>Charakter: Spokojny, cierpliwy, łagodny</li>
+									<li>Specjalizacja: Praca z dziećmi i osobami z niepełnosprawnościami</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="tribute-section">
-				<h3>W pamici - Tofik</h3>
-				<p>
-					Z wielkim szacunkiem wspominamy Tofika, kt�ry przez 21 lat wiernie sBu|yB
-					w naszym o[rodku. ByB pierwszym koniem, kt�ry rozpoczB prac terapeutyczn
-					w naszym Towarzystwie. Tofik odszedB w 2024 roku, pozostawiajc po sobie
-					niezatarte wspomnienia u setek os�b, kt�rym pomagaB.
-				</p>
 			</div>
 		</section>
 
-		<section class="horse-requirements">
-			<h2>Wymagania dla koni terapeutycznych</h2>
-			<div class="requirements-grid">
-				<div class="requirement-item">
-					<h3>Temperament</h3>
-					<ul>
-						<li>Spokojny i zr�wnowa|ony charakter</li>
-						<li>Odporno[ na haBas i nagBe ruchy</li>
-						<li>Cierpliwo[ w kontakcie z dziemi</li>
-						<li>Brak agresywnych zachowaD</li>
-					</ul>
-				</div>
+		<!-- Memorial Section -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-gray-300">
+				Wspomnienie
+			</h2>
 
-				<div class="requirement-item">
-					<h3>Szkolenie</h3>
-					<ul>
-						<li>Specjalistyczne przygotowanie do hipoterapii</li>
-						<li>Oswojenie z pomocami terapeutycznymi</li>
-						<li>Nauka pracy w r�|nym tempie</li>
-						<li>Regularne testy behawioralne</li>
-					</ul>
+			<div class="bg-gray-50 border-l-4 border-gray-400 p-6 rounded-lg">
+				<div class="flex items-start space-x-4">
+					<div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0">
+						<svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+						</svg>
+					</div>
+					<div class="flex-1">
+						<h3 class="text-xl font-bold text-gray-800 mb-2">Tofik (2003-2024)</h3>
+						<div class="text-gray-600 text-sm mb-4">✝ Z szacunkiem wspominamy</div>
+						<p class="text-gray-700 leading-relaxed">
+							Z wielkim szacunkiem wspominamy Tofika, który przez 21 lat wiernie służył
+							w naszym ośrodku. Był pierwszym koniem, który rozpoczął pracę terapeutyczną
+							w naszym Towarzystwie. Tofik odszedł w 2024 roku, pozostawiając po sobie
+							niezatarte wspomnienia u setek osób, którym pomagał.
+						</p>
+					</div>
 				</div>
+			</div>
+		</section>
 
-				<div class="requirement-item">
-					<h3>Zdrowie</h3>
-					<ul>
+		<!-- Horse Care -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
+				Opieka nad końmi
+			</h2>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div class="card p-6">
+					<div class="flex items-center mb-4">
+						<svg class="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
+						<h3 class="text-lg font-bold text-gray-900">Opieka weterynaryjna</h3>
+					</div>
+					<ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
 						<li>Regularne badania weterynaryjne</li>
-						<li>Szczepienia zgodnie z kalendarzem</li>
-						<li>Kontrola kondycji fizycznej</li>
-						<li>Odpowiednia dieta i suplementacja</li>
+						<li>Szczepienia profilaktyczne</li>
+						<li>Kontrola stanu zdrowia</li>
+						<li>Profesjonalna opieka podologiczna</li>
 					</ul>
 				</div>
 
-				<div class="requirement-item">
-					<h3>Budowa</h3>
-					<ul>
-						<li>Odpowiednia wysoko[ (130-160 cm)</li>
-						<li>Stabilny ch�d we wszystkich chodach</li>
-						<li>WytrzymaBo[ na dBu|sz prac</li>
-						<li>PrawidBowa budowa krgosBupa</li>
+				<div class="card p-6">
+					<div class="flex items-center mb-4">
+						<svg class="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+						</svg>
+						<h3 class="text-lg font-bold text-gray-900">Codzienna pielęgnacja</h3>
+					</div>
+					<ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
+						<li>Regularne szczotkowanie i czyszczenie</li>
+						<li>Właściwe karmienie i pojenie</li>
+						<li>Spacery i ruch na świeżym powietrzu</li>
+						<li>Dbanie o czystość i higienę</li>
+					</ul>
+				</div>
+
+				<div class="card p-6">
+					<div class="flex items-center mb-4">
+						<svg class="w-6 h-6 text-purple-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-2m-12 0H3m2 0h2M9 7h6m-6 4h6m-6 4h6"></path>
+						</svg>
+						<h3 class="text-lg font-bold text-gray-900">Szkolenie terapeutyczne</h3>
+					</div>
+					<ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
+						<li>Specjalistyczne przygotowanie do pracy z niepełnosprawnymi</li>
+						<li>Trening reakcji na różne sytuacje</li>
+						<li>Nauka tolerancji na nietypowe zachowania</li>
+						<li>Certyfikacja jako koń terapeutyczny</li>
+					</ul>
+				</div>
+
+				<div class="card p-6">
+					<div class="flex items-center mb-4">
+						<svg class="w-6 h-6 text-red-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+						</svg>
+						<h3 class="text-lg font-bold text-gray-900">Bezpieczeństwo</h3>
+					</div>
+					<ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
+						<li>Stałe monitorowanie zachowania koni</li>
+						<li>Kontrola sprzętu jeździeckiego</li>
+						<li>Bezpieczne warunki przebywania</li>
+						<li>Procedury awaryjne i pierwszej pomocy</li>
 					</ul>
 				</div>
 			</div>
 		</section>
 
-		<section class="care-section">
-			<h2>Opieka nad koDmi</h2>
-			<div class="care-content">
-				<div class="care-item">
-					<h3>Codzienna opieka</h3>
-					<p>
-						Nasze konie otrzymuj najlepsz mo|liw opiek. Codziennie s karmione,
-						pielgnowane i sprawdzane pod ktem zdrowia. Ka|dy koD ma sw�j indywidualny
-						plan opieki dostosowany do jego potrzeb.
-					</p>
-				</div>
+		<!-- Selection Criteria -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
+				Kryteria wyboru koni terapeutycznych
+			</h2>
 
-				<div class="care-item">
-					<h3>Wypas i ruch</h3>
-					<p>
-						Konie maj zapewniony regularny wypas na [wie|ym powietrzu oraz czas
-						na swobodny ruch. To kluczowe dla ich dobrego samopoczucia fizycznego
-						i psychicznego.
-					</p>
-				</div>
-
-				<div class="care-item">
-					<h3>Opieka weterynaryjna</h3>
-					<p>
-						Wsp�Bpracujemy z do[wiadczonymi lekarzami weterynarii, kt�rzy regularnie
-						badaj nasze konie i monitoruj ich stan zdrowia. Wszystkie konie
-						s ubezpieczone i maj aktualne dokumenty zdrowia.
-					</p>
-				</div>
-			</div>
-		</section>
-
-		<section class="adoption-section">
-			<h2>Wspieraj nasze konie</h2>
-			<div class="adoption-content">
-				<p>
-					Utrzymanie koni terapeutycznych wi|e si ze znacznymi kosztami. Mo|esz wesprze
-					nasze konie poprzez:
+			<div class="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6">
+				<p class="text-gray-700 leading-relaxed">
+					Nie każdy koń nadaje się do pracy terapeutycznej. Nasze konie są starannie
+					dobierane pod kątem charakteru, temparamentu i zdolności do pracy z osobami niepełnosprawnymi.
 				</p>
-				<div class="support-options">
-					<div class="support-option">
-						<h3>Adopcja symboliczna</h3>
-						<p>ZostaD opiekunem jednego z naszych koni</p>
+			</div>
+
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<div class="space-y-4">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">Cechy charakteru</h3>
+					<div class="space-y-3">
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+							</svg>
+							<span class="text-gray-700 text-sm">Spokojny i zrównoważony temperament</span>
+						</div>
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+							</svg>
+							<span class="text-gray-700 text-sm">Cierpliwość i tolerancja</span>
+						</div>
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+							</svg>
+							<span class="text-gray-700 text-sm">Łagodność w kontakcie z ludźmi</span>
+						</div>
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+							</svg>
+							<span class="text-gray-700 text-sm">Brak skłonności do płoszenia się</span>
+						</div>
 					</div>
-					<div class="support-option">
-						<h3>Darowizny</h3>
-						<p>Wsparcie finansowe na pasz, opiek wet., sprzt</p>
-					</div>
-					<div class="support-option">
-						<h3>1,5% podatku</h3>
-						<p>Przeka| sw�j 1,5% podatku na rzecz koni</p>
-					</div>
-					<div class="support-option">
-						<h3>Wolontariat</h3>
-						<p>Pomoc przy codziennej opiece nad koDmi</p>
+				</div>
+
+				<div class="space-y-4">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">Wymagania fizyczne</h3>
+					<div class="space-y-3">
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+							</svg>
+							<span class="text-gray-700 text-sm">Zdrowie i kondycja fizyczna</span>
+						</div>
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+							</svg>
+							<span class="text-gray-700 text-sm">Odpowiedni wzrost i budowa</span>
+						</div>
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+							</svg>
+							<span class="text-gray-700 text-sm">Stabilne i równe chody</span>
+						</div>
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+							</svg>
+							<span class="text-gray-700 text-sm">Wiek między 8 a 18 lat</span>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="cta-section">
-			<h2>Chcesz pozna nasze konie?</h2>
-			<p>
-				Odwiedz nas w o[rodku lub skontaktuj si, aby dowiedzie si wicej
-				o naszych wspaniaBych terapeutach na czterech nogach.
+		<!-- Contact CTA -->
+		<section class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-center text-white">
+			<div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+				<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+				</svg>
+			</div>
+			<h2 class="text-3xl font-bold mb-4">Chcesz poznać nasze konie?</h2>
+			<p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+				Zapraszamy na zajęcia, podczas których będziecie mogli poznać nasze wspaniałe konie
+				i przekonać się o ich wyjątkowych umiejętnościach terapeutycznych.
 			</p>
-			<a href="/kontakt/" class="cta-button">Um�w wizyt</a>
+			<a href="/kontakt/" class="btn bg-white text-primary-600 hover:bg-gray-100 px-6 py-3 inline-flex items-center">
+				<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+				</svg>
+				Skontaktuj się z nami
+			</a>
 		</section>
 	</div>
 </MainLayout>
-
-<style>
-	.horses-content {
-		max-width: 900px;
-		margin: 0 auto;
-	}
-
-	.breadcrumb {
-		margin-bottom: 2rem;
-	}
-
-	.breadcrumb a {
-		color: var(--primary-color);
-		text-decoration: none;
-		font-weight: 600;
-		transition: color 0.3s ease;
-	}
-
-	.breadcrumb a:hover {
-		color: var(--secondary-color);
-	}
-
-	.intro {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		margin-bottom: 2rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-left: 5px solid var(--secondary-color);
-	}
-
-	.lead {
-		font-size: 1.2rem;
-		line-height: 1.8;
-		color: var(--text-color);
-		margin: 0;
-	}
-
-	h2 {
-		color: var(--primary-color);
-		margin-bottom: 2rem;
-		padding-bottom: 0.5rem;
-		border-bottom: 2px solid var(--secondary-color);
-	}
-
-	.horse-card {
-		background: white;
-		border-radius: 8px;
-		padding: 2rem;
-		margin-bottom: 2rem;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-	}
-
-	.featured {
-		border: 2px solid var(--secondary-color);
-	}
-
-	.horse-info h3 {
-		color: var(--primary-color);
-		font-size: 2rem;
-		margin-bottom: 1rem;
-	}
-
-	.horse-details {
-		display: flex;
-		gap: 1rem;
-		margin-bottom: 1rem;
-		flex-wrap: wrap;
-	}
-
-	.horse-breed,
-	.horse-age {
-		background: var(--secondary-color);
-		color: white;
-		padding: 0.3rem 0.8rem;
-		border-radius: 15px;
-		font-size: 0.85rem;
-		font-weight: 600;
-	}
-
-	.horse-info p {
-		line-height: 1.8;
-		margin-bottom: 1.5rem;
-	}
-
-	.horse-traits {
-		display: flex;
-		gap: 0.5rem;
-		flex-wrap: wrap;
-	}
-
-	.trait {
-		background: #e8f5e8;
-		color: var(--primary-color);
-		padding: 0.3rem 0.8rem;
-		border-radius: 15px;
-		font-size: 0.85rem;
-		font-weight: 600;
-	}
-
-	.tribute-section {
-		background: #fff3e0;
-		padding: 2rem;
-		border-radius: 8px;
-		margin: 2rem 0;
-		border-left: 4px solid #ff9800;
-	}
-
-	.tribute-section h3 {
-		color: #e65100;
-		margin-bottom: 1rem;
-	}
-
-	.tribute-section p {
-		line-height: 1.8;
-		color: #5d4037;
-		font-style: italic;
-		margin: 0;
-	}
-
-	.requirements-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-		margin-top: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.requirements-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.requirement-item {
-		background: white;
-		padding: 1.5rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-top: 3px solid var(--secondary-color);
-	}
-
-	.requirement-item h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-		font-size: 1.2rem;
-	}
-
-	.requirement-item ul {
-		list-style-position: inside;
-		line-height: 1.8;
-		color: var(--text-color);
-	}
-
-	.care-content {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.care-content {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.care-item {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		text-align: center;
-	}
-
-	.care-item h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-	}
-
-	.care-item p {
-		line-height: 1.6;
-		margin: 0;
-	}
-
-	.adoption-content {
-		background: #f8f9fa;
-		padding: 2rem;
-		border-radius: 8px;
-		margin-top: 2rem;
-	}
-
-	.adoption-content p {
-		margin-bottom: 2rem;
-		line-height: 1.8;
-	}
-
-	.support-options {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1rem;
-	}
-
-	@media (min-width: 768px) {
-		.support-options {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.support-option {
-		background: white;
-		padding: 1.5rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		transition: transform 0.3s ease;
-	}
-
-	.support-option:hover {
-		transform: translateY(-3px);
-	}
-
-	.support-option h3 {
-		color: var(--primary-color);
-		margin-bottom: 0.5rem;
-		font-size: 1.1rem;
-	}
-
-	.support-option p {
-		margin: 0;
-		font-size: 0.9rem;
-		color: #666;
-	}
-
-	.cta-section {
-		background: linear-gradient(135deg, var(--primary-color) 0%, #4a7c59 100%);
-		color: white;
-		padding: 3rem 2rem;
-		border-radius: 8px;
-		text-align: center;
-		margin-top: 3rem;
-	}
-
-	.cta-section h2 {
-		color: white;
-		border-bottom: 2px solid rgba(255,255,255,0.3);
-		padding-bottom: 1rem;
-		margin-bottom: 1rem;
-	}
-
-	.cta-section p {
-		font-size: 1.1rem;
-		margin-bottom: 2rem;
-		opacity: 0.95;
-		line-height: 1.8;
-	}
-
-	.cta-button {
-		display: inline-block;
-		background: var(--secondary-color);
-		color: var(--primary-color);
-		padding: 1rem 2rem;
-		border-radius: 4px;
-		text-decoration: none;
-		font-weight: bold;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
-
-	.cta-button:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-	}
-</style>

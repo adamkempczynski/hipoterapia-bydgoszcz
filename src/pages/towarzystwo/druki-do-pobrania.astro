@@ -3,649 +3,422 @@ import MainLayout from '../../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Druki do Pobrania">
-	<div class="documents-content">
-		<nav class="breadcrumb">
-			<a href="/towarzystwo/">ê PowrÛt do Towarzystwo</a>
+	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<!-- Breadcrumb -->
+		<nav class="mb-8">
+			<a href="/towarzystwo/" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors">
+				<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+				</svg>
+				Powr√≥t do Towarzystwo
+			</a>
 		</nav>
 
-		<section class="intro">
-			<p class="lead">
-				Na tej stronie znajduj si wszystkie niezbdne formularze, dokumenty i druki
-				potrzebne do wspÛBpracy z naszym Towarzystwem. Wszystkie dokumenty s dostpne
-				w formacie PDF i mo|na je pobra bezpBatnie.
+		<!-- Header -->
+		<section class="card p-8 text-center mb-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Druki do Pobrania</h1>
+			<p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+				Na tej stronie znajdujƒÖ siƒô wszystkie niezbƒôdne formularze, dokumenty i druki
+				potrzebne do wsp√≥≈Çpracy z naszym Towarzystwem. Wszystkie dokumenty sƒÖ dostƒôpne
+				w formacie PDF i mo≈ºna je pobraƒá bezp≈Çatnie.
 			</p>
 		</section>
 
-		<section class="documents-section">
-			<h2>Dokumenty dla uczestnikÛw</h2>
-			<div class="documents-grid">
-				<div class="document-item">
-					<div class="document-icon">=À</div>
-					<h3>Karta uczestnika hipoterapii</h3>
-					<p>Formularz z danymi osobowymi, medycznymi i informacjami o potrzebach terapeutycznych.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 2 strony " 450 KB</span>
-						<span class="required">Wymagany</span>
+		<!-- Participant Documents -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
+				Dokumenty dla uczestnik√≥w
+			</h2>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<!-- Medical Card -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-start space-x-4">
+						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+							<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Karta uczestnika hipoterapii</h3>
+							<p class="text-gray-600 text-sm mb-4">
+								Formularz z danymi osobowymi, medycznymi i informacjami o potrzebach terapeutycznych.
+							</p>
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-xs text-gray-500">PDF ‚Ä¢ 2 strony ‚Ä¢ 450 KB</span>
+								<span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium">
+									Wymagany
+								</span>
+							</div>
+							<a href="/uploads/docs/karta-uczestnika.pdf" target="_blank"
+							   class="btn bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 text-sm inline-flex items-center">
+								<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+								</svg>
+								Pobierz
+							</a>
+						</div>
 					</div>
-					<a href="/uploads/docs/karta-uczestnika.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
 				</div>
 
-				<div class="document-item">
-					<div class="document-icon"><Â</div>
-					<h3>Ankieta zdrowotna COVID-19</h3>
-					<p>Formularz do wypeBnienia przed ka|dymi zajciami - obowizkowy w zwizku z pandemi.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 1 strona " 180 KB</span>
-						<span class="required">Wymagany</span>
+				<!-- Medical Certificate -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-start space-x-4">
+						<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+							<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Za≈õwiadczenie lekarskie</h3>
+							<p class="text-gray-600 text-sm mb-4">
+								Wz√≥r za≈õwiadczenia o braku przeciwwskaza≈Ñ do udzia≈Çu w hipoterapii.
+							</p>
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-xs text-gray-500">PDF ‚Ä¢ 1 strona ‚Ä¢ 320 KB</span>
+								<span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium">
+									Wymagany
+								</span>
+							</div>
+							<a href="/uploads/docs/zaswiadczenie-lekarskie.pdf" target="_blank"
+							   class="btn bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 text-sm inline-flex items-center">
+								<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+								</svg>
+								Pobierz
+							</a>
+						</div>
 					</div>
-					<a href="/uploads/docs/ankieta-covid19.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
 				</div>
 
-				<div class="document-item">
-					<div class="document-icon">=</div>
-					<h3>Zgoda na przetwarzanie danych osobowych (RODO)</h3>
-					<p>Zgoda na przetwarzanie danych osobowych zgodnie z rozporzdzeniem RODO.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 2 strony " 320 KB</span>
-						<span class="required">Wymagany</span>
+				<!-- Photo Permission -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-start space-x-4">
+						<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+							<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Zgoda na zdjƒôcia</h3>
+							<p class="text-gray-600 text-sm mb-4">
+								Zgoda na wykonywanie zdjƒôƒá podczas zajƒôƒá i ich wykorzystanie w materia≈Çach promocyjnych.
+							</p>
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-xs text-gray-500">PDF ‚Ä¢ 1 strona ‚Ä¢ 280 KB</span>
+								<span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
+									Opcjonalny
+								</span>
+							</div>
+							<a href="/uploads/docs/zgoda-zdjecia.pdf" target="_blank"
+							   class="btn bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 text-sm inline-flex items-center">
+								<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+								</svg>
+								Pobierz
+							</a>
+						</div>
 					</div>
-					<a href="/uploads/docs/zgoda-rodo.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
 				</div>
 
-				<div class="document-item">
-					<div class="document-icon">=¯</div>
-					<h3>Zgoda na wykorzystanie wizerunku</h3>
-					<p>Zgoda na wykonywanie zdj podczas zaj i ich wykorzystanie w materiaBach promocyjnych.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 1 strona " 200 KB</span>
-						<span class="optional">Opcjonalny</span>
+				<!-- Pricing Info -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-start space-x-4">
+						<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+							<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Cennik i informacje o p≈Çatno≈õciach</h3>
+							<p class="text-gray-600 text-sm mb-4">
+								Aktualne ceny zajƒôƒá, sposoby p≈Çatno≈õci i informacje o dostƒôpnych dofinansowaniach.
+							</p>
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-xs text-gray-500">PDF ‚Ä¢ 3 strony ‚Ä¢ 560 KB</span>
+								<span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">
+									Informacyjny
+								</span>
+							</div>
+							<a href="/uploads/docs/cennik.pdf" target="_blank"
+							   class="btn bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 text-sm inline-flex items-center">
+								<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+								</svg>
+								Pobierz
+							</a>
+						</div>
 					</div>
-					<a href="/uploads/docs/zgoda-wizerunek.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
-				</div>
-
-				<div class="document-item">
-					<div class="document-icon">ñ</div>
-					<h3>Regulamin zaj hipoterapeutycznych</h3>
-					<p>Kompletny regulamin okre[lajcy zasady uczestnictwa, bezpieczeDstwa i organizacji zaj.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 8 stron " 1.2 MB</span>
-						<span class="info">Informacyjny</span>
-					</div>
-					<a href="/uploads/docs/regulamin.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
-				</div>
-
-				<div class="document-item">
-					<div class="document-icon">=∞</div>
-					<h3>Cennik i informacje o pBatno[ciach</h3>
-					<p>Aktualne ceny zaj, sposoby pBatno[ci i informacje o dostpnych dofinansowaniach.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 2 strony " 380 KB</span>
-						<span class="info">Informacyjny</span>
-					</div>
-					<a href="/uploads/docs/cennik.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
 				</div>
 			</div>
 		</section>
 
-		<section class="documents-section">
-			<h2>Dokumenty dla wolontariuszy</h2>
-			<div class="documents-grid">
-				<div class="document-item">
-					<div class="document-icon"></div>
-					<h3>Formularz zgBoszeniowy wolontariusza</h3>
-					<p>Podstawowy formularz do zapisania si na wolontariat w naszej organizacji.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 3 strony " 520 KB</span>
-						<span class="required">Wymagany</span>
+		<!-- Volunteer Documents -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
+				Dokumenty dla wolontariuszy
+			</h2>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<!-- Volunteer Application -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-start space-x-4">
+						<div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
+							<svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Formularz zg≈Çoszeniowy wolontariusza</h3>
+							<p class="text-gray-600 text-sm mb-4">
+								Formularz rejestracyjny dla os√≥b chcƒÖcych zostaƒá wolontariuszami w naszym Towarzystwie.
+							</p>
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-xs text-gray-500">PDF ‚Ä¢ 2 strony ‚Ä¢ 420 KB</span>
+								<span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium">
+									Wymagany
+								</span>
+							</div>
+							<a href="/uploads/docs/formularz-wolontariusz.pdf" target="_blank"
+							   class="btn bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 text-sm inline-flex items-center">
+								<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+								</svg>
+								Pobierz
+							</a>
+						</div>
 					</div>
-					<a href="/uploads/docs/formularz-wolontariusz.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
 				</div>
 
-				<div class="document-item">
-					<div class="document-icon">=÷</div>
-					<h3>Regulamin wolontariatu</h3>
-					<p>Zasady i warunki dziaBalno[ci wolontariackiej w Towarzystwie.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 4 strony " 680 KB</span>
-						<span class="info">Informacyjny</span>
+				<!-- Volunteer Regulations -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-start space-x-4">
+						<div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
+							<svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-2m-12 0H3m2 0h2M9 7h6m-6 4h6m-6 4h6"></path>
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Regulamin wolontariatu</h3>
+							<p class="text-gray-600 text-sm mb-4">
+								Zasady i warunki dzia≈Çalno≈õci wolontariackiej w Towarzystwie.
+							</p>
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-xs text-gray-500">PDF ‚Ä¢ 3 strony ‚Ä¢ 480 KB</span>
+								<span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">
+									Informacyjny
+								</span>
+							</div>
+							<a href="/uploads/docs/regulamin-wolontariat.pdf" target="_blank"
+							   class="btn bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 text-sm inline-flex items-center">
+								<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+								</svg>
+								Pobierz
+							</a>
+						</div>
 					</div>
-					<a href="/uploads/docs/regulamin-wolontariatu.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
-				</div>
-
-				<div class="document-item">
-					<div class="document-icon"><∆</div>
-					<h3>Za[wiadczenie o pracy wolontariackiej</h3>
-					<p>Szablon za[wiadczenia potwierdzajcego wykonanie pracy wolontariackiej.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 1 strona " 280 KB</span>
-						<span class="info">Na |yczenie</span>
-					</div>
-					<a href="/uploads/docs/zaswiadczenie-wolontariat.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
-				</div>
-
-				<div class="document-item">
-					<div class="document-icon">=·</div>
-					<h3>Kodeks postpowania z maBoletnimi</h3>
-					<p>Obowizkowe wytyczne dla wszystkich osÛb pracujcych z dziemi.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 6 stron " 920 KB</span>
-						<span class="required">Wymagany</span>
-					</div>
-					<a href="/uploads/docs/kodeks-postepowania.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
 				</div>
 			</div>
 		</section>
 
-		<section class="documents-section">
-			<h2>Dokumenty dla darczyDcÛw</h2>
-			<div class="documents-grid">
-				<div class="document-item">
-					<div class="document-icon">=ù</div>
-					<h3>Formularz darowizny</h3>
-					<p>Oficjalny dokument do przekazania darowizny na rzecz Towarzystwa.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 2 strony " 420 KB</span>
-						<span class="optional">Opcjonalny</span>
+		<!-- Organization Documents -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
+				Dokumenty organizacyjne
+			</h2>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<!-- Child Protection Code -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-start space-x-4">
+						<div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+							<svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Kodeks postƒôpowania z ma≈Çoletnimi</h3>
+							<p class="text-gray-600 text-sm mb-4">
+								Standardy ochrony ma≈Çoletnich i zasady bezpiecze≈Ñstwa w pracy z dzieƒámi.
+							</p>
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-xs text-gray-500">PDF ‚Ä¢ 4 strony ‚Ä¢ 680 KB</span>
+								<span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">
+									Informacyjny
+								</span>
+							</div>
+							<a href="/uploads/docs/kodeks-maloletnich.pdf" target="_blank"
+							   class="btn bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 text-sm inline-flex items-center">
+								<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+								</svg>
+								Pobierz
+							</a>
+						</div>
 					</div>
-					<a href="/uploads/docs/formularz-darowizny.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
 				</div>
 
-				<div class="document-item">
-					<div class="document-icon">= </div>
-					<h3>Informacja o przekazaniu 1,5% podatku</h3>
-					<p>Instrukcja jak przekaza 1,5% podatku dochodowego na rzecz organizacji OPP.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 3 strony " 650 KB</span>
-						<span class="info">Informacyjny</span>
+				<!-- Statute -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-start space-x-4">
+						<div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+							<svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Statut Towarzystwa</h3>
+							<p class="text-gray-600 text-sm mb-4">
+								Pe≈Çny tekst statutu Bydgoskiego Towarzystwa Hipoterapii i Psychoterapii.
+							</p>
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-xs text-gray-500">PDF ‚Ä¢ 8 stron ‚Ä¢ 920 KB</span>
+								<span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">
+									Informacyjny
+								</span>
+							</div>
+							<a href="/towarzystwo/statut/"
+							   class="btn bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 text-sm inline-flex items-center">
+								<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+								</svg>
+								Zobacz
+							</a>
+						</div>
 					</div>
-					<a href="/uploads/docs/info-1-5-procent.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
-				</div>
-
-				<div class="document-item">
-					<div class="document-icon"></div>
-					<h3>Certyfikat OPP</h3>
-					<p>Certyfikat potwierdzajcy status organizacji po|ytku publicznego.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 1 strona " 350 KB</span>
-						<span class="info">Referencyjny</span>
-					</div>
-					<a href="/uploads/docs/certyfikat-opp.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
 				</div>
 			</div>
 		</section>
 
-		<section class="documents-section">
-			<h2>Dokumenty organizacyjne</h2>
-			<div class="documents-grid">
-				<div class="document-item">
-					<div class="document-icon">=‹</div>
-					<h3>Statut Towarzystwa</h3>
-					<p>Aktualny statut Bydgoskiego Towarzystwa Hipoterapii i Psychoterapii.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 12 stron " 1.8 MB</span>
-						<span class="info">Publiczny</span>
+		<!-- Reports Section -->
+		<section class="mb-12">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
+				Sprawozdania i raporty
+			</h2>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<!-- Annual Report -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-start space-x-4">
+						<div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+							<svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Sprawozdanie OPP 2024</h3>
+							<p class="text-gray-600 text-sm mb-4">
+								Pe≈Çne sprawozdanie z dzia≈Çalno≈õci organizacji po≈ºytku publicznego za rok 2024.
+							</p>
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-xs text-gray-500">PDF ‚Ä¢ 12 stron ‚Ä¢ 1.2 MB</span>
+								<span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">
+									Publiczny
+								</span>
+							</div>
+							<a href="/uploads/docs/sprawozdanie-opp-2024.pdf" target="_blank"
+							   class="btn bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 text-sm inline-flex items-center">
+								<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+								</svg>
+								Pobierz
+							</a>
+						</div>
 					</div>
-					<a href="/uploads/docs/statut-towarzystwa.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
 				</div>
 
-				<div class="document-item">
-					<div class="document-icon">=»</div>
-					<h3>Sprawozdanie roczne OPP 2024</h3>
-					<p>PeBne sprawozdanie z dziaBalno[ci organizacji po|ytku publicznego za rok 2024.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 25 stron " 2.8 MB</span>
-						<span class="info">Publiczny</span>
+				<!-- Financial Report -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-start space-x-4">
+						<div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+							<svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Sprawozdanie finansowe 2024</h3>
+							<p class="text-gray-600 text-sm mb-4">
+								Szczeg√≥≈Çowe zestawienie finansowe organizacji za ostatni rok.
+							</p>
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-xs text-gray-500">PDF ‚Ä¢ 6 stron ‚Ä¢ 780 KB</span>
+								<span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">
+									Publiczny
+								</span>
+							</div>
+							<a href="/uploads/docs/sprawozdanie-finansowe-2024.pdf" target="_blank"
+							   class="btn bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 text-sm inline-flex items-center">
+								<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+								</svg>
+								Pobierz
+							</a>
+						</div>
 					</div>
-					<a href="/uploads/docs/sprawozdanie-opp-2024.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
 				</div>
 
-				<div class="document-item">
-					<div class="document-icon">=º</div>
-					<h3>Sprawozdanie finansowe 2024</h3>
-					<p>SzczegÛBowe zestawienie finansowe organizacji za ostatni rok.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 15 stron " 1.2 MB</span>
-						<span class="info">Publiczny</span>
+				<!-- Activity Program -->
+				<div class="card p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-start space-x-4">
+						<div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center flex-shrink-0">
+							<svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Program dzia≈Çalno≈õci 2025</h3>
+							<p class="text-gray-600 text-sm mb-4">
+								Plan dzia≈Çalno≈õci Towarzystwa na bie≈ºƒÖcy rok z harmonogramem wydarze≈Ñ.
+							</p>
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-xs text-gray-500">PDF ‚Ä¢ 5 stron ‚Ä¢ 620 KB</span>
+								<span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">
+									Informacyjny
+								</span>
+							</div>
+							<a href="/uploads/docs/program-dzialalnosci-2025.pdf" target="_blank"
+							   class="btn bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 text-sm inline-flex items-center">
+								<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+								</svg>
+								Pobierz
+							</a>
+						</div>
 					</div>
-					<a href="/uploads/docs/sprawozdanie-finansowe-2024.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
-				</div>
-
-				<div class="document-item">
-					<div class="document-icon"><Ø</div>
-					<h3>Program dziaBalno[ci 2025</h3>
-					<p>Plan dziaBalno[ci merytorycznej i finansowej na bie|cy rok.</p>
-					<div class="document-details">
-						<span class="file-info">PDF " 8 stron " 950 KB</span>
-						<span class="info">Informacyjny</span>
-					</div>
-					<a href="/uploads/docs/program-2025.pdf" class="download-btn" target="_blank">
-						=Â Pobierz PDF
-					</a>
 				</div>
 			</div>
 		</section>
 
-		<section class="quick-access-section">
-			<h2>Szybki dostp</h2>
-			<div class="quick-grid">
-				<div class="quick-item urgent">
-					<h3>=® Dokumenty wymagane</h3>
-					<p>Dokumenty niezbdne do rozpoczcia terapii</p>
-					<ul class="quick-list">
-						<li><a href="/uploads/docs/karta-uczestnika.pdf" target="_blank">Karta uczestnika</a></li>
-						<li><a href="/uploads/docs/ankieta-covid19.pdf" target="_blank">Ankieta COVID-19</a></li>
-						<li><a href="/uploads/docs/zgoda-rodo.pdf" target="_blank">Zgoda RODO</a></li>
-					</ul>
-				</div>
-
-				<div class="quick-item info">
-					<h3>9 Przed pierwsz wizyt</h3>
-					<p>Przydatne informacje dla nowych uczestnikÛw</p>
-					<ul class="quick-list">
-						<li><a href="/uploads/docs/regulamin.pdf" target="_blank">Regulamin zaj</a></li>
-						<li><a href="/uploads/docs/cennik.pdf" target="_blank">Cennik i pBatno[ci</a></li>
-						<li><a href="/o-hipoterapii/">Co to jest hipoterapia?</a></li>
-					</ul>
-				</div>
-
-				<div class="quick-item support">
-					<h3>> Chc pomÛc</h3>
-					<p>Dokumenty dla osÛb chccych nas wspiera</p>
-					<ul class="quick-list">
-						<li><a href="/uploads/docs/formularz-wolontariusz.pdf" target="_blank">ZgBoszenie wolontariusza</a></li>
-						<li><a href="/uploads/docs/info-1-5-procent.pdf" target="_blank">1,5% podatku</a></li>
-						<li><a href="/towarzystwo/numer-konta/">Wsparcie finansowe</a></li>
-					</ul>
-				</div>
+		<!-- Help Section -->
+		<section class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-center text-white">
+			<div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+				<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+				</svg>
 			</div>
-		</section>
-
-		<section class="help-section">
-			<h2>Potrzebujesz pomocy?</h2>
-			<div class="help-content">
-				<div class="help-item">
-					<h3>=ﬁ Pomoc telefoniczna</h3>
-					<p>ZadzwoD do naszego biura w godzinach 9:00-16:00</p>
-					<a href="tel:+48123456789" class="contact-link">+48 123 456 789</a>
-				</div>
-
-				<div class="help-item">
-					<h3>	 Pomoc przez email</h3>
-					<p>Wy[lij pytanie - odpowiemy w cigu 24 godzin</p>
-					<a href="mailto:biuro@hipoterapia.bydgoszcz.pl" class="contact-link">biuro@hipoterapia.bydgoszcz.pl</a>
-				</div>
-
-				<div class="help-item">
-					<h3><‚ Wizyta w biurze</h3>
-					<p>UmÛw si na spotkanie w naszej siedzibie</p>
-					<a href="/kontakt/" class="contact-link">Zobacz lokalizacj</a>
-				</div>
-			</div>
-
-			<div class="faq-note">
-				<h4>=° Czsto zadawane pytania</h4>
-				<p>
-					Wikszo[ odpowiedzi na pytania dotyczce dokumentÛw znajdziesz w naszym regulaminie
-					i na stronie kontaktowej. Je[li nie znajdziesz potrzebnych informacji, skontaktuj si z nami.
-				</p>
+			<h2 class="text-3xl font-bold mb-4">Potrzebujesz pomocy?</h2>
+			<p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+				Je≈õli masz problemy z wype≈Çnieniem dokument√≥w lub potrzebujesz dodatkowych informacji,
+				skontaktuj siƒô z nami. Chƒôtnie pomo≈ºemy!
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/kontakt/" class="btn bg-white text-primary-600 hover:bg-gray-100 px-6 py-3 inline-flex items-center">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+					</svg>
+					Skontaktuj siƒô z nami
+				</a>
+				<a href="/oferta/" class="btn border-2 border-white text-white hover:bg-white hover:text-primary-600 px-6 py-3 inline-flex items-center">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+					</svg>
+					Zobacz naszƒÖ ofertƒô
+				</a>
 			</div>
 		</section>
 	</div>
 </MainLayout>
-
-<style>
-	.documents-content {
-		max-width: 1200px;
-		margin: 0 auto;
-	}
-
-	.breadcrumb {
-		margin-bottom: 2rem;
-	}
-
-	.breadcrumb a {
-		color: var(--primary-color);
-		text-decoration: none;
-		font-weight: 600;
-		transition: color 0.3s ease;
-	}
-
-	.breadcrumb a:hover {
-		color: var(--secondary-color);
-	}
-
-	.intro {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		margin-bottom: 3rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-left: 5px solid var(--secondary-color);
-	}
-
-	.lead {
-		font-size: 1.2rem;
-		line-height: 1.8;
-		color: var(--text-color);
-		margin: 0;
-	}
-
-	.documents-section {
-		margin-bottom: 4rem;
-	}
-
-	.documents-section h2 {
-		color: var(--primary-color);
-		margin-bottom: 2rem;
-		padding-bottom: 0.5rem;
-		border-bottom: 2px solid var(--secondary-color);
-	}
-
-	.documents-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.documents-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	@media (min-width: 1024px) {
-		.documents-grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.document-item {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-		text-align: center;
-		border-top: 4px solid var(--primary-color);
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
-
-	.document-item:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-	}
-
-	.document-icon {
-		font-size: 3rem;
-		margin-bottom: 1rem;
-		display: block;
-	}
-
-	.document-item h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-		font-size: 1.1rem;
-	}
-
-	.document-item p {
-		color: #666;
-		line-height: 1.6;
-		margin-bottom: 1.5rem;
-	}
-
-	.document-details {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 1.5rem;
-		font-size: 0.9rem;
-	}
-
-	.file-info {
-		color: #888;
-	}
-
-	.required, .optional, .info {
-		padding: 0.3rem 0.8rem;
-		border-radius: 12px;
-		font-size: 0.8rem;
-		font-weight: 600;
-	}
-
-	.required {
-		background: #dc3545;
-		color: white;
-	}
-
-	.optional {
-		background: #28a745;
-		color: white;
-	}
-
-	.info {
-		background: #007bff;
-		color: white;
-	}
-
-	.download-btn {
-		display: inline-block;
-		background: var(--primary-color);
-		color: white;
-		padding: 0.75rem 1.5rem;
-		border-radius: 6px;
-		text-decoration: none;
-		font-weight: 600;
-		transition: all 0.3s ease;
-		border: none;
-		cursor: pointer;
-	}
-
-	.download-btn:hover {
-		background: var(--secondary-color);
-		transform: translateY(-2px);
-		box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-	}
-
-	.quick-access-section {
-		background: #f8f9fa;
-		padding: 3rem 2rem;
-		border-radius: 8px;
-		margin-bottom: 3rem;
-	}
-
-	.quick-access-section h2 {
-		color: var(--primary-color);
-		margin-bottom: 2rem;
-		text-align: center;
-		border-bottom: 2px solid var(--secondary-color);
-		padding-bottom: 0.5rem;
-	}
-
-	.quick-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.quick-grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.quick-item {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-top: 4px solid #ddd;
-	}
-
-	.quick-item.urgent {
-		border-top-color: #dc3545;
-	}
-
-	.quick-item.info {
-		border-top-color: #007bff;
-	}
-
-	.quick-item.support {
-		border-top-color: #28a745;
-	}
-
-	.quick-item h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-		font-size: 1.1rem;
-	}
-
-	.quick-item p {
-		color: #666;
-		margin-bottom: 1rem;
-		line-height: 1.6;
-	}
-
-	.quick-list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	.quick-list li {
-		margin-bottom: 0.5rem;
-	}
-
-	.quick-list a {
-		color: var(--primary-color);
-		text-decoration: none;
-		font-weight: 600;
-		transition: color 0.3s ease;
-	}
-
-	.quick-list a:hover {
-		color: var(--secondary-color);
-	}
-
-	.help-section {
-		background: linear-gradient(135deg, var(--primary-color) 0%, #4a7c59 100%);
-		color: white;
-		padding: 3rem 2rem;
-		border-radius: 8px;
-	}
-
-	.help-section h2 {
-		color: white;
-		border-bottom: 2px solid rgba(255,255,255,0.3);
-		padding-bottom: 1rem;
-		margin-bottom: 2rem;
-		text-align: center;
-	}
-
-	.help-content {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		margin-bottom: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.help-content {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.help-item {
-		background: rgba(255,255,255,0.1);
-		padding: 2rem;
-		border-radius: 8px;
-		text-align: center;
-	}
-
-	.help-item h3 {
-		color: white;
-		margin-bottom: 1rem;
-		font-size: 1.1rem;
-	}
-
-	.help-item p {
-		margin-bottom: 1.5rem;
-		opacity: 0.9;
-		line-height: 1.6;
-	}
-
-	.contact-link {
-		color: var(--secondary-color);
-		text-decoration: none;
-		font-weight: 600;
-		transition: color 0.3s ease;
-	}
-
-	.contact-link:hover {
-		color: white;
-	}
-
-	.faq-note {
-		background: rgba(255,255,255,0.1);
-		padding: 2rem;
-		border-radius: 8px;
-		text-align: center;
-	}
-
-	.faq-note h4 {
-		color: white;
-		margin-bottom: 1rem;
-	}
-
-	.faq-note p {
-		opacity: 0.95;
-		line-height: 1.8;
-		margin: 0;
-	}
-
-	@media (max-width: 768px) {
-		.document-item {
-			padding: 1.5rem;
-		}
-
-		.document-details {
-			flex-direction: column;
-			gap: 0.5rem;
-			align-items: flex-start;
-		}
-
-		.quick-access-section {
-			padding: 2rem 1.5rem;
-		}
-	}
-</style>
