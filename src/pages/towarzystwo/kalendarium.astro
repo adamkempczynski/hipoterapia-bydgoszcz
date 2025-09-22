@@ -1,0 +1,648 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+
+const currentYear = new Date().getFullYear();
+const nextYear = currentYear + 1;
+---
+
+<MainLayout title="Kalendarium - Stowarzyszenie Hipoterapia Bydgoszcz">
+  <div class="container">
+
+      <section class="hero-section">
+        <h1>Kalendarium</h1>
+        <p class="lead">Nadchodzące wydarzenia i ważne daty w życiu naszego stowarzyszenia</p>
+      </section>
+
+      <section class="calendar-overview">
+        <div class="calendar-grid">
+          <div class="upcoming-events">
+            <h2><i class="fas fa-calendar-plus"></i> Nadchodzące wydarzenia {nextYear}</h2>
+
+            <div class="event-card featured">
+              <div class="event-date">
+                <span class="day">20</span>
+                <span class="month">września</span>
+              </div>
+              <div class="event-details">
+                <h3>Mecz piłki nożnej</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Żołędowo</p>
+                <p><i class="fas fa-clock"></i> 15:00 - 19:00</p>
+                <div class="event-description">
+                  <p>Coroczny mecz piłki nożnej z udziałem podopiecznych, rodzin i wolontariuszy. W programie:</p>
+                  <ul>
+                    <li>Mecz piłki nożnej</li>
+                    <li>Turniej strzelecki</li>
+                    <li>Ognisko z kiełbaskami</li>
+                    <li>Integracja i zabawa dla całych rodzin</li>
+                  </ul>
+                </div>
+                <div class="event-tags">
+                  <span class="tag sport">Sport</span>
+                  <span class="tag family">Rodzinnie</span>
+                  <span class="tag outdoor">Na świeżym powietrzu</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="event-card">
+              <div class="event-date">
+                <span class="day">28-29</span>
+                <span class="month">czerwca</span>
+              </div>
+              <div class="event-details">
+                <h3>Biwak i wycieczka do Biskupina</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Biskupin</p>
+                <p><i class="fas fa-clock"></i> Weekend</p>
+                <div class="event-description">
+                  <p>Dwudniowy biwak z noclegiem pod namiotami i zwiedzaniem muzeum archeologicznego w Biskupinie. Program obejmuje:</p>
+                  <ul>
+                    <li>Zwiedzanie grodu z przewodnikiem</li>
+                    <li>Warsztaty archeologiczne</li>
+                    <li>Ognisko i śpiewy przy gitarze</li>
+                    <li>Gry i zabawy integracyjne</li>
+                  </ul>
+                </div>
+                <div class="event-tags">
+                  <span class="tag camping">Biwak</span>
+                  <span class="tag culture">Kultura</span>
+                  <span class="tag weekend">Weekend</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="event-card">
+              <div class="event-date">
+                <span class="day">18</span>
+                <span class="month">maja</span>
+              </div>
+              <div class="event-details">
+                <h3>Spływ kajakowy i piknik</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Do ustalenia</p>
+                <p><i class="fas fa-clock"></i> 10:00 - 18:00</p>
+                <div class="event-description">
+                  <p>Tradycyjny majowy spływ kajakowy dla podopiecznych i ich rodzin. Po spływie piknik nad wodą z:</p>
+                  <ul>
+                    <li>Grillowaniem</li>
+                    <li>Grami i zabawami</li>
+                    <li>Konkursami z nagrodami</li>
+                    <li>Relaksem na łonie natury</li>
+                  </ul>
+                </div>
+                <div class="event-tags">
+                  <span class="tag water">Wodne</span>
+                  <span class="tag family">Rodzinnie</span>
+                  <span class="tag outdoor">Aktywnie</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="regular-activities">
+            <h2><i class="fas fa-calendar-week"></i> Regularne aktywności</h2>
+
+            <div class="activity-card">
+              <h3><i class="fas fa-horse"></i> Sesje hipoterapii</h3>
+              <p><strong>Poniedziałek - Piątek:</strong> 8:00 - 16:00</p>
+              <p><strong>Sobota:</strong> 9:00 - 14:00</p>
+              <p class="location"><i class="fas fa-map-marker-alt"></i> Ośrodek Jeździecki, ul. Gdańska 188</p>
+            </div>
+
+            <div class="activity-card">
+              <h3><i class="fas fa-swimming-pool"></i> Zajęcia w wodzie</h3>
+              <p><strong>Wtorek, Czwartek:</strong> 14:00 - 17:00</p>
+              <p class="location"><i class="fas fa-map-marker-alt"></i> Basen Kapelanka</p>
+            </div>
+
+            <div class="activity-card">
+              <h3><i class="fas fa-running"></i> Zajęcia ruchowe</h3>
+              <p><strong>Środa:</strong> 10:00 - 12:00</p>
+              <p><strong>Piątek:</strong> 15:00 - 17:00</p>
+              <p class="location"><i class="fas fa-map-marker-alt"></i> Sala gimnastyczna</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="past-events">
+        <h2><i class="fas fa-history"></i> Nasze ostatnie wydarzenia</h2>
+        <div class="past-events-grid">
+          <div class="past-event">
+            <h3>Bal jubileuszowy</h3>
+            <p class="date">21 lutego {currentYear - 1}</p>
+            <p>Elegancki bal z okazji jubileuszu działalności stowarzyszenia</p>
+          </div>
+
+          <div class="past-event">
+            <h3>Walne Zebranie</h3>
+            <p class="date">3 kwietnia {currentYear - 1}</p>
+            <p>Coroczne sprawozdanie z działalności i wybory władz</p>
+          </div>
+
+          <div class="past-event">
+            <h3>Biwak w Jarużynie</h3>
+            <p class="date">22-23 czerwca {currentYear - 1}</p>
+            <p>Weekendowy biwak z noclegiem pod namiotami</p>
+          </div>
+
+          <div class="past-event">
+            <h3>Spływ kajakowy</h3>
+            <p class="date">9 czerwca {currentYear - 1}</p>
+            <p>Rodzinny spływ kajakowy z piknikiem</p>
+          </div>
+
+          <div class="past-event">
+            <h3>Bal karnawałowy</h3>
+            <p class="date">9 lutego {currentYear - 1}</p>
+            <p>Kolorowy karnawał z konkursami na najlepsze przebrania</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="important-dates">
+        <h2><i class="fas fa-exclamation-triangle"></i> Ważne daty</h2>
+        <div class="important-dates-grid">
+          <div class="date-card administrative">
+            <h3>Walne Zebranie</h3>
+            <p class="date">Kwiecień każdego roku</p>
+            <p>Obowiązkowe dla wszystkich członków stowarzyszenia</p>
+          </div>
+
+          <div class="date-card deadline">
+            <h3>Składanie sprawozdań</h3>
+            <p class="date">Do 31 marca</p>
+            <p>Sprawozdanie merytoryczne i finansowe za poprzedni rok</p>
+          </div>
+
+          <div class="date-card holiday">
+            <h3>Dzień Dziecka</h3>
+            <p class="date">1 czerwca</p>
+            <p>Specjalne zajęcia i atrakcje dla najmłodszych</p>
+          </div>
+
+          <div class="date-card awareness">
+            <h3>Światowy Dzień Niepełnosprawności</h3>
+            <p class="date">3 grudnia</p>
+            <p>Akcje edukacyjne i promocyjne</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="event-registration">
+        <div class="registration-info">
+          <h2><i class="fas fa-clipboard-list"></i> Zapisy na wydarzenia</h2>
+          <p>Chcesz wziąć udział w naszych wydarzeniach? Skontaktuj się z nami!</p>
+
+          <div class="contact-methods">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong>Telefon:</strong>
+                <p>52 341 14 66</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email:</strong>
+                <p>biuro@hipoterapia.bydgoszcz.pl</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Biuro:</strong>
+                <p>ul. Gdańska 188, 85-915 Bydgoszcz</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="registration-note">
+            <i class="fas fa-info-circle"></i>
+            <p><strong>Ważne:</strong> Liczba miejsc na wydarzeniach jest ograniczona. Zapisy przyjmujemy w kolejności zgłoszeń.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-preview">
+        <h2><i class="fas fa-images"></i> Wspomnienia z naszych wydarzeń</h2>
+        <p>Zobacz zdjęcia z naszych ostatnich wydarzeń w <a href="/galeria" class="gallery-link">galerii</a>.</p>
+
+        <div class="gallery-highlights">
+          <div class="highlight-item">
+            <img src="/images/galeria/mecz-pilki-noznej-2024/IMG_3849.jpg" alt="Mecz piłki nożnej 2024" loading="lazy">
+            <span class="caption">Mecz piłki nożnej 2024</span>
+          </div>
+          <div class="highlight-item">
+            <img src="/images/galeria/bal-jubileuszowy-2024/IMG_3636.jpg" alt="Bal jubileuszowy 2024" loading="lazy">
+            <span class="caption">Bal jubileuszowy 2024</span>
+          </div>
+          <div class="highlight-item">
+            <img src="/images/galeria/splyw-kajakowy-2024/IMG_4129.jpg" alt="Spływ kajakowy 2024" loading="lazy">
+            <span class="caption">Spływ kajakowy 2024</span>
+          </div>
+        </div>
+      </section>
+  </div>
+</MainLayout>
+
+<style>
+  .hero-section {
+    text-align: center;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+    color: white;
+    margin-bottom: 3rem;
+    border-radius: 12px;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .lead {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .calendar-overview {
+    margin-bottom: 4rem;
+  }
+
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .upcoming-events h2,
+  .regular-activities h2 {
+    color: #2c5530;
+    border-bottom: 3px solid #4a7c59;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .event-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid #4a7c59;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .event-card.featured {
+    border-left: 5px solid #d4942a;
+    background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
+  }
+
+  .event-date {
+    text-align: center;
+    background: #2c5530;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    min-width: 80px;
+    height: fit-content;
+  }
+
+  .featured .event-date {
+    background: #d4942a;
+  }
+
+  .event-date .day {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  .event-date .month {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .event-details {
+    flex: 1;
+  }
+
+  .event-details h3 {
+    color: #2c5530;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  .event-details p {
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+
+  .event-description {
+    margin: 1rem 0;
+  }
+
+  .event-description ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .event-description li {
+    color: #555;
+    margin-bottom: 0.3rem;
+  }
+
+  .event-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .tag {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+  }
+
+  .tag.sport { background: #dc3545; }
+  .tag.family { background: #fd7e14; }
+  .tag.outdoor { background: #20c997; }
+  .tag.camping { background: #6f42c1; }
+  .tag.culture { background: #6610f2; }
+  .tag.weekend { background: #e83e8c; }
+  .tag.water { background: #0dcaf0; }
+
+  .activity-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #4a7c59;
+  }
+
+  .activity-card h3 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .activity-card p {
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+
+  .location {
+    color: #666 !important;
+    font-style: italic;
+  }
+
+  .past-events {
+    margin-bottom: 4rem;
+  }
+
+  .past-events h2 {
+    color: #2c5530;
+    border-bottom: 3px solid #4a7c59;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .past-events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .past-event {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #6c757d;
+  }
+
+  .past-event h3 {
+    color: #2c5530;
+    margin-bottom: 0.5rem;
+  }
+
+  .past-event .date {
+    color: #6c757d;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .important-dates h2 {
+    color: #2c5530;
+    border-bottom: 3px solid #4a7c59;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .important-dates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .date-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .date-card.administrative { border-left: 4px solid #0d6efd; }
+  .date-card.deadline { border-left: 4px solid #dc3545; }
+  .date-card.holiday { border-left: 4px solid #198754; }
+  .date-card.awareness { border-left: 4px solid #6f42c1; }
+
+  .date-card h3 {
+    color: #2c5530;
+    margin-bottom: 0.5rem;
+  }
+
+  .date-card .date {
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .event-registration {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 3rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+  }
+
+  .registration-info h2 {
+    color: #2c5530;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .registration-info > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-item i {
+    color: #4a7c59;
+    font-size: 1.5rem;
+    width: 30px;
+    text-align: center;
+  }
+
+  .contact-item strong {
+    color: #2c5530;
+  }
+
+  .contact-item p {
+    margin: 0;
+    color: #555;
+  }
+
+  .registration-note {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .registration-note i {
+    color: #b45309;
+    font-size: 1.2rem;
+  }
+
+  .registration-note p {
+    margin: 0;
+    color: #664d03;
+  }
+
+  .gallery-preview {
+    text-align: center;
+  }
+
+  .gallery-preview h2 {
+    color: #2c5530;
+    border-bottom: 3px solid #4a7c59;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    display: inline-block;
+  }
+
+  .gallery-link {
+    color: #4a7c59;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .gallery-link:hover {
+    text-decoration: underline;
+  }
+
+  .gallery-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .highlight-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .highlight-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .highlight-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+
+    .calendar-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .event-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .event-date {
+      width: 100%;
+      max-width: 120px;
+    }
+
+    .contact-methods {
+      grid-template-columns: 1fr;
+    }
+
+    .gallery-highlights {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

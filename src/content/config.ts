@@ -7,7 +7,9 @@ const aktualnosciCollection = defineCollection({
     title: z.string(),
     pubDate: z.date(),
     description: z.string().optional(), // Krótki opis, opcjonalny
-    image: z.string().optional(),     // Ścieżka do obrazka, opcjonalna
+    image: z.string().optional(),       // Ścieżka do obrazka, opcjonalna
+    category: z.enum(['biwaki-wycieczki', 'wydarzenia-sportowe', 'zebrania-organizacyjne', 'wydarzenia-spoleczne', 'programy-dotacyjne']).optional(), // Kategoria wydarzenia
+    gallery: z.array(z.string()).optional(), // Galeria zdjęć
   }),
 });
 

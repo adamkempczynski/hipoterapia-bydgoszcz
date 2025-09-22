@@ -1,0 +1,394 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Oferta">
+	<div class="offer-content">
+		<section class="intro">
+			<p class="lead">
+				Oferujemy profesjonalną hipoterapię dla osób z przewlekłymi chorobami i niepełnosprawnościami.
+				Nasze zajęcia prowadzone są przez wykwalifikowaną kadrę z wieloletnim doświadczeniem.
+			</p>
+		</section>
+
+		<section class="pricing-section">
+			<h2>Cennik zajęć hipoterapeutycznych</h2>
+			<div class="pricing-grid">
+				<div class="price-card standard">
+					<div class="price-header">
+						<h3>Standardowa</h3>
+						<div class="price">60 zł</div>
+					</div>
+					<div class="price-body">
+						<p>Podstawowa sesja hipoterapii</p>
+						<ul>
+							<li>45 minut zajęć</li>
+							<li>Praca z wykwalifikowanym hipoterapeutą</li>
+							<li>Używanie specjalistycznego sprzętu</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="price-card premium">
+					<div class="price-header">
+						<h3>Indywidualna</h3>
+						<div class="price">80 zł</div>
+					</div>
+					<div class="price-body">
+						<p>Sesja dostosowana do indywidualnych potrzeb</p>
+						<ul>
+							<li>60 minut zajęć</li>
+							<li>Program terapeutyczny na miarę</li>
+							<li>Dodatkowe wsparcie specjalistyczne</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="price-card group">
+					<div class="price-header">
+						<h3>Grupowa</h3>
+						<div class="price">40 zł</div>
+					</div>
+					<div class="price-body">
+						<p>Zajęcia w małych grupach 2-3 osoby</p>
+						<ul>
+							<li>45 minut zajęć</li>
+							<li>Integracja społeczna</li>
+							<li>Atrakcyjna cena</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="services-overview">
+			<h2>Nasze usługi</h2>
+			<div class="services-grid">
+				<div class="service-item">
+					<h3>Hipoterapia</h3>
+					<p>
+						Specjalistyczne zajęcia terapeutyczne z końmi dla osób z różnymi rodzajami
+						niepełnosprawności. Prowadzone przez certyfikowanych hipoterapeutów.
+					</p>
+					<a href="/oferta/hipoterapia" class="service-link">Dowiedz się więcej</a>
+				</div>
+
+				<div class="service-item">
+					<h3>Kadra</h3>
+					<p>
+						Poznaj nasz zespół wykwalifikowanych specjalistów - hipoterapeutów,
+						psychologów i instruktorów z wieloletnim doświadczeniem.
+					</p>
+					<a href="/oferta/kadra" class="service-link">Zobacz kadrę</a>
+				</div>
+
+				<div class="service-item">
+					<h3>Konie</h3>
+					<p>
+						Nasze konie to starannie wyselekcjonowane zwierzęta o łagodnym usposobieniu,
+						przeszkolone do pracy z osobami niepełnosprawnymi.
+					</p>
+					<a href="/oferta/konie" class="service-link">Poznaj konie</a>
+				</div>
+
+				<div class="service-item">
+					<h3>Regulamin</h3>
+					<p>
+						Zapoznaj się z zasadami uczestnictwa w zajęciach hipoterapeutycznych
+						oraz wymaganiami bezpieczeństwa.
+					</p>
+					<a href="/oferta/regulamin" class="service-link">Przeczytaj regulamin</a>
+				</div>
+
+				<div class="service-item">
+					<h3>Wolontariat</h3>
+					<p>
+						Dołącz do naszej grupy wolontariuszy i pomagaj w organizacji zajęć
+						oraz wydarzeń integracyjnych.
+					</p>
+					<a href="/oferta/wolontariusze" class="service-link">Zostań wolontariuszem</a>
+				</div>
+
+				<div class="service-item">
+					<h3>Dokumenty</h3>
+					<p>
+						Sprawozdania finansowe, dokumenty rozliczeniowe i inne oficjalne
+						materiały organizacji.
+					</p>
+					<a href="/oferta/dokumenty-rozliczeniowe" class="service-link">Zobacz dokumenty</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact-section">
+			<h2>Umów się na zajęcia</h2>
+			<p>
+				Aby umówić się na zajęcia hipoterapeutyczne, skontaktuj się z nami telefonicznie
+				lub mailowo. Chętnie odpowiemy na wszystkie pytania i pomożemy dobrać odpowiedni
+				program terapeutyczny.
+			</p>
+			<div class="contact-info">
+				<div class="contact-item">
+					<strong>Telefon:</strong>
+					<span>52 341 14 66</span>
+				</div>
+				<div class="contact-item">
+					<strong>Email:</strong>
+					<span>biuro@hipoterapia.bydgoszcz.pl</span>
+				</div>
+				<div class="contact-item">
+					<strong>Adres:</strong>
+					<span>ul. Gdańska 188, 85-915 Bydgoszcz</span>
+				</div>
+			</div>
+			<a href="/kontakt" class="contact-button">Formularz kontaktowy</a>
+		</section>
+	</div>
+</MainLayout>
+
+<style>
+	.offer-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+
+	.intro {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.lead {
+		font-size: 1.25rem;
+		color: #666;
+		line-height: 1.6;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.pricing-section {
+		margin-bottom: 4rem;
+	}
+
+	.pricing-section h2 {
+		text-align: center;
+		color: #2c5530;
+		margin-bottom: 2rem;
+		font-size: 2.5rem;
+	}
+
+	.pricing-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.price-card {
+		background: white;
+		border-radius: 12px;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+		overflow: hidden;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.price-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+	}
+
+	.price-header {
+		padding: 2rem;
+		text-align: center;
+		color: white;
+	}
+
+	.standard .price-header {
+		background: linear-gradient(135deg, #4a7c59 0%, #2c5530 100%);
+	}
+
+	.premium .price-header {
+		background: linear-gradient(135deg, #d4942a 0%, #b8791f 100%);
+	}
+
+	.group .price-header {
+		background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+	}
+
+	.price-header h3 {
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.price {
+		font-size: 3rem;
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+	}
+
+	.price-body {
+		padding: 2rem;
+	}
+
+	.price-body p {
+		color: #666;
+		margin-bottom: 1.5rem;
+		font-weight: 500;
+	}
+
+	.price-body ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.price-body li {
+		color: #555;
+		margin-bottom: 0.5rem;
+		position: relative;
+		padding-left: 1.5rem;
+	}
+
+	.price-body li::before {
+		content: '✓';
+		position: absolute;
+		left: 0;
+		color: #4a7c59;
+		font-weight: bold;
+	}
+
+	.services-overview {
+		margin-bottom: 4rem;
+	}
+
+	.services-overview h2 {
+		text-align: center;
+		color: #2c5530;
+		margin-bottom: 3rem;
+		font-size: 2.5rem;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.service-item {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+		border-left: 5px solid #4a7c59;
+		transition: transform 0.3s ease;
+	}
+
+	.service-item:hover {
+		transform: translateY(-3px);
+	}
+
+	.service-item h3 {
+		color: #2c5530;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+
+	.service-item p {
+		color: #666;
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
+	}
+
+	.service-link {
+		color: #4a7c59;
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.3s ease;
+	}
+
+	.service-link:hover {
+		color: #2c5530;
+		text-decoration: underline;
+	}
+
+	.contact-section {
+		background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+		padding: 3rem;
+		border-radius: 12px;
+		text-align: center;
+	}
+
+	.contact-section h2 {
+		color: #2c5530;
+		margin-bottom: 1rem;
+		font-size: 2rem;
+	}
+
+	.contact-section > p {
+		color: #666;
+		line-height: 1.6;
+		max-width: 600px;
+		margin: 0 auto 2rem;
+	}
+
+	.contact-info {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1rem;
+		margin: 2rem 0;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.contact-item {
+		background: white;
+		padding: 1rem;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.contact-item strong {
+		color: #2c5530;
+		min-width: 70px;
+	}
+
+	.contact-item span {
+		color: #555;
+	}
+
+	.contact-button {
+		display: inline-block;
+		background: #4a7c59;
+		color: white;
+		padding: 1rem 2rem;
+		border-radius: 25px;
+		text-decoration: none;
+		font-weight: 500;
+		transition: background 0.3s ease;
+		margin-top: 1rem;
+	}
+
+	.contact-button:hover {
+		background: #2c5530;
+	}
+
+	@media (max-width: 768px) {
+		.offer-content {
+			padding: 1rem;
+		}
+
+		.pricing-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.services-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.contact-info {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

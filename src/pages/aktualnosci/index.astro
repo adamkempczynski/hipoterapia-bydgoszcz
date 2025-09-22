@@ -1,0 +1,175 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('aktualnosci');
+
+// Grupowanie postów według lat
+const postsByYear = allPosts.reduce((acc, post) => {
+  const year = post.data.pubDate.getFullYear();
+  if (!acc[year]) {
+    acc[year] = [];
+  }
+  acc[year].push(post);
+  return acc;
+}, {} as Record<number, typeof allPosts>);
+
+// Sortowanie lat malejąco
+const sortedYears = Object.keys(postsByYear)
+  .map(year => parseInt(year))
+  .sort((a, b) => b - a);
+
+// Kategorie wydarzeń
+const categories = {
+  'biwaki-wycieczki': 'Biwaki i wycieczki',
+  'wydarzenia-sportowe': 'Wydarzenia sportowe',
+  'zebrania-organizacyjne': 'Zebrania i sprawy organizacyjne',
+  'wydarzenia-spoleczne': 'Wydarzenia społeczne',
+  'programy-dotacyjne': 'Programy dotacyjne'
+};
+---
+
+<MainLayout title="Aktualności - Archiwum">
+  <div class="archive-intro">
+    <p>Wszystkie aktualności i wydarzenia organizowane przez Bydgoskie Towarzystwo Hipoterapii i Psychoterapii, uporządkowane chronologicznie według lat.</p>
+  </div>
+
+  <div class="archive-navigation">
+    <h2>Przeglądaj według lat:</h2>
+    <div class="year-links">
+      {sortedYears.map(year => (
+        <a href={`/aktualnosci/${year}/`} class="year-link">
+          {year} ({postsByYear[year].length} {postsByYear[year].length === 1 ? 'wpis' : postsByYear[year].length < 5 ? 'wpisy' : 'wpisów'})
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <div class="categories-navigation">
+    <h2>Przeglądaj według kategorii:</h2>
+    <div class="category-links">
+      {Object.entries(categories).map(([key, name]) => {
+        const categoryPosts = allPosts.filter(post => post.data.category === key);
+        return categoryPosts.length > 0 ? (
+          <a href={`/aktualnosci/kategoria/${key}/`} class="category-link">
+            {name} ({categoryPosts.length})
+          </a>
+        ) : null;
+      })}
+    </div>
+  </div>
+
+  <div class="recent-posts">
+    <h2>Najnowsze aktualności:</h2>
+    {allPosts
+      .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+      .slice(0, 5)
+      .map(post => (
+        <article class="post-preview">
+          <h3><a href={`/aktualnosci/wpis/${post.slug}/`}>{post.data.title}</a></h3>
+          <div class="post-meta">
+            <time>{post.data.pubDate.toLocaleDateString('pl-PL')}</time>
+            {post.data.category && (
+              <span class="category-badge">{categories[post.data.category]}</span>
+            )}
+          </div>
+          {post.data.description && (
+            <p>{post.data.description}</p>
+          )}
+        </article>
+      ))
+    }
+  </div>
+</MainLayout>
+
+<style>
+  .archive-intro {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+
+  .archive-navigation, .categories-navigation {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+
+  .year-links, .category-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .year-link, .category-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+  }
+
+  .year-link:hover, .category-link:hover {
+    background-color: var(--primary-color);
+  }
+
+  .recent-posts {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+
+  .post-preview {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .post-preview:last-child {
+    border-bottom: none;
+  }
+
+  .post-preview h3 {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .post-preview h3 a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  .post-preview h3 a:hover {
+    text-decoration: underline;
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .category-badge {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .post-preview p {
+    margin: 0;
+    color: #666;
+  }
+</style>

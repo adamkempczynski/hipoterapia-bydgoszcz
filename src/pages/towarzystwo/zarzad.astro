@@ -1,0 +1,348 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Zarząd Towarzystwa">
+	<div class="board-content">
+		<nav class="breadcrumb">
+			<a href="/towarzystwo/">← Powrót do Towarzystwo</a>
+		</nav>
+
+		<section class="intro">
+			<p class="lead">
+				Zarząd Bydgoskiego Towarzystwa Hipoterapii i Psychoterapii składa się z doświadczonych
+				specjalistów i pasjonatów, którzy od lat działają na rzecz osób niepełnosprawnych.
+			</p>
+		</section>
+
+		<section class="board-section">
+			<h2>Zarząd Towarzystwa</h2>
+			<p class="term-info"><strong>Kadencja:</strong> 2022-2025</p>
+			<div class="board-grid">
+				<div class="board-member">
+					<div class="member-role">Prezes</div>
+					<h3>Weronika Kiełtyka-Wydmuch</h3>
+					<p>
+						Hipoterapeutka z wieloletnim doświadczeniem, aktywnie
+						zaangażowana w rozwój hipoterapii w regionie.
+					</p>
+				</div>
+
+				<div class="board-member">
+					<div class="member-role">Członek Zarządu</div>
+					<h3>Ewa Ziętak</h3>
+					<p>
+						Zaangażowana w działalność statutową Towarzystwa,
+						wspiera organizację zajęć terapeutycznych.
+					</p>
+				</div>
+
+				<div class="board-member">
+					<div class="member-role">Członek Zarządu</div>
+					<h3>Monika Światowy</h3>
+					<p>
+						Odpowiedzialna za koordynację działań organizacyjnych
+						i współpracę z instytucjami partnerskimi.
+					</p>
+				</div>
+
+				<div class="board-member">
+					<div class="member-role">Członek Zarządu</div>
+					<h3>Rafał Orłowski</h3>
+					<p>
+						Wspiera działalność Towarzystwa w zakresie logistyki
+						i organizacji wydarzeń sportowo-rekreacyjnych.
+					</p>
+				</div>
+
+				<div class="board-member">
+					<div class="member-role">Członek Zarządu</div>
+					<h3>Joanna Cywińska</h3>
+					<p>
+						Zaangażowana w działania edukacyjne i promocyjne
+						Towarzystwa, współpraca z wolontariuszami.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="commission-section">
+			<h2>Komisja Rewizyjna</h2>
+			<div class="commission-grid">
+				<div class="commission-member">
+					<div class="member-role">Przewodnicząca</div>
+					<h3>Barbara Rettig</h3>
+					<p>Nadzór nad działalnością finansową Towarzystwa i kontrola zgodności ze statutem.</p>
+				</div>
+
+				<div class="commission-member">
+					<div class="member-role">Członek</div>
+					<h3>Joanna Zataj-Ross</h3>
+					<p>Kontrola zgodności działań ze statutem i weryfikacja sprawozdań.</p>
+				</div>
+
+				<div class="commission-member">
+					<div class="member-role">Członek</div>
+					<h3>Ryszard Kuryło</h3>
+					<p>Weryfikacja sprawozdań, dokumentacji i nadzór nad procedurami.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="team-section">
+			<h2>Nasz zespół terapeutyczny</h2>
+			<p class="team-intro">
+				Oprócz zarządu, nasze Towarzystwo tworzą wykwalifikowani terapeuci,
+				instruktorzy jazdy konnej, fizjoterapeuci, pedagodzy i psychologowie.
+				Wszyscy posiadają odpowiednie kwalifikacje i doświadczenie w pracy
+				z osobami niepełnosprawnymi.
+			</p>
+
+			<div class="tribute-section">
+				<h3>Pamięć</h3>
+				<p class="tribute">
+					Z wielkim szacunkiem wspominamy <strong>Emilię Skrzypczak</strong>,
+					wieloletnią wolontariuszkę i przyjaciółkę naszego Towarzystwa,
+					która odeszła od nas w 2024 roku. Jej zaangażowanie i serce
+					na zawsze pozostanie w naszej pamięci.
+				</p>
+			</div>
+
+			<div class="team-stats">
+				<div class="stat-item">
+					<span class="stat-number">12</span>
+					<span class="stat-label">Certyfikowanych hipoterapeutów</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number">8</span>
+					<span class="stat-label">Fizjoterapeutów</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number">6</span>
+					<span class="stat-label">Pedagogów specjalnych</span>
+				</div>
+				<div class="stat-item">
+					<span class="stat-number">30+</span>
+					<span class="stat-label">Wolontariuszy</span>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact-section">
+			<h2>Kontakt z zarządem</h2>
+			<div class="contact-info">
+				<p>
+					Jeśli masz pytania do zarządu lub chcesz nawiązać współpracę,
+					skontaktuj się z nami:
+				</p>
+				<a href="/kontakt/" class="contact-button">Skontaktuj się</a>
+			</div>
+		</section>
+	</div>
+</MainLayout>
+
+<style>
+	.board-content {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.breadcrumb {
+		margin-bottom: 2rem;
+	}
+
+	.breadcrumb a {
+		color: var(--primary-color);
+		text-decoration: none;
+		font-weight: 600;
+		transition: color 0.3s ease;
+	}
+
+	.breadcrumb a:hover {
+		color: var(--secondary-color);
+	}
+
+	.intro {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		margin-bottom: 2rem;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+		border-left: 5px solid var(--secondary-color);
+	}
+
+	.lead {
+		font-size: 1.2rem;
+		line-height: 1.8;
+		color: var(--text-color);
+		margin: 0;
+	}
+
+	.board-section h2,
+	.commission-section h2,
+	.team-section h2,
+	.contact-section h2 {
+		color: var(--primary-color);
+		margin-bottom: 2rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 2px solid var(--secondary-color);
+	}
+
+	.term-info {
+		background: #f8f9fa;
+		padding: 1rem;
+		border-radius: 4px;
+		margin-bottom: 2rem;
+		border-left: 4px solid var(--primary-color);
+	}
+
+	.board-grid,
+	.commission-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+		margin-bottom: 3rem;
+	}
+
+	@media (min-width: 768px) {
+		.board-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.commission-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	.board-member,
+	.commission-member {
+		background: white;
+		padding: 1.5rem;
+		border-radius: 8px;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.board-member:hover,
+	.commission-member:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	}
+
+	.member-role {
+		display: inline-block;
+		background: var(--secondary-color);
+		color: white;
+		padding: 0.3rem 0.8rem;
+		border-radius: 15px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+
+	.board-member h3,
+	.commission-member h3 {
+		color: var(--primary-color);
+		margin-bottom: 0.5rem;
+		font-size: 1.2rem;
+	}
+
+	.board-member p,
+	.commission-member p {
+		margin: 0;
+		line-height: 1.6;
+		color: var(--text-color);
+	}
+
+	.team-section {
+		margin: 3rem 0;
+	}
+
+	.team-intro {
+		background: #f8f9fa;
+		padding: 1.5rem;
+		border-radius: 8px;
+		line-height: 1.8;
+		margin-bottom: 2rem;
+	}
+
+	.tribute-section {
+		background: #fff3e0;
+		padding: 1.5rem;
+		border-radius: 8px;
+		margin-bottom: 2rem;
+		border-left: 4px solid #ff9800;
+	}
+
+	.tribute-section h3 {
+		color: #e65100;
+		margin-bottom: 1rem;
+	}
+
+	.tribute {
+		line-height: 1.8;
+		color: #5d4037;
+		font-style: italic;
+		margin: 0;
+	}
+
+	.team-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.stat-item {
+		background: linear-gradient(135deg, var(--primary-color) 0%, #4a7c59 100%);
+		color: white;
+		padding: 2rem 1rem;
+		border-radius: 8px;
+		text-align: center;
+		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	}
+
+	.stat-number {
+		display: block;
+		font-size: 2.5rem;
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		display: block;
+		font-size: 0.9rem;
+		opacity: 0.95;
+	}
+
+	.contact-section {
+		margin-top: 3rem;
+	}
+
+	.contact-info {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+		text-align: center;
+	}
+
+	.contact-info p {
+		margin-bottom: 1.5rem;
+		line-height: 1.8;
+	}
+
+	.contact-button {
+		display: inline-block;
+		background: var(--primary-color);
+		color: white;
+		padding: 0.75rem 2rem;
+		border-radius: 4px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: background 0.3s ease, transform 0.3s ease;
+	}
+
+	.contact-button:hover {
+		background: var(--secondary-color);
+		transform: translateY(-2px);
+	}
+</style>

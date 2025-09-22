@@ -1,0 +1,219 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import MainLayout from '../../../layouts/MainLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('aktualnosci');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+type Props = {
+  post: CollectionEntry<'aktualnosci'>;
+};
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const categories = {
+  'biwaki-wycieczki': 'Biwaki i wycieczki',
+  'wydarzenia-sportowe': 'Wydarzenia sportowe',
+  'zebrania-organizacyjne': 'Zebrania i sprawy organizacyjne',
+  'wydarzenia-spoleczne': 'Wydarzenia społeczne',
+  'programy-dotacyjne': 'Programy dotacyjne'
+};
+---
+
+<MainLayout title={post.data.title}>
+  <article class="post-article">
+    <header class="post-header">
+      <h1>{post.data.title}</h1>
+      <div class="post-meta">
+        <time>{post.data.pubDate.toLocaleDateString('pl-PL', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })}</time>
+        {post.data.category && (
+          <span class="category-badge">{categories[post.data.category]}</span>
+        )}
+      </div>
+      {post.data.description && (
+        <p class="post-description">{post.data.description}</p>
+      )}
+    </header>
+
+    <div class="post-content">
+      <Content />
+    </div>
+
+    <footer class="post-footer">
+      <div class="post-navigation">
+        <a href="/aktualnosci/" class="back-to-archive">← Powrót do archiwum aktualności</a>
+        {post.data.category && (
+          <a href={`/aktualnosci/kategoria/${post.data.category}/`} class="category-link">
+            Zobacz więcej: {categories[post.data.category]} →
+          </a>
+        )}
+      </div>
+    </footer>
+  </article>
+</MainLayout>
+
+<style>
+  .post-article {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    overflow: hidden;
+  }
+
+  .post-header {
+    padding: 2rem 2rem 1rem 2rem;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .post-header h1 {
+    margin: 0 0 1rem 0;
+    color: var(--primary-color);
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .category-badge {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .post-description {
+    font-size: 1.1rem;
+    color: #666;
+    font-style: italic;
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 4px;
+  }
+
+  .post-content {
+    padding: 2rem;
+    line-height: 1.8;
+  }
+
+  .post-content :global(h2) {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .post-content :global(h3) {
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .post-content :global(ul), .post-content :global(ol) {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .post-content :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .post-content :global(strong) {
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+
+  .post-content :global(blockquote) {
+    border-left: 4px solid var(--secondary-color);
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background-color: var(--bg-color);
+    font-style: italic;
+  }
+
+  .post-footer {
+    padding: 1.5rem 2rem 2rem 2rem;
+    border-top: 1px solid var(--light-gray);
+    background-color: #fafafa;
+  }
+
+  .post-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .back-to-archive, .category-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+
+  .back-to-archive {
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+  .back-to-archive:hover {
+    background-color: #2a4f2a;
+    transform: translateX(-2px);
+  }
+
+  .category-link {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+
+  .category-link:hover {
+    background-color: #8fb33f;
+    transform: translateX(2px);
+  }
+
+  @media (max-width: 768px) {
+    .post-header, .post-content, .post-footer {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .post-header h1 {
+      font-size: 1.5rem;
+    }
+
+    .post-navigation {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .back-to-archive, .category-link {
+      text-align: center;
+    }
+  }
+</style>

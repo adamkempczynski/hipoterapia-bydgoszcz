@@ -1,0 +1,615 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Kontakt">
+	<div class="contact-container">
+		<div class="contact-grid">
+			<div class="contact-info">
+				<h2>Dane kontaktowe</h2>
+
+				<div class="info-section">
+					<h3>Adres</h3>
+					<p>
+						Bydgoskie Towarzystwo<br>
+						Hipoterapeutyczne "Myślęcinek"<br>
+						ul. Gdańska 188<br>
+						85-915 Bydgoszcz
+					</p>
+				</div>
+
+				<div class="info-section">
+					<h3>Telefon</h3>
+					<p>
+						<a href="tel:+48523411466" class="contact-link">52 341 14 66</a>
+					</p>
+				</div>
+
+				<div class="info-section">
+					<h3>Email</h3>
+					<p>
+						<a href="mailto:biuro@hipoterapia.bydgoszcz.pl" class="contact-link">
+							biuro@hipoterapia.bydgoszcz.pl
+						</a>
+					</p>
+				</div>
+
+				<div class="info-section">
+					<h3>Godziny pracy biura</h3>
+					<div class="hours-grid">
+						<div class="hours-item">
+							<strong>Poniedziałek - Piątek:</strong>
+							<span>8:00 - 16:00</span>
+						</div>
+						<div class="hours-item">
+							<strong>Sobota:</strong>
+							<span>9:00 - 14:00</span>
+						</div>
+						<div class="hours-item">
+							<strong>Niedziela:</strong>
+							<span>Zamknięte</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="info-section">
+					<h3>Lokalizacja zajęć</h3>
+					<p>
+						<strong>Ośrodek Jeździecki</strong><br>
+						ul. Gdańska 188<br>
+						85-915 Bydgoszcz
+					</p>
+					<p class="location-note">
+						Zajęcia hipoterapeutyczne odbywają się w profesjonalnym ośrodku jeździeckim
+						wyposażonym w rampy dla osób niepełnosprawnych.
+					</p>
+				</div>
+
+				<div class="info-section">
+					<h3>Dojazd</h3>
+					<div class="transport-info">
+						<div class="transport-item">
+							<i class="fas fa-bus"></i>
+							<div>
+								<strong>Komunikacja miejska:</strong>
+								<p>Autobus linii 52, 67 - przystanek "Gdańska/Wojska Polskiego"</p>
+							</div>
+						</div>
+						<div class="transport-item">
+							<i class="fas fa-car"></i>
+							<div>
+								<strong>Dojazd samochodem:</strong>
+								<p>Dostępny parking dla gości przy ośrodku jeździeckim</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="contact-form">
+				<h2>Napisz do nas</h2>
+				<form class="form" action="#" method="post">
+					<div class="form-group">
+						<label for="name">Imię i nazwisko *</label>
+						<input type="text" id="name" name="name" required>
+					</div>
+
+					<div class="form-group">
+						<label for="email">Adres email *</label>
+						<input type="email" id="email" name="email" required>
+					</div>
+
+					<div class="form-group">
+						<label for="phone">Telefon</label>
+						<input type="tel" id="phone" name="phone">
+					</div>
+
+					<div class="form-group">
+						<label for="subject">Temat</label>
+						<select id="subject" name="subject">
+							<option value="">Wybierz temat</option>
+							<option value="hipoterapia">Zapisy na hipoterapię</option>
+							<option value="wolontariat">Wolontariat</option>
+							<option value="wsparcie">Wsparcie organizacji</option>
+							<option value="informacje">Informacje ogólne</option>
+							<option value="inne">Inne</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="message">Wiadomość *</label>
+						<textarea id="message" name="message" rows="5" required
+							placeholder="Opisz swoje pytanie lub potrzeby..."></textarea>
+					</div>
+
+					<div class="form-group checkbox-group">
+						<input type="checkbox" id="privacy" name="privacy" required>
+						<label for="privacy" class="checkbox-label">
+							Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z
+							<a href="/rodo" target="_blank">polityką prywatności</a> *
+						</label>
+					</div>
+
+					<button type="submit" class="submit-button">
+						<i class="fas fa-paper-plane"></i>
+						Wyślij wiadomość
+					</button>
+				</form>
+
+				<div class="form-note">
+					<p><strong>Ważne:</strong> Na wiadomości odpowiadamy w ciągu 1-2 dni roboczych.
+					W pilnych sprawach prosimy o kontakt telefoniczny.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="map-section">
+			<h2>Jak do nas dotrzeć</h2>
+			<div class="map-container">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2360.8747891676845!2d17.999841!3d53.1156735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470285cd8b7a8c3b%3A0x9c9c4c4c4c4c4c4c!2sGda%C5%84ska%20188%2C%2085-915%20Bydgoszcz!5e0!3m2!1spl!2spl!4v1234567890123"
+					width="100%"
+					height="400"
+					style="border:0;"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+					title="Mapa lokalizacji Bydgoskie Towarzystwo Hipoterapeutyczne">
+				</iframe>
+			</div>
+		</div>
+
+		<div class="additional-info">
+			<div class="info-cards">
+				<div class="info-card">
+					<div class="card-icon">
+						<i class="fas fa-question-circle"></i>
+					</div>
+					<h3>Często zadawane pytania</h3>
+					<p>Odpowiedzi na najczęściej zadawane pytania dotyczące hipoterapii i naszych usług.</p>
+					<a href="/faq" class="card-link">Zobacz FAQ</a>
+				</div>
+
+				<div class="info-card">
+					<div class="card-icon">
+						<i class="fas fa-calendar-alt"></i>
+					</div>
+					<h3>Umów wizytę</h3>
+					<p>Skontaktuj się z nami, aby umówić konsultację lub pierwsze zajęcia hipoterapeutyczne.</p>
+					<a href="tel:+48523411466" class="card-link">Zadzwoń teraz</a>
+				</div>
+
+				<div class="info-card">
+					<div class="card-icon">
+						<i class="fas fa-hands-helping"></i>
+					</div>
+					<h3>Zostań wolontariuszem</h3>
+					<p>Dołącz do naszego zespołu wolontariuszy i pomagaj w organizacji zajęć oraz wydarzeń.</p>
+					<a href="/oferta/wolontariusze" class="card-link">Dowiedz się więcej</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="emergency-contact">
+			<div class="emergency-box">
+				<i class="fas fa-exclamation-triangle"></i>
+				<div class="emergency-content">
+					<h3>W przypadku pilnych spraw</h3>
+					<p>
+						Jeśli masz pilną sprawę związaną z bezpieczeństwem podczas zajęć lub sytuacją kryzysową,
+						skontaktuj się z nami natychmiast:
+					</p>
+					<div class="emergency-contacts">
+						<a href="tel:+48523411466" class="emergency-link">
+							<i class="fas fa-phone"></i>
+							52 341 14 66
+						</a>
+						<a href="mailto:biuro@hipoterapia.bydgoszcz.pl" class="emergency-link">
+							<i class="fas fa-envelope"></i>
+							biuro@hipoterapia.bydgoszcz.pl
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</MainLayout>
+
+<style>
+	.contact-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+
+	.contact-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		margin-bottom: 3rem;
+	}
+
+	.contact-info h2,
+	.contact-form h2 {
+		color: #2c5530;
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		border-bottom: 3px solid #4a7c59;
+		padding-bottom: 0.5rem;
+	}
+
+	.info-section {
+		margin-bottom: 2rem;
+		padding: 1.5rem;
+		background: white;
+		border-radius: 8px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		border-left: 4px solid #4a7c59;
+	}
+
+	.info-section h3 {
+		color: #2c5530;
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+	}
+
+	.info-section p {
+		color: #555;
+		line-height: 1.5;
+		margin-bottom: 0.5rem;
+	}
+
+	.contact-link {
+		color: #4a7c59;
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.3s ease;
+	}
+
+	.contact-link:hover {
+		color: #2c5530;
+		text-decoration: underline;
+	}
+
+	.hours-grid {
+		display: grid;
+		gap: 0.5rem;
+	}
+
+	.hours-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.5rem 0;
+		border-bottom: 1px solid #eee;
+	}
+
+	.hours-item:last-child {
+		border-bottom: none;
+	}
+
+	.hours-item strong {
+		color: #2c5530;
+	}
+
+	.hours-item span {
+		color: #666;
+	}
+
+	.location-note {
+		margin-top: 1rem;
+		font-style: italic;
+		color: #666;
+		font-size: 0.9rem;
+	}
+
+	.transport-info {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.transport-item {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem;
+		background: #f8f9fa;
+		border-radius: 6px;
+	}
+
+	.transport-item i {
+		color: #4a7c59;
+		font-size: 1.5rem;
+		width: 30px;
+		text-align: center;
+	}
+
+	.transport-item strong {
+		color: #2c5530;
+		display: block;
+		margin-bottom: 0.3rem;
+	}
+
+	.transport-item p {
+		color: #666;
+		margin: 0;
+		font-size: 0.9rem;
+	}
+
+	.contact-form {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+		height: fit-content;
+	}
+
+	.form {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.form-group {
+		display: grid;
+		gap: 0.5rem;
+	}
+
+	.form-group label {
+		color: #2c5530;
+		font-weight: 500;
+		font-size: 0.95rem;
+	}
+
+	.form-group input,
+	.form-group select,
+	.form-group textarea {
+		padding: 0.8rem;
+		border: 2px solid #e9ecef;
+		border-radius: 6px;
+		font-size: 1rem;
+		transition: border-color 0.3s ease;
+	}
+
+	.form-group input:focus,
+	.form-group select:focus,
+	.form-group textarea:focus {
+		outline: none;
+		border-color: #4a7c59;
+	}
+
+	.checkbox-group {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.8rem;
+	}
+
+	.checkbox-group input[type="checkbox"] {
+		margin-top: 0.2rem;
+		width: auto;
+	}
+
+	.checkbox-label {
+		color: #555;
+		font-size: 0.9rem;
+		line-height: 1.4;
+	}
+
+	.checkbox-label a {
+		color: #4a7c59;
+	}
+
+	.submit-button {
+		background: #4a7c59;
+		color: white;
+		padding: 1rem 2rem;
+		border: none;
+		border-radius: 25px;
+		font-size: 1rem;
+		font-weight: 500;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+
+	.submit-button:hover {
+		background: #2c5530;
+		transform: translateY(-2px);
+	}
+
+	.form-note {
+		margin-top: 1rem;
+		padding: 1rem;
+		background: #e3f2fd;
+		border-left: 4px solid #2196f3;
+		border-radius: 4px;
+	}
+
+	.form-note p {
+		color: #1976d2;
+		margin: 0;
+		font-size: 0.9rem;
+	}
+
+	.map-section {
+		margin-bottom: 3rem;
+	}
+
+	.map-section h2 {
+		color: #2c5530;
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	.map-container {
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	}
+
+	.additional-info {
+		margin-bottom: 3rem;
+	}
+
+	.info-cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+	}
+
+	.info-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		border-left: 5px solid #4a7c59;
+		transition: transform 0.3s ease;
+	}
+
+	.info-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.card-icon {
+		background: #4a7c59;
+		color: white;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 1.5rem;
+		font-size: 1.5rem;
+	}
+
+	.info-card h3 {
+		color: #2c5530;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+
+	.info-card p {
+		color: #666;
+		line-height: 1.5;
+		margin-bottom: 1.5rem;
+	}
+
+	.card-link {
+		color: #4a7c59;
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.3s ease;
+	}
+
+	.card-link:hover {
+		color: #2c5530;
+		text-decoration: underline;
+	}
+
+	.emergency-contact {
+		background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+		border-radius: 12px;
+		padding: 2rem;
+	}
+
+	.emergency-box {
+		display: flex;
+		align-items: flex-start;
+		gap: 1.5rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.emergency-box > i {
+		color: #ff9800;
+		font-size: 2rem;
+		margin-top: 0.5rem;
+	}
+
+	.emergency-content h3 {
+		color: #e65100;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+
+	.emergency-content p {
+		color: #bf360c;
+		line-height: 1.5;
+		margin-bottom: 1.5rem;
+	}
+
+	.emergency-contacts {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.emergency-link {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: #e65100;
+		text-decoration: none;
+		font-weight: 500;
+		padding: 0.5rem 1rem;
+		background: rgba(255, 152, 0, 0.1);
+		border-radius: 20px;
+		transition: all 0.3s ease;
+	}
+
+	.emergency-link:hover {
+		background: rgba(255, 152, 0, 0.2);
+		transform: translateY(-2px);
+	}
+
+	@media (max-width: 768px) {
+		.contact-container {
+			padding: 1rem;
+		}
+
+		.contact-grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.contact-form {
+			padding: 1.5rem;
+		}
+
+		.info-cards {
+			grid-template-columns: 1fr;
+		}
+
+		.emergency-box {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.emergency-contacts {
+			justify-content: center;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.emergency-contacts {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.transport-item {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.hours-item {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.3rem;
+		}
+	}
+</style>

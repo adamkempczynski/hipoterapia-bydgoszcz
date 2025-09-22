@@ -1,0 +1,268 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from '../../../layouts/MainLayout.astro';
+
+export async function getStaticPaths() {
+  const categories = {
+    'biwaki-wycieczki': 'Biwaki i wycieczki',
+    'wydarzenia-sportowe': 'Wydarzenia sportowe',
+    'zebrania-organizacyjne': 'Zebrania i sprawy organizacyjne',
+    'wydarzenia-spoleczne': 'Wydarzenia społeczne',
+    'programy-dotacyjne': 'Programy dotacyjne'
+  };
+  const posts = await getCollection('aktualnosci');
+
+  return Object.keys(categories).map(category => {
+    const categoryPosts = posts.filter(post => post.data.category === category);
+    return {
+      params: { category },
+      props: {
+        category,
+        categories,
+        posts: categoryPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+      }
+    };
+  });
+}
+
+const { category, categories, posts } = Astro.props;
+const categoryName = categories[category];
+
+// Grupowanie postów według lat
+const postsByYear = posts.reduce((acc, post) => {
+  const year = post.data.pubDate.getFullYear();
+  if (!acc[year]) {
+    acc[year] = [];
+  }
+  acc[year].push(post);
+  return acc;
+}, {} as Record<number, typeof posts>);
+
+const sortedYears = Object.keys(postsByYear)
+  .map(year => parseInt(year))
+  .sort((a, b) => b - a);
+---
+
+<MainLayout title={categoryName}>
+  <div class="category-header">
+    <h1>{categoryName}</h1>
+    <p>Wszystkie wydarzenia z kategorii „{categoryName}" ({posts.length} {posts.length === 1 ? 'wpis' : posts.length < 5 ? 'wpisy' : 'wpisów'})</p>
+  </div>
+
+  <div class="navigation-links">
+    <a href="/aktualnosci/" class="nav-link">← Wszystkie aktualności</a>
+    <div class="category-filters">
+      {Object.entries(categories).map(([key, name]) =>
+        key !== category ? (
+          <a href={`/aktualnosci/kategoria/${key}/`} class="category-filter">
+            {name}
+          </a>
+        ) : null
+      )}
+    </div>
+  </div>
+
+  {posts.length > 0 ? (
+    <div class="posts-by-year">
+      {sortedYears.map(year => (
+        <section class="year-section">
+          <h2 class="year-header">{year}</h2>
+          <div class="posts-grid">
+            {postsByYear[year].map(post => (
+              <article class="post-card">
+                <header class="post-card-header">
+                  <h3>
+                    <a href={`/aktualnosci/wpis/${post.slug}/`}>{post.data.title}</a>
+                  </h3>
+                  <div class="post-card-meta">
+                    <time>{post.data.pubDate.toLocaleDateString('pl-PL', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}</time>
+                  </div>
+                </header>
+                {post.data.description && (
+                  <p class="post-card-description">{post.data.description}</p>
+                )}
+                {post.data.gallery && post.data.gallery.length > 0 && (
+                  <div class="post-card-gallery-info">
+                    📸 Galeria ({post.data.gallery.length} zdjęć)
+                  </div>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  ) : (
+    <div class="no-posts">
+      <p>Brak wpisów w kategorii „{categoryName}".</p>
+      <a href="/aktualnosci/" class="nav-link">← Powrót do wszystkich aktualności</a>
+    </div>
+  )}
+</MainLayout>
+
+<style>
+  .category-header {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    text-align: center;
+    border-left: 5px solid var(--secondary-color);
+  }
+
+  .category-header h1 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+  }
+
+  .category-header p {
+    margin: 0;
+    color: #666;
+    font-size: 1.1rem;
+  }
+
+  .navigation-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    background-color: #2a4f2a;
+  }
+
+  .category-filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .category-filter {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    background-color: #ddd;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+  }
+
+  .category-filter:hover {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+
+  .posts-by-year {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .year-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    overflow: hidden;
+  }
+
+  .year-header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 1.5rem;
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  .posts-grid {
+    padding: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .post-card {
+    border: 1px solid var(--light-gray);
+    border-radius: 6px;
+    padding: 1.5rem;
+    transition: box-shadow 0.2s ease;
+  }
+
+  .post-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .post-card-header h3 {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .post-card-header h3 a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  .post-card-header h3 a:hover {
+    text-decoration: underline;
+  }
+
+  .post-card-meta {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .post-card-description {
+    margin: 0 0 1rem 0;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .post-card-gallery-info {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .no-posts {
+    text-align: center;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+
+  @media (max-width: 768px) {
+    .navigation-links {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .category-filters {
+      justify-content: center;
+    }
+
+    .category-header, .posts-grid, .no-posts {
+      padding: 1rem;
+    }
+  }
+</style>

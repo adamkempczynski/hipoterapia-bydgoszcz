@@ -23,17 +23,22 @@ const sortedPosts = allPosts.sort((
 			<p>Odkryj moc hipoterapii w profesjonalnym i przyjaznym otoczeniu.</p>
 		</div>
 	</div>
-	<h2 class="news-heading">Ostatnie aktualności</h2>
+	<div class="news-section">
+		<div class="news-header">
+			<h2 class="news-heading">Ostatnie aktualności</h2>
+			<a href="/aktualnosci/" class="archive-link">Zobacz wszystkie aktualności →</a>
+		</div>
+	</div>
 
 	<div class="posts-list">
 		{sortedPosts.map((post: CollectionEntry<'aktualnosci'>) => (
 			<article class="post-preview">
 				<h3>
-					<a href={`/aktualnosci/${post.slug}/`}>{post.data.title}</a>
+					<a href={`/aktualnosci/wpis/${post.slug}/`}>{post.data.title}</a>
 				</h3>
 				<p><small>Opublikowano: {post.data.pubDate.toLocaleDateString('pl-PL')}</small></p>
 				{post.data.description && <p>{post.data.description}</p>}
-				<a href={`/aktualnosci/${post.slug}/`} class="read-more">Czytaj więcej...</a>
+				<a href={`/aktualnosci/wpis/${post.slug}/`} class="read-more">Czytaj więcej...</a>
 			</article>
 		))}
 	</div>
@@ -90,10 +95,45 @@ const sortedPosts = allPosts.sort((
 	}
 
 	/* --- Style dla listy aktualności --- */
-	.news-heading {
-		text-align: center;
+	.news-section {
 		margin-bottom: 2rem;
+	}
+
+	.news-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2rem;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.news-heading {
 		font-size: 2rem;
+		margin: 0;
+		color: var(--primary-color);
+	}
+
+	.archive-link {
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		background-color: var(--secondary-color);
+		color: white;
+		text-decoration: none;
+		border-radius: 6px;
+		font-weight: 600;
+		transition: background-color 0.2s ease;
+	}
+
+	.archive-link:hover {
+		background-color: var(--primary-color);
+	}
+
+	@media (max-width: 768px) {
+		.news-header {
+			flex-direction: column;
+			text-align: center;
+		}
 	}
 	.posts-list {
 		display: grid; /* Zmieniamy na siatkę dla lepszego układu */
