@@ -15,169 +15,170 @@ const sortedPosts = allPosts.sort((
 ---
 
 <MainLayout title="Strona Główna">
-	<div class="hero">
-		<div class="hero-overlay"></div>
-		<Image src={heroImage} alt="Konie podczas hipoterapii" class="hero-bg" />
-		<div class="hero-content">
-			<h1>Terapia, która daje radość</h1>
-			<p>Odkryj moc hipoterapii w profesjonalnym i przyjaznym otoczeniu.</p>
+	<!-- Hero Section -->
+	<section class="relative h-[60vh] min-h-[400px] max-h-[600px] overflow-hidden rounded-2xl mx-4 sm:mx-6 lg:mx-8 mt-6">
+		<Image
+			src={heroImage}
+			alt="Konie podczas hipoterapii"
+			class="absolute inset-0 w-full h-full object-cover"
+		/>
+		<div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/30"></div>
+		<div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+			<div class="max-w-4xl">
+				<h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+					Terapia, która daje <span class="text-primary-300">radość</span>
+				</h1>
+				<p class="text-xl md:text-2xl text-gray-200 mb-8 font-light animate-slide-up">
+					Odkryj moc hipoterapii w profesjonalnym i przyjaznym otoczeniu.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
+					<a href="/oferta/" class="btn bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 text-lg">
+						Zobacz ofertę
+					</a>
+					<a href="/kontakt/" class="btn bg-white/20 hover:bg-white/30 text-white border border-white/50 px-8 py-4 text-lg backdrop-blur-sm">
+						Skontaktuj się
+					</a>
+				</div>
+			</div>
 		</div>
-	</div>
-	<div class="news-section">
-		<div class="news-header">
-			<h2 class="news-heading">Ostatnie aktualności</h2>
-			<a href="/aktualnosci/" class="archive-link">Zobacz wszystkie aktualności →</a>
-		</div>
-	</div>
+	</section>
 
-	<div class="posts-list">
-		{sortedPosts.map((post: CollectionEntry<'aktualnosci'>) => (
-			<article class="post-preview">
-				<h3>
-					<a href={`/aktualnosci/wpis/${post.slug}/`}>{post.data.title}</a>
-				</h3>
-				<p><small>Opublikowano: {post.data.pubDate.toLocaleDateString('pl-PL')}</small></p>
-				{post.data.description && <p>{post.data.description}</p>}
-				<a href={`/aktualnosci/wpis/${post.slug}/`} class="read-more">Czytaj więcej...</a>
-			</article>
-		))}
-	</div>
+	<!-- Features Section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+					Dlaczego <span class="text-primary-600">hipoterapia</span>?
+				</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					Hipoterapia to innowacyjna metoda rehabilitacji wykorzystująca ruch konia do poprawy funkcjonowania fizycznego i psychicznego.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="card text-center p-8">
+					<div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+						<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-4">Profesjonalna opieka</h3>
+					<p class="text-gray-600 leading-relaxed">
+						Doświadczeni terapeuci i instruktorzy zapewniają bezpieczną i skuteczną terapię dostosowaną do indywidualnych potrzeb.
+					</p>
+				</div>
+
+				<div class="card text-center p-8">
+					<div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+						<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-4">Skuteczne efekty</h3>
+					<p class="text-gray-600 leading-relaxed">
+						Poprawa równowagi, koordynacji, siły mięśniowej oraz rozwój umiejętności społecznych i emocjonalnych.
+					</p>
+				</div>
+
+				<div class="card text-center p-8">
+					<div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+						<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-4">Indywidualne podejście</h3>
+					<p class="text-gray-600 leading-relaxed">
+						Każda sesja jest dostosowana do wieku, możliwości i celów terapeutycznych uczestnika.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- News Section -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 gap-4">
+				<div>
+					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+						Ostatnie <span class="text-primary-600">aktualności</span>
+					</h2>
+					<p class="text-gray-600">Poznaj najnowsze wydarzenia z naszego ośrodka</p>
+				</div>
+				<a href="/aktualnosci/" class="btn bg-primary-600 hover:bg-primary-700 text-white inline-flex items-center">
+					Wszystkie aktualności
+					<svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+				</a>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				{sortedPosts.slice(0, 6).map((post: CollectionEntry<'aktualnosci'>) => (
+					<article class="card p-6 group hover:shadow-lg transition-all duration-300">
+						<div class="mb-4">
+							<span class="inline-block px-3 py-1 bg-primary-100 text-primary-800 text-sm font-medium rounded-full mb-3">
+								{post.data.category}
+							</span>
+							<h3 class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+								<a href={`/aktualnosci/wpis/${post.slug}/`} class="text-decoration-none">{post.data.title}</a>
+							</h3>
+							<p class="text-sm text-gray-500 mb-3">
+								{post.data.pubDate.toLocaleDateString('pl-PL', {
+									day: 'numeric',
+									month: 'long',
+									year: 'numeric'
+								})}
+							</p>
+						</div>
+						{post.data.description && (
+							<p class="text-gray-600 mb-4 line-clamp-3">{post.data.description}</p>
+						)}
+						<a
+							href={`/aktualnosci/wpis/${post.slug}/`}
+							class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors"
+						>
+							Czytaj więcej
+							<svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+							</svg>
+						</a>
+					</article>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 bg-primary-600">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+				Gotowy na pierwszy krok?
+			</h2>
+			<p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+				Skontaktuj się z nami, aby umówić konsultację i dowiedzieć się więcej o możliwościach hipoterapii.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/kontakt/" class="btn bg-white hover:bg-gray-100 text-primary-600 px-8 py-4 text-lg">
+					Skontaktuj się z nami
+				</a>
+				<a href="/oferta/" class="btn bg-primary-500 hover:bg-primary-400 text-white px-8 py-4 text-lg">
+					Poznaj pełną ofertę
+				</a>
+			</div>
+		</div>
+	</section>
 </MainLayout>
 
 <style>
-	/* --- Style dla sekcji HERO --- */
-	.hero {
-		position: relative;
-		height: 50vh; /* 50% wysokości ekranu */
-		min-height: 300px;
-		max-height: 450px;
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		color: white;
-		border-radius: 12px;
-		overflow: hidden; /* Ukrywa wystające części obrazka */
-		margin-bottom: 3rem;
-	}
-	.hero-bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover; /* Skaluje obraz, aby pokrył cały kontener */
-		z-index: 1;
-	}
-	.hero-overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.4); /* Ciemna nakładka dla czytelności tekstu */
-		z-index: 2;
-	}
-	.hero-content {
-		position: relative;
-		z-index: 3;
-		padding: 1rem;
-	}
-	.hero-content h1 {
-		color: white;
-		font-size: 2.5rem;
-		margin-bottom: 0.5rem;
-	}
-	.hero-content p {
-		font-size: 1.2rem;
-		font-weight: 300;
+	.line-clamp-3 {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 	}
 
-	/* --- Style dla listy aktualności --- */
-	.news-section {
-		margin-bottom: 2rem;
-	}
-
-	.news-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 2rem;
-		flex-wrap: wrap;
-		gap: 1rem;
-	}
-
-	.news-heading {
-		font-size: 2rem;
-		margin: 0;
-		color: var(--primary-color);
-	}
-
-	.archive-link {
-		display: inline-block;
-		padding: 0.5rem 1rem;
-		background-color: var(--secondary-color);
-		color: white;
+	.text-decoration-none {
 		text-decoration: none;
-		border-radius: 6px;
-		font-weight: 600;
-		transition: background-color 0.2s ease;
 	}
-
-	.archive-link:hover {
-		background-color: var(--primary-color);
-	}
-
-	@media (max-width: 768px) {
-		.news-header {
-			flex-direction: column;
-			text-align: center;
-		}
-	}
-	.posts-list {
-		display: grid; /* Zmieniamy na siatkę dla lepszego układu */
-		grid-template-columns: 1fr; /* Domyślnie jedna kolumna */
-		gap: 1.5rem;
-	}
-
-	/* Na większych ekranach dwie kolumny */
-	@media (min-width: 768px) {
-		.posts-list {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.post-preview {
-		background-color: white;
-		border: 1px solid var(--light-gray);
-		border-left: 5px solid var(--secondary-color);
-		box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-		border-radius: 8px;
-		padding: 1.5rem;
-		transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-		display: flex;
-		flex-direction: column;
-	}
-	.post-preview:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-	}
-	.post-preview h3 {
-		margin-top: 0;
-		flex-grow: 1; /* Sprawia, że tytuł pcha stopkę w dół */
-	}
-	.post-preview h3 a {
-		text-decoration: none;
-		color: var(--primary-color);
-	}
-	.post-preview .read-more {
-		font-weight: bold;
-		color: var(--primary-color);
-		text-decoration: none;
-		align-self: flex-start; /* Przycisk na dole po lewej */
-	}
-    .post-preview .read-more:hover {
-        text-decoration: underline;
-    }
 </style>

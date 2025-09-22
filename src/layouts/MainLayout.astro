@@ -1,94 +1,54 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
 interface Props {
 	title: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
+const defaultDescription = "Profesjonalna hipoterapia w Bydgoszczy. Terapia z udziałem koni dla dzieci i dorosłych z niepełnosprawnościami. Bydgoskie Towarzystwo Hipoterapii i Psychoterapii.";
 ---
 
 <!doctype html>
-<html lang="pl">
+<html lang="pl" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Profesjonalna hipoterapia w Bydgoszczy. Terapia z udziałem koni dla dzieci i dorosłych z niepełnosprawnościami. Bydgoskie Towarzystwo Hipoterapii i Psychoterapii." />
+		<meta name="description" content={description || defaultDescription} />
 		<meta name="keywords" content="hipoterapia, Bydgoszcz, terapia, konie, rehabilitacja, niepełnosprawność, dzieci, dorośli" />
 		<meta name="author" content="Bydgoskie Towarzystwo Hipoterapii i Psychoterapii" />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://hipoterapia.bydgoszcz.pl/" />
-		<meta property="og:title" content="{title} | Hipoterapia Bydgoszcz" />
-		<meta property="og:description" content="Profesjonalna hipoterapia w Bydgoszczy. Terapia z udziałem koni dla dzieci i dorosłych z niepełnosprawnościami." />
+		<meta property="og:title" content={`${title} | Hipoterapia Bydgoszcz`} />
+		<meta property="og:description" content={description || defaultDescription} />
 		<meta property="og:image" content="/uploads/index_na_koniu.jpg" />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content="https://hipoterapia.bydgoszcz.pl/" />
-		<meta property="twitter:title" content="{title} | Hipoterapia Bydgoszcz" />
-		<meta property="twitter:description" content="Profesjonalna hipoterapia w Bydgoszczy. Terapia z udziałem koni dla dzieci i dorosłych." />
+		<meta property="twitter:title" content={`${title} | Hipoterapia Bydgoszcz`} />
+		<meta property="twitter:description" content={description || defaultDescription} />
 		<meta property="twitter:image" content="/uploads/index_na_koniu.jpg" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="canonical" href={`https://hipoterapia.bydgoszcz.pl${Astro.url.pathname}`} />
-		
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-		
+
 		<title>{title} | Hipoterapia Bydgoszcz</title>
 
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 	</head>
-	<body>
-		<header>
-			<nav>
-				<a href="/">Strona Główna</a>
-				<a href="/oferta/">Oferta</a>
-				<a href="/o-hipoterapii/">O Hipoterapii</a>
-				<a href="/aktualnosci/">Aktualności</a>
-				<a href="/galeria/">Galeria</a>
-				<a href="/towarzystwo/">Towarzystwo</a>
-				<a href="/standardy-ochrony-maloletnich/">Standardy</a>
-				<a href="/kontakt/">Kontakt</a>
-				<a href="/linki/">Linki</a>
-			</nav>
-		</header>
-		<main>
-			<h1>{title}</h1>
+	<body class="min-h-screen bg-gray-50 flex flex-col">
+		<Navigation />
+
+		<main class="flex-1">
 			<slot />
 		</main>
-		<footer>
-			<div class="footer-content">
-				<div class="footer-section">
-					<h3>Kontakt</h3>
-					<p>Bydgoskie Towarzystwo</p>
-					<p>Hipoterapii i Psychoterapii</p>
-					<p>ul. Gdańska 173-175</p>
-					<p>85-674 Bydgoszcz</p>
-					<p>KRS: 0000120586</p>
-				</div>
-				<div class="footer-section">
-					<h3>Szybkie linki</h3>
-					<a href="/oferta/">Oferta</a><br>
-					<a href="/o-hipoterapii/">O Hipoterapii</a><br>
-					<a href="/towarzystwo/">O nas</a><br>
-					<a href="/kontakt/">Kontakt</a>
-				</div>
-				<div class="footer-section">
-					<h3>Social Media</h3>
-					<a href="https://www.facebook.com/bthip.myslecinek/" target="_blank" rel="noopener noreferrer">
-						Facebook
-					</a><br>
-					<p style="margin-top: 1rem;">
-						<strong>Wesprzyj nas!</strong><br>
-						Przekaż 1.5% podatku
-					</p>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<p>&copy; {new Date().getFullYear()} Bydgoskie Towarzystwo Hipoterapii i Psychoterapii. Wszelkie prawa zastrzeżone.</p>
-			</div>
-		</footer>
+
+		<Footer />
 
 		<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 		<script type="text/javascript">
@@ -100,132 +60,3 @@ const { title } = Astro.props;
 		</script>
 	</body>
 </html>
-
-<style is:global>
-	:root {
-		--primary-color: #386641;
-		--secondary-color: #a7c957;
-		--bg-color: #f2e8cf;
-		--text-color: #3a3a3a;
-		--light-gray: #e6e6e6;
-		--font-heading: 'Montserrat', sans-serif;
-		--font-body: 'Lato', sans-serif;
-	}
-
-	*, *::before, *::after {
-		box-sizing: border-box;
-	}
-
-	body {
-		font-family: var(--font-body);
-		line-height: 1.7;
-		margin: 0;
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-		color: var(--text-color);
-		background-color: var(--bg-color);
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		font-family: var(--font-heading);
-		color: var(--primary-color);
-		font-weight: 700;
-	}
-
-	header, footer {
-		padding: 1.5rem 1rem;
-		background-color: white;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-	}
-
-	main {
-		flex-grow: 1;
-		width: 100%;
-		max-width: 900px;
-		margin: 2.5rem auto;
-		padding: 0 1.5rem;
-	}
-
-	header {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-bottom: 4px solid var(--primary-color);
-	}
-    nav {
-		display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-		gap: 0.5rem 1.5rem;
-    }
-	nav a {
-		text-decoration: none;
-		color: var(--primary-color);
-		font-weight: 700;
-        padding: 0.5rem;
-		border-radius: 6px;
-		transition: all 0.2s ease-in-out;
-	}
-    nav a:hover {
-        background-color: var(--secondary-color);
-		color: white;
-    }
-
-	footer {
-		margin-top: 3rem;
-		background-color: var(--primary-color);
-		color: white;
-		font-size: 0.9rem;
-		padding: 2rem 1rem;
-	}
-
-	.footer-content {
-		max-width: 1200px;
-		margin: 0 auto;
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		text-align: center;
-	}
-
-	@media (min-width: 768px) {
-		.footer-content {
-			grid-template-columns: repeat(3, 1fr);
-			text-align: left;
-		}
-	}
-
-	.footer-section h3 {
-		color: var(--secondary-color);
-		margin-bottom: 1rem;
-		font-size: 1.1rem;
-	}
-
-	.footer-section p, .footer-section a {
-		margin: 0.5rem 0;
-		color: white;
-		text-decoration: none;
-	}
-
-	.footer-section a:hover {
-		color: var(--secondary-color);
-		text-decoration: underline;
-	}
-
-	.footer-bottom {
-		text-align: center;
-		margin-top: 2rem;
-		padding-top: 2rem;
-		border-top: 1px solid rgba(255,255,255,0.2);
-		color: rgba(255,255,255,0.8);
-	}
-
-	.post-preview {
-		background-color: white;
-		border: 1px solid var(--light-gray);
-		border-left: 5px solid var(--secondary-color);
-		box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-		border-radius: 8px;
-	}
-</style>
