@@ -13,51 +13,68 @@ import MainLayout from '../../layouts/MainLayout.astro';
 
 		<section class="pricing-section">
 			<h2>Cennik zajęć hipoterapeutycznych</h2>
+			<p class="pricing-note">Cennik obowiązujący od 1.03.2025 r.</p>
 			<div class="pricing-grid">
 				<div class="price-card standard">
 					<div class="price-header">
-						<h3>Standardowa</h3>
+						<h3>Osoby niebędące członkami Towarzystwa</h3>
 						<div class="price">60 zł</div>
 					</div>
 					<div class="price-body">
-						<p>Podstawowa sesja hipoterapii</p>
+						<p>Za 0,5 godziny zajęć</p>
 						<ul>
-							<li>45 minut zajęć</li>
-							<li>Praca z wykwalifikowanym hipoterapeutą</li>
-							<li>Używanie specjalistycznego sprzętu</li>
+							<li>Skierowanie lekarskie wymagane</li>
 						</ul>
 					</div>
 				</div>
 
 				<div class="price-card premium">
 					<div class="price-header">
-						<h3>Indywidualna</h3>
-						<div class="price">80 zł</div>
+						<h3>Aktywni członkowie Towarzystwa</h3>
+						<div class="price">52 zł</div>
 					</div>
 					<div class="price-body">
-						<p>Sesja dostosowana do indywidualnych potrzeb</p>
+						<p>Za 0,5 godziny zajęć dla członków którzy:</p>
 						<ul>
-							<li>60 minut zajęć</li>
-							<li>Program terapeutyczny na miarę</li>
-							<li>Dodatkowe wsparcie specjalistyczne</li>
+							<li>regularnie opłacają składki</li>
+							<li>uczestniczą w zebraniach BTHip „Myślęcinek"</li>
 						</ul>
 					</div>
 				</div>
 
 				<div class="price-card group">
 					<div class="price-header">
-						<h3>Grupowa</h3>
-						<div class="price">40 zł</div>
+						<h3>Członkowie Towarzystwa</h3>
+						<div class="price">57 zł</div>
 					</div>
 					<div class="price-body">
-						<p>Zajęcia w małych grupach 2-3 osoby</p>
+						<p>Za 0,5 godziny zajęć dla członków Towarzystwa, którzy:</p>
 						<ul>
-							<li>45 minut zajęć</li>
-							<li>Integracja społeczna</li>
-							<li>Atrakcyjna cena</li>
+							<li>korzystają z indywidualnie zbieranego 1% u nas</li>
+							<li>mają zajęcia finansowane z innych programów/źródeł (np. Fundacja, przedszkole)</li>
+							<li>są nieaktywnymi członkami Towarzystwa</li>
+							<li>nie płacą na bieżąco składek</li>
 						</ul>
 					</div>
 				</div>
+			</div>
+
+			<div class="membership-info">
+				<h3>Członkostwo w Towarzystwie</h3>
+				<p>
+					Można zostać członkiem po 6 miesiącach korzystania z zajęć. Wymagane: wypełnienie deklaracji członkowskiej,
+					wpłata wpisowego (30 zł) oraz wpłata rocznej składki członkowskiej (50 zł).
+					Składka obejmuje sezon od września do sierpnia następnego roku.
+				</p>
+			</div>
+
+			<div class="schedule-info">
+				<h3>Terminy zajęć</h3>
+				<ul class="schedule-list">
+					<li><strong>Poniedziałek - Piątek:</strong> 15:30 - 19:00</li>
+					<li><strong>Soboty:</strong> 9:00 - 13:00</li>
+					<li><strong>Lokalizacja:</strong> Jarużyn, ul. Kolonia 33</li>
+				</ul>
 			</div>
 		</section>
 
@@ -134,7 +151,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 				</div>
 				<div class="contact-item">
 					<strong>Email:</strong>
-					<span>biuro@hipoterapia.bydgoszcz.pl</span>
+					<a href="mailto:biuro@hipoterapia.bydgoszcz.pl">biuro@hipoterapia.bydgoszcz.pl</a>
 				</div>
 				<div class="contact-item">
 					<strong>Adres:</strong>
@@ -173,8 +190,16 @@ import MainLayout from '../../layouts/MainLayout.astro';
 	.pricing-section h2 {
 		text-align: center;
 		color: #2c5530;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 		font-size: 2.5rem;
+	}
+
+	.pricing-note {
+		text-align: center;
+		color: #666;
+		font-style: italic;
+		margin-bottom: 2rem;
+		font-size: 1rem;
 	}
 
 	.pricing-grid {
@@ -254,6 +279,44 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		left: 0;
 		color: #4a7c59;
 		font-weight: bold;
+	}
+
+	.membership-info,
+	.schedule-info {
+		background: #f8f9fa;
+		padding: 2rem;
+		border-radius: 12px;
+		margin-top: 2rem;
+		border-left: 5px solid #4a7c59;
+	}
+
+	.membership-info h3,
+	.schedule-info h3 {
+		color: #2c5530;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+
+	.membership-info p {
+		color: #666;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.schedule-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.schedule-list li {
+		color: #555;
+		margin-bottom: 0.5rem;
+		padding-left: 0;
+	}
+
+	.schedule-list li::before {
+		display: none;
 	}
 
 	.services-overview {
@@ -345,17 +408,32 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		padding: 1rem;
 		border-radius: 8px;
 		display: flex;
-		align-items: center;
-		gap: 1rem;
+		flex-direction: column;
+		gap: 0.5rem;
+		text-align: center;
 	}
 
 	.contact-item strong {
 		color: #2c5530;
-		min-width: 70px;
+		font-size: 0.9rem;
+		margin-bottom: 0;
 	}
 
-	.contact-item span {
+	.contact-item span,
+	.contact-item a {
 		color: #555;
+		font-size: 1rem;
+		text-decoration: none;
+		font-weight: 500;
+	}
+
+	.contact-item a {
+		color: #4a7c59;
+	}
+
+	.contact-item a:hover {
+		color: #2c5530;
+		text-decoration: underline;
 	}
 
 	.contact-button {
@@ -374,6 +452,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		background: #2c5530;
 	}
 
+
 	@media (max-width: 768px) {
 		.offer-content {
 			padding: 1rem;
@@ -390,5 +469,6 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		.contact-info {
 			grid-template-columns: 1fr;
 		}
+
 	}
 </style>
