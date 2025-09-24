@@ -1,15 +1,26 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import LocationsMap from '../../components/LocationsMap.astro';
 ---
 
 <MainLayout title="Oferta">
 	<div class="offer-content">
 		<section class="intro">
 			<p class="lead">
-				Oferujemy profesjonalną hipoterapię dla osób z przewlekłymi chorobami i niepełnosprawnościami.
-				Nasze zajęcia prowadzone są przez wykwalifikowaną kadrę z wieloletnim doświadczeniem.
+				Zapraszamy do udziału w zajęciach hipoterapeutycznych prowadzonych przez Bydgoskie Towarzystwo Hipoterapeutyczne „Myślęcinek”.
+				Towarzystwo od ponad 20 lat zajmuje się hipoterapią dzieci i młodzieży m.in. z porażeniem mózgowym, zespołem Downa, nadpobudliwością, niedosłuchem, niewidomych, ze spektrum autyzmu oraz z wadami postawy.
+			</p>
+			<p class="lead extra">
+				Od 1997 roku Towarzystwo objęte jest patronatem Polskiego Towarzystwa Hipoterapeutycznego. Dysponujemy doświadczoną kadrą, trzema spokojnymi końmi oraz zapleczem obejmującym budynek pełniący funkcję krytej ujeżdżalni. Większość zajęć prowadzimy na świeżym powietrzu, korzystając z padoku i okolicznych terenów.
+			</p>
+			<p class="lead extra">
+				Organizujemy także wydarzenia integracyjne: spływy, biwaki oraz mecze piłki nożnej, wspierające integrację społeczną uczestników.
 			</p>
 		</section>
+
+		<div class="requirement-alert" role="note" aria-label="Wymagania">
+			<strong>Warunek przyjęcia na zajęcia:</strong> skierowanie lekarskie.
+		</div>
 
 		<section class="pricing-section">
 			<h2>Cennik zajęć hipoterapeutycznych</h2>
@@ -61,11 +72,11 @@ import MainLayout from '../../layouts/MainLayout.astro';
 
 			<div class="membership-info">
 				<h3>Członkostwo w Towarzystwie</h3>
-				<p>
-					Można zostać członkiem po 6 miesiącach korzystania z zajęć. Wymagane: wypełnienie deklaracji członkowskiej,
-					wpłata wpisowego (30 zł) oraz wpłata rocznej składki członkowskiej (50 zł).
-					Składka obejmuje sezon od września do sierpnia następnego roku.
-				</p>
+				<p>Można zostać członkiem po 6 miesiącach korzystania z zajęć i wypełnieniu deklaracji członkowskiej.</p>
+				<ul class="membership-fees">
+					<li><strong>Wpisowe:</strong> 30 zł</li>
+					<li><strong>Roczna składka członkowska:</strong> 50 zł (obejmuje sezon od września bieżącego roku do sierpnia roku następnego)</li>
+				</ul>
 			</div>
 
 			<div class="schedule-info">
@@ -80,6 +91,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 
 		<section class="services-overview">
 			<h2>Nasze usługi</h2>
+			<p class="services-intro">Dowiedz się więcej o naszej kadrze, koniach, zasadach uczestnictwa oraz możliwościach zaangażowania poprzez wolontariat i wsparcie organizacji.</p>
 			<div class="services-grid">
 				<div class="service-item">
 					<h3>Hipoterapia</h3>
@@ -144,6 +156,14 @@ import MainLayout from '../../layouts/MainLayout.astro';
 				lub mailowo. Chętnie odpowiemy na wszystkie pytania i pomożemy dobrać odpowiedni
 				program terapeutyczny.
 			</p>
+			<div class="quick-schedule" aria-label="Harmonogram zajęć">
+				<h3>Harmonogram zajęć</h3>
+				<p class="location"><strong>Miejsce:</strong> Jarużyn, ul. Kolonia 33</p>
+				<ul>
+					<li><strong>Pn–Pt:</strong> 15:30 – 19:00</li>
+					<li><strong>Sobota:</strong> 9:00 – 13:00</li>
+				</ul>
+			</div>
 			<div class="contact-info">
 				<div class="contact-item">
 					<strong>Telefon:</strong>
@@ -159,6 +179,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 				</div>
 			</div>
 			<a href="/kontakt" class="contact-button">Formularz kontaktowy</a>
+			<LocationsMap />
 		</section>
 	</div>
 </MainLayout>
@@ -181,6 +202,26 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		line-height: 1.6;
 		max-width: 800px;
 		margin: 0 auto;
+	}
+
+	.lead.extra {
+		margin-top: 1.5rem;
+	}
+
+	.requirement-alert {
+		background: #fff7e6;
+		border: 1px solid #f0c36c;
+		color: #5c470a;
+		padding: 1rem 1.25rem;
+		border-radius: 8px;
+		margin: 1rem auto 2rem;
+		max-width: 900px;
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+
+	.requirement-alert strong {
+		color: #8a5a00;
 	}
 
 	.pricing-section {
@@ -303,6 +344,27 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		margin: 0;
 	}
 
+	.membership-fees {
+		list-style: none;
+		padding: 0;
+		margin: 1rem 0 0;
+	}
+
+	.membership-fees li {
+		color: #555;
+		margin-bottom: 0.5rem;
+		position: relative;
+		padding-left: 1.4rem;
+	}
+
+	.membership-fees li::before {
+		content: '•';
+		position: absolute;
+		left: 0;
+		color: #4a7c59;
+		font-weight: bold;
+	}
+
 	.schedule-list {
 		list-style: none;
 		padding: 0;
@@ -361,6 +423,15 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		margin-bottom: 1.5rem;
 	}
 
+	.services-intro {
+		text-align: center;
+		color: #555;
+		max-width: 800px;
+		margin: -1rem auto 2rem;
+		font-size: 1.05rem;
+		line-height: 1.5;
+	}
+
 	.service-link {
 		color: #4a7c59;
 		text-decoration: none;
@@ -385,6 +456,42 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		margin-bottom: 1rem;
 		font-size: 2rem;
 	}
+
+		.quick-schedule {
+			background: #ffffff;
+			border: 1px solid #e2e8f0;
+			border-radius: 12px;
+			padding: 1.5rem 1.75rem;
+			max-width: 600px;
+			margin: 1.5rem auto 2rem;
+			text-align: left;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+		}
+
+		.quick-schedule h3 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+			font-size: 1.25rem;
+			color: #2c5530;
+		}
+
+		.quick-schedule .location {
+			margin: 0 0 0.75rem;
+			color: #555;
+			font-weight: 500;
+		}
+
+		.quick-schedule ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.quick-schedule li {
+			margin-bottom: 0.4rem;
+			color: #444;
+			font-size: 0.95rem;
+		}
 
 	.contact-section > p {
 		color: #666;
