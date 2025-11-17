@@ -22,3 +22,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# test screenshots and reports
+screenshots/
+screenshot-*.png
+lighthouse-reports/
