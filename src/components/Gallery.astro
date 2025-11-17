@@ -10,31 +10,41 @@ const { imagePaths, galleryId } = Astro.props;
 
 <div class="photo-gallery">
   {imagePaths.map((path, index) => (
-    <a
-      href={path}
-      class="glightbox group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-      data-gallery={galleryId}
-      data-title={`Zdjęcie ${index + 1} z ${imagePaths.length}`}
-    >
-      <img
-        src={path}
-        alt={`Zdjęcie ${index + 1} z galerii ${galleryId}`}
-        loading="lazy"
-        class="w-full h-64 md:h-72 object-cover group-hover:scale-110 transition-transform duration-500"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-      <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
-          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-          </svg>
+    <div class="gallery-item-wrapper" data-item-index={index}>
+      {/* Skeleton loader - pokazuje się domyślnie */}
+      <div class="skeleton-loader rounded-xl">
+        <div class="skeleton-shimmer"></div>
+      </div>
+
+      {/* Główny element galerii */}
+      <a
+        href={path}
+        class="glightbox gallery-item group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+        data-gallery={galleryId}
+        data-title={`${index + 1} z ${imagePaths.length}`}
+        style="opacity: 0;"
+      >
+        <img
+          src={path}
+          alt=""
+          loading="lazy"
+          class="gallery-image w-full h-64 md:h-72 object-cover group-hover:scale-110 transition-transform duration-500"
+          data-item-index={index}
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+          </div>
         </div>
-      </div>
-      <div class="absolute bottom-3 right-3 bg-black/70 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        {index + 1}/{imagePaths.length}
-      </div>
-    </a>
+        <div class="absolute bottom-3 right-3 bg-black/70 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          {index + 1}/{imagePaths.length}
+        </div>
+      </a>
+    </div>
   ))}
 </div>
 
@@ -52,4 +62,142 @@ const { imagePaths, galleryId } = Astro.props;
       gap: 1rem;
     }
   }
+
+  .gallery-item-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  /* Skeleton loader styles */
+  .skeleton-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 16rem; /* 64 * 4px = 256px (h-64) */
+    background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  @media (min-width: 768px) {
+    .skeleton-loader {
+      height: 18rem; /* 72 * 4px = 288px (md:h-72) */
+    }
+  }
+
+  .skeleton-shimmer {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      transparent 100%
+    );
+    animation: shimmer-slide 2s infinite;
+  }
+
+  /* Animacja shimmer - gradient się przesuwa */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes shimmer-slide {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  /* Ukryj skeleton gdy obraz załadowany */
+  .skeleton-loader.loaded {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+  }
+
+  /* Pokaż obraz gdy załadowany */
+  .gallery-item.loaded {
+    opacity: 1 !important;
+    transition: opacity 0.4s ease-in;
+    z-index: 2;
+    position: relative;
+  }
 </style>
+
+<script>
+  // Funkcja do obsługi ładowania obrazów
+  function initializeGalleryLoaders() {
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    // Intersection Observer dla lazy loading
+    const imageObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            const wrapper = img.closest('.gallery-item-wrapper');
+            const galleryItem = wrapper?.querySelector('.gallery-item');
+            const skeleton = wrapper?.querySelector('.skeleton-loader');
+
+            // Sprawdź czy obraz już załadowany
+            if (img.complete && img.naturalHeight !== 0) {
+              // Obraz już załadowany (z cache)
+              skeleton?.classList.add('loaded');
+              galleryItem?.classList.add('loaded');
+            } else {
+              // Czekaj na załadowanie obrazu
+              img.addEventListener('load', () => {
+                skeleton?.classList.add('loaded');
+                galleryItem?.classList.add('loaded');
+              });
+
+              // Obsługa błędu ładowania
+              img.addEventListener('error', () => {
+                skeleton?.classList.add('loaded');
+                galleryItem?.classList.add('loaded');
+                console.warn('Failed to load image:', img.src);
+              });
+            }
+
+            // Przestań obserwować ten obraz
+            observer.unobserve(img);
+          }
+        });
+      },
+      {
+        // Zacznij ładować gdy obraz jest 50px od viewportu
+        rootMargin: '50px',
+        threshold: 0.01
+      }
+    );
+
+    // Obserwuj wszystkie obrazy
+    galleryImages.forEach((img) => {
+      imageObserver.observe(img);
+    });
+  }
+
+  // Inicjalizuj po załadowaniu DOM
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeGalleryLoaders);
+  } else {
+    initializeGalleryLoaders();
+  }
+
+  // Reinicjalizuj po nawigacji (dla SPA-like behavior w Astro)
+  document.addEventListener('astro:page-load', initializeGalleryLoaders);
+</script>
