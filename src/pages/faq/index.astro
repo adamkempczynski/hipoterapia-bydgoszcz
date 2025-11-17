@@ -1,0 +1,377 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+
+const faqs = [
+	{
+		category: "O hipoterapii",
+		questions: [
+			{
+				q: "Czym jest hipoterapia?",
+				a: "Hipoterapia to metoda rehabilitacji i terapii wykorzystująca kontakt z koniem oraz jazdę konną. Naturalny, trójwymiarowy ruch konia stymuluje układ nerwowy, poprawia równowagę, koordynację i napięcie mięśniowe."
+			},
+			{
+				q: "Dla kogo jest hipoterapia?",
+				a: "Hipoterapia jest wskazana dla osób z porażeniem mózgowym, autyzmem, zespołem Downa, wadami postawy, ADHD, zaburzeniami integracji sensorycznej oraz wieloma innymi dysfunkcjami neurologicznymi, ortopedycznymi i emocjonalnymi."
+			},
+			{
+				q: "Od jakiego wieku można rozpocząć terapię?",
+				a: "Hipoterapię można rozpocząć już od 2-3 roku życia, po uzyskaniu zgody lekarza. Nie ma górnej granicy wieku - terapia jest odpowiednia również dla dorosłych."
+			},
+			{
+				q: "Czy hipoterapia jest bezpieczna?",
+				a: "Tak, zajęcia prowadzone są przez certyfikowanych hipoterapeutów z wieloletnim doświadczeniem. Nasze konie są specjalnie wyselekcjonowane i przeszkolone do pracy z osobami niepełnosprawnymi. Zawsze zachowujemy najwyższe standardy bezpieczeństwa."
+			}
+		]
+	},
+	{
+		category: "Organizacja zajęć",
+		questions: [
+			{
+				q: "Jak często odbywają się zajęcia?",
+				a: "Zazwyczaj zalecamy 1-2 zajęcia tygodniowo. Częstotliwość zależy od indywidualnych potrzeb i możliwości uczestnika oraz dostępności terminów."
+			},
+			{
+				q: "Jak długo trwa jedno zajęcie?",
+				a: "Standardowe zajęcie trwa 30 minut (0,5 godziny). Dla niektórych uczestników, w zależności od potrzeb, możliwe są zajęcia 45-minutowe."
+			},
+			{
+				q: "Jakie dokumenty są potrzebne do rozpoczęcia terapii?",
+				a: "Wymagane jest skierowanie lekarskie potwierdzające brak przeciwwskazań do udziału w hipoterapii. Dodatkowo prosimy o wypełnienie formularza zgłoszeniowego dostępnego w biurze."
+			},
+			{
+				q: "Gdzie odbywają się zajęcia?",
+				a: "Zajęcia odbywają się w Jarużynie, ul. Kolonia 33. Większość zajęć prowadzimy na świeżym powietrzu, korzystając z padoku. W razie niepogody wykorzystujemy krytą ujeżdżalnię."
+			},
+			{
+				q: "W jakich godzinach są zajęcia?",
+				a: "Poniedziałek-Piątek: 15:30-19:00, Sobota: 9:00-13:00. Niedziela - zamknięte."
+			}
+		]
+	},
+	{
+		category: "Koszty i płatności",
+		questions: [
+			{
+				q: "Ile kosztują zajęcia?",
+				a: "Cena za 0,5 godziny zajęć wynosi 60 zł dla osób niebędących członkami Towarzystwa, 52 zł dla aktywnych członków oraz 57 zł dla pozostałych członków. Szczegóły cennika dostępne są na stronie Oferta."
+			},
+			{
+				q: "Czy można zostać członkiem Towarzystwa?",
+				a: "Tak! Można zostać członkiem po 6 miesiącach korzystania z zajęć. Wpisowe wynosi 30 zł, roczna składka członkowska to 50 zł. Członkowie otrzymują zniżki na zajęcia."
+			},
+			{
+				q: "Czy istnieją jakieś dofinansowania?",
+				a: "Niektóre zajęcia mogą być finansowane z programów dotacyjnych, przedszkoli lub fundacji. Prosimy o kontakt w celu omówienia możliwości dofinansowania."
+			},
+			{
+				q: "Czy mogę przekazać 1,5% podatku na Towarzystwo?",
+				a: "Tak! Jesteśmy organizacją pożytku publicznego. Numer KRS: 0000120586. Twoje 1,5% pomoże nam kontynuować działalność."
+			}
+		]
+	},
+	{
+		category: "Przygotowanie do zajęć",
+		questions: [
+			{
+				q: "Jak przygotować się do pierwszych zajęć?",
+				a: "Zalecamy wygodny strój sportowy (długie spodnie, t-shirt). Jeśli uczestnik ma własny kask jeździecki - bardzo dobrze, jeśli nie - udostępnimy. Warto zabrać wodę do picia."
+			},
+			{
+				q: "Czy rodzic może być obecny podczas zajęć?",
+				a: "Tak, obecność rodzica/opiekuna jest mile widziana, szczególnie podczas pierwszych zajęć. Pomagamy również w oswojeniu się z koniem i budowaniu zaufania."
+			},
+			{
+				q: "Co jeśli dziecko boi się koni?",
+				a: "To normalne! Pierwsze zajęcia poświęcamy na oswojenie się z koniem - dotykanie, głaskanie, karmienie. Terapeuta stopniowo buduje zaufanie i dopiero po pełnym oswojeniu zaczynamy jazdę."
+			},
+			{
+				q: "Czy w razie deszczu zajęcia się odbywają?",
+				a: "Tak, dysponujemy krytą ujeżdżalnią, więc zajęcia odbywają się niezależnie od pogody. W przypadku ekstremalnych warunków pogodowych kontaktujemy się indywidualnie."
+			}
+		]
+	},
+	{
+		category: "Inne pytania",
+		questions: [
+			{
+				q: "Czy organizujecie wydarzenia integracyjne?",
+				a: "Tak! Regularnie organizujemy spływy kajakowe, biwaki, mecze piłki nożnej i inne wydarzenia integracyjne dla uczestników terapii i ich rodzin."
+			},
+			{
+				q: "Czy mogę zostać wolontariuszem?",
+				a: "Oczywiście! Zawsze szukamy osób chętnych do pomocy. Więcej informacji na stronie Wolontariat lub skontaktuj się z nami bezpośrednio."
+			},
+			{
+				q: "Czy prowadzicie zajęcia grupowe?",
+				a: "Koncentrujemy się na zajęciach indywidualnych, dostosowanych do potrzeb każdego uczestnika. Dzięki temu możemy zapewnić najwyższą jakość terapii."
+			},
+			{
+				q: "Jak mogę umówić konsultację?",
+				a: "Skontaktuj się z nami telefonicznie (52 341 14 66) lub mailowo (biuro@hipoterapia.bydgoszcz.pl). Chętnie odpowiemy na wszystkie pytania i umówimy pierwszą konsultację."
+			}
+		]
+	}
+];
+---
+
+<MainLayout
+	title="FAQ - Najczęściej zadawane pytania"
+	description="Odpowiedzi na najczęściej zadawane pytania dotyczące hipoterapii w Bydgoszczy. Dowiedz się więcej o organizacji zajęć, kosztach i przygotowaniu do terapii."
+>
+	<div class="faq-container">
+		<div class="faq-header">
+			<h1>Najczęściej zadawane pytania</h1>
+			<p class="lead">Znajdź odpowiedzi na pytania dotyczące hipoterapii, organizacji zajęć i naszego Towarzystwa</p>
+		</div>
+
+		{faqs.map((section) => (
+			<section class="faq-section">
+				<h2 class="category-title">{section.category}</h2>
+				<div class="questions-list">
+					{section.questions.map((item, index) => (
+						<details class="faq-item">
+							<summary class="faq-question">
+								<span class="question-text">{item.q}</span>
+								<svg class="chevron" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</summary>
+							<div class="faq-answer">
+								<p>{item.a}</p>
+							</div>
+						</details>
+					))}
+				</div>
+			</section>
+		))}
+
+		<div class="contact-cta">
+			<h2>Nie znalazłeś odpowiedzi?</h2>
+			<p>Skontaktuj się z nami - chętnie odpowiemy na wszystkie Twoje pytania!</p>
+			<div class="cta-buttons">
+				<a href="/kontakt/" class="btn btn-primary">Skontaktuj się</a>
+				<a href="tel:+48523411466" class="btn btn-secondary">Zadzwoń: 52 341 14 66</a>
+			</div>
+		</div>
+	</div>
+</MainLayout>
+
+<style>
+	.faq-container {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+
+	.faq-header {
+		text-align: center;
+		margin-bottom: 3rem;
+		padding: 2rem;
+		background: linear-gradient(135deg, #f0f9f4 0%, #ffffff 100%);
+		border-radius: 12px;
+	}
+
+	.faq-header h1 {
+		color: #16a34a;
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.lead {
+		font-size: 1.125rem;
+		color: #666;
+		line-height: 1.6;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.faq-section {
+		margin-bottom: 3rem;
+	}
+
+	.category-title {
+		color: #16a34a;
+		font-size: 1.75rem;
+		margin-bottom: 1.5rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 2px solid #16a34a;
+	}
+
+	.questions-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.faq-item {
+		background: white;
+		border: 1px solid #e5e7eb;
+		border-radius: 8px;
+		overflow: hidden;
+		transition: all 0.3s ease;
+	}
+
+	.faq-item:hover {
+		border-color: #16a34a;
+		box-shadow: 0 2px 8px rgba(22, 163, 74, 0.1);
+	}
+
+	.faq-item[open] {
+		border-color: #16a34a;
+	}
+
+	.faq-question {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.25rem 1.5rem;
+		cursor: pointer;
+		user-select: none;
+		background: white;
+		transition: background 0.2s ease;
+	}
+
+	.faq-question:hover {
+		background: #f9fafb;
+	}
+
+	.question-text {
+		font-weight: 600;
+		color: #1f2937;
+		font-size: 1.0625rem;
+		flex: 1;
+		padding-right: 1rem;
+	}
+
+	.chevron {
+		color: #16a34a;
+		transition: transform 0.3s ease;
+		flex-shrink: 0;
+	}
+
+	.faq-item[open] .chevron {
+		transform: rotate(180deg);
+	}
+
+	.faq-answer {
+		padding: 0 1.5rem 1.5rem 1.5rem;
+		color: #4b5563;
+		line-height: 1.7;
+		animation: slideDown 0.3s ease;
+	}
+
+	@keyframes slideDown {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.faq-answer p {
+		margin: 0;
+	}
+
+	.contact-cta {
+		margin-top: 4rem;
+		padding: 2.5rem;
+		background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+		border-radius: 12px;
+		text-align: center;
+		color: white;
+	}
+
+	.contact-cta h2 {
+		color: white;
+		font-size: 2rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.contact-cta p {
+		font-size: 1.125rem;
+		margin-bottom: 2rem;
+		opacity: 0.95;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.875rem 1.75rem;
+		border-radius: 8px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: all 0.2s ease;
+		font-size: 1rem;
+	}
+
+	.btn-primary {
+		background: white;
+		color: #16a34a;
+	}
+
+	.btn-primary:hover {
+		background: #f0f9f4;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	}
+
+	.btn-secondary {
+		background: rgba(255, 255, 255, 0.15);
+		color: white;
+		border: 2px solid white;
+	}
+
+	.btn-secondary:hover {
+		background: rgba(255, 255, 255, 0.25);
+		transform: translateY(-2px);
+	}
+
+	@media (max-width: 768px) {
+		.faq-header h1 {
+			font-size: 2rem;
+		}
+
+		.category-title {
+			font-size: 1.5rem;
+		}
+
+		.faq-question {
+			padding: 1rem;
+		}
+
+		.question-text {
+			font-size: 1rem;
+		}
+
+		.faq-answer {
+			padding: 0 1rem 1rem 1rem;
+		}
+
+		.contact-cta {
+			padding: 2rem 1.5rem;
+		}
+
+		.contact-cta h2 {
+			font-size: 1.5rem;
+		}
+
+		.cta-buttons {
+			flex-direction: column;
+		}
+
+		.btn {
+			width: 100%;
+		}
+	}
+</style>
