@@ -32,25 +32,21 @@ async function optimizeImage(imagePath) {
   const stats = await stat(imagePath);
   const sizeMB = stats.size / (1024 * 1024);
 
-  console.log(`\n📸 ${imagePath}`);
-  console.log(`   Rozmiar przed: ${sizeMB.toFixed(2)}MB`);
+  const ext = extname(imagePath).toLowerCase();
+  const dir = dirname(imagePath);
+  const base = basename(imagePath, ext);
+  const webpPath = join(dir, `${base}.webp`);
 
-  if (sizeMB < MAX_SIZE_MB) {
-    console.log(`   ✅ Już zoptymalizowany`);
+  // Check if WebP already exists
+  if (existsSync(webpPath)) {
+    console.log(`\n⏭️  ${imagePath} - WebP już istnieje`);
     return;
   }
 
+  console.log(`\n📸 ${imagePath}`);
+  console.log(`   Rozmiar przed: ${sizeMB.toFixed(2)}MB`);
+
   try {
-    const ext = extname(imagePath).toLowerCase();
-    const dir = dirname(imagePath);
-    const base = basename(imagePath, ext);
-
-    // Backup original
-    const backupDir = join(dir, 'originals');
-    if (!existsSync(backupDir)) {
-      await mkdir(backupDir, { recursive: true });
-    }
-
     const image = sharp(imagePath);
     const metadata = await image.metadata();
 
@@ -64,7 +60,6 @@ async function optimizeImage(imagePath) {
     }
 
     // Convert to WebP
-    const webpPath = join(dir, `${base}.webp`);
     await pipeline
       .webp({ quality: QUALITY })
       .toFile(webpPath);
