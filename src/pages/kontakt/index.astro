@@ -89,7 +89,12 @@ import LocationsMap from '../../components/LocationsMap.astro';
 
 			<div class="contact-form">
 				<h2>Napisz do nas</h2>
-				<form class="form" action="#" method="post">
+				<form class="form" action="https://api.web3forms.com/submit" method="POST">
+					<!-- TODO: Zamień na swój klucz z https://web3forms.com/ -->
+					<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+					<input type="hidden" name="subject" value="Nowa wiadomość z formularza kontaktowego">
+					<input type="hidden" name="from_name" value="Hipoterapia Bydgoszcz - Formularz">
+
 					<div class="form-group">
 						<label for="name">Imię i nazwisko *</label>
 						<input type="text" id="name" name="name" required>
