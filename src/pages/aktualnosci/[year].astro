@@ -46,18 +46,30 @@ const monthNames = [
 ---
 
 <MainLayout title={`Aktualności ${year}`}>
-  <div class="year-header">
-    <h1>Aktualności z {year} roku</h1>
-    <p>Wszystkie wydarzenia i aktualności z {year} roku ({posts.length} {posts.length === 1 ? 'wpis' : posts.length < 5 ? 'wpisy' : 'wpisów'})</p>
-  </div>
+  <section class="py-12 bg-gradient-to-r from-primary-600 to-primary-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        Aktualności z <span class="text-primary-200">{year}</span> roku
+      </h1>
+      <p class="text-xl text-primary-100 max-w-3xl mx-auto">
+        Wszystkie wydarzenia i aktualności z {year} roku ({posts.length} {posts.length === 1 ? 'wpis' : posts.length < 5 ? 'wpisy' : 'wpisów'})
+      </p>
+    </div>
+  </section>
 
-  <div class="navigation-links">
-    <a href="/aktualnosci/" class="nav-link">← Wszystkie aktualności</a>
-    <div class="category-filters">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+    <a href="/aktualnosci/" class="inline-flex items-center px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors">
+      <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+      Wszystkie aktualności
+    </a>
+    <div class="flex flex-wrap gap-2">
       {Object.entries(categories).map(([key, name]) => {
         const categoryPosts = posts.filter(post => post.data.category === key);
         return categoryPosts.length > 0 ? (
-          <a href={`/aktualnosci/kategoria/${key}/`} class="category-filter">
+          <a href={`/aktualnosci/kategoria/${key}/`} class="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-800 text-sm font-medium rounded-full hover:bg-primary-200 transition-colors">
             {name} ({categoryPosts.length})
           </a>
         ) : null;
@@ -65,35 +77,59 @@ const monthNames = [
     </div>
   </div>
 
-  <div class="posts-timeline">
+  <div class="space-y-8">
     {Object.keys(postsByMonth)
       .map(month => parseInt(month))
       .sort((a, b) => b - a)
       .map(month => (
-        <section class="month-section">
-          <h2 class="month-header">{monthNames[month]} {year}</h2>
-          <div class="posts-grid">
+        <section class="card p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <svg class="w-6 h-6 text-primary-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            {monthNames[month]} {year}
+          </h2>
+          <div class="space-y-6">
             {postsByMonth[month].map(post => (
-              <article class="post-card">
-                <header class="post-card-header">
-                  <h3>
-                    <a href={`/aktualnosci/wpis/${post.slug}/`}>{post.data.title}</a>
-                  </h3>
-                  <div class="post-card-meta">
-                    <time>{post.data.pubDate.toLocaleDateString('pl-PL')}</time>
-                    {post.data.category && (
-                      <span class="category-badge">{categories[post.data.category]}</span>
+              <article class="group border-l-4 border-primary-200 hover:border-primary-500 bg-gray-50 hover:bg-white rounded-r-lg p-6 transition-all duration-300 hover:shadow-md">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div class="flex-1">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-primary-700 transition-colors mb-2">
+                      <a href={`/aktualnosci/wpis/${post.slug}/`} class="text-decoration-none">{post.data.title}</a>
+                    </h3>
+                    <div class="flex flex-wrap items-center gap-4 mb-3">
+                      <time class="text-sm text-gray-500 flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        {post.data.pubDate.toLocaleDateString('pl-PL', {
+                          day: 'numeric',
+                          month: 'long',
+                          year: 'numeric'
+                        })}
+                      </time>
+                      {post.data.category && (
+                        <span class="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-800 text-sm font-medium rounded-full">
+                          {categories[post.data.category]}
+                        </span>
+                      )}
+                    </div>
+                    {post.data.description && (
+                      <p class="text-gray-600 line-clamp-2">{post.data.description}</p>
                     )}
                   </div>
-                </header>
-                {post.data.description && (
-                  <p class="post-card-description">{post.data.description}</p>
-                )}
-                {post.data.gallery && post.data.gallery.length > 0 && (
-                  <div class="post-card-gallery-info">
-                    📸 Galeria ({post.data.gallery.length} zdjęć)
+                  <div class="flex-shrink-0">
+                    <a
+                      href={`/aktualnosci/wpis/${post.slug}/`}
+                      class="inline-flex items-center px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors"
+                    >
+                      Czytaj
+                      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
                   </div>
-                )}
+                </div>
               </article>
             ))}
           </div>
@@ -102,182 +138,15 @@ const monthNames = [
   </div>
 
   {posts.length === 0 && (
-    <div class="no-posts">
-      <p>Brak aktualności z {year} roku.</p>
-      <a href="/aktualnosci/" class="nav-link">← Powrót do wszystkich aktualności</a>
+    <div class="card p-8 text-center">
+      <p class="text-gray-600 mb-4">Brak aktualności z {year} roku.</p>
+      <a href="/aktualnosci/" class="inline-flex items-center px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Powrót do wszystkich aktualności
+      </a>
     </div>
   )}
+  </div>
 </MainLayout>
-
-<style>
-  .year-header {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    text-align: center;
-  }
-
-  .year-header h1 {
-    margin: 0 0 0.5rem 0;
-    color: var(--primary-color);
-  }
-
-  .year-header p {
-    margin: 0;
-    color: #666;
-    font-size: 1.1rem;
-  }
-
-  .navigation-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .nav-link {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background-color 0.2s ease;
-  }
-
-  .nav-link:hover {
-    background-color: #2a4f2a;
-  }
-
-  .category-filters {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .category-filter {
-    display: inline-block;
-    padding: 0.3rem 0.6rem;
-    background-color: var(--secondary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: background-color 0.2s ease;
-  }
-
-  .category-filter:hover {
-    background-color: #8fb33f;
-  }
-
-  .posts-timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .month-section {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    overflow: hidden;
-  }
-
-  .month-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem 1.5rem;
-    margin: 0;
-    font-size: 1.3rem;
-  }
-
-  .posts-grid {
-    padding: 1.5rem;
-    display: grid;
-    gap: 1.5rem;
-  }
-
-  .post-card {
-    border: 1px solid var(--light-gray);
-    border-radius: 6px;
-    padding: 1.5rem;
-    transition: box-shadow 0.2s ease;
-  }
-
-  .post-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-
-  .post-card-header h3 {
-    margin: 0 0 0.5rem 0;
-  }
-
-  .post-card-header h3 a {
-    color: var(--primary-color);
-    text-decoration: none;
-  }
-
-  .post-card-header h3 a:hover {
-    text-decoration: underline;
-  }
-
-  .post-card-meta {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    color: #666;
-  }
-
-  .category-badge {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 0.2rem 0.6rem;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    font-weight: 600;
-  }
-
-  .post-card-description {
-    margin: 0 0 1rem 0;
-    color: #666;
-    line-height: 1.6;
-  }
-
-  .post-card-gallery-info {
-    font-size: 0.9rem;
-    color: var(--primary-color);
-    font-weight: 600;
-    margin: 0;
-  }
-
-  .no-posts {
-    text-align: center;
-    background-color: white;
-    padding: 3rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  }
-
-  @media (max-width: 768px) {
-    .navigation-links {
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    .category-filters {
-      justify-content: center;
-    }
-
-    .year-header, .posts-grid, .no-posts {
-      padding: 1rem;
-    }
-  }
-</style>
