@@ -1,6 +1,7 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
 import MainLayout from '../../../layouts/MainLayout.astro';
+import Gallery from '../../../components/Gallery.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('aktualnosci');
@@ -52,6 +53,24 @@ const shareTitle = post.data.title;
     <div class="post-content">
       <Content />
     </div>
+
+    <!-- Gallery - automatically displayed if gallery exists in frontmatter -->
+    {post.data.gallery && post.data.gallery.length > 0 && (
+      <div class="post-gallery">
+        {post.data.gallery.length === 1 ? (
+          <!-- Single image - display as featured image -->
+          <img
+            src={post.data.gallery[0]}
+            alt={post.data.title}
+            class="featured-image"
+            loading="lazy"
+          />
+        ) : (
+          <!-- Multiple images - display as gallery -->
+          <Gallery imagePaths={post.data.gallery} />
+        )}
+      </div>
+    )}
 
     <!-- Social Share Buttons -->
     <div class="share-section">
@@ -230,6 +249,21 @@ const shareTitle = post.data.title;
     margin-bottom: 1.25rem;
   }
 
+  .post-gallery {
+    padding: 2rem 3rem;
+  }
+
+  .featured-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+  }
+
   .post-footer {
     padding: 2rem 3rem 2.5rem 3rem;
     border-top: 2px solid #e5e7eb;
@@ -382,7 +416,7 @@ const shareTitle = post.data.title;
   }
 
   @media (max-width: 768px) {
-    .post-header, .post-content, .post-footer, .share-section {
+    .post-header, .post-content, .post-gallery, .post-footer, .share-section {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
     }

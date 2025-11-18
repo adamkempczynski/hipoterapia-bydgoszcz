@@ -1,0 +1,33 @@
+---
+// CMS Admin Panel - Astro Page
+---
+
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Panel administracyjny - Hipoterapia Bydgoszcz</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+</head>
+<body>
+  <!-- Set default sort order in localStorage before CMS loads -->
+  <script is:inline>
+    // Set default sort order for Aktualności collection
+    const sortKey = 'cms.collection.aktualnosci.sort';
+    if (!localStorage.getItem(sortKey)) {
+      localStorage.setItem(sortKey, JSON.stringify({
+        key: 'pubDate',
+        direction: 'Descending'
+      }));
+    }
+  </script>
+
+  <!-- Include the script that builds the page and powers Decap CMS -->
+  <script is:inline src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <!-- Include Netlify Identity Widget for authentication -->
+  <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</body>
+</html>

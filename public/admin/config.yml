@@ -8,15 +8,14 @@ locale: 'pl'
 backend:
   name: git-gateway
   branch: main
-  # Enable local backend for development (run: npx decap-server)
-  # Uncomment the line below when testing locally:
+  # Test mode (uncomment for testing UI only):
   # name: test-repo
 
-# Local backend for development
+# Local backend for development (requires npx decap-server)
 local_backend: true
 
-# Publish mode - editorial workflow enables draft/review/publish workflow
-publish_mode: editorial_workflow
+# Publish mode - editorial workflow disabled for testing
+# publish_mode: editorial_workflow
 
 # Media files configuration
 media_folder: "public/uploads"
@@ -34,6 +33,8 @@ collections:
     format: "frontmatter"
     extension: "mdx"
     slug: "{{slug}}"
+    summary: "{{pubDate}} - {{title}}"
+    sortable_fields: ['pubDate', 'title']
     editor:
       preview: false
     fields:
