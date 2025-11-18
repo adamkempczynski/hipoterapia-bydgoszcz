@@ -1,25 +1,94 @@
-# Backend - sposób zapisu i autoryzacji.
-# Używamy git-gateway, który będzie działał automatycznie po wdrożeniu na Netlify.
+# Decap CMS Configuration for Hipoterapia Bydgoszcz
+# https://decapcms.org/docs/configuration-options/
+
+# Locale - set interface to Polish
+locale: 'pl'
+
+# Backend configuration - Git Gateway for GitHub authentication
 backend:
   name: git-gateway
-  branch: main # lub master, w zależności od nazwy Twojej głównej gałęzi na GitHub
+  branch: main
+  # Enable local backend for development (run: npx decap-server)
+  # Uncomment the line below when testing locally:
+  # name: test-repo
 
-# Folder, do którego będą trafiać wgrywane zdjęcia.
+# Local backend for development
+local_backend: true
+
+# Publish mode - editorial workflow enables draft/review/publish workflow
+publish_mode: editorial_workflow
+
+# Media files configuration
 media_folder: "public/uploads"
-# Publiczna ścieżka do tego folderu, używana w plikach .md
 public_folder: "/uploads"
 
-# Kolekcje - czyli zestawy treści, które można edytować.
+# Collections - content types that can be edited
 collections:
-  # Nasza pierwsza i jedyna na razie kolekcja: Aktualności
-  - name: "aktualnosci" # Nazwa techniczna - musi pasować do folderu w src/content/
-    label: "Aktualności" # Nazwa wyświetlana w panelu
-    folder: "src/content/aktualnosci" # Ścieżka do plików z treścią
-    create: true # Pozwól na tworzenie nowych wpisów
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Format nazwy nowego pliku, np. 2025-07-08-tytul-wpisu.md
-    fields: # Pola formularza do edycji
-      - { label: "Tytuł", name: "title", widget: "string" }
-      - { label: "Data publikacji", name: "pubDate", widget: "datetime" }
-      - { label: "Krótki opis (opcjonalnie)", name: "description", widget: "string", required: false }
-      - { label: "Zdjęcie główne (opcjonalnie)", name: "image", widget: "image", required: false }
-      - { label: "Treść wpisu", name: "body", widget: "markdown" }
+  # Aktualności (News/Blog Posts)
+  - name: "aktualnosci"
+    label: "Aktualności"
+    label_singular: "Aktualność"
+    folder: "src/content/aktualnosci"
+    create: true
+    delete: true
+    format: "frontmatter"
+    extension: "mdx"
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Tytuł"
+        name: "title"
+        widget: "string"
+        hint: "Tytuł aktualności (wymagane)"
+
+      - label: "Data publikacji"
+        name: "pubDate"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD.MM.YYYY"
+        time_format: false
+        hint: "Data publikacji aktualności"
+
+      - label: "Krótki opis"
+        name: "description"
+        widget: "text"
+        required: false
+        hint: "Krótki opis wyświetlany na listach aktualności (opcjonalny)"
+
+      - label: "Kategoria"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Biwaki i wycieczki", value: "biwaki-wycieczki" }
+          - { label: "Wydarzenia sportowe", value: "wydarzenia-sportowe" }
+          - { label: "Zebrania i sprawy organizacyjne", value: "zebrania-organizacyjne" }
+          - { label: "Wydarzenia społeczne", value: "wydarzenia-spoleczne" }
+          - { label: "Programy dotacyjne", value: "programy-dotacyjne" }
+        hint: "Wybierz kategorię aktualności"
+
+      - label: "Galeria zdjęć"
+        name: "gallery"
+        widget: "list"
+        required: false
+        field:
+          label: "Zdjęcie"
+          name: "image"
+          widget: "image"
+          allow_multiple: false
+        hint: "Dodaj zdjęcia do galerii (opcjonalne). Przeciągnij i upuść aby zmienić kolejność."
+
+      - label: "Treść"
+        name: "body"
+        widget: "markdown"
+        hint: "Treść aktualności w formacie Markdown. Możesz używać nagłówków (## Nagłówek), list, pogrubień (**tekst**) i innych formatowań."
+        buttons:
+          - bold
+          - italic
+          - code
+          - link
+          - heading-two
+          - heading-three
+          - quote
+          - bulleted-list
+          - numbered-list
