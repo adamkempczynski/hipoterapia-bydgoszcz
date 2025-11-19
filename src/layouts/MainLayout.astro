@@ -65,8 +65,8 @@ const defaultDescription = "Profesjonalna hipoterapia w Bydgoszczy. Terapia z ud
 		</script>
 
 		<!-- Netlify Identity Widget for CMS authentication -->
-		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-		<script>
+		<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+		<script is:inline>
 			if (window.netlifyIdentity) {
 				window.netlifyIdentity.on("init", user => {
 					if (!user) {
