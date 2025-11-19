@@ -75,6 +75,25 @@ const defaultDescription = "Profesjonalna hipoterapia w Bydgoszczy. Terapia z ud
 						});
 					}
 				});
+
+				// Handle invite and recovery tokens from URL hash
+				window.netlifyIdentity.on("init", user => {
+					const hash = window.location.hash;
+					if (hash && (hash.includes('invite_token=') || hash.includes('recovery_token='))) {
+						window.netlifyIdentity.open();
+					}
+				});
+
+				// Redirect to admin after signup/recovery
+				window.netlifyIdentity.on("signup", () => {
+					window.netlifyIdentity.close();
+					document.location.href = "/admin/";
+				});
+
+				window.netlifyIdentity.on("passwordRecovery", () => {
+					window.netlifyIdentity.close();
+					document.location.href = "/admin/";
+				});
 			}
 		</script>
 	</body>
