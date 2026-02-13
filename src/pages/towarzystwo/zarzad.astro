@@ -1,20 +1,16 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 ---
 
 <MainLayout title="Zarząd Towarzystwa">
+	<PageHero
+		title="Zarząd Towarzystwa"
+		subtitle="Doświadczeni specjaliści i pasjonaci działający na rzecz osób niepełnosprawnych"
+		breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'Towarzystwo', href: '/towarzystwo/' }, { label: 'Zarząd' }]}
+	/>
+
 	<div class="board-content">
-		<nav class="breadcrumb">
-			<a href="/towarzystwo/">← Powrót do Towarzystwo</a>
-		</nav>
-
-		<section class="intro">
-			<p class="lead">
-				Zarząd Bydgoskiego Towarzystwa Hipoterapii i Psychoterapii składa się z doświadczonych
-				specjalistów i pasjonatów, którzy od lat działają na rzecz osób niepełnosprawnych.
-			</p>
-		</section>
-
 		<section class="board-section">
 			<h2>Zarząd Towarzystwa</h2>
 			<p class="term-info"><strong>Kadencja:</strong> 2022-2025</p>
@@ -29,25 +25,17 @@ import MainLayout from '../../layouts/MainLayout.astro';
 				</div>
 
 				<div class="board-member">
-					<div class="member-role">Członek Zarządu</div>
+					<div class="member-role">Wiceprezes</div>
 					<h3>Ewa Ziętak</h3>
 					<p>
 						Zaangażowana w działalność statutową Towarzystwa,
-						wspiera organizację zajęć terapeutycznych.
+						wspiera organizację zajęć terapeutycznych.<br>
+						Tel: <a href="tel:+48727912331">727-912-331</a>
 					</p>
 				</div>
 
 				<div class="board-member">
-					<div class="member-role">Członek Zarządu</div>
-					<h3>Monika Światowy</h3>
-					<p>
-						Odpowiedzialna za koordynację działań organizacyjnych
-						i współpracę z instytucjami partnerskimi.
-					</p>
-				</div>
-
-				<div class="board-member">
-					<div class="member-role">Członek Zarządu</div>
+					<div class="member-role">Wiceprezes</div>
 					<h3>Rafał Orłowski</h3>
 					<p>
 						Wspiera działalność Towarzystwa w zakresie logistyki
@@ -56,11 +44,20 @@ import MainLayout from '../../layouts/MainLayout.astro';
 				</div>
 
 				<div class="board-member">
-					<div class="member-role">Członek Zarządu</div>
+					<div class="member-role">Skarbnik</div>
 					<h3>Joanna Cywińska</h3>
 					<p>
-						Zaangażowana w działania edukacyjne i promocyjne
-						Towarzystwa, współpraca z wolontariuszami.
+						Odpowiedzialna za finanse i rozliczenia Towarzystwa.<br>
+						Tel: <a href="tel:+48727912332">727-912-332</a>, <a href="tel:+48604130520">604-130-520</a>
+					</p>
+				</div>
+
+				<div class="board-member">
+					<div class="member-role">Sekretarz</div>
+					<h3>Monika Światowy</h3>
+					<p>
+						Odpowiedzialna za koordynację działań organizacyjnych
+						i współpracę z instytucjami partnerskimi.
 					</p>
 				</div>
 			</div>
@@ -145,37 +142,6 @@ import MainLayout from '../../layouts/MainLayout.astro';
 	.board-content {
 		max-width: 900px;
 		margin: 0 auto;
-	}
-
-	.breadcrumb {
-		margin-bottom: 2rem;
-	}
-
-	.breadcrumb a {
-		color: var(--primary-color);
-		text-decoration: none;
-		font-weight: 600;
-		transition: color 0.3s ease;
-	}
-
-	.breadcrumb a:hover {
-		color: var(--secondary-color);
-	}
-
-	.intro {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		margin-bottom: 2rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-left: 5px solid var(--secondary-color);
-	}
-
-	.lead {
-		font-size: 1.2rem;
-		line-height: 1.8;
-		color: var(--text-color);
-		margin: 0;
 	}
 
 	.board-section h2,

@@ -1,127 +1,150 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import LocationsMap from '../../components/LocationsMap.astro';
+import PageHero from '../../components/PageHero.astro';
+import ScrollReveal from '../../components/ScrollReveal.astro';
 ---
 
 <MainLayout title="Kontakt">
-	<div class="contact-container">
-		<div class="contact-grid">
-			<div class="contact-info">
-				<h2>Dane kontaktowe</h2>
+	<PageHero
+		title="Kontakt"
+		subtitle="Skontaktuj się z nami — chętnie odpowiemy na wszystkie pytania i pomożemy umówić wizytę"
+		breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'Kontakt' }]}
+	/>
 
-				<div class="info-section">
-					<h3>Adres</h3>
-					<p>
-						Bydgoskie Towarzystwo<br>
-						Hipoterapeutyczne "Myślęcinek"<br>
-						ul. Gdańska 173-175<br>
-						85-674 Bydgoszcz
-					</p>
-				</div>
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+			<!-- Contact Info -->
+			<ScrollReveal animation="left">
+			<div>
+				<h2 class="font-display text-2xl font-bold text-gray-900 mb-6">Dane kontaktowe</h2>
 
-				<div class="info-section">
-					<h3>Adres korespondencyjny</h3>
-					<p>
-						ul. Wyspiańskiego 10<br>
-						Niemcz 86-032
-					</p>
-				</div>
-
-				<div class="info-section">
-					<h3>Telefon</h3>
-					<p>
-						<a href="tel:+48727912331" class="contact-link">727-912-331</a> (Prezes - Ewa Ziętak)<br>
-						<a href="tel:+48727912332" class="contact-link">727-912-332</a> (Skarbnik - Joanna Cywińska)
-					</p>
-				</div>
-
-				<div class="info-section">
-					<h3>Email</h3>
-					<p>
-						<a href="mailto:hipoterapia.bydgoszcz@poczta.onet.pl" class="contact-link">
-							hipoterapia.bydgoszcz@poczta.onet.pl
-						</a>
-					</p>
-				</div>
-
-				<div class="info-section">
-					<h3>Godziny pracy biura</h3>
-					<div class="hours-grid">
-						<div class="hours-item">
-							<strong>Poniedziałek - Piątek:</strong>
-							<span>8:00 - 16:00</span>
-						</div>
-						<div class="hours-item">
-							<strong>Sobota:</strong>
-							<span>9:00 - 14:00</span>
-						</div>
-						<div class="hours-item">
-							<strong>Niedziela:</strong>
-							<span>Zamknięte</span>
-						</div>
+				<div class="space-y-4">
+					<div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 border-l-4 border-l-primary-500">
+						<h3 class="font-semibold text-primary-700 mb-2">Adres</h3>
+						<p class="text-gray-600 leading-relaxed">
+							Bydgoskie Towarzystwo<br>
+							Hipoterapeutyczne "Myślęcinek"<br>
+							ul. Gdańska 173-175<br>
+							85-674 Bydgoszcz
+						</p>
 					</div>
-				</div>
 
-				<div class="info-section">
-					<h3>Lokalizacja zajęć</h3>
-					<p>
-						<strong>Ośrodek Jeździecki</strong><br>
-						ul. Kolonia 33<br>
-						Jarużyn
-					</p>
-					<p class="location-note">
-						Zajęcia hipoterapeutyczne odbywają się w profesjonalnym ośrodku jeździeckim
-						wyposażonym w rampy dla osób niepełnosprawnych.
-					</p>
-				</div>
+					<div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 border-l-4 border-l-primary-500">
+						<h3 class="font-semibold text-primary-700 mb-2">Adres korespondencyjny</h3>
+						<p class="text-gray-600 leading-relaxed">
+							ul. Wyspiańskiego 10<br>
+							Niemcz 86-032
+						</p>
+					</div>
 
-				<div class="info-section">
-					<h3>Dojazd</h3>
-					<div class="transport-info">
-						<div class="transport-item">
-							<i class="fas fa-bus"></i>
-							<div>
-								<strong>Komunikacja miejska:</strong>
-								<p>Autobus linii 52, 67 - przystanek "Gdańska/Wojska Polskiego"</p>
+					<div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 border-l-4 border-l-primary-500">
+						<h3 class="font-semibold text-primary-700 mb-2">Telefon</h3>
+						<p class="text-gray-600">
+							<a href="tel:+48727912331" class="text-primary-600 hover:text-primary-800 font-medium transition-colors">727-912-331</a> (Wiceprezes - Ewa Ziętak)<br>
+							<a href="tel:+48727912332" class="text-primary-600 hover:text-primary-800 font-medium transition-colors">727-912-332</a> (Skarbnik - Joanna Cywińska)
+						</p>
+					</div>
+
+					<div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 border-l-4 border-l-primary-500">
+						<h3 class="font-semibold text-primary-700 mb-2">Email</h3>
+						<p>
+							<a href="mailto:hipoterapia.bydgoszcz@poczta.onet.pl" class="text-primary-600 hover:text-primary-800 font-medium transition-colors">
+								hipoterapia.bydgoszcz@poczta.onet.pl
+							</a>
+						</p>
+					</div>
+
+					<div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 border-l-4 border-l-accent-400">
+						<h3 class="font-semibold text-primary-700 mb-3">Godziny pracy biura</h3>
+						<div class="space-y-2">
+							<div class="flex justify-between items-center py-1.5 border-b border-gray-100">
+								<span class="font-medium text-gray-700">Poniedziałek - Piątek:</span>
+								<span class="text-gray-600">8:00 - 16:00</span>
+							</div>
+							<div class="flex justify-between items-center py-1.5 border-b border-gray-100">
+								<span class="font-medium text-gray-700">Sobota:</span>
+								<span class="text-gray-600">9:00 - 14:00</span>
+							</div>
+							<div class="flex justify-between items-center py-1.5">
+								<span class="font-medium text-gray-700">Niedziela:</span>
+								<span class="text-gray-500">Zamknięte</span>
 							</div>
 						</div>
-						<div class="transport-item">
-							<i class="fas fa-car"></i>
-							<div>
-								<strong>Dojazd samochodem:</strong>
-								<p>Dostępny parking dla gości przy ośrodku jeździeckim</p>
+					</div>
+
+					<div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 border-l-4 border-l-primary-500">
+						<h3 class="font-semibold text-primary-700 mb-2">Lokalizacja zajęć</h3>
+						<p class="text-gray-600 leading-relaxed">
+							<span class="font-medium text-gray-800">Ośrodek Jeździecki</span><br>
+							ul. Kolonia 33<br>
+							Jarużyn
+						</p>
+						<p class="mt-2 text-sm text-gray-500 italic">
+							Zajęcia hipoterapeutyczne odbywają się w profesjonalnym ośrodku jeździeckim
+							wyposażonym w rampy dla osób niepełnosprawnych.
+						</p>
+					</div>
+
+					<div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 border-l-4 border-l-primary-500">
+						<h3 class="font-semibold text-primary-700 mb-3">Dojazd</h3>
+						<div class="space-y-3">
+							<div class="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
+								<svg class="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+								</svg>
+								<div>
+									<p class="font-medium text-gray-800 text-sm">Komunikacja miejska:</p>
+									<p class="text-gray-600 text-sm">Autobus linii 52, 67 - przystanek "Gdańska/Wojska Polskiego"</p>
+								</div>
+							</div>
+							<div class="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
+								<svg class="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+								</svg>
+								<div>
+									<p class="font-medium text-gray-800 text-sm">Dojazd samochodem:</p>
+									<p class="text-gray-600 text-sm">Dostępny parking dla gości przy ośrodku jeździeckim</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			</ScrollReveal>
 
-			<div class="contact-form">
-				<h2>Napisz do nas</h2>
-				<form class="form" action="https://api.web3forms.com/submit" method="POST">
-					<!-- TODO: Zamień na swój klucz z https://web3forms.com/ -->
+			<!-- Contact Form -->
+			<ScrollReveal animation="right">
+			<div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 h-fit sticky top-24">
+				<h2 class="font-display text-2xl font-bold text-gray-900 mb-6">Napisz do nas</h2>
+				<form class="space-y-5" action="https://api.web3forms.com/submit" method="POST">
 					<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
 					<input type="hidden" name="subject" value="Nowa wiadomość z formularza kontaktowego">
 					<input type="hidden" name="from_name" value="Hipoterapia Bydgoszcz - Formularz">
 
-					<div class="form-group">
-						<label for="name">Imię i nazwisko *</label>
-						<input type="text" id="name" name="name" required>
+					<div>
+						<label for="name" class="block text-sm font-medium text-gray-700 mb-1.5">Imię i nazwisko *</label>
+						<input type="text" id="name" name="name" required
+							class="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg text-base transition-colors focus:outline-none focus:border-primary-500" />
 					</div>
 
-					<div class="form-group">
-						<label for="email">Adres email *</label>
-						<input type="email" id="email" name="email" required>
+					<div>
+						<label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Adres email *</label>
+						<input type="email" id="email" name="email" required
+							class="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg text-base transition-colors focus:outline-none focus:border-primary-500" />
 					</div>
 
-					<div class="form-group">
-						<label for="phone">Telefon</label>
-						<input type="tel" id="phone" name="phone">
+					<div>
+						<label for="phone" class="block text-sm font-medium text-gray-700 mb-1.5">Telefon</label>
+						<input type="tel" id="phone" name="phone"
+							class="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg text-base transition-colors focus:outline-none focus:border-primary-500" />
 					</div>
 
-					<div class="form-group">
-						<label for="subject">Temat</label>
-						<select id="subject" name="subject">
+					<div>
+						<label for="subject" class="block text-sm font-medium text-gray-700 mb-1.5">Temat</label>
+						<select id="subject" name="subject"
+							class="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg text-base transition-colors focus:outline-none focus:border-primary-500 bg-white">
 							<option value="">Wybierz temat</option>
 							<option value="hipoterapia">Zapisy na hipoterapię</option>
 							<option value="wolontariat">Wolontariat</option>
@@ -131,489 +154,117 @@ import LocationsMap from '../../components/LocationsMap.astro';
 						</select>
 					</div>
 
-					<div class="form-group">
-						<label for="message">Wiadomość *</label>
+					<div>
+						<label for="message" class="block text-sm font-medium text-gray-700 mb-1.5">Wiadomość *</label>
 						<textarea id="message" name="message" rows="5" required
-							placeholder="Opisz swoje pytanie lub potrzeby..."></textarea>
+							placeholder="Opisz swoje pytanie lub potrzeby..."
+							class="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg text-base transition-colors focus:outline-none focus:border-primary-500 resize-y"></textarea>
 					</div>
 
-					<div class="form-group checkbox-group">
-						<input type="checkbox" id="privacy" name="privacy" required>
-						<label for="privacy" class="checkbox-label">
+					<div class="flex items-start gap-3">
+						<input type="checkbox" id="privacy" name="privacy" required
+							class="mt-1 w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500" />
+						<label for="privacy" class="text-sm text-gray-600 leading-relaxed">
 							Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z
-							<a href="/rodo" target="_blank">polityką prywatności</a> *
+							<a href="/rodo" target="_blank" class="text-primary-600 hover:underline">polityką prywatności</a> *
 						</label>
 					</div>
 
-					<button type="submit" class="submit-button">
-						<i class="fas fa-paper-plane"></i>
+					<button type="submit" class="btn btn-primary btn-lg w-full">
 						Wyślij wiadomość
 					</button>
 				</form>
 
-				<div class="form-note">
-					<p><strong>Ważne:</strong> Na wiadomości odpowiadamy w ciągu 1-2 dni roboczych.
-					W pilnych sprawach prosimy o kontakt telefoniczny.</p>
+				<div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
+					<p class="text-sm text-blue-800">
+						<span class="font-medium">Ważne:</span> Na wiadomości odpowiadamy w ciągu 1-2 dni roboczych.
+						W pilnych sprawach prosimy o kontakt telefoniczny.
+					</p>
 				</div>
 			</div>
+			</ScrollReveal>
 		</div>
 
-		<div class="map-section">
-			<h2>Jak do nas dotrzeć</h2>
-			<LocationsMap />
-		</div>
-
-		<div class="additional-info">
-			<div class="info-cards">
-				<div class="info-card">
-					<div class="card-icon">
-						<i class="fas fa-question-circle"></i>
-					</div>
-					<h3>Często zadawane pytania</h3>
-					<p>Odpowiedzi na najczęściej zadawane pytania dotyczące hipoterapii i naszych usług.</p>
-					<a href="/faq" class="card-link">Zobacz FAQ</a>
-				</div>
-
-				<div class="info-card">
-					<div class="card-icon">
-						<i class="fas fa-calendar-alt"></i>
-					</div>
-					<h3>Umów wizytę</h3>
-					<p>Skontaktuj się z nami, aby umówić konsultację lub pierwsze zajęcia hipoterapeutyczne.</p>
-					<a href="tel:+48727912331" class="card-link">Zadzwoń teraz</a>
-				</div>
-
-				<div class="info-card">
-					<div class="card-icon">
-						<i class="fas fa-hands-helping"></i>
-					</div>
-					<h3>Zostań wolontariuszem</h3>
-					<p>Dołącz do naszego zespołu wolontariuszy i pomagaj w organizacji zajęć oraz wydarzeń.</p>
-					<a href="/oferta/wolontariusze" class="card-link">Dowiedz się więcej</a>
-				</div>
+		<!-- Map -->
+		<ScrollReveal animation="up">
+		<div class="mb-16">
+			<h2 class="section-heading text-center mb-8">Jak do nas dotrzeć</h2>
+			<div class="rounded-2xl overflow-hidden shadow-lg">
+				<LocationsMap />
 			</div>
 		</div>
+		</ScrollReveal>
 
-		<div class="emergency-contact">
-			<div class="emergency-box">
-				<i class="fas fa-exclamation-triangle"></i>
-				<div class="emergency-content">
-					<h3>W przypadku pilnych spraw</h3>
-					<p>
+		<!-- Info Cards -->
+		<ScrollReveal animation="up" stagger>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+			<a href="/faq" class="card-warm p-6 text-center group">
+				<div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-200 transition-colors">
+					<svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+					</svg>
+				</div>
+				<h3 class="font-semibold text-gray-900 mb-2 text-lg">Często zadawane pytania</h3>
+				<p class="text-gray-600 text-sm leading-relaxed mb-3">Odpowiedzi na najczęściej zadawane pytania dotyczące hipoterapii i naszych usług.</p>
+				<span class="text-primary-600 font-medium text-sm group-hover:text-primary-700 transition-colors">Zobacz FAQ →</span>
+			</a>
+
+			<a href="tel:+48727912331" class="card-warm p-6 text-center group">
+				<div class="w-14 h-14 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-200 transition-colors">
+					<svg class="w-7 h-7 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+					</svg>
+				</div>
+				<h3 class="font-semibold text-gray-900 mb-2 text-lg">Umów wizytę</h3>
+				<p class="text-gray-600 text-sm leading-relaxed mb-3">Skontaktuj się z nami, aby umówić konsultację lub pierwsze zajęcia hipoterapeutyczne.</p>
+				<span class="text-accent-600 font-medium text-sm group-hover:text-accent-700 transition-colors">Zadzwoń teraz →</span>
+			</a>
+
+			<a href="/oferta/wolontariusze" class="card-warm p-6 text-center group">
+				<div class="w-14 h-14 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary-200 transition-colors">
+					<svg class="w-7 h-7 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+					</svg>
+				</div>
+				<h3 class="font-semibold text-gray-900 mb-2 text-lg">Zostań wolontariuszem</h3>
+				<p class="text-gray-600 text-sm leading-relaxed mb-3">Dołącz do naszego zespołu wolontariuszy i pomagaj w organizacji zajęć oraz wydarzeń.</p>
+				<span class="text-secondary-600 font-medium text-sm group-hover:text-secondary-700 transition-colors">Dowiedz się więcej →</span>
+			</a>
+		</div>
+		</ScrollReveal>
+
+		<!-- Emergency Contact -->
+		<ScrollReveal animation="scale">
+		<div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 md:p-8 border border-amber-200">
+			<div class="flex flex-col md:flex-row items-start gap-4 max-w-3xl mx-auto">
+				<div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+					<svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+					</svg>
+				</div>
+				<div>
+					<h3 class="text-lg font-bold text-amber-900 mb-2">W przypadku pilnych spraw</h3>
+					<p class="text-amber-800 leading-relaxed mb-4">
 						Jeśli masz pilną sprawę związaną z bezpieczeństwem podczas zajęć lub sytuacją kryzysową,
 						skontaktuj się z nami natychmiast:
 					</p>
-					<div class="emergency-contacts">
-						<a href="tel:+48727912331" class="emergency-link">
-							<i class="fas fa-phone"></i>
+					<div class="flex flex-wrap gap-3">
+						<a href="tel:+48727912331" class="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 hover:bg-amber-200 text-amber-900 font-medium rounded-full text-sm transition-colors">
+							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+							</svg>
 							727-912-331
 						</a>
-						<a href="mailto:hipoterapia.bydgoszcz@poczta.onet.pl" class="emergency-link">
-							<i class="fas fa-envelope"></i>
+						<a href="mailto:hipoterapia.bydgoszcz@poczta.onet.pl" class="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 hover:bg-amber-200 text-amber-900 font-medium rounded-full text-sm transition-colors">
+							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+							</svg>
 							hipoterapia.bydgoszcz@poczta.onet.pl
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
+		</ScrollReveal>
 	</div>
 </MainLayout>
-
-<style>
-	.contact-container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 2rem;
-	}
-
-	.contact-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 3rem;
-		margin-bottom: 3rem;
-	}
-
-	.contact-info h2,
-	.contact-form h2 {
-		color: #2c5530;
-		font-size: 2rem;
-		margin-bottom: 2rem;
-		border-bottom: 3px solid #4a7c59;
-		padding-bottom: 0.5rem;
-	}
-
-	.info-section {
-		margin-bottom: 2rem;
-		padding: 1.5rem;
-		background: white;
-		border-radius: 8px;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-		border-left: 4px solid #4a7c59;
-	}
-
-	.info-section h3 {
-		color: #2c5530;
-		margin-bottom: 1rem;
-		font-size: 1.2rem;
-	}
-
-	.info-section p {
-		color: #555;
-		line-height: 1.5;
-		margin-bottom: 0.5rem;
-	}
-
-	.contact-link {
-		color: #4a7c59;
-		text-decoration: none;
-		font-weight: 500;
-		transition: color 0.3s ease;
-	}
-
-	.contact-link:hover {
-		color: #2c5530;
-		text-decoration: underline;
-	}
-
-	.hours-grid {
-		display: grid;
-		gap: 0.5rem;
-	}
-
-	.hours-item {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0.5rem 0;
-		border-bottom: 1px solid #eee;
-	}
-
-	.hours-item:last-child {
-		border-bottom: none;
-	}
-
-	.hours-item strong {
-		color: #2c5530;
-	}
-
-	.hours-item span {
-		color: #666;
-	}
-
-	.location-note {
-		margin-top: 1rem;
-		font-style: italic;
-		color: #666;
-		font-size: 0.9rem;
-	}
-
-	.transport-info {
-		display: grid;
-		gap: 1rem;
-	}
-
-	.transport-item {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		padding: 1rem;
-		background: #f8f9fa;
-		border-radius: 6px;
-	}
-
-	.transport-item i {
-		color: #4a7c59;
-		font-size: 1.5rem;
-		width: 30px;
-		text-align: center;
-	}
-
-	.transport-item strong {
-		color: #2c5530;
-		display: block;
-		margin-bottom: 0.3rem;
-	}
-
-	.transport-item p {
-		color: #666;
-		margin: 0;
-		font-size: 0.9rem;
-	}
-
-	.contact-form {
-		background: white;
-		padding: 2rem;
-		border-radius: 12px;
-		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-		height: fit-content;
-	}
-
-	.form {
-		display: grid;
-		gap: 1.5rem;
-	}
-
-	.form-group {
-		display: grid;
-		gap: 0.5rem;
-	}
-
-	.form-group label {
-		color: #2c5530;
-		font-weight: 500;
-		font-size: 0.95rem;
-	}
-
-	.form-group input,
-	.form-group select,
-	.form-group textarea {
-		padding: 0.8rem;
-		border: 2px solid #e9ecef;
-		border-radius: 6px;
-		font-size: 1rem;
-		transition: border-color 0.3s ease;
-	}
-
-	.form-group input:focus,
-	.form-group select:focus,
-	.form-group textarea:focus {
-		outline: none;
-		border-color: #4a7c59;
-	}
-
-	.checkbox-group {
-		display: flex;
-		align-items: flex-start;
-		gap: 0.8rem;
-	}
-
-	.checkbox-group input[type="checkbox"] {
-		margin-top: 0.2rem;
-		width: auto;
-	}
-
-	.checkbox-label {
-		color: #555;
-		font-size: 0.9rem;
-		line-height: 1.4;
-	}
-
-	.checkbox-label a {
-		color: #4a7c59;
-	}
-
-	.submit-button {
-		background: #4a7c59;
-		color: white;
-		padding: 1rem 2rem;
-		border: none;
-		border-radius: 25px;
-		font-size: 1rem;
-		font-weight: 500;
-		cursor: pointer;
-		transition: all 0.3s ease;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
-	}
-
-	.submit-button:hover {
-		background: #2c5530;
-		transform: translateY(-2px);
-	}
-
-	.form-note {
-		margin-top: 1rem;
-		padding: 1rem;
-		background: #e3f2fd;
-		border-left: 4px solid #2196f3;
-		border-radius: 4px;
-	}
-
-	.form-note p {
-		color: #1976d2;
-		margin: 0;
-		font-size: 0.9rem;
-	}
-
-	.map-section {
-		margin-bottom: 3rem;
-	}
-
-	.map-section h2 {
-		color: #2c5530;
-		font-size: 2rem;
-		margin-bottom: 1.5rem;
-		text-align: center;
-	}
-
-	.map-container {
-		border-radius: 12px;
-		overflow: hidden;
-		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-	}
-
-	.additional-info {
-		margin-bottom: 3rem;
-	}
-
-	.info-cards {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 2rem;
-	}
-
-	.info-card {
-		background: white;
-		padding: 2rem;
-		border-radius: 12px;
-		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-		text-align: center;
-		border-left: 5px solid #4a7c59;
-		transition: transform 0.3s ease;
-	}
-
-	.info-card:hover {
-		transform: translateY(-5px);
-	}
-
-	.card-icon {
-		background: #4a7c59;
-		color: white;
-		width: 60px;
-		height: 60px;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin: 0 auto 1.5rem;
-		font-size: 1.5rem;
-	}
-
-	.info-card h3 {
-		color: #2c5530;
-		margin-bottom: 1rem;
-		font-size: 1.3rem;
-	}
-
-	.info-card p {
-		color: #666;
-		line-height: 1.5;
-		margin-bottom: 1.5rem;
-	}
-
-	.card-link {
-		color: #4a7c59;
-		text-decoration: none;
-		font-weight: 500;
-		transition: color 0.3s ease;
-	}
-
-	.card-link:hover {
-		color: #2c5530;
-		text-decoration: underline;
-	}
-
-	.emergency-contact {
-		background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
-		border-radius: 12px;
-		padding: 2rem;
-	}
-
-	.emergency-box {
-		display: flex;
-		align-items: flex-start;
-		gap: 1.5rem;
-		max-width: 800px;
-		margin: 0 auto;
-	}
-
-	.emergency-box > i {
-		color: #ff9800;
-		font-size: 2rem;
-		margin-top: 0.5rem;
-	}
-
-	.emergency-content h3 {
-		color: #e65100;
-		margin-bottom: 1rem;
-		font-size: 1.3rem;
-	}
-
-	.emergency-content p {
-		color: #bf360c;
-		line-height: 1.5;
-		margin-bottom: 1.5rem;
-	}
-
-	.emergency-contacts {
-		display: flex;
-		gap: 1rem;
-		flex-wrap: wrap;
-	}
-
-	.emergency-link {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		color: #e65100;
-		text-decoration: none;
-		font-weight: 500;
-		padding: 0.5rem 1rem;
-		background: rgba(255, 152, 0, 0.1);
-		border-radius: 20px;
-		transition: all 0.3s ease;
-	}
-
-	.emergency-link:hover {
-		background: rgba(255, 152, 0, 0.2);
-		transform: translateY(-2px);
-	}
-
-	@media (max-width: 768px) {
-		.contact-container {
-			padding: 1rem;
-		}
-
-		.contact-grid {
-			grid-template-columns: 1fr;
-			gap: 2rem;
-		}
-
-		.contact-form {
-			padding: 1.5rem;
-		}
-
-		.info-cards {
-			grid-template-columns: 1fr;
-		}
-
-		.emergency-box {
-			flex-direction: column;
-			text-align: center;
-		}
-
-		.emergency-contacts {
-			justify-content: center;
-		}
-	}
-
-	@media (max-width: 480px) {
-		.emergency-contacts {
-			flex-direction: column;
-			align-items: center;
-		}
-
-		.transport-item {
-			flex-direction: column;
-			text-align: center;
-		}
-
-		.hours-item {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 0.3rem;
-		}
-	}
-</style>

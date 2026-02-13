@@ -1,0 +1,58 @@
+---
+import Breadcrumbs from './Breadcrumbs.astro';
+import WaveDivider from './WaveDivider.astro';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  breadcrumbs?: { label: string; href?: string }[];
+  variant?: 'green' | 'dark' | 'light';
+}
+
+const {
+  title,
+  subtitle,
+  breadcrumbs,
+  variant = 'green',
+} = Astro.props;
+
+const variantStyles = {
+  green: 'bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 text-white',
+  dark: 'bg-gradient-to-br from-gray-900 via-gray-800 to-primary-900 text-white',
+  light: 'bg-gradient-to-br from-primary-50 via-white to-primary-50 text-gray-900',
+};
+
+const subtitleStyles = {
+  green: 'text-primary-100',
+  dark: 'text-gray-300',
+  light: 'text-gray-600',
+};
+---
+
+<section class:list={['relative py-16 md:py-20 overflow-hidden', variantStyles[variant]]}>
+  <!-- Decorative background elements -->
+  <div class="absolute inset-0 opacity-10 pointer-events-none">
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    {breadcrumbs && breadcrumbs.length > 0 && (
+      <div class="mb-6">
+        <Breadcrumbs items={breadcrumbs} />
+      </div>
+    )}
+
+    <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+      {title}
+    </h1>
+
+    {subtitle && (
+      <p class:list={['text-lg md:text-xl max-w-3xl', subtitleStyles[variant]]}>
+        {subtitle}
+      </p>
+    )}
+  </div>
+
+  <WaveDivider position="bottom" color="#f9fafb" />
+</section>

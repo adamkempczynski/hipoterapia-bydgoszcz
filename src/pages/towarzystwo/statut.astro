@@ -1,29 +1,16 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 ---
 
 <MainLayout title="Statut Towarzystwa">
+	<PageHero
+		title="Statut Towarzystwa"
+		subtitle="Bydgoskiego Towarzystwa Hipoterapii i Psychoterapii"
+		breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'Towarzystwo', href: '/towarzystwo/' }, { label: 'Statut' }]}
+	/>
+
 	<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-		<!-- Breadcrumb -->
-		<nav class="mb-8">
-			<a href="/towarzystwo/" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors">
-				<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-				</svg>
-				Powrót do Towarzystwo
-			</a>
-		</nav>
-
-		<!-- Header -->
-		<section class="card p-8 text-center mb-12">
-			<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">STATUT</h1>
-			<div class="text-xl text-gray-600 mb-6">Bydgoskiego Towarzystwa Hipoterapii i Psychoterapii</div>
-			<div class="flex flex-col sm:flex-row justify-center gap-4 text-sm text-gray-500">
-				<span>Wersja aktualna z dnia: 15 marca 2024</span>
-				<span>KRS: 0000120586</span>
-			</div>
-		</section>
-
 		<!-- Statute Content -->
 		<div class="space-y-12">
 			<!-- Rozdział I -->

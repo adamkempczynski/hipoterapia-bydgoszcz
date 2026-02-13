@@ -1,16 +1,16 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import PageHero from '../components/PageHero.astro';
 ---
 
 <MainLayout title="Przydatne Linki">
+	<PageHero
+		title="Przydatne linki"
+		subtitle="Strony internetowe związane z hipoterapią, rehabilitacją i wsparciem osób niepełnosprawnych"
+		breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'Linki' }]}
+	/>
+
 	<div class="links-content">
-		<section class="intro">
-			<p class="lead">
-				Zebraliśmy dla Państwa przydatne linki do stron internetowych związanych z hipoterapią,
-				rehabilitacją, organizacjami wspierającymi osoby niepełnosprawne oraz instytucjami
-				oferującymi wsparcie finansowe.
-			</p>
-		</section>
 
 		<section class="links-section">
 			<h2>Hipoterapia w Polsce</h2>
@@ -287,22 +287,6 @@ import MainLayout from '../layouts/MainLayout.astro';
 		padding: 2rem;
 	}
 
-	.intro {
-		text-align: center;
-		margin-bottom: 3rem;
-		padding: 2rem;
-		background: linear-gradient(135deg, #4a7c59 0%, #2c5530 100%);
-		color: white;
-		border-radius: 12px;
-	}
-
-	.lead {
-		font-size: 1.2rem;
-		max-width: 800px;
-		margin: 0 auto;
-		line-height: 1.6;
-	}
-
 	.links-section {
 		margin-bottom: 4rem;
 	}
@@ -532,10 +516,6 @@ import MainLayout from '../layouts/MainLayout.astro';
 		.contact-method {
 			flex-direction: column;
 			text-align: center;
-		}
-
-		.intro {
-			padding: 1.5rem;
 		}
 
 		.navigation-section {

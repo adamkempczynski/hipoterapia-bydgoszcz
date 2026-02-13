@@ -1,28 +1,16 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 ---
 
 <MainLayout title="Historia Towarzystwa">
+	<PageHero
+		title="Historia Towarzystwa"
+		subtitle="Od 1995 roku — historia naszej organizacji i jej wpływ na społeczność"
+		breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'Towarzystwo', href: '/towarzystwo/' }, { label: 'Historia' }]}
+	/>
+
 	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-		<!-- Breadcrumb -->
-		<nav class="mb-8">
-			<a href="/towarzystwo/" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors">
-				<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-				</svg>
-				Powrót do Towarzystwo
-			</a>
-		</nav>
-
-		<!-- Header -->
-		<section class="card p-8 text-center mb-12">
-			<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Historia Towarzystwa</h1>
-			<p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-				Bydgoskie Towarzystwo Hipoterapii i Psychoterapii powstało w 1996 roku z inicjatywy
-				grupy pasjonatów przekonanych o terapeutycznej mocy kontaktu z końmi.
-			</p>
-		</section>
-
 		<!-- Timeline -->
 		<section class="mb-12">
 			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Nasza historia</h2>

@@ -23,52 +23,50 @@ const structuredData = {
 };
 ---
 
-<nav aria-label="Breadcrumb" class="bg-white/50 backdrop-blur-sm border-b border-gray-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-    <ol class="flex items-center space-x-2 text-sm overflow-x-auto scrollbar-hide">
-      {items.map((item, index) => {
-        const isLast = index === items.length - 1;
-        const isFirst = index === 0;
+<nav aria-label="Breadcrumb">
+  <ol class="flex items-center space-x-1 text-sm overflow-x-auto scrollbar-hide">
+    {items.map((item, index) => {
+      const isLast = index === items.length - 1;
+      const isFirst = index === 0;
 
-        return (
-          <li class="flex items-center shrink-0">
-            {!isFirst && (
-              <svg
-                class="w-4 h-4 mx-2 text-primary-500 shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            )}
+      return (
+        <li class="flex items-center shrink-0">
+          {!isFirst && (
+            <svg
+              class="w-3.5 h-3.5 mx-1.5 text-white/40 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          )}
 
-            {isLast ? (
-              <span
-                class="font-semibold text-gray-900 truncate max-w-[200px] sm:max-w-none"
-                aria-current="page"
-              >
-                {item.label}
-              </span>
-            ) : (
-              <a
-                href={item.href}
-                class="text-gray-600 hover:text-primary-600 hover:underline transition-colors duration-200 truncate max-w-[150px] sm:max-w-none"
-              >
-                {item.label}
-              </a>
-            )}
-          </li>
-        );
-      })}
-    </ol>
-  </div>
+          {isLast ? (
+            <span
+              class="font-medium text-white truncate max-w-[200px] sm:max-w-none"
+              aria-current="page"
+            >
+              {item.label}
+            </span>
+          ) : (
+            <a
+              href={item.href}
+              class="text-white/70 hover:text-white transition-colors duration-200 truncate max-w-[150px] sm:max-w-none"
+            >
+              {item.label}
+            </a>
+          )}
+        </li>
+      );
+    })}
+  </ol>
 </nav>
 
 <!-- Schema.org structured data -->

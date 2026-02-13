@@ -1,731 +1,124 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import ScrollReveal from '../../components/ScrollReveal.astro';
 ---
 
 <MainLayout title="Numer Konta - Wsparcie Finansowe">
-	<div class="account-content">
-		<nav class="breadcrumb">
-			<a href="/towarzystwo/">ê PowrÛt do Towarzystwo</a>
-		</nav>
+	<PageHero
+		title="Numer konta"
+		subtitle="Informacje o sposobach wsparcia organizacji i dane do wp≈Çat"
+		breadcrumbs={[{ label: 'Strona g≈Ç√≥wna', href: '/' }, { label: 'Towarzystwo', href: '/towarzystwo/' }, { label: 'Numer konta' }]}
+	/>
 
-		<section class="intro">
-			<p class="lead">
-				Dzikujemy za ch wsparcia naszej dziaBalno[ci! Ka|da wpBata pomaga nam rozwija
-				programy hipoterapeutyczne i wspiera osoby niepeBnosprawne w naszym regionie.
-				Poni|ej znajd PaDstwo wszystkie informacje potrzebne do przekazania darowizny.
-			</p>
-		</section>
+	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
-		<section class="account-section">
-			<h2>Dane do przelewu</h2>
-			<div class="account-info">
-				<div class="account-card">
-					<div class="bank-info">
-						<h3>PKO Bank Polski S.A.</h3>
-						<div class="account-number">
-							<span class="label">Numer konta:</span>
-							<span class="number">12 1020 1026 0000 1402 0677 4321</span>
-							<button class="copy-btn" data-copy="12 1020 1026 0000 1402 0677 4321">=À Kopiuj</button>
-						</div>
+		<!-- Dane do przelewu -->
+		<ScrollReveal animation="up">
+			<section class="mb-12">
+				<h2 class="font-display text-2xl font-bold text-primary-700 pb-2 border-b-2 border-accent-400 mb-6">Dane do przelewu</h2>
+
+				<div class="card-warm p-6 md:p-8 border-l-4 border-l-primary-500">
+					<h3 class="text-lg font-bold text-primary-800 mb-4">Bank Sp√≥≈Çdzielczy O/Bydgoszcz</h3>
+
+					<div class="bg-gray-50 rounded-lg p-4 mb-6 relative">
+						<span class="block text-sm text-gray-500 mb-1">Numer konta:</span>
+						<span class="block text-xl font-bold font-mono text-primary-700 tracking-wider" id="account-number">70 8142 0007 0000 3812 2000 0001</span>
+						<button
+							class="absolute top-3 right-3 bg-accent-500 text-white px-3 py-1 rounded text-sm font-medium hover:bg-accent-600 transition-colors"
+							id="copy-btn"
+						>
+							Kopiuj
+						</button>
 					</div>
 
-					<div class="organization-info">
-						<h4>Dane odbiorcy:</h4>
-						<div class="info-item">
-							<strong>Nazwa:</strong> Bydgoskie Towarzystwo Hipoterapii i Psychoterapii
-						</div>
-						<div class="info-item">
-							<strong>Adres:</strong> ul. PrzykBadowa 123, 85-001 Bydgoszcz
-						</div>
-						<div class="info-item">
-							<strong>NIP:</strong> 123-456-78-90
-						</div>
-						<div class="info-item">
-							<strong>KRS:</strong> 0000123456
-						</div>
+					<div class="space-y-2 text-gray-600">
+						<div><strong class="text-gray-800">Odbiorca:</strong> Bydgoskie Towarzystwo Hipoterapeutyczne ‚ÄûMy≈õlƒôcinek"</div>
+						<div><strong class="text-gray-800">Adres:</strong> ul. Gda≈Ñska 173-175, 85-674 Bydgoszcz</div>
+						<div><strong class="text-gray-800">KRS:</strong> 0000120586</div>
 					</div>
 				</div>
+			</section>
+		</ScrollReveal>
 
-				<div class="donation-types">
-					<h3>Typy wpBat</h3>
-					<div class="type-item">
-						<h4>Darowizna ogÛlna</h4>
-						<p>Zrodki przeznaczone na bie|c dziaBalno[ statutow Towarzystwa</p>
-						<div class="title-suggestion">
-							<strong>TytuB przelewu:</strong> "Darowizna na dziaBalno[ statutow"
-						</div>
-					</div>
+		<!-- 1,5% podatku -->
+		<ScrollReveal animation="up">
+			<section class="mb-12">
+				<h2 class="font-display text-2xl font-bold text-primary-700 pb-2 border-b-2 border-accent-400 mb-6">1,5% podatku dla OPP</h2>
 
-					<div class="type-item">
-						<h4>Wsparcie hipoterapii</h4>
-						<p>Zrodki dedykowane bezpo[rednio na zajcia hipoterapeutyczne</p>
-						<div class="title-suggestion">
-							<strong>TytuB przelewu:</strong> "Darowizna na hipoterapi"
-						</div>
-					</div>
-
-					<div class="type-item">
-						<h4>Utrzymanie koni</h4>
-						<p>Zrodki na pasz, opiek weterynaryjn i codzienn pielgnacj koni</p>
-						<div class="title-suggestion">
-							<strong>TytuB przelewu:</strong> "Darowizna na utrzymanie koni"
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="tax-section">
-			<h2>1,5% podatku dla OPP</h2>
-			<div class="tax-content">
-				<div class="tax-info">
-					<h3>Przeka| nam 1,5% swojego podatku</h3>
-					<p>
-						Jako organizacja po|ytku publicznego (OPP) mo|emy otrzyma 1,5% Twojego podatku
-						dochodowego bez |adnych dodatkowych kosztÛw z Twojej strony.
+				<div class="bg-gradient-to-br from-primary-50 via-white to-primary-50 rounded-2xl p-6 md:p-8 border border-primary-100">
+					<p class="text-gray-700 leading-relaxed mb-6">
+						Jako organizacja po≈ºytku publicznego (OPP) mo≈ºemy otrzymaƒá 1,5% Twojego podatku
+						dochodowego bez ≈ºadnych dodatkowych koszt√≥w z Twojej strony.
 					</p>
 
-					<div class="opp-details">
-						<h4>Nasze dane OPP:</h4>
-						<div class="opp-item">
-							<strong>KRS:</strong> 0000123456
-						</div>
-						<div class="opp-item">
-							<strong>Cel szczegÛBowy:</strong> DziaBalno[ na rzecz osÛb niepeBnosprawnych
+					<div class="bg-white rounded-xl p-5 border border-gray-100 shadow-sm mb-6">
+						<h3 class="font-bold text-primary-800 mb-3">Nasze dane OPP:</h3>
+						<div class="space-y-2 text-gray-600">
+							<div><strong class="text-gray-800">KRS:</strong> <span class="font-mono font-bold text-primary-700">0000120586</span></div>
 						</div>
 					</div>
 
-					<div class="tax-steps">
-						<h4>Jak przekaza 1,5%?</h4>
-						<ol>
-							<li>W zeznaniu podatkowym (PIT-37, PIT-36) znajdz sekcj dotyczc 1,5% podatku</li>
-							<li>Wpisz nasz numer KRS: <strong>0000123456</strong></li>
-							<li>Wpisz cel szczegÛBowy: <strong>DziaBalno[ na rzecz osÛb niepeBnosprawnych</strong></li>
-							<li>ZBÛ| zeznanie podatkowe do 30 kwietnia</li>
+					<div>
+						<h3 class="font-bold text-primary-800 mb-3">Jak przekazaƒá 1,5%?</h3>
+						<ol class="list-decimal pl-5 space-y-2 text-gray-700 leading-relaxed">
+							<li>W zeznaniu podatkowym (PIT-37, PIT-36) znajd≈∫ sekcjƒô dotyczƒÖcƒÖ 1,5% podatku</li>
+							<li>Wpisz nasz numer KRS: <strong class="text-primary-700">0000120586</strong></li>
+							<li>Z≈Ç√≥≈º zeznanie podatkowe do 30 kwietnia</li>
 						</ol>
 					</div>
 				</div>
+			</section>
+		</ScrollReveal>
 
-				<div class="tax-calculator">
-					<h4>Kalkulator 1,5%</h4>
-					<div class="calculator">
-						<label for="income">TwÛj roczny dochÛd (brutto):</label>
-						<input type="number" id="income" placeholder="np. 60000" />
-						<div class="result">
-							<span>Kwota 1,5% podatku: </span>
-							<span class="amount">0 zB</span>
-						</div>
-						<p class="calculator-note">
-							* To orientacyjna kwota. DokBadna wysoko[ zale|y od zastosowanych ulg podatkowych.
-						</p>
+		<!-- Inne sposoby wsparcia -->
+		<ScrollReveal animation="up">
+			<section class="mb-12">
+				<h2 class="font-display text-2xl font-bold text-primary-700 pb-2 border-b-2 border-accent-400 mb-6">Inne sposoby wsparcia</h2>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div class="card-warm p-6 text-center">
+						<h3 class="text-primary-800 font-bold text-lg mb-2">Wp≈Çata w banku</h3>
+						<p class="text-gray-500 leading-relaxed">Mo≈ºna dokonaƒá wp≈Çaty w dowolnym oddziale bankowym, podajƒÖc numer konta i dane organizacji.</p>
+					</div>
+
+					<div class="card-warm p-6 text-center">
+						<h3 class="text-primary-800 font-bold text-lg mb-2">Darowizna rzeczowa</h3>
+						<p class="text-gray-500 leading-relaxed mb-3">Przeka≈º przedmioty potrzebne w hipoterapii ‚Äî pasza, sprzƒôt, ≈õrodki czysto≈õci.</p>
+						<a href="/kontakt/" class="text-primary-600 font-medium hover:text-primary-800 transition-colors">Skontaktuj siƒô z nami</a>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</ScrollReveal>
 
-		<section class="support-options">
-			<h2>Inne sposoby wsparcia</h2>
-			<div class="options-grid">
-				<div class="option-item">
-					<h3>=≥ PBatno[ online</h3>
-					<p>Bezpieczna pBatno[ kart lub przelewem przez system PayU</p>
-					<a href="https://secure.payu.com/hipoterapia-bydgoszcz" class="support-btn" target="_blank">WpBa online</a>
-				</div>
-
-				<div class="option-item">
-					<h3><Í WpBata w banku</h3>
-					<p>Mo|esz dokona wpBaty w dowolnym oddziale PKO Bank Polski</p>
-					<div class="bank-note">Podaj numer konta i dane organizacji</div>
-				</div>
-
-				<div class="option-item">
-					<h3>=Ò BLIK / Przelew mobilny</h3>
-					<p>Szybka wpBata przez aplikacj bankow</p>
-					<div class="mobile-note">U|yj numeru konta: 12 1020 1026 0000 1402 0677 4321</div>
-				</div>
-
-				<div class="option-item">
-					<h3><Å Darowizna rzeczowa</h3>
-					<p>Przeka| przedmioty potrzebne w hipoterapii</p>
-					<a href="/kontakt/" class="support-btn secondary">Skontaktuj si</a>
-				</div>
-			</div>
-		</section>
-
-		<section class="transparency-section">
-			<h2>Transparentno[ i rozliczenia</h2>
-			<div class="transparency-content">
-				<div class="transparency-item">
-					<h3>=  Sprawozdania finansowe</h3>
-					<p>
-						Regularnie publikujemy szczegÛBowe sprawozdania z wykorzystania
-						otrzymanych [rodkÛw finansowych.
-					</p>
-					<a href="/oferta/dokumenty-rozliczeniowe/" class="transparency-link">Zobacz sprawozdania</a>
-				</div>
-
-				<div class="transparency-item">
-					<h3>=À Faktury i dokumenty</h3>
-					<p>
-						Na |yczenie wystawiamy faktury VAT oraz potwierdzenia darowizn
-						do celÛw podatkowych.
-					</p>
-					<div class="contact-note">
-						Email: <a href="mailto:finanse@hipoterapia.bydgoszcz.pl">finanse@hipoterapia.bydgoszcz.pl</a>
-					</div>
-				</div>
-
-				<div class="transparency-item">
-					<h3> Kontrola wBadz</h3>
-					<p>
-						Nasza dziaBalno[ finansowa podlega kontroli organÛw paDstwowych
-						oraz audytom zewntrznym.
-					</p>
-					<div class="audit-note">Ostatni audyt: pazdziernik 2024 - bez zastrze|eD</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="thank-you-section">
-			<h2>Dzikujemy za wsparcie! =ö</h2>
-			<div class="thanks-content">
-				<p>
-					Dziki PaDstwa wsparciu mo|emy kontynuowa nasz misj pomocy osobom
-					niepeBnosprawnym. Ka|da zBotÛwka jest wykorzystywana zgodnie z przeznaczeniem
-					i przyczynia si do poprawy jako[ci |ycia naszych podopiecznych.
+		<!-- Podziƒôkowanie -->
+		<ScrollReveal animation="up">
+			<section class="bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 text-white rounded-2xl p-8 md:p-12 text-center">
+				<h2 class="font-display text-2xl md:text-3xl font-bold text-white mb-4">Dziƒôkujemy za wsparcie!</h2>
+				<p class="text-primary-100 leading-relaxed text-lg max-w-2xl mx-auto mb-6">
+					Dziƒôki Pa≈Ñstwa wsparciu mo≈ºemy kontynuowaƒá naszƒÖ misjƒô pomocy osobom
+					niepe≈Çnosprawnym. Ka≈ºda z≈Çot√≥wka jest wykorzystywana zgodnie z przeznaczeniem.
 				</p>
-
-				<div class="impact-stats">
-					<div class="stat-item">
-						<span class="number">50 zB</span>
-						<span class="description">finansuje jedn sesj hipoterapii</span>
-					</div>
-					<div class="stat-item">
-						<span class="number">200 zB</span>
-						<span class="description">pokrywa koszt utrzymania konia przez dzieD</span>
-					</div>
-					<div class="stat-item">
-						<span class="number">1000 zB</span>
-						<span class="description">pozwala na miesiczny program terapeutyczny</span>
-					</div>
+				<div class="space-y-1 text-primary-200">
+					<p>Tel: <a href="tel:+48727912331" class="text-white hover:text-accent-300 transition-colors">727-912-331</a></p>
+					<p>Email: <a href="mailto:hipoterapia.bydgoszcz@poczta.onet.pl" class="text-white hover:text-accent-300 transition-colors">hipoterapia.bydgoszcz@poczta.onet.pl</a></p>
 				</div>
-
-				<div class="contact-support">
-					<h4>Pytania o wsparcie?</h4>
-					<p>
-						Tel: <a href="tel:+48123456789">+48 123 456 789</a><br>
-						Email: <a href="mailto:wsparcie@hipoterapia.bydgoszcz.pl">wsparcie@hipoterapia.bydgoszcz.pl</a>
-					</p>
-				</div>
-			</div>
-		</section>
+			</section>
+		</ScrollReveal>
 	</div>
 </MainLayout>
 
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
-		// Copy account number functionality
-		const copyBtn = document.querySelector('.copy-btn');
+		const copyBtn = document.getElementById('copy-btn');
 		if (copyBtn) {
 			copyBtn.addEventListener('click', function() {
-				const textToCopy = this.getAttribute('data-copy');
-				navigator.clipboard.writeText(textToCopy).then(function() {
-					copyBtn.textContent = ' Skopiowano!';
-					setTimeout(() => {
-						copyBtn.textContent = '=À Kopiuj';
-					}, 2000);
+				const number = '70814200070000381220000001';
+				navigator.clipboard.writeText(number).then(function() {
+					copyBtn.textContent = 'Skopiowano!';
+					setTimeout(() => { copyBtn.textContent = 'Kopiuj'; }, 2000);
 				});
-			});
-		}
-
-		// Tax calculator
-		const incomeInput = document.getElementById('income');
-		const resultAmount = document.querySelector('.result .amount');
-
-		if (incomeInput && resultAmount) {
-			incomeInput.addEventListener('input', function() {
-				const income = parseFloat(this.value) || 0;
-				const tax = Math.round(income * 0.015);
-				resultAmount.textContent = tax.toLocaleString('pl-PL') + ' zB';
 			});
 		}
 	});
 </script>
-
-<style>
-	.account-content {
-		max-width: 1000px;
-		margin: 0 auto;
-	}
-
-	.breadcrumb {
-		margin-bottom: 2rem;
-	}
-
-	.breadcrumb a {
-		color: var(--primary-color);
-		text-decoration: none;
-		font-weight: 600;
-		transition: color 0.3s ease;
-	}
-
-	.breadcrumb a:hover {
-		color: var(--secondary-color);
-	}
-
-	.intro {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		margin-bottom: 2rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-left: 5px solid var(--secondary-color);
-	}
-
-	.lead {
-		font-size: 1.2rem;
-		line-height: 1.8;
-		color: var(--text-color);
-		margin: 0;
-	}
-
-	h2 {
-		color: var(--primary-color);
-		margin-bottom: 2rem;
-		padding-bottom: 0.5rem;
-		border-bottom: 2px solid var(--secondary-color);
-	}
-
-	.account-info {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		margin-bottom: 3rem;
-	}
-
-	@media (min-width: 768px) {
-		.account-info {
-			grid-template-columns: 1fr 1fr;
-		}
-	}
-
-	.account-card {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-		border-left: 5px solid #28a745;
-	}
-
-	.bank-info h3 {
-		color: var(--primary-color);
-		margin-bottom: 1.5rem;
-		font-size: 1.3rem;
-	}
-
-	.account-number {
-		background: #f8f9fa;
-		padding: 1rem;
-		border-radius: 8px;
-		margin-bottom: 2rem;
-		position: relative;
-	}
-
-	.account-number .label {
-		display: block;
-		font-size: 0.9rem;
-		color: #666;
-		margin-bottom: 0.5rem;
-	}
-
-	.account-number .number {
-		display: block;
-		font-size: 1.2rem;
-		font-weight: bold;
-		font-family: monospace;
-		color: var(--primary-color);
-		letter-spacing: 1px;
-	}
-
-	.copy-btn {
-		position: absolute;
-		top: 0.5rem;
-		right: 0.5rem;
-		background: var(--secondary-color);
-		color: white;
-		border: none;
-		padding: 0.3rem 0.8rem;
-		border-radius: 4px;
-		font-size: 0.8rem;
-		cursor: pointer;
-		transition: background 0.3s ease;
-	}
-
-	.copy-btn:hover {
-		background: var(--primary-color);
-	}
-
-	.organization-info h4 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-	}
-
-	.info-item {
-		margin-bottom: 0.5rem;
-		line-height: 1.6;
-	}
-
-	.info-item strong {
-		color: var(--primary-color);
-	}
-
-	.donation-types {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-	}
-
-	.donation-types h3 {
-		color: var(--primary-color);
-		margin-bottom: 1.5rem;
-	}
-
-	.type-item {
-		margin-bottom: 2rem;
-		padding-bottom: 1.5rem;
-		border-bottom: 1px solid #eee;
-	}
-
-	.type-item:last-child {
-		border-bottom: none;
-		margin-bottom: 0;
-	}
-
-	.type-item h4 {
-		color: var(--primary-color);
-		margin-bottom: 0.5rem;
-	}
-
-	.type-item p {
-		color: #666;
-		margin-bottom: 0.5rem;
-		line-height: 1.6;
-	}
-
-	.title-suggestion {
-		background: #f8f9fa;
-		padding: 0.5rem;
-		border-radius: 4px;
-		font-size: 0.9rem;
-	}
-
-	.tax-section {
-		margin-bottom: 4rem;
-	}
-
-	.tax-content {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.tax-content {
-			grid-template-columns: 2fr 1fr;
-		}
-	}
-
-	.tax-info {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-	}
-
-	.tax-info h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-	}
-
-	.tax-info p {
-		line-height: 1.8;
-		margin-bottom: 1.5rem;
-	}
-
-	.opp-details, .tax-steps {
-		margin: 2rem 0;
-	}
-
-	.opp-details h4, .tax-steps h4 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-	}
-
-	.opp-item {
-		margin-bottom: 0.5rem;
-	}
-
-	.opp-item strong {
-		color: var(--primary-color);
-	}
-
-	.tax-steps ol {
-		padding-left: 1.5rem;
-		line-height: 1.8;
-	}
-
-	.tax-steps li {
-		margin-bottom: 0.5rem;
-	}
-
-	.tax-calculator {
-		background: #f8f9fa;
-		padding: 2rem;
-		border-radius: 8px;
-		border-left: 4px solid var(--secondary-color);
-	}
-
-	.tax-calculator h4 {
-		color: var(--primary-color);
-		margin-bottom: 1.5rem;
-	}
-
-	.calculator label {
-		display: block;
-		margin-bottom: 0.5rem;
-		font-weight: 600;
-		color: var(--primary-color);
-	}
-
-	.calculator input {
-		width: 100%;
-		padding: 0.75rem;
-		border: 2px solid #ddd;
-		border-radius: 4px;
-		font-size: 1rem;
-		margin-bottom: 1rem;
-	}
-
-	.calculator input:focus {
-		border-color: var(--secondary-color);
-		outline: none;
-	}
-
-	.result {
-		background: white;
-		padding: 1rem;
-		border-radius: 4px;
-		text-align: center;
-		margin-bottom: 1rem;
-	}
-
-	.result .amount {
-		font-weight: bold;
-		color: var(--primary-color);
-		font-size: 1.2rem;
-	}
-
-	.calculator-note {
-		font-size: 0.8rem;
-		color: #666;
-		font-style: italic;
-		margin: 0;
-	}
-
-	.options-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		margin-bottom: 3rem;
-	}
-
-	@media (min-width: 768px) {
-		.options-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.option-item {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		text-align: center;
-		border-top: 4px solid var(--primary-color);
-	}
-
-	.option-item h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-		font-size: 1.1rem;
-	}
-
-	.option-item p {
-		margin-bottom: 1.5rem;
-		line-height: 1.6;
-		color: #666;
-	}
-
-	.support-btn {
-		display: inline-block;
-		background: var(--primary-color);
-		color: white;
-		padding: 0.75rem 1.5rem;
-		border-radius: 4px;
-		text-decoration: none;
-		font-weight: 600;
-		transition: background 0.3s ease, transform 0.3s ease;
-	}
-
-	.support-btn:hover {
-		background: var(--secondary-color);
-		transform: translateY(-2px);
-	}
-
-	.support-btn.secondary {
-		background: var(--secondary-color);
-	}
-
-	.support-btn.secondary:hover {
-		background: var(--primary-color);
-	}
-
-	.bank-note, .mobile-note {
-		background: #f8f9fa;
-		padding: 0.5rem;
-		border-radius: 4px;
-		font-size: 0.9rem;
-		color: #666;
-	}
-
-	.transparency-content {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		margin-bottom: 3rem;
-	}
-
-	@media (min-width: 768px) {
-		.transparency-content {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.transparency-item {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-	}
-
-	.transparency-item h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-	}
-
-	.transparency-item p {
-		line-height: 1.6;
-		color: #666;
-		margin-bottom: 1rem;
-	}
-
-	.transparency-link {
-		color: var(--primary-color);
-		text-decoration: none;
-		font-weight: 600;
-	}
-
-	.transparency-link:hover {
-		color: var(--secondary-color);
-	}
-
-	.contact-note, .audit-note {
-		background: #f8f9fa;
-		padding: 0.75rem;
-		border-radius: 4px;
-		font-size: 0.9rem;
-	}
-
-	.contact-note a {
-		color: var(--primary-color);
-		text-decoration: none;
-	}
-
-	.thank-you-section {
-		background: linear-gradient(135deg, var(--primary-color) 0%, #4a7c59 100%);
-		color: white;
-		padding: 3rem 2rem;
-		border-radius: 8px;
-	}
-
-	.thank-you-section h2 {
-		color: white;
-		border-bottom: 2px solid rgba(255,255,255,0.3);
-		padding-bottom: 1rem;
-		margin-bottom: 2rem;
-		text-align: center;
-	}
-
-	.thanks-content p {
-		font-size: 1.1rem;
-		line-height: 1.8;
-		margin-bottom: 2rem;
-		opacity: 0.95;
-	}
-
-	.impact-stats {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-		margin: 2rem 0;
-	}
-
-	@media (min-width: 768px) {
-		.impact-stats {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.stat-item {
-		background: rgba(255,255,255,0.1);
-		padding: 1.5rem;
-		border-radius: 8px;
-		text-align: center;
-	}
-
-	.stat-item .number {
-		display: block;
-		font-size: 1.8rem;
-		font-weight: bold;
-		margin-bottom: 0.5rem;
-		color: var(--secondary-color);
-	}
-
-	.stat-item .description {
-		font-size: 0.9rem;
-		opacity: 0.9;
-	}
-
-	.contact-support {
-		background: rgba(255,255,255,0.1);
-		padding: 2rem;
-		border-radius: 8px;
-		text-align: center;
-		margin-top: 2rem;
-	}
-
-	.contact-support h4 {
-		color: white;
-		margin-bottom: 1rem;
-	}
-
-	.contact-support a {
-		color: var(--secondary-color);
-		text-decoration: none;
-	}
-
-	.contact-support a:hover {
-		text-decoration: underline;
-	}
-</style>

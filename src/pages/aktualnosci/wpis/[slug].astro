@@ -67,7 +67,7 @@ const shareTitle = post.data.title;
           />
         ) : (
           <!-- Multiple images - display as gallery -->
-          <Gallery imagePaths={post.data.gallery} />
+          <Gallery imagePaths={post.data.gallery} galleryId={post.slug} />
         )}
       </div>
     )}

@@ -1,18 +1,19 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 
 const currentYear = new Date().getFullYear();
 const nextYear = currentYear + 1;
 ---
 
 <MainLayout title="Kalendarium - Stowarzyszenie Hipoterapia Bydgoszcz">
+  <PageHero
+    title="Kalendarium"
+    subtitle="Nadchodzące wydarzenia, ważne daty i regularne aktywności organizacji"
+    breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'Towarzystwo', href: '/towarzystwo/' }, { label: 'Kalendarium' }]}
+  />
+
   <div class="container">
-
-      <section class="hero-section">
-        <h1>Kalendarium</h1>
-        <p class="lead">Nadchodzące wydarzenia i ważne daty w życiu naszego stowarzyszenia</p>
-      </section>
-
       <section class="calendar-overview">
         <div class="calendar-grid">
           <div class="upcoming-events">
@@ -248,28 +249,6 @@ const nextYear = currentYear + 1;
 </MainLayout>
 
 <style>
-  .hero-section {
-    text-align: center;
-    padding: 2rem 0;
-    background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
-    color: white;
-    margin-bottom: 3rem;
-    border-radius: 12px;
-  }
-
-  .hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-  }
-
-  .lead {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
   .calendar-overview {
     margin-bottom: 4rem;
   }

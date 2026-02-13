@@ -1,24 +1,33 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 ---
 
 <MainLayout title="Standardy Ochrony Małoletnich">
+	<PageHero
+		title="Standardy ochrony małoletnich"
+		subtitle="Zasady i procedury zapewniające bezpieczeństwo dzieci i młodzieży"
+		breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'Standardy ochrony małoletnich' }]}
+	/>
+
 	<div class="protection-content">
-		<section class="intro">
-			<p class="lead">
-				Bydgoskie Towarzystwo Hipoterapeutyczne "Myślęcinek" zobowiązuje się do zapewnienia
-				najwyższych standardów bezpieczeństwa i ochrony małoletnich uczestników naszych programów.
-				Przedstawione zasady są obowiązkowe dla wszystkich członków kadry, wolontariuszy i osób
-				współpracujących z organizacją.
-			</p>
+
+		<section class="download-section" style="background: #f0f9f4; border: 2px solid #2d7a47; border-radius: 12px; padding: 2rem; margin-bottom: 3rem; text-align: center;">
+			<h2 style="color: #2d7a47; border: none; margin-bottom: 1rem;">Dokumenty do pobrania</h2>
+			<p style="color: #555; margin-bottom: 1.5rem;">Oficjalne dokumenty standardów ochrony małoletnich Bydgoskiego Towarzystwa Hipoterapeutycznego „Myślęcinek":</p>
+			<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+				<a href="/uploads/standardy_ochrony_maloletnich_pelna.pdf" target="_blank" style="display: inline-block; background: #2d7a47; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Wersja pełna (PDF)</a>
+				<a href="/uploads/standardy_ochrony_maloletnich_skrocona.pdf" target="_blank" style="display: inline-block; background: white; color: #2d7a47; border: 2px solid #2d7a47; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Wersja skrócona (PDF)</a>
+			</div>
+			<p style="color: #999; font-size: 0.85rem; margin-top: 1rem;">Pliki PDF wymagają Adobe Acrobat Reader lub innego programu obsługującego format PDF.</p>
 		</section>
 
 		<section class="principles-section">
-			<h2><i class="fas fa-shield-alt"></i> Podstawowe zasady ochrony</h2>
+			<h2>Podstawowe zasady ochrony</h2>
 			<div class="principles-grid">
 				<div class="principle-card">
 					<div class="principle-icon">
-						<i class="fas fa-eye"></i>
+						
 					</div>
 					<h3>Zasada przejrzystości</h3>
 					<p>
@@ -29,7 +38,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 
 				<div class="principle-card">
 					<div class="principle-icon">
-						<i class="fas fa-handshake"></i>
+						
 					</div>
 					<h3>Zasada szacunku</h3>
 					<p>
@@ -40,7 +49,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 
 				<div class="principle-card">
 					<div class="principle-icon">
-						<i class="fas fa-graduation-cap"></i>
+						
 					</div>
 					<h3>Zasada kompetencji</h3>
 					<p>
@@ -51,7 +60,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 
 				<div class="principle-card">
 					<div class="principle-icon">
-						<i class="fas fa-users"></i>
+						
 					</div>
 					<h3>Zasada współpracy</h3>
 					<p>
@@ -63,7 +72,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		</section>
 
 		<section class="safety-protocols">
-			<h2><i class="fas fa-clipboard-check"></i> Protokoły bezpieczeństwa</h2>
+			<h2>Protokoły bezpieczeństwa</h2>
 
 			<div class="protocol-section">
 				<h3>1. Weryfikacja kadry</h3>
@@ -115,7 +124,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		</section>
 
 		<section class="reporting-section">
-			<h2><i class="fas fa-exclamation-triangle"></i> Procedury zgłaszania</h2>
+			<h2>Procedury zgłaszania</h2>
 
 			<div class="reporting-info">
 				<div class="urgent-box">
@@ -126,15 +135,13 @@ import MainLayout from '../../layouts/MainLayout.astro';
 					</p>
 					<div class="emergency-contacts">
 						<div class="emergency-contact">
-							<i class="fas fa-phone"></i>
-							<div>
+														<div>
 								<strong>Policja / Pogotowie ratunkowe</strong>
 								<span>112</span>
 							</div>
 						</div>
 						<div class="emergency-contact">
-							<i class="fas fa-phone"></i>
-							<div>
+														<div>
 								<strong>Telefon zaufania dla dzieci</strong>
 								<span>116 111</span>
 							</div>
@@ -167,19 +174,17 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		</section>
 
 		<section class="contact-persons">
-			<h2><i class="fas fa-user-shield"></i> Osoby kontaktowe</h2>
+			<h2>Osoby kontaktowe</h2>
 
 			<div class="contacts-grid">
 				<div class="contact-card">
 					<div class="contact-role">Koordynator ds. Bezpieczeństwa</div>
 					<div class="contact-info">
 						<div class="contact-item">
-							<i class="fas fa-phone"></i>
-							<span>52 341 14 66</span>
+														<span>52 341 14 66</span>
 						</div>
 						<div class="contact-item">
-							<i class="fas fa-envelope"></i>
-							<span>bezpieczenstwo@hipoterapia.bydgoszcz.pl</span>
+														<span>bezpieczenstwo@hipoterapia.bydgoszcz.pl</span>
 						</div>
 					</div>
 					<div class="contact-availability">
@@ -191,12 +196,10 @@ import MainLayout from '../../layouts/MainLayout.astro';
 					<div class="contact-role">Prezes Zarządu</div>
 					<div class="contact-info">
 						<div class="contact-item">
-							<i class="fas fa-phone"></i>
-							<span>52 341 14 66</span>
+														<span>52 341 14 66</span>
 						</div>
 						<div class="contact-item">
-							<i class="fas fa-envelope"></i>
-							<span>prezes@hipoterapia.bydgoszcz.pl</span>
+														<span>prezes@hipoterapia.bydgoszcz.pl</span>
 						</div>
 					</div>
 					<div class="contact-availability">
@@ -207,7 +210,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		</section>
 
 		<section class="external-resources">
-			<h2><i class="fas fa-link"></i> Pomocne zasoby</h2>
+			<h2>Pomocne zasoby</h2>
 
 			<div class="resources-grid">
 				<div class="resource-item">
@@ -237,7 +240,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		</section>
 
 		<section class="training-section">
-			<h2><i class="fas fa-chalkboard-teacher"></i> Szkolenia i edukacja</h2>
+			<h2>Szkolenia i edukacja</h2>
 
 			<div class="training-info">
 				<div class="training-item">
@@ -306,21 +309,6 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		margin: 0 auto;
 		padding: 2rem;
 		line-height: 1.6;
-	}
-
-	.intro {
-		text-align: center;
-		margin-bottom: 3rem;
-		padding: 2rem;
-		background: linear-gradient(135deg, #dc3545, #c82333);
-		color: white;
-		border-radius: 12px;
-	}
-
-	.lead {
-		font-size: 1.2rem;
-		max-width: 800px;
-		margin: 0 auto;
 	}
 
 	.principles-section {

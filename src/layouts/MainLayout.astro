@@ -37,6 +37,10 @@ const defaultDescription = "Profesjonalna hipoterapia w Bydgoszczy. Terapia z ud
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="canonical" href={`https://nowa.hipoterapia.bydgoszcz.pl${Astro.url.pathname}`} />
 
+		<!-- Preload fonts for faster rendering -->
+		<link rel="preload" href="https://api.fontshare.com/v2/css?f=cal-sans@1&display=swap" as="style" />
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" />
+
 		<title>{title} | Hipoterapia Bydgoszcz</title>
 
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />

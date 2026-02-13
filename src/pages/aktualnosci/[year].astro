@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import MainLayout from '../../layouts/MainLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('aktualnosci');
@@ -46,16 +47,10 @@ const monthNames = [
 ---
 
 <MainLayout title={`Aktualności ${year}`}>
-  <section class="py-12 bg-gradient-to-r from-primary-600 to-primary-700">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
-        Aktualności z <span class="text-primary-200">{year}</span> roku
-      </h1>
-      <p class="text-xl text-primary-100 max-w-3xl mx-auto">
-        Wszystkie wydarzenia i aktualności z {year} roku ({posts.length} {posts.length === 1 ? 'wpis' : posts.length < 5 ? 'wpisy' : 'wpisów'})
-      </p>
-    </div>
-  </section>
+  <PageHero
+    title={`Aktualności ${year}`}
+    breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'Aktualności', href: '/aktualnosci/' }, { label: year.toString() }]}
+  />
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
   <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">

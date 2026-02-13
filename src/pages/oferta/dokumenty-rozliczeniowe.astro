@@ -1,20 +1,15 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 ---
 
 <MainLayout title="Dokumenty Rozliczeniowe">
+	<PageHero
+		title="Dokumenty rozliczeniowe"
+		subtitle="Dokumenty finansowe, sprawozdania oraz formularze dla uczestników i darczyńców"
+		breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'Oferta', href: '/oferta/' }, { label: 'Dokumenty rozliczeniowe' }]}
+	/>
 	<div class="documents-content">
-		<nav class="breadcrumb">
-			<a href="/oferta/">← Powrót do Oferta</a>
-		</nav>
-
-		<section class="intro">
-			<p class="lead">
-				W ramach transparentności działania publikujemy dokumenty finansowe,
-				sprawozdania oraz wszystkie niezbędne formularze dla uczestników i darczyńców.
-				Wszystkie dokumenty są dostępne do pobrania w formacie PDF.
-			</p>
-		</section>
 
 		<section class="reports-section">
 			<h2>Sprawozdania Roczne</h2>
@@ -265,38 +260,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		margin: 0 auto;
 	}
 
-	.breadcrumb {
-		margin-bottom: 2rem;
-	}
-
-	.breadcrumb a {
-		color: var(--primary-color);
-		text-decoration: none;
-		font-weight: 600;
-		transition: color 0.3s ease;
-	}
-
-	.breadcrumb a:hover {
-		color: var(--secondary-color);
-	}
-
-	.intro {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		margin-bottom: 2rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-left: 5px solid var(--secondary-color);
-	}
-
-	.lead {
-		font-size: 1.2rem;
-		line-height: 1.8;
-		color: var(--text-color);
-		margin: 0;
-	}
-
-	h2 {
+h2 {
 		color: var(--primary-color);
 		margin-bottom: 2rem;
 		padding-bottom: 0.5rem;

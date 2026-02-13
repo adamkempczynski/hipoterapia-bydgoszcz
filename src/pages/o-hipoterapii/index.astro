@@ -1,500 +1,314 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import ScrollReveal from '../../components/ScrollReveal.astro';
 ---
 
 <MainLayout
   title="O Hipoterapii"
   description="Czym jest hipoterapia? Poznaj metody rehabilitacji z końmi w Bydgoszczy, wskazania, przeciwwskazania i korzyści dla dzieci z niepełnosprawnościami i autyzmem."
 >
-	<div class="hippotherapy-content">
-		<section class="intro">
-			<p class="lead">
-				Hipoterapia to uznana metoda rehabilitacji i terapii wykorzystująca kontakt z koniem oraz jazdę konną
-				jako środek do osiągnięcia celów terapeutycznych. Jest to kompleksowa forma wspomagania rozwoju
-				i rehabilitacji osób z różnorodnymi dysfunkcjami.
-			</p>
-		</section>
+	<PageHero
+		title="O Hipoterapii"
+		subtitle="Czym jest hipoterapia? Poznaj metody rehabilitacji z końmi, wskazania, przeciwwskazania i korzyści"
+		breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'O Hipoterapii' }]}
+	/>
 
-		<section class="content-section">
-			<h2>Czym jest hipoterapia?</h2>
-			<p>
-				Hipoterapia (z greckiego "hippos" - koń i "therapeia" - leczenie) to metoda wspomagająca rehabilitację
-				ruchową, psychiczną i społeczną. Wykorzystuje naturalny, trójwymiarowy ruch konia, który jest zbliżony
-				do wzorca chodu człowieka. Podczas jazdy konnej pracują wszystkie mięśnie jeźdźca, co stanowi
-				doskonałą formę ćwiczeń rehabilitacyjnych.
-			</p>
-			<p>
-				Koń przekazuje jeźdźcowi około 90-110 impulsów ruchowych na minutę, które stymulują układ nerwowy,
-				poprawiają równowagę, koordynację ruchową oraz napięcie mięśniowe. Temperatura ciała konia (wyższa
-				o około 1-1,5°C od temperatury człowieka) działa rozluźniająco na napięte mięśnie.
-			</p>
-		</section>
-
-		<section class="content-section">
-			<h2>Dla kogo jest hipoterapia?</h2>
-			<div class="indication-grid">
-				<div class="indication-card">
-					<h3>Schorzenia neurologiczne</h3>
-					<ul>
-						<li>Mózgowe porażenie dziecięce</li>
-						<li>Stwardnienie rozsiane</li>
-						<li>Udary mózgu</li>
-						<li>Urazy czaszkowo-mózgowe</li>
-						<li>Przepuklina oponowo-rdzeniowa</li>
-					</ul>
-				</div>
-
-				<div class="indication-card">
-					<h3>Zaburzenia rozwojowe</h3>
-					<ul>
-						<li>Autyzm</li>
-						<li>Zespół Downa</li>
-						<li>Opóźnienia rozwoju psychoruchowego</li>
-						<li>Zaburzenia integracji sensorycznej</li>
-						<li>ADHD</li>
-					</ul>
-				</div>
-
-				<div class="indication-card">
-					<h3>Schorzenia ortopedyczne</h3>
-					<ul>
-						<li>Wady postawy</li>
-						<li>Skoliozy</li>
-						<li>Dysplazja stawów biodrowych</li>
-						<li>Stany po urazach kończyn</li>
-						<li>Zaburzenia napięcia mięśniowego</li>
-					</ul>
-				</div>
-
-				<div class="indication-card">
-					<h3>Zaburzenia emocjonalne</h3>
-					<ul>
-						<li>Depresja</li>
-						<li>Zaburzenia lękowe</li>
-						<li>Niska samoocena</li>
-						<li>Trudności w nawiązywaniu kontaktów</li>
-						<li>Zaburzenia zachowania</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<section class="content-section">
-			<h2>Korzyści z hipoterapii</h2>
-			<div class="benefits-container">
-				<div class="benefit-category">
-					<h3>Korzyści fizyczne</h3>
-					<ul>
-						<li>Poprawa równowagi i koordynacji ruchowej</li>
-						<li>Wzmocnienie mięśni posturalnych</li>
-						<li>Normalizacja napięcia mięśniowego</li>
-						<li>Poprawa zakresu ruchów w stawach</li>
-						<li>Stymulacja układu przedsionkowego</li>
-						<li>Rozwój reakcji równoważnych</li>
-					</ul>
-				</div>
-
-				<div class="benefit-category">
-					<h3>Korzyści psychiczne</h3>
-					<ul>
-						<li>Wzrost poczucia własnej wartości</li>
-						<li>Poprawa koncentracji uwagi</li>
-						<li>Rozwój umiejętności planowania</li>
-						<li>Redukcja lęku i napięcia</li>
-						<li>Zwiększenie motywacji do działania</li>
-						<li>Poprawa nastroju</li>
-					</ul>
-				</div>
-
-				<div class="benefit-category">
-					<h3>Korzyści społeczne</h3>
-					<ul>
-						<li>Rozwój umiejętności komunikacyjnych</li>
-						<li>Nauka odpowiedzialności</li>
-						<li>Budowanie relacji z koniem i terapeutą</li>
-						<li>Integracja z grupą</li>
-						<li>Rozwój empatii</li>
-						<li>Przestrzeganie zasad i reguł</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<section class="content-section">
-			<h2>Jak przebiega zajęcia?</h2>
-			<div class="process-timeline">
-				<div class="timeline-item">
-					<div class="timeline-number">1</div>
-					<div class="timeline-content">
-						<h3>Konsultacja wstępna</h3>
-						<p>Rozmowa z rodzicami/opiekunami, analiza dokumentacji medycznej, określenie celów terapii.</p>
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<div class="timeline-number">2</div>
-					<div class="timeline-content">
-						<h3>Pierwsze spotkanie z koniem</h3>
-						<p>Nawiązanie kontaktu z koniem, oswojenie się, nauka podstawowych zasad bezpieczeństwa.</p>
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<div class="timeline-number">3</div>
-					<div class="timeline-content">
-						<h3>Zajęcia terapeutyczne</h3>
-						<p>Regularne sesje 30-45 minutowe, dostosowane do możliwości i potrzeb uczestnika.</p>
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<div class="timeline-number">4</div>
-					<div class="timeline-content">
-						<h3>Ewaluacja postępów</h3>
-						<p>Regularna ocena efektów terapii, modyfikacja programu, współpraca z rodzicami.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="content-section">
-			<h2>Przeciwwskazania</h2>
-			<div class="warning-box">
-				<p><strong>Hipoterapia nie jest wskazana przy:</strong></p>
-				<ul>
-					<li>Ostrych stanach zapalnych</li>
-					<li>Niestabilnej epilepsji</li>
-					<li>Alergiach na sierść konia</li>
-					<li>Ostrych schorzeniach kręgosłupa</li>
-					<li>Hemofili</li>
-					<li>Niektórych wadach serca</li>
-					<li>Otwartych ranach</li>
-				</ul>
-				<p class="note">
-					Zawsze przed rozpoczęciem terapii wymagana jest konsultacja lekarska i zaświadczenie
-					o braku przeciwwskazań do udziału w zajęciach hipoterapeutycznych.
+	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<!-- Intro -->
+		<ScrollReveal animation="up">
+			<section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border-l-4 border-accent-500 mb-10">
+				<p class="text-lg md:text-xl leading-relaxed text-gray-700">
+					Hipoterapia to uznana metoda rehabilitacji i terapii wykorzystująca kontakt z koniem oraz jazdę konną
+					jako środek do osiągnięcia celów terapeutycznych. Jest to kompleksowa forma wspomagania rozwoju
+					i rehabilitacji osób z różnorodnymi dysfunkcjami.
 				</p>
-			</div>
-		</section>
+			</section>
+		</ScrollReveal>
 
-		<section class="content-section">
-			<h2>Metody stosowane w hipoterapii</h2>
-			<div class="methods-grid">
-				<div class="method-card">
-					<h3>Hipoterapia właściwa</h3>
-					<p>
-						Fizjoterapia na koniu - wykorzystanie ruchu konia do usprawniania ruchowego.
-						Pacjent przyjmuje różne pozycje na koniu, wykonuje ćwiczenia dostosowane do swoich potrzeb.
+		<!-- Czym jest hipoterapia -->
+		<ScrollReveal animation="up">
+			<section class="mb-12">
+				<h2 class="font-display text-2xl font-bold text-primary-700 pb-2 border-b-2 border-accent-400 mb-6">Czym jest hipoterapia?</h2>
+				<p class="leading-relaxed text-gray-700 mb-4">
+					Hipoterapia (z greckiego "hippos" - koń i "therapeia" - leczenie) to metoda wspomagająca rehabilitację
+					ruchową, psychiczną i społeczną. Wykorzystuje naturalny, trójwymiarowy ruch konia, który jest zbliżony
+					do wzorca chodu człowieka. Podczas jazdy konnej pracują wszystkie mięśnie jeźdźca, co stanowi
+					doskonałą formę ćwiczeń rehabilitacyjnych.
+				</p>
+				<p class="leading-relaxed text-gray-700">
+					Koń przekazuje jeźdźcowi około 90-110 impulsów ruchowych na minutę, które stymulują układ nerwowy,
+					poprawiają równowagę, koordynację ruchową oraz napięcie mięśniowe. Temperatura ciała konia (wyższa
+					o około 1-1,5°C od temperatury człowieka) działa rozluźniająco na napięte mięśnie.
+				</p>
+			</section>
+		</ScrollReveal>
+
+		<!-- Dla kogo -->
+		<ScrollReveal animation="up">
+			<section class="mb-12">
+				<h2 class="font-display text-2xl font-bold text-primary-700 pb-2 border-b-2 border-accent-400 mb-6">Dla kogo jest hipoterapia?</h2>
+				<ScrollReveal animation="up" stagger={true} class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+					<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 border-t-3 border-t-accent-500">
+						<h3 class="font-display text-lg font-semibold text-primary-700 mb-3">Schorzenia neurologiczne</h3>
+						<ul class="list-inside list-disc text-gray-700 leading-relaxed space-y-1">
+							<li>Mózgowe porażenie dziecięce</li>
+							<li>Stwardnienie rozsiane</li>
+							<li>Udary mózgu</li>
+							<li>Urazy czaszkowo-mózgowe</li>
+							<li>Przepuklina oponowo-rdzeniowa</li>
+						</ul>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 border-t-3 border-t-accent-500">
+						<h3 class="font-display text-lg font-semibold text-primary-700 mb-3">Zaburzenia rozwojowe</h3>
+						<ul class="list-inside list-disc text-gray-700 leading-relaxed space-y-1">
+							<li>Autyzm</li>
+							<li>Zespół Downa</li>
+							<li>Opóźnienia rozwoju psychoruchowego</li>
+							<li>Zaburzenia integracji sensorycznej</li>
+							<li>ADHD</li>
+						</ul>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 border-t-3 border-t-accent-500">
+						<h3 class="font-display text-lg font-semibold text-primary-700 mb-3">Schorzenia ortopedyczne</h3>
+						<ul class="list-inside list-disc text-gray-700 leading-relaxed space-y-1">
+							<li>Wady postawy</li>
+							<li>Skoliozy</li>
+							<li>Dysplazja stawów biodrowych</li>
+							<li>Stany po urazach kończyn</li>
+							<li>Zaburzenia napięcia mięśniowego</li>
+						</ul>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 border-t-3 border-t-accent-500">
+						<h3 class="font-display text-lg font-semibold text-primary-700 mb-3">Zaburzenia emocjonalne</h3>
+						<ul class="list-inside list-disc text-gray-700 leading-relaxed space-y-1">
+							<li>Depresja</li>
+							<li>Zaburzenia lękowe</li>
+							<li>Niska samoocena</li>
+							<li>Trudności w nawiązywaniu kontaktów</li>
+							<li>Zaburzenia zachowania</li>
+						</ul>
+					</div>
+				</ScrollReveal>
+			</section>
+		</ScrollReveal>
+
+		<!-- Korzyści -->
+		<ScrollReveal animation="up">
+			<section class="mb-12">
+				<h2 class="font-display text-2xl font-bold text-primary-700 pb-2 border-b-2 border-accent-400 mb-6">Korzyści z hipoterapii</h2>
+				<ScrollReveal animation="up" stagger={true} class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+					<div class="bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-sm border border-gray-100 p-6">
+						<h3 class="font-display text-lg font-semibold text-primary-700 mb-4 text-center">Korzyści fizyczne</h3>
+						<ul class="space-y-2">
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Poprawa równowagi i koordynacji ruchowej
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Wzmocnienie mięśni posturalnych
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Normalizacja napięcia mięśniowego
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Poprawa zakresu ruchów w stawach
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Stymulacja układu przedsionkowego
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Rozwój reakcji równoważnych
+							</li>
+						</ul>
+					</div>
+
+					<div class="bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-sm border border-gray-100 p-6">
+						<h3 class="font-display text-lg font-semibold text-primary-700 mb-4 text-center">Korzyści psychiczne</h3>
+						<ul class="space-y-2">
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Wzrost poczucia własnej wartości
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Poprawa koncentracji uwagi
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Rozwój umiejętności planowania
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Redukcja lęku i napięcia
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Zwiększenie motywacji do działania
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Poprawa nastroju
+							</li>
+						</ul>
+					</div>
+
+					<div class="bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-sm border border-gray-100 p-6">
+						<h3 class="font-display text-lg font-semibold text-primary-700 mb-4 text-center">Korzyści społeczne</h3>
+						<ul class="space-y-2">
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Rozwój umiejętności komunikacyjnych
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Nauka odpowiedzialności
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Budowanie relacji z koniem i terapeutą
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Integracja z grupą
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Rozwój empatii
+							</li>
+							<li class="relative pl-6 leading-relaxed text-gray-700">
+								<span class="absolute left-0 text-accent-500 font-bold">&#10003;</span>
+								Przestrzeganie zasad i reguł
+							</li>
+						</ul>
+					</div>
+				</ScrollReveal>
+			</section>
+		</ScrollReveal>
+
+		<!-- Jak przebiegają zajęcia -->
+		<ScrollReveal animation="up">
+			<section class="mb-12">
+				<h2 class="font-display text-2xl font-bold text-primary-700 pb-2 border-b-2 border-accent-400 mb-6">Jak przebiega zajęcia?</h2>
+				<div class="mt-8 space-y-6">
+					<ScrollReveal animation="up" stagger={true} class="space-y-6">
+						<div class="flex items-start gap-6 relative">
+							<div class="w-10 h-10 min-w-[2.5rem] bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">1</div>
+							<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex-1">
+								<h3 class="font-display text-lg font-semibold text-primary-700 mb-2">Konsultacja wstępna</h3>
+								<p class="text-gray-700 leading-relaxed">Rozmowa z rodzicami/opiekunami, analiza dokumentacji medycznej, określenie celów terapii.</p>
+							</div>
+						</div>
+
+						<div class="flex items-start gap-6 relative">
+							<div class="w-10 h-10 min-w-[2.5rem] bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">2</div>
+							<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex-1">
+								<h3 class="font-display text-lg font-semibold text-primary-700 mb-2">Pierwsze spotkanie z koniem</h3>
+								<p class="text-gray-700 leading-relaxed">Nawiązanie kontaktu z koniem, oswojenie się, nauka podstawowych zasad bezpieczeństwa.</p>
+							</div>
+						</div>
+
+						<div class="flex items-start gap-6 relative">
+							<div class="w-10 h-10 min-w-[2.5rem] bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">3</div>
+							<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex-1">
+								<h3 class="font-display text-lg font-semibold text-primary-700 mb-2">Zajęcia terapeutyczne</h3>
+								<p class="text-gray-700 leading-relaxed">Regularne sesje 30-45 minutowe, dostosowane do możliwości i potrzeb uczestnika.</p>
+							</div>
+						</div>
+
+						<div class="flex items-start gap-6 relative">
+							<div class="w-10 h-10 min-w-[2.5rem] bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">4</div>
+							<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex-1">
+								<h3 class="font-display text-lg font-semibold text-primary-700 mb-2">Ewaluacja postępów</h3>
+								<p class="text-gray-700 leading-relaxed">Regularna ocena efektów terapii, modyfikacja programu, współpraca z rodzicami.</p>
+							</div>
+						</div>
+					</ScrollReveal>
+				</div>
+			</section>
+		</ScrollReveal>
+
+		<!-- Przeciwwskazania -->
+		<ScrollReveal animation="up">
+			<section class="mb-12">
+				<h2 class="font-display text-2xl font-bold text-primary-700 pb-2 border-b-2 border-accent-400 mb-6">Przeciwwskazania</h2>
+				<div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-6">
+					<p class="font-semibold text-gray-800 mb-3"><strong>Hipoterapia nie jest wskazana przy:</strong></p>
+					<ul class="list-disc pl-6 text-gray-700 leading-relaxed space-y-1 mb-4">
+						<li>Ostrych stanach zapalnych</li>
+						<li>Niestabilnej epilepsji</li>
+						<li>Alergiach na sierść konia</li>
+						<li>Ostrych schorzeniach kręgosłupa</li>
+						<li>Hemofili</li>
+						<li>Niektórych wadach serca</li>
+						<li>Otwartych ranach</li>
+					</ul>
+					<p class="italic text-amber-700 pt-4 border-t border-amber-300">
+						Zawsze przed rozpoczęciem terapii wymagana jest konsultacja lekarska i zaświadczenie
+						o braku przeciwwskazań do udziału w zajęciach hipoterapeutycznych.
 					</p>
 				</div>
+			</section>
+		</ScrollReveal>
 
-				<div class="method-card">
-					<h3>Psychopedagogiczna jazda konna</h3>
-					<p>
-						Nauka jazdy konnej jako forma terapii pedagogicznej i psychologicznej.
-						Rozwija samodzielność, odpowiedzialność i umiejętności społeczne.
-					</p>
-				</div>
+		<!-- Metody -->
+		<ScrollReveal animation="up">
+			<section class="mb-12">
+				<h2 class="font-display text-2xl font-bold text-primary-700 pb-2 border-b-2 border-accent-400 mb-6">Metody stosowane w hipoterapii</h2>
+				<ScrollReveal animation="up" stagger={true} class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+					<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+						<h3 class="font-display text-lg font-semibold text-primary-700 mb-3">Hipoterapia właściwa</h3>
+						<p class="text-gray-700 leading-relaxed">
+							Fizjoterapia na koniu - wykorzystanie ruchu konia do usprawniania ruchowego.
+							Pacjent przyjmuje różne pozycje na koniu, wykonuje ćwiczenia dostosowane do swoich potrzeb.
+						</p>
+					</div>
 
-				<div class="method-card">
-					<h3>Terapia kontaktem z koniem</h3>
-					<p>
-						Zajęcia przy koniu bez jazdy - pielęgnacja, karmienie, prowadzenie.
-						Buduje relację z koniem, uczy empatii i odpowiedzialności.
-					</p>
-				</div>
+					<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+						<h3 class="font-display text-lg font-semibold text-primary-700 mb-3">Psychopedagogiczna jazda konna</h3>
+						<p class="text-gray-700 leading-relaxed">
+							Nauka jazdy konnej jako forma terapii pedagogicznej i psychologicznej.
+							Rozwija samodzielność, odpowiedzialność i umiejętności społeczne.
+						</p>
+					</div>
 
-				<div class="method-card">
-					<h3>Sport jeździecki niepełnosprawnych</h3>
-					<p>
-						Dla zaawansowanych uczestników - nauka jazdy sportowej, udział w zawodach.
-						Rozwija ambicje, podnosi samoocenę, integruje ze środowiskiem.
-					</p>
-				</div>
-			</div>
-		</section>
+					<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+						<h3 class="font-display text-lg font-semibold text-primary-700 mb-3">Terapia kontaktem z koniem</h3>
+						<p class="text-gray-700 leading-relaxed">
+							Zajęcia przy koniu bez jazdy - pielęgnacja, karmienie, prowadzenie.
+							Buduje relację z koniem, uczy empatii i odpowiedzialności.
+						</p>
+					</div>
 
-		<section class="cta-section">
-			<h2>Zainteresowany hipoterapią?</h2>
-			<p>
-				Skontaktuj się z nami, aby dowiedzieć się więcej o naszej ofercie i możliwościach
-				terapii dla Ciebie lub Twojego dziecka.
-			</p>
-			<a href="/kontakt/" class="cta-button">Skontaktuj się z nami</a>
-		</section>
+					<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+						<h3 class="font-display text-lg font-semibold text-primary-700 mb-3">Sport jeździecki niepełnosprawnych</h3>
+						<p class="text-gray-700 leading-relaxed">
+							Dla zaawansowanych uczestników - nauka jazdy sportowej, udział w zawodach.
+							Rozwija ambicje, podnosi samoocenę, integruje ze środowiskiem.
+						</p>
+					</div>
+				</ScrollReveal>
+			</section>
+		</ScrollReveal>
+
+		<!-- CTA -->
+		<ScrollReveal animation="up">
+			<section class="bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 rounded-2xl text-white text-center px-6 py-12 md:px-10 mt-12">
+				<h2 class="font-display text-2xl md:text-3xl font-bold text-white mb-4">Zainteresowany hipoterapią?</h2>
+				<p class="text-lg text-primary-100 mb-8 max-w-2xl mx-auto">
+					Skontaktuj się z nami, aby dowiedzieć się więcej o naszej ofercie i możliwościach
+					terapii dla Ciebie lub Twojego dziecka.
+				</p>
+				<a href="/kontakt/" class="btn btn-primary btn-lg">Skontaktuj się z nami</a>
+			</section>
+		</ScrollReveal>
 	</div>
 </MainLayout>
-
-<style>
-	.hippotherapy-content {
-		max-width: 900px;
-		margin: 0 auto;
-	}
-
-	.intro {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		margin-bottom: 2rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-left: 5px solid var(--secondary-color);
-	}
-
-	.lead {
-		font-size: 1.2rem;
-		line-height: 1.8;
-		color: var(--text-color);
-		margin: 0;
-	}
-
-	.content-section {
-		margin-bottom: 3rem;
-	}
-
-	.content-section h2 {
-		color: var(--primary-color);
-		margin-bottom: 1.5rem;
-		padding-bottom: 0.5rem;
-		border-bottom: 2px solid var(--secondary-color);
-	}
-
-	.content-section p {
-		line-height: 1.8;
-		margin-bottom: 1rem;
-	}
-
-	.indication-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-		margin-top: 1.5rem;
-	}
-
-	@media (min-width: 768px) {
-		.indication-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.indication-card {
-		background: white;
-		padding: 1.5rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-top: 3px solid var(--secondary-color);
-	}
-
-	.indication-card h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-		font-size: 1.1rem;
-	}
-
-	.indication-card ul {
-		list-style-position: inside;
-		color: var(--text-color);
-		line-height: 1.8;
-	}
-
-	.benefits-container {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		margin-top: 1.5rem;
-	}
-
-	@media (min-width: 768px) {
-		.benefits-container {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	.benefit-category {
-		background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-		padding: 1.5rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-	}
-
-	.benefit-category h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-		font-size: 1.1rem;
-		text-align: center;
-	}
-
-	.benefit-category ul {
-		list-style: none;
-		padding: 0;
-	}
-
-	.benefit-category li {
-		padding: 0.5rem 0;
-		padding-left: 1.5rem;
-		position: relative;
-		line-height: 1.6;
-	}
-
-	.benefit-category li:before {
-		content: "✓";
-		position: absolute;
-		left: 0;
-		color: var(--secondary-color);
-		font-weight: bold;
-	}
-
-	.process-timeline {
-		margin-top: 2rem;
-	}
-
-	.timeline-item {
-		display: flex;
-		margin-bottom: 2rem;
-		position: relative;
-	}
-
-	.timeline-item:not(:last-child):after {
-		content: "";
-		position: absolute;
-		left: 20px;
-		top: 50px;
-		height: calc(100% + 1rem);
-		width: 2px;
-		background: var(--secondary-color);
-		opacity: 0.3;
-	}
-
-	.timeline-number {
-		min-width: 40px;
-		height: 40px;
-		background: var(--primary-color);
-		color: white;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-weight: bold;
-		margin-right: 1.5rem;
-		flex-shrink: 0;
-	}
-
-	.timeline-content {
-		flex: 1;
-		background: white;
-		padding: 1.5rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-	}
-
-	.timeline-content h3 {
-		color: var(--primary-color);
-		margin-bottom: 0.5rem;
-		font-size: 1.1rem;
-	}
-
-	.timeline-content p {
-		margin: 0;
-		color: var(--text-color);
-		line-height: 1.6;
-	}
-
-	.warning-box {
-		background: #fff3cd;
-		border: 1px solid #ffc107;
-		border-radius: 8px;
-		padding: 1.5rem;
-		margin-top: 1.5rem;
-	}
-
-	.warning-box p {
-		margin: 0.5rem 0;
-	}
-
-	.warning-box ul {
-		margin: 1rem 0;
-		padding-left: 2rem;
-		line-height: 1.8;
-	}
-
-	.warning-box .note {
-		font-style: italic;
-		color: #856404;
-		margin-top: 1rem;
-		padding-top: 1rem;
-		border-top: 1px solid #ffc107;
-	}
-
-	.methods-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-		margin-top: 1.5rem;
-	}
-
-	@media (min-width: 768px) {
-		.methods-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.method-card {
-		background: white;
-		padding: 1.5rem;
-		border-radius: 8px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
-
-	.method-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-	}
-
-	.method-card h3 {
-		color: var(--primary-color);
-		margin-bottom: 1rem;
-		font-size: 1.1rem;
-	}
-
-	.method-card p {
-		margin: 0;
-		line-height: 1.6;
-		color: var(--text-color);
-	}
-
-	.cta-section {
-		background: linear-gradient(135deg, var(--primary-color) 0%, #4a7c59 100%);
-		color: white;
-		padding: 3rem 2rem;
-		border-radius: 8px;
-		text-align: center;
-		margin-top: 3rem;
-	}
-
-	.cta-section h2 {
-		color: white;
-		margin-bottom: 1rem;
-	}
-
-	.cta-section p {
-		font-size: 1.1rem;
-		margin-bottom: 2rem;
-		opacity: 0.95;
-	}
-
-	.cta-button {
-		display: inline-block;
-		background: var(--secondary-color);
-		color: var(--primary-color);
-		padding: 1rem 2rem;
-		border-radius: 4px;
-		text-decoration: none;
-		font-weight: bold;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
-
-	.cta-button:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-	}
-</style>

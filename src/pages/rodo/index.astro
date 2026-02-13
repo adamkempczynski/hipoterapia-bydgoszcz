@@ -1,17 +1,19 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 ---
 
 <MainLayout
 	title="Polityka Prywatności - RODO"
 	description="Polityka prywatności i ochrony danych osobowych Bydgoskiego Towarzystwa Hipoterapii i Psychoterapii zgodnie z RODO."
 >
+	<PageHero
+		title="Polityka Prywatności"
+		subtitle="Ochrona danych osobowych zgodnie z RODO"
+		breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'RODO' }]}
+	/>
+
 	<div class="rodo-container">
-		<div class="rodo-header">
-			<h1>Polityka Prywatności</h1>
-			<p class="subtitle">Ochrona danych osobowych zgodnie z RODO</p>
-			<p class="update-date">Ostatnia aktualizacja: {new Date().toLocaleDateString('pl-PL', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
-		</div>
 
 		<div class="content">
 			<section>
@@ -182,9 +184,9 @@ import MainLayout from '../../layouts/MainLayout.astro';
 				</p>
 				<div class="contact-box">
 					<p><strong>Bydgoskie Towarzystwo Hipoterapeutyczne "Myślęcinek"</strong></p>
-					<p>ul. Gdańska 188, 85-915 Bydgoszcz</p>
-					<p>Email: <a href="mailto:biuro@hipoterapia.bydgoszcz.pl">biuro@hipoterapia.bydgoszcz.pl</a></p>
-					<p>Telefon: <a href="tel:+48523411466">52 341 14 66</a></p>
+					<p>ul. Gdańska 173-175, 85-674 Bydgoszcz</p>
+					<p>Email: <a href="mailto:hipoterapia.bydgoszcz@poczta.onet.pl">hipoterapia.bydgoszcz@poczta.onet.pl</a></p>
+					<p>Telefon: <a href="tel:+48727912331">727-912-331</a>, <a href="tel:+48727912332">727-912-332</a></p>
 				</div>
 			</section>
 
@@ -209,33 +211,6 @@ import MainLayout from '../../layouts/MainLayout.astro';
 		max-width: 900px;
 		margin: 0 auto;
 		padding: 2rem 1rem;
-	}
-
-	.rodo-header {
-		text-align: center;
-		margin-bottom: 3rem;
-		padding: 2.5rem 2rem;
-		background: linear-gradient(135deg, #f0f9f4 0%, #ffffff 100%);
-		border-radius: 12px;
-		border-left: 5px solid #16a34a;
-	}
-
-	.rodo-header h1 {
-		color: #16a34a;
-		font-size: 2.5rem;
-		margin-bottom: 0.75rem;
-	}
-
-	.subtitle {
-		font-size: 1.25rem;
-		color: #666;
-		margin-bottom: 0.5rem;
-	}
-
-	.update-date {
-		font-size: 0.9rem;
-		color: #999;
-		font-style: italic;
 	}
 
 	.content {
@@ -389,14 +364,6 @@ import MainLayout from '../../layouts/MainLayout.astro';
 	}
 
 	@media (max-width: 768px) {
-		.rodo-header h1 {
-			font-size: 2rem;
-		}
-
-		.subtitle {
-			font-size: 1.125rem;
-		}
-
 		h2 {
 			font-size: 1.5rem;
 		}

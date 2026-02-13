@@ -1,43 +1,45 @@
 ---
+import WaveDivider from './WaveDivider.astro';
 ---
 
-<footer class="bg-gray-900 text-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<footer class="bg-gradient-to-b from-primary-900 via-gray-900 to-gray-950 text-white relative">
+  <WaveDivider position="top" color="#f9fafb" />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pt-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
       <!-- About -->
-      <div class="space-y-4">
+      <div class="space-y-4 lg:col-span-1">
         <div class="flex items-center space-x-3">
-          <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-            </svg>
+          <img src="/uploads/logos/logo_bw.webp" alt="Logo BTH Myślęcinek" class="w-12 h-12 brightness-0 invert opacity-80" />
+          <div>
+            <h3 class="font-display font-bold text-lg">Hipoterapia</h3>
+            <p class="text-xs text-gray-400">Bydgoszcz</p>
           </div>
-          <h3 class="font-bold text-lg">Hipoterapia Bydgoszcz</h3>
         </div>
-        <p class="text-gray-300 leading-relaxed">
+        <p class="text-gray-300 leading-relaxed text-sm">
           Profesjonalna hipoterapia dla dzieci i dorosłych z niepełnosprawnościami.
-          Pomagamy w rozwoju przez kontakt z końmi.
+          Pomagamy w rozwoju przez kontakt z końmi od 1995 roku.
         </p>
       </div>
 
       <!-- Contact -->
       <div class="space-y-4">
         <h3 class="font-semibold text-lg text-white">Kontakt</h3>
-        <div class="space-y-3 text-gray-300">
+        <div class="space-y-3 text-gray-300 text-sm">
           <div class="flex items-start space-x-3">
-            <svg class="w-5 h-5 mt-0.5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 mt-0.5 text-primary-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
             </svg>
             <div>
-              <p class="font-medium">Bydgoskie Towarzystwo</p>
+              <p class="font-medium text-white">Bydgoskie Towarzystwo</p>
               <p>Hipoterapeutyczne "Myślęcinek"</p>
               <p>ul. Gdańska 173-175</p>
               <p>85-674 Bydgoszcz</p>
             </div>
           </div>
           <div class="flex items-center space-x-3">
-            <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 text-primary-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
             </svg>
             <p>KRS: 0000120586</p>
@@ -49,33 +51,41 @@
       <div class="space-y-4">
         <h3 class="font-semibold text-lg text-white">Szybkie linki</h3>
         <div class="space-y-2">
-          <a href="/oferta/" class="block text-gray-300 hover:text-primary-400 transition-colors">Oferta</a>
-          <a href="/o-hipoterapii/" class="block text-gray-300 hover:text-primary-400 transition-colors">O Hipoterapii</a>
-          <a href="/aktualnosci/" class="block text-gray-300 hover:text-primary-400 transition-colors">Aktualności</a>
-          <a href="/towarzystwo/" class="block text-gray-300 hover:text-primary-400 transition-colors">O nas</a>
-          <a href="/kontakt/" class="block text-gray-300 hover:text-primary-400 transition-colors">Kontakt</a>
+          <a href="/oferta/" class="block text-gray-300 hover:text-primary-400 transition-colors text-sm">Oferta</a>
+          <a href="/o-hipoterapii/" class="block text-gray-300 hover:text-primary-400 transition-colors text-sm">O Hipoterapii</a>
+          <a href="/aktualnosci/" class="block text-gray-300 hover:text-primary-400 transition-colors text-sm">Aktualności</a>
+          <a href="/galeria/" class="block text-gray-300 hover:text-primary-400 transition-colors text-sm">Galeria</a>
+          <a href="/towarzystwo/" class="block text-gray-300 hover:text-primary-400 transition-colors text-sm">O nas</a>
+          <a href="/kontakt/" class="block text-gray-300 hover:text-primary-400 transition-colors text-sm">Kontakt</a>
         </div>
+      </div>
 
-        <div class="pt-4">
-          <h4 class="font-medium text-white mb-2">Wesprzyj nas!</h4>
-          <p class="text-sm text-gray-300">Przekaż 1.5% podatku</p>
-          <p class="text-sm font-mono text-primary-400">KRS: 0000120586</p>
+      <!-- Support -->
+      <div class="space-y-4">
+        <h3 class="font-semibold text-lg text-white">Wesprzyj nas!</h3>
+        <div class="bg-accent-500/10 border border-accent-500/20 rounded-xl p-4">
+          <p class="text-accent-300 font-semibold mb-1">Przekaż 1,5% podatku</p>
+          <p class="text-2xl font-mono font-bold text-accent-400 mb-2">KRS: 0000120586</p>
+          <p class="text-xs text-gray-400">
+            Bydgoskie Towarzystwo Hipoterapeutyczne "Myślęcinek"
+          </p>
         </div>
       </div>
     </div>
 
     <!-- Social & Copyright -->
-    <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+    <div class="border-t border-gray-800 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-gray-400 text-sm">
         &copy; {new Date().getFullYear()} Bydgoskie Towarzystwo Hipoterapeutyczne "Myślęcinek". Wszelkie prawa zastrzeżone.
       </p>
 
-      <div class="flex items-center space-x-4 mt-4 md:mt-0">
+      <div class="flex items-center space-x-4">
         <a
           href="https://www.facebook.com/bthip.myslecinek/"
           target="_blank"
           rel="noopener noreferrer"
           class="text-gray-400 hover:text-primary-400 transition-colors"
+          aria-label="Facebook Bydgoskiego Towarzystwa Hipoterapeutycznego"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>

@@ -1,0 +1,96 @@
+---
+interface Props {
+  animation?: 'up' | 'left' | 'right' | 'scale' | 'fade';
+  delay?: number;
+  threshold?: number;
+  class?: string;
+  tag?: 'div' | 'section' | 'article';
+  stagger?: boolean;
+}
+
+const {
+  animation = 'up',
+  delay = 0,
+  threshold = 0.15,
+  class: className = '',
+  tag: Tag = 'div',
+  stagger = false,
+} = Astro.props;
+---
+
+<Tag
+  class:list={['reveal', `reveal-${animation}`, className]}
+  data-reveal-delay={delay}
+  data-reveal-threshold={threshold}
+  data-reveal-stagger={stagger}
+>
+  <slot />
+</Tag>
+
+<script>
+  function initScrollReveal() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.reveal').forEach(el => {
+        el.classList.add('visible');
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target as HTMLElement;
+          const delay = parseInt(el.dataset.revealDelay || '0', 10);
+          const shouldStagger = el.dataset.revealStagger === 'true';
+
+          if (shouldStagger) {
+            const children = el.querySelectorAll(':scope > *');
+            children.forEach((child, i) => {
+              const childEl = child as HTMLElement;
+              childEl.style.transitionDelay = `${delay + i * 100}ms`;
+              // Ensure children also have reveal classes if not set
+              if (!childEl.classList.contains('reveal')) {
+                childEl.classList.add('reveal', 'reveal-up');
+              }
+              requestAnimationFrame(() => {
+                childEl.classList.add('visible');
+              });
+            });
+            // Make the container itself visible immediately
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+          } else {
+            if (delay > 0) {
+              el.style.transitionDelay = `${delay}ms`;
+            }
+            el.classList.add('visible');
+          }
+
+          observer.unobserve(el);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px',
+    });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      // Only observe top-level reveal elements (not children inside stagger containers)
+      if (!el.parentElement?.closest('[data-reveal-stagger="true"]')) {
+        observer.observe(el);
+      }
+    });
+  }
+
+  // Initialize on DOMContentLoaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollReveal);
+  } else {
+    initScrollReveal();
+  }
+
+  // Re-initialize on Astro page transitions
+  document.addEventListener('astro:page-load', initScrollReveal);
+</script>

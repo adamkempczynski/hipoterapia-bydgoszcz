@@ -1,43 +1,41 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import Gallery from '../../components/Gallery.astro';
+import PageHero from '../../components/PageHero.astro';
+import ScrollReveal from '../../components/ScrollReveal.astro';
 ---
 
 <MainLayout
   title="Galeria"
   description="Galeria zdjęć z zajęć hipoterapii w Bydgoszczy - zobacz nasze wydarzenia, spływy kajakowe, biwaki i codzienne zajęcia rehabilitacyjne z terapeutycznymi końmi."
 >
-	<!-- Hero Section -->
-	<section class="py-16 bg-gradient-to-r from-primary-600 to-primary-700">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
-				<span class="text-primary-200">Galeria</span> zdjęć
-			</h1>
-			<p class="text-xl text-primary-100 max-w-4xl mx-auto leading-relaxed">
-				Zapraszamy do oglądania zdjęć z naszych wydarzeń, zajęć hipoterapeutycznych i życia codziennego naszego Towarzystwa. Wszystkie zdjęcia pochodzą z naszych prawdziwych wydarzeń.
-			</p>
-			<div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-				<div class="inline-flex items-center text-primary-200">
-					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-					</svg>
-					Kliknij zdjęcie, aby powiększyć
-				</div>
-				<div class="inline-flex items-center text-primary-200">
-					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-					</svg>
-					Użyj strzałek do nawigacji
-				</div>
-			</div>
-		</div>
-	</section>
+	<PageHero
+		title="Galeria zdjęć"
+		subtitle="Zapraszamy do oglądania zdjęć z naszych wydarzeń, zajęć hipoterapeutycznych i życia codziennego naszego Towarzystwa."
+		breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'Galeria' }]}
+	/>
 
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<!-- Hints -->
+		<div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 text-sm text-gray-500">
+			<div class="inline-flex items-center justify-center">
+				<svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+				</svg>
+				Kliknij zdjęcie, aby powiększyć
+			</div>
+			<div class="inline-flex items-center justify-center">
+				<svg class="w-5 h-5 mr-2 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+				</svg>
+				Użyj strzałek do nawigacji
+			</div>
+		</div>
 
+		<ScrollReveal animation="up">
 		<section class="mb-16">
-			<div class="card p-8">
+			<div class="card-warm p-8">
 				<div class="flex items-center mb-6">
 					<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
 						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,9 +59,11 @@ import Gallery from '../../components/Gallery.astro';
 				]} galleryId="splyw-2025" />
 			</div>
 		</section>
+		</ScrollReveal>
 
+		<ScrollReveal animation="up" delay={150}>
 		<section class="mb-16">
-			<div class="card p-8">
+			<div class="card-warm p-8">
 				<div class="flex items-center mb-6">
 					<div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
 						<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,9 +90,11 @@ import Gallery from '../../components/Gallery.astro';
 				]} galleryId="bal-jubileuszowy-2025" />
 			</div>
 		</section>
+		</ScrollReveal>
 
+		<ScrollReveal animation="up">
 		<section class="mb-16">
-			<div class="card p-8">
+			<div class="card-warm p-8">
 				<div class="flex items-center mb-6">
 					<div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
 						<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,9 +115,11 @@ import Gallery from '../../components/Gallery.astro';
 				]} galleryId="mecz-zeelandia-2024" />
 			</div>
 		</section>
+		</ScrollReveal>
 
+		<ScrollReveal animation="up" delay={150}>
 		<section class="mb-16">
-			<div class="card p-8">
+			<div class="card-warm p-8">
 				<div class="flex items-center mb-6">
 					<div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
 						<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -139,9 +143,11 @@ import Gallery from '../../components/Gallery.astro';
 				]} galleryId="biwak-jaruzyn-2024" />
 			</div>
 		</section>
+		</ScrollReveal>
 
+		<ScrollReveal animation="up">
 		<section class="mb-16">
-			<div class="card p-8">
+			<div class="card-warm p-8">
 				<div class="flex items-center mb-6">
 					<div class="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mr-4">
 						<svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,11 +170,13 @@ import Gallery from '../../components/Gallery.astro';
 				]} galleryId="splyw-czerwiec-2024" />
 			</div>
 		</section>
+		</ScrollReveal>
 
+		<ScrollReveal animation="up" delay={150}>
 		<section class="mb-16">
-			<div class="card p-8">
+			<div class="card-warm p-8">
 				<div class="text-center mb-8">
-					<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+					<h2 class="section-heading mb-4">
 						Archiwum <span class="text-primary-600">wydarzeń</span>
 					</h2>
 					<p class="text-gray-600 max-w-2xl mx-auto">
@@ -212,12 +220,14 @@ import Gallery from '../../components/Gallery.astro';
 				</div>
 			</div>
 		</section>
+		</ScrollReveal>
 
+		<ScrollReveal animation="scale">
 		<section class="mb-16">
-			<div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-white">
+			<div class="bg-gradient-to-r from-primary-700 to-primary-800 rounded-2xl p-8 text-white">
 				<div class="text-center mb-8">
-					<h2 class="text-2xl md:text-3xl font-bold mb-4">
-						Nasza galeria w <span class="text-primary-200">liczbach</span>
+					<h2 class="font-display text-2xl md:text-3xl font-bold mb-4">
+						Nasza galeria w <span class="text-accent-300">liczbach</span>
 					</h2>
 					<p class="text-primary-100 max-w-2xl mx-auto">
 						Każde zdjęcie to wspomnienie, każde wspomnienie to część naszej historii
@@ -226,39 +236,41 @@ import Gallery from '../../components/Gallery.astro';
 
 				<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
 					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-						<div class="text-3xl md:text-4xl font-bold mb-2">71</div>
+						<div class="text-3xl md:text-4xl font-bold mb-2 text-accent-300">71</div>
 						<div class="text-primary-100 text-sm">Zdjęć w galerii</div>
 					</div>
 					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-						<div class="text-3xl md:text-4xl font-bold mb-2">6</div>
+						<div class="text-3xl md:text-4xl font-bold mb-2 text-accent-300">6</div>
 						<div class="text-primary-100 text-sm">Różnych wydarzeń</div>
 					</div>
 					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-						<div class="text-2xl md:text-3xl font-bold mb-2">2024-2025</div>
+						<div class="text-2xl md:text-3xl font-bold mb-2 text-accent-300">2024-2025</div>
 						<div class="text-primary-100 text-sm">Lata wydarzeń</div>
 					</div>
 					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-						<div class="text-3xl md:text-4xl font-bold mb-2">66MB</div>
+						<div class="text-3xl md:text-4xl font-bold mb-2 text-accent-300">66MB</div>
 						<div class="text-primary-100 text-sm">Wspomnień</div>
 					</div>
 				</div>
 			</div>
 		</section>
+		</ScrollReveal>
 
+		<ScrollReveal animation="up">
 		<section>
-			<div class="card p-8 text-center">
+			<div class="card-warm p-8 text-center">
 				<div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
 					<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
 					</svg>
 				</div>
-				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+				<h2 class="section-heading mb-4">
 					Masz zdjęcia z naszych <span class="text-primary-600">wydarzeń</span>?
 				</h2>
 				<p class="text-gray-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
 					Jeśli uczestniczyłeś w naszych wydarzeniach i masz zdjęcia, które chciałbyś się z nami podzielić, skontaktuj się z nami. Chętnie dodamy je do galerii!
 				</p>
-				<a href="/kontakt/" class="btn bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 text-lg inline-flex items-center">
+				<a href="/kontakt/" class="btn btn-primary btn-lg inline-flex items-center">
 					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
 					</svg>
@@ -266,6 +278,6 @@ import Gallery from '../../components/Gallery.astro';
 				</a>
 			</div>
 		</section>
+		</ScrollReveal>
 	</div>
 </MainLayout>
-

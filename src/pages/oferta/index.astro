@@ -1,12 +1,18 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import LocationsMap from '../../components/LocationsMap.astro';
+import PageHero from '../../components/PageHero.astro';
 ---
 
 <MainLayout
   title="Oferta"
   description="Profesjonalna hipoterapia w Bydgoszczy - zajęcia rehabilitacyjne z końmi dla dzieci i dorosłych z niepełnosprawnościami. Sprawdź cennik, terminy i lokalizację."
 >
+	<PageHero
+		title="Oferta"
+		subtitle="Profesjonalna hipoterapia w Bydgoszczy — zajęcia rehabilitacyjne z końmi dla dzieci i dorosłych"
+		breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'Oferta' }]}
+	/>
 	<div class="offer-content">
 		<section class="intro">
 			<p class="lead">

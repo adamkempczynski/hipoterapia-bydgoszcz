@@ -1,36 +1,27 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 ---
 
 <MainLayout title="Sprawozdania OPP">
+	<PageHero
+		title="Sprawozdania OPP"
+		subtitle="Roczne sprawozdania merytoryczne i finansowe organizacji po≈ºytku publicznego"
+		breadcrumbs={[{ label: 'Strona g≈Ç√≥wna', href: '/' }, { label: 'Towarzystwo', href: '/towarzystwo/' }, { label: 'Sprawozdania OPP' }]}
+	/>
+
 	<div class="reports-content">
-		<nav class="breadcrumb">
-			<a href="/towarzystwo/">ê PowrÛt do Towarzystwo</a>
-		</nav>
-
-		<section class="intro">
-			<p class="lead">
-				Jako organizacja po|ytku publicznego (OPP) regularnie publikujemy sprawozdania
-				ze swojej dziaBalno[ci. Wszystkie dokumenty s dostpne publicznie zgodnie
-				z wymogami ustawy o dziaBalno[ci po|ytku publicznego i o wolontariacie.
-			</p>
-			<div class="opp-status">
-				<span class="opp-badge">Status OPP od 2012 roku</span>
-				<span class="krs-number">KRS: 0000123456</span>
-			</div>
-		</section>
-
 		<section class="current-reports">
 			<h2>Sprawozdania za rok 2024</h2>
 			<div class="reports-grid">
 				<div class="report-item featured">
-					<div class="report-icon">=»</div>
+					<div class="report-icon">=ÔøΩ</div>
 					<h3>Sprawozdanie merytoryczne OPP 2024</h3>
-					<p>SzczegÛBowe sprawozdanie z dziaBalno[ci statutowej, realizowanych programÛw i osigni organizacji.</p>
+					<p>SzczegÔøΩBowe sprawozdanie z dziaBalno[ci statutowej, realizowanych programÔøΩw i osigni organizacji.</p>
 					<div class="report-stats">
 						<div class="stat">
 							<span class="number">142</span>
-							<span class="label">beneficjentÛw</span>
+							<span class="label">beneficjentÔøΩw</span>
 						</div>
 						<div class="stat">
 							<span class="number">2,847</span>
@@ -46,17 +37,17 @@ import MainLayout from '../../layouts/MainLayout.astro';
 						<span class="date">Data publikacji: 15.03.2025</span>
 					</div>
 					<a href="/uploads/docs/sprawozdanie-opp-2024.pdf" class="download-btn primary" target="_blank">
-						=  Pobierz sprawozdanie OPP
+						=ÔøΩ Pobierz sprawozdanie OPP
 					</a>
 				</div>
 
 				<div class="report-item">
-					<div class="report-icon">=∞</div>
+					<div class="report-icon">=ÔøΩ</div>
 					<h3>Sprawozdanie finansowe 2024</h3>
-					<p>Zestawienie przychodÛw, kosztÛw, informacje o wykorzystaniu [rodkÛw publicznych i darowizn.</p>
+					<p>Zestawienie przychodÔøΩw, kosztÔøΩw, informacje o wykorzystaniu [rodkÔøΩw publicznych i darowizn.</p>
 					<div class="financial-summary">
 						<div class="finance-item">
-							<strong>Przychody ogÛBem:</strong> 487 350 zB
+							<strong>Przychody ogÔøΩBem:</strong> 487 350 zB
 						</div>
 						<div class="finance-item">
 							<strong>Koszty dziaBalno[ci:</strong> 445 120 zB
@@ -70,20 +61,20 @@ import MainLayout from '../../layouts/MainLayout.astro';
 						<span class="date">Data publikacji: 15.03.2025</span>
 					</div>
 					<a href="/uploads/docs/sprawozdanie-finansowe-2024.pdf" class="download-btn" target="_blank">
-						=º Pobierz sprawozdanie finansowe
+						=ÔøΩ Pobierz sprawozdanie finansowe
 					</a>
 				</div>
 
 				<div class="report-item">
-					<div class="report-icon">=À</div>
+					<div class="report-icon">=ÔøΩ</div>
 					<h3>Informacja o dziaBalno[ci OPP</h3>
-					<p>SkrÛcona informacja o dziaBalno[ci zgodnie z art. 23 ustawy o dziaBalno[ci po|ytku publicznego.</p>
+					<p>SkrÔøΩcona informacja o dziaBalno[ci zgodnie z art. 23 ustawy o dziaBalno[ci po|ytku publicznego.</p>
 					<div class="key-info">
 						<ul>
 							<li>Cele statutowe i ich realizacja</li>
-							<li>Informacje o zrÛdBach finansowania</li>
-							<li>Wykaz gBÛwnych programÛw</li>
-							<li>WspÛBpraca z administracj publiczn</li>
+							<li>Informacje o zrÔøΩdBach finansowania</li>
+							<li>Wykaz gBÔøΩwnych programÔøΩw</li>
+							<li>WspÔøΩBpraca z administracj publiczn</li>
 						</ul>
 					</div>
 					<div class="report-meta">
@@ -91,7 +82,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 						<span class="date">Data publikacji: 15.03.2025</span>
 					</div>
 					<a href="/uploads/docs/informacja-opp-2024.pdf" class="download-btn" target="_blank">
-						=ƒ Pobierz informacj
+						=ÔøΩ Pobierz informacj
 					</a>
 				</div>
 			</div>
@@ -199,21 +190,21 @@ import MainLayout from '../../layouts/MainLayout.astro';
 					<p>
 						Wszystkie sprawozdania publikujemy w wymaganych terminach i udostpniamy
 						na naszej stronie internetowej. Ka|dy mo|e zapozna si z nasz dziaBalno[ci
-						i sposobem wykorzystania [rodkÛw publicznych.
+						i sposobem wykorzystania [rodkÔøΩw publicznych.
 					</p>
 				</div>
 
 				<div class="transparency-item">
-					<h3>ñ Zgodno[ z prawem</h3>
+					<h3>ÔøΩ Zgodno[ z prawem</h3>
 					<p>
 						Nasze sprawozdania s sporzdzane zgodnie z wymogami ustawy o dziaBalno[ci
 						po|ytku publicznego i o wolontariacie oraz przepisami o rachunkowo[ci.
-						Podlegaj one rÛwnie| kontroli organÛw nadzorujcych.
+						Podlegaj one rÔøΩwnie| kontroli organÔøΩw nadzorujcych.
 					</p>
 				</div>
 
 				<div class="transparency-item">
-					<h3>=  Kontrola zewntrzna</h3>
+					<h3>=ÔøΩ Kontrola zewntrzna</h3>
 					<p>
 						Nasza dziaBalno[ jest regularnie kontrolowana przez organy administracji
 						publicznej, Najwy|sz Izb Kontroli oraz podlega audytom zewntrznym.
@@ -227,18 +218,18 @@ import MainLayout from '../../layouts/MainLayout.astro';
 			<h2>Podstawy prawne</h2>
 			<div class="legal-content">
 				<div class="legal-item">
-					<h3>=‹ Obowizki OPP</h3>
+					<h3>=ÔøΩ Obowizki OPP</h3>
 					<p>Zgodnie z art. 23 ustawy o dziaBalno[ci po|ytku publicznego i o wolontariacie, organizacje po|ytku publicznego s obowizane do:</p>
 					<ul>
 						<li>SkBadania rocznego sprawozdania z dziaBalno[ci do wBa[ciwego urzdu</li>
 						<li>Publikowania informacji o swojej dziaBalno[ci</li>
 						<li>Udostpniania sprawozdaD ka|demu zainteresowanemu</li>
-						<li>Poddawania si kontrolom organÛw nadzorujcych</li>
+						<li>Poddawania si kontrolom organÔøΩw nadzorujcych</li>
 					</ul>
 				</div>
 
 				<div class="legal-item">
-					<h3>=≈ Terminy skBadania</h3>
+					<h3>=ÔøΩ Terminy skBadania</h3>
 					<p>Sprawozdania z dziaBalno[ci OPP skBadamy w okre[lonych terminach:</p>
 					<ul>
 						<li><strong>Do 15 marca</strong> - sprawozdanie merytoryczne</li>
@@ -257,14 +248,14 @@ import MainLayout from '../../layouts/MainLayout.astro';
 					<h3>Jak to zrobi?</h3>
 					<p>
 						Mo|esz wesprze nasz dziaBalno[ przekazujc nam 1,5% swojego podatku dochodowego.
-						To nie kosztuje Ci nic dodatkowego - to pienidze, ktÛre i tak trafiaj do bud|etu paDstwa.
+						To nie kosztuje Ci nic dodatkowego - to pienidze, ktÔøΩre i tak trafiaj do bud|etu paDstwa.
 					</p>
 					<div class="opp-data">
 						<div class="data-item">
 							<strong>KRS:</strong> 0000123456
 						</div>
 						<div class="data-item">
-							<strong>Cel szczegÛBowy:</strong> DziaBalno[ na rzecz osÛb niepeBnosprawnych
+							<strong>Cel szczegÔøΩBowy:</strong> DziaBalno[ na rzecz osÔøΩb niepeBnosprawnych
 						</div>
 					</div>
 					<a href="/towarzystwo/numer-konta/" class="support-btn">Zobacz jak przekaza 1,5%</a>
@@ -283,7 +274,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 						</div>
 						<div class="impact-item">
 							<span class="percentage">10%</span>
-							<span class="description">RozwÛj infrastruktury</span>
+							<span class="description">RozwÔøΩj infrastruktury</span>
 						</div>
 						<div class="impact-item">
 							<span class="percentage">5%</span>
@@ -298,7 +289,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 			<h2>Kontakt w sprawie sprawozdaD</h2>
 			<div class="contact-info">
 				<div class="contact-item">
-					<h3>=ﬁ Pytania ogÛlne</h3>
+					<h3>=ÔøΩ Pytania ogÔøΩlne</h3>
 					<p>
 						<strong>Biuro Towarzystwa</strong><br>
 						Tel: <a href="tel:+48123456789">+48 123 456 789</a><br>
@@ -307,9 +298,9 @@ import MainLayout from '../../layouts/MainLayout.astro';
 				</div>
 
 				<div class="contact-item">
-					<h3>=º Sprawy finansowe</h3>
+					<h3>=ÔøΩ Sprawy finansowe</h3>
 					<p>
-						<strong>GBÛwna ksigowa - Anna Kowalska</strong><br>
+						<strong>GBÔøΩwna ksigowa - Anna Kowalska</strong><br>
 						Tel: <a href="tel:+48123456790">+48 123 456 790</a><br>
 						Email: <a href="mailto:finanse@hipoterapia.bydgoszcz.pl">finanse@hipoterapia.bydgoszcz.pl</a>
 					</p>
@@ -317,10 +308,10 @@ import MainLayout from '../../layouts/MainLayout.astro';
 			</div>
 
 			<div class="availability-note">
-				<h4>=À Dostpno[ dokumentÛw</h4>
+				<h4>=ÔøΩ Dostpno[ dokumentÔøΩw</h4>
 				<p>
 					Wszystkie sprawozdania s dostpne w siedzibie naszego Towarzystwa w godzinach
-					pracy biura (pon-pt 9:00-16:00). Mo|na rÛwnie| poprosi o przesBanie ich drog elektroniczn.
+					pracy biura (pon-pt 9:00-16:00). Mo|na rÔøΩwnie| poprosi o przesBanie ich drog elektroniczn.
 				</p>
 			</div>
 		</section>
@@ -331,54 +322,6 @@ import MainLayout from '../../layouts/MainLayout.astro';
 	.reports-content {
 		max-width: 1200px;
 		margin: 0 auto;
-	}
-
-	.breadcrumb {
-		margin-bottom: 2rem;
-	}
-
-	.breadcrumb a {
-		color: var(--primary-color);
-		text-decoration: none;
-		font-weight: 600;
-		transition: color 0.3s ease;
-	}
-
-	.breadcrumb a:hover {
-		color: var(--secondary-color);
-	}
-
-	.intro {
-		background: white;
-		padding: 2rem;
-		border-radius: 8px;
-		margin-bottom: 3rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		border-left: 5px solid var(--secondary-color);
-		text-align: center;
-	}
-
-	.lead {
-		font-size: 1.2rem;
-		line-height: 1.8;
-		color: var(--text-color);
-		margin-bottom: 2rem;
-	}
-
-	.opp-status {
-		display: flex;
-		justify-content: center;
-		gap: 2rem;
-		flex-wrap: wrap;
-	}
-
-	.opp-badge {
-		background: var(--secondary-color);
-		color: white;
-		padding: 0.5rem 1rem;
-		border-radius: 15px;
-		font-weight: 600;
-		font-size: 0.9rem;
 	}
 
 	.krs-number {

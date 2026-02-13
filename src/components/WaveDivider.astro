@@ -1,0 +1,39 @@
+---
+interface Props {
+  position?: 'top' | 'bottom';
+  color?: string;
+  flip?: boolean;
+  class?: string;
+}
+
+const {
+  position = 'bottom',
+  color = '#ffffff',
+  flip = false,
+  class: className = '',
+} = Astro.props;
+
+const isTop = position === 'top';
+---
+
+<div
+  class:list={[
+    'wave-divider absolute left-0 right-0 w-full overflow-hidden leading-none pointer-events-none',
+    isTop ? 'top-0' : 'bottom-0',
+    className,
+  ]}
+  style={`${isTop ? 'transform: rotate(180deg);' : ''}`}
+>
+  <svg
+    class="relative block w-full"
+    style={`height: 60px; ${flip ? 'transform: scaleX(-1);' : ''}`}
+    viewBox="0 0 1200 60"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z"
+      fill={color}
+    />
+  </svg>
+</div>

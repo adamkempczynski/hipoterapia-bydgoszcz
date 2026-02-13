@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://api.fontshare.com/v2/css?f=cal-sans@1&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --primary-color: #2d7a47;
+    --secondary-color: #f59e0b;
+    --text-color: #374151;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -15,16 +22,17 @@
 }
 
 @layer components {
+  /* Buttons */
   .btn {
     @apply inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
   }
 
   .btn-primary {
-    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 shadow-lg hover:shadow-xl;
+    @apply bg-accent-500 text-white hover:bg-accent-600 focus:ring-accent-400 shadow-lg hover:shadow-xl;
   }
 
   .btn-secondary {
-    @apply bg-white text-primary-600 border border-primary-200 hover:bg-primary-50 focus:ring-primary-500;
+    @apply bg-white text-primary-700 border border-primary-200 hover:bg-primary-50 focus:ring-primary-500;
   }
 
   .btn-sm {
@@ -39,15 +47,67 @@
     @apply px-6 py-3 text-lg;
   }
 
+  /* Cards */
   .card {
-    @apply bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
 
+  .card-warm {
+    @apply bg-white rounded-2xl shadow-md border border-primary-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary-100/50 hover:-translate-y-1;
+  }
+
+  /* Gradients */
   .gradient-bg {
     @apply bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700;
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent;
+  }
+
+  /* Section headings */
+  .section-heading {
+    @apply font-display text-3xl md:text-4xl font-bold text-gray-900;
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: transform, opacity;
+  }
+
+  .reveal-up {
+    transform: translateY(30px);
+  }
+
+  .reveal-left {
+    transform: translateX(-40px);
+  }
+
+  .reveal-right {
+    transform: translateX(40px);
+  }
+
+  .reveal-scale {
+    transform: scale(0.95);
+  }
+
+  .reveal-fade {
+    transform: none;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

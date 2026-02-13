@@ -1,18 +1,16 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 ---
 
 <MainLayout title="O nas - Stowarzyszenie Hipoterapia Bydgoszcz">
+  <PageHero
+    title='Bydgoskie Towarzystwo Hipoterapeutyczne "Myślęcinek"'
+    subtitle="Ponad 30 lat doświadczenia w hipoterapii i wsparciu osób z niepełnosprawnościami"
+    breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'O nas' }]}
+  />
+
   <div class="container">
-    <section class="hero-section">
-      <div class="hero-content">
-        <h1>Bydgoskie Towarzystwo Hipoterapeutyczne "Myślęcinek"</h1>
-        <p class="hero-subtitle">Ponad 30 lat doświadczenia w hipoterapii i wsparciu osób z niepełnosprawnościami</p>
-      </div>
-      <div class="hero-image">
-        <img src="/images/galeria/sesje-hipoterapii/IMG_3752.webp" alt="Terapeuta prowadzący konia z dzieckiem podczas sesji hipoterapii w Bydgoszczy" loading="lazy">
-      </div>
-    </section>
 
     <section class="story-section">
       <div class="story-grid">
@@ -384,41 +382,6 @@ import MainLayout from '../../layouts/MainLayout.astro';
 </MainLayout>
 
 <style>
-  .hero-section {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    padding: 3rem 0;
-    margin-bottom: 4rem;
-  }
-
-  .hero-content h1 {
-    color: #2c5530;
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    font-weight: 700;
-  }
-
-  .hero-subtitle {
-    font-size: 1.3rem;
-    color: #666;
-    line-height: 1.4;
-  }
-
-  .hero-image {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  }
-
-  .hero-image img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
-
   .story-section {
     margin-bottom: 5rem;
   }
@@ -1067,15 +1030,6 @@ import MainLayout from '../../layouts/MainLayout.astro';
   }
 
   @media (max-width: 768px) {
-    .hero-section {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .hero-content h1 {
-      font-size: 2.2rem;
-    }
-
     .story-grid {
       grid-template-columns: 1fr;
     }
@@ -1106,10 +1060,6 @@ import MainLayout from '../../layouts/MainLayout.astro';
   }
 
   @media (max-width: 480px) {
-    .hero-content h1 {
-      font-size: 1.8rem;
-    }
-
     .achievements-grid {
       grid-template-columns: 1fr;
     }
