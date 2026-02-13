@@ -6,128 +6,110 @@ import PageHero from '../../components/PageHero.astro';
 <MainLayout title="Historia Towarzystwa">
 	<PageHero
 		title="Historia Towarzystwa"
-		subtitle="Od 1995 roku — historia naszej organizacji i jej wpływ na społeczność"
+		subtitle="Od 1992 roku prowadzimy zajęcia hipoterapeutyczne w Bydgoszczy — poznaj naszą drogę"
 		breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'Towarzystwo', href: '/towarzystwo/' }, { label: 'Historia' }]}
 	/>
 
 	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-		<!-- Timeline -->
-		<section class="mb-12">
-			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Nasza historia</h2>
+
+		<!-- Intro -->
+		<section class="mb-16">
+			<div class="card p-8 border-l-4 border-primary-500 bg-primary-50/30">
+				<p class="text-gray-700 leading-relaxed text-lg">
+					Historia Bydgoskiego Towarzystwa Hipoterapeutycznego "Myślęcinek" to ponad trzy dekady pracy na rzecz osób
+					z niepełnosprawnościami. Od pierwszych zajęć w Myślęcinku w 1992 roku, przez formalne założenie stowarzyszenia
+					w 1995, aż po uzyskanie statusu jednego z ośmiu ośrodków stażowych w Polsce — nasza organizacja
+					konsekwentnie budowała kompetencje i zaufanie środowiska hipoterapeutycznego.
+				</p>
+			</div>
+		</section>
+
+		<!-- ============================================ -->
+		<!-- SECTION: Początki (1992-1995) -->
+		<!-- ============================================ -->
+		<section class="mb-16">
+			<h2 class="text-3xl font-bold text-gray-900 mb-10 pb-3 border-b-2 border-primary-200 font-display">
+				Początki (1992–1995)
+			</h2>
 
 			<div class="relative">
 				<!-- Timeline line -->
 				<div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-200"></div>
 
-				<div class="space-y-12">
-					<!-- 1996 -->
+				<div class="space-y-10">
+					<!-- 1992 -->
 					<div class="relative flex items-start">
-						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-							1996
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm z-10">
+							1992
 						</div>
 						<div class="ml-6 card p-6 flex-1">
-							<h3 class="text-xl font-bold text-gray-900 mb-3">Powstanie Towarzystwa</h3>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Rozpoczęcie zajęć hipoterapeutycznych</h3>
 							<p class="text-gray-700 leading-relaxed">
-								Grupa entuzjastów zakłada Bydgoskie Towarzystwo Hipoterapii i Psychoterapii.
-								Pierwsze zajęcia odbywają się w wypożyczonych stajniach.
+								Zajęcia hipoterapeutyczne rozpoczęły się w <strong>Jeździeckim Ośrodku Rekreacyjnym
+								Leśnego Parku Kultury i Wypoczynku w Myślęcinku</strong>, finansowane z budżetu miasta Bydgoszczy.
+								Był to początek zorganizowanej hipoterapii w regionie.
 							</p>
 						</div>
 					</div>
 
-					<!-- 1998 -->
+					<!-- Początek 1995 — trudności -->
 					<div class="relative flex items-start">
-						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-							1998
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							pocz.<br/>1995
 						</div>
 						<div class="ml-6 card p-6 flex-1">
-							<h3 class="text-xl font-bold text-gray-900 mb-3">Pierwsze sukcesy</h3>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Trudności finansowe i decyzja o założeniu stowarzyszenia</h3>
 							<p class="text-gray-700 leading-relaxed">
-								Nawiązujemy współpracę z ośrodkami rehabilitacyjnymi. Liczba uczestników
-								systematycznie rośnie. Pierwsze certyfikowane kursy hipoterapii.
+								Na początku 1995 roku pojawiły się poważne trudności finansowe, które zagroziły dalszemu prowadzeniu
+								zajęć. Sytuacja ta skłoniła rodziców podopiecznych oraz terapeutów do podjęcia decyzji
+								o formalnym powołaniu stowarzyszenia, które mogłoby samodzielnie pozyskiwać środki i organizować działalność.
 							</p>
 						</div>
 					</div>
 
-					<!-- 2001 -->
+					<!-- 9 lutego 1995 -->
 					<div class="relative flex items-start">
-						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-							2001
+						<div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							9 II<br/>1995
 						</div>
-						<div class="ml-6 card p-6 flex-1">
-							<h3 class="text-xl font-bold text-gray-900 mb-3">Własna siedziba</h3>
+						<div class="ml-6 card p-6 flex-1 border-l-4 border-accent-400">
+							<div class="inline-block bg-accent-100 text-accent-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+								Kamień milowy
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Założenie stowarzyszenia</h3>
 							<p class="text-gray-700 leading-relaxed">
-								Towarzystwo otrzymuje własną siedzibę i stajnie. Znaczne rozszerzenie
-								działalności i zwiększenie liczby terapeutów.
+								<strong>9 lutego 1995 roku</strong> zostało oficjalnie założone stowarzyszenie. Wśród członków założycieli
+								byli rodzice, lekarze, pedagodzy oraz psycholog. <strong>Pierwszą prezes</strong> została
+								<strong>Barbara Łyszkiewicz</strong>.
 							</p>
 						</div>
 					</div>
 
-					<!-- 2005 -->
+					<!-- 28 marca 1995 -->
 					<div class="relative flex items-start">
-						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-							2005
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							28 III<br/>1995
 						</div>
 						<div class="ml-6 card p-6 flex-1">
-							<h3 class="text-xl font-bold text-gray-900 mb-3">Rozwój programów</h3>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Rejestracja sądowa</h3>
 							<p class="text-gray-700 leading-relaxed">
-								Wprowadzenie programów dla różnych grup wiekowych. Współpraca
-								z placówkami edukacyjnymi i terapeutycznymi w regionie.
+								Stowarzyszenie zostało zarejestrowane w Sądzie Rejonowym w Bydgoszczy.
+								Numer KRS: <strong>0000120586</strong>.
 							</p>
 						</div>
 					</div>
 
-					<!-- 2010 -->
+					<!-- 16 września 1995 -->
 					<div class="relative flex items-start">
-						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-							2010
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							16 IX<br/>1995
 						</div>
 						<div class="ml-6 card p-6 flex-1">
-							<h3 class="text-xl font-bold text-gray-900 mb-3">Uznanie i nagrody</h3>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Pierwszy mecz charytatywny "Mecz o grosz"</h3>
 							<p class="text-gray-700 leading-relaxed">
-								Towarzystwo otrzymuje uznanie za działalność na rzecz osób niepełnosprawnych.
-								Pierwsze granty z funduszy europejskich.
-							</p>
-						</div>
-					</div>
-
-					<!-- 2015 -->
-					<div class="relative flex items-start">
-						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-							2015
-						</div>
-						<div class="ml-6 card p-6 flex-1">
-							<h3 class="text-xl font-bold text-gray-900 mb-3">Modernizacja</h3>
-							<p class="text-gray-700 leading-relaxed">
-								Modernizacja obiektów i zakup nowego sprzętu. Wprowadzenie
-								nowoczesnych metod terapeutycznych i programów integracyjnych.
-							</p>
-						</div>
-					</div>
-
-					<!-- 2020 -->
-					<div class="relative flex items-start">
-						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-							2020
-						</div>
-						<div class="ml-6 card p-6 flex-1">
-							<h3 class="text-xl font-bold text-gray-900 mb-3">Nowe wyzwania</h3>
-							<p class="text-gray-700 leading-relaxed">
-								Adaptacja do warunków pandemicznych. Wprowadzenie nowych protokołów
-								bezpieczeństwa przy zachowaniu ciągłości terapii.
-							</p>
-						</div>
-					</div>
-
-					<!-- 2024 -->
-					<div class="relative flex items-start">
-						<div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center text-white font-bold text-sm">
-							2024
-						</div>
-						<div class="ml-6 card p-6 flex-1 border-l-4 border-primary-500">
-							<h3 class="text-xl font-bold text-gray-900 mb-3">Dzisiaj</h3>
-							<p class="text-gray-700 leading-relaxed">
-								Towarzystwo kontynuuje swoją misję, pomagając setkom osób rocznie.
-								Planowane dalsze inwestycje i rozwój oferty terapeutycznej.
+								Odbył się mecz charytatywny pod nazwą <strong>"Mecz o grosz"</strong>, w którym zmierzyli się
+								pracownicy PKO BP I/O Bydgoszcz z redakcją "Express Bydgoski". Było to jedno z pierwszych
+								wydarzeń fundraisingowych Towarzystwa.
 							</p>
 						</div>
 					</div>
@@ -135,112 +117,442 @@ import PageHero from '../../components/PageHero.astro';
 			</div>
 		</section>
 
-		<!-- Achievements -->
-		<section class="mb-12">
-			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
-				Nasze osiągnięcia
+		<!-- ============================================ -->
+		<!-- SECTION: Rozwój (1997-2004) -->
+		<!-- ============================================ -->
+		<section class="mb-16">
+			<h2 class="text-3xl font-bold text-gray-900 mb-10 pb-3 border-b-2 border-primary-200 font-display">
+				Rozwój (1997–2004)
 			</h2>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-				<div class="card p-6 text-center">
-					<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-						<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-						</svg>
-					</div>
-					<div class="text-3xl font-bold text-gray-900 mb-2">2000+</div>
-					<div class="text-gray-600 text-sm">Osób, którym pomogliśmy</div>
-				</div>
+			<div class="relative">
+				<div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-200"></div>
 
-				<div class="card p-6 text-center">
-					<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-						<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-						</svg>
+				<div class="space-y-10">
+					<!-- 1997 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-sm z-10">
+							1997
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Nowa prezes i patronat PTHip</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Prezesurę objęła <strong>Małgorzata Kluczkowska</strong>. W latach 1997–1998
+								Towarzystwo uzyskało patronat <strong>Polskiego Towarzystwa Hipoterapeutycznego (PTHip)</strong>
+								oraz prawo prowadzenia staży dla przyszłych hipoterapeutów — jako jeden z nielicznych ośrodków w kraju.
+							</p>
+						</div>
 					</div>
-					<div class="text-3xl font-bold text-gray-900 mb-2">28</div>
-					<div class="text-gray-600 text-sm">lat działalności</div>
-				</div>
 
-				<div class="card p-6 text-center">
-					<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-						<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-						</svg>
+					<!-- Marzec 1998 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							III<br/>1998
+						</div>
+						<div class="ml-6 card p-6 flex-1 border-l-4 border-accent-400">
+							<div class="inline-block bg-accent-100 text-accent-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+								Kamień milowy
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Międzynarodowa Konferencja Hipoterapeutyczna</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Towarzystwo zorganizowało <strong>Międzynarodową Konferencję Hipoterapeutyczną w Bydgoszczy</strong> —
+								wydarzenie, które potwierdziło rosnącą pozycję organizacji w środowisku hipoterapeutycznym.
+							</p>
+						</div>
 					</div>
-					<div class="text-3xl font-bold text-gray-900 mb-2">30+</div>
-					<div class="text-gray-600 text-sm">Wykwalifikowanych terapeutów</div>
-				</div>
 
-				<div class="card p-6 text-center">
-					<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-						<svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
-						</svg>
+					<!-- 11 grudnia 1999 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							11 XII<br/>1999
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Mecz charytatywny — żużel i hokej</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Odbył się kolejny mecz charytatywny, w którym wystąpili żużlowcy
+								<strong>Jutrzenka-Polonia</strong> przeciwko <strong>Apator Toruń</strong>,
+								a także <strong>Old-Boys Club Bydgoszcz</strong> w meczu hokejowym.
+							</p>
+						</div>
 					</div>
-					<div class="text-3xl font-bold text-gray-900 mb-2">15+</div>
-					<div class="text-gray-600 text-sm">Projektów zrealizowanych</div>
+
+					<!-- Sierpień 2000 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							VIII<br/>2000
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Warsztaty hipoterapeutyczne</h3>
+							<p class="text-gray-700 leading-relaxed">
+								W Leśnym Parku Kultury i Wypoczynku odbyły się dwutygodniowe warsztaty hipoterapeutyczne,
+								poszerzające kompetencje kadry i propagujące metody terapii z udziałem koni.
+							</p>
+						</div>
+					</div>
+
+					<!-- 13 stycznia 2001 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							13 I<br/>2001
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Pozyskanie konia Tofi</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Dzięki dotacji z <strong>Urzędu Miasta Bydgoszczy</strong> Towarzystwo pozyskało konia
+								o imieniu <strong>Tofi</strong>, który wzmocnił możliwości prowadzenia zajęć terapeutycznych.
+							</p>
+						</div>
+					</div>
+
+					<!-- Podsumowanie dekady -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center text-primary-700 font-bold text-xs z-10 text-center leading-tight">
+							10+<br/>lat
+						</div>
+						<div class="ml-6 card p-6 flex-1 bg-primary-50/50">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Dekada budowania współpracy</h3>
+							<p class="text-gray-700 leading-relaxed">
+								W ciągu ponad 10 lat Towarzystwo organizowało bale karnawałowe, Dni Dziecka,
+								budowało współpracę z przedszkolami, szkołami integracyjnymi oraz ośrodkami
+								dla dzieci głuchych i słabowidzących, stale poszerzając zasięg swojej działalności.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Mission -->
-		<section class="mb-12">
-			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
-				Nasza misja
+		<!-- ============================================ -->
+		<!-- SECTION: Nowa era (2005-2006) -->
+		<!-- ============================================ -->
+		<section class="mb-16">
+			<h2 class="text-3xl font-bold text-gray-900 mb-10 pb-3 border-b-2 border-primary-200 font-display">
+				Nowa era (2005–2006)
 			</h2>
 
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-				<div class="card p-6">
-					<div class="flex items-center mb-4">
-						<svg class="w-6 h-6 text-primary-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-						</svg>
-						<h3 class="text-xl font-bold text-gray-900">Cel główny</h3>
-					</div>
-					<p class="text-gray-700 leading-relaxed">
-						Naszym głównym celem jest wykorzystanie terapeutycznej mocy kontaktu z końmi
-						do poprawy jakości życia osób z niepełnosprawnościami i problemami rozwojowymi.
-					</p>
-				</div>
+			<div class="relative">
+				<div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-200"></div>
 
-				<div class="card p-6">
-					<div class="flex items-center mb-4">
-						<svg class="w-6 h-6 text-primary-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-						</svg>
-						<h3 class="text-xl font-bold text-gray-900">Wartości</h3>
+				<div class="space-y-10">
+					<!-- 28 stycznia 2005 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							28 I<br/>2005
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Bal karnawałowy "Bal na tratwie"</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Odbył się bal karnawałowy pod hasłem <strong>"Bal na tratwie"</strong>
+								dla dzieci Towarzystwa oraz uczniów Szkoły Podstawowej nr 47.
+							</p>
+						</div>
 					</div>
-					<ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
-						<li>Profesjonalizm i bezpieczeństwo</li>
-						<li>Indywidualne podejście do każdego uczestnika</li>
-						<li>Ciągły rozwój i doskonalenie metod</li>
-						<li>Współpraca z rodzinami i specjalistami</li>
-					</ul>
+
+					<!-- 14 lutego 2005 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							14 II<br/>2005
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Zmiana na stanowisku prezesa</h3>
+							<p class="text-gray-700 leading-relaxed">
+								<strong>M. Górniewicz</strong> złożył rezygnację z funkcji prezesa Towarzystwa.
+							</p>
+						</div>
+					</div>
+
+					<!-- 31 marca 2005 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							31 III<br/>2005
+						</div>
+						<div class="ml-6 card p-6 flex-1 border-l-4 border-accent-400">
+							<div class="inline-block bg-accent-100 text-accent-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+								Kamień milowy
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Walne Zebranie — nowy prezes i nowa nazwa</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Na Walnym Zebraniu prezesem wybrany został <strong>Andrzej Matczak</strong>.
+								Dokonano zmiany statutu i przyjęto nową nazwę organizacji:
+								<strong>"Bydgoskie Towarzystwo Hipoterapeutyczne Myślęcinek"</strong>.
+							</p>
+						</div>
+					</div>
+
+					<!-- 1 września 2005 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							1 IX<br/>2005
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Start programu wieloletniego</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Rozpoczął się <strong>"Wieloletni program na rzecz osób niepełnosprawnych i ich rodzin"</strong>,
+								który umożliwił systematyczne prowadzenie zajęć terapeutycznych.
+							</p>
+						</div>
+					</div>
+
+					<!-- Wrzesień 2005 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							IX<br/>2005
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Współpraca z TWK i strona internetowa</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Nawiązano współpracę z TWK — w ramach imprezy "Pożegnanie lata" (19 września)
+								przeprowadzono ponad 100 zajęć hipoterapeutycznych. Utworzono pierwszą stronę internetową
+								Towarzystwa pod adresem <strong>www.hipoterapia.republika.pl</strong>.
+							</p>
+						</div>
+					</div>
+
+					<!-- Listopad 2005 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							XI<br/>2005
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Seminarium "Na początku był koń"</h3>
+							<p class="text-gray-700 leading-relaxed">
+								11–12 listopada <strong>E. Ziętak</strong> i <strong>J. Cywińska</strong> reprezentowały
+								Towarzystwo na Walnym Zebraniu PTHip oraz II Międzynarodowym Seminarium
+								<strong>"Na początku był koń"</strong> w Warszawie.
+							</p>
+						</div>
+					</div>
+
+					<!-- 30 grudnia 2005 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							30 XII<br/>2005
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Koniec ery w Myślęcinku</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Zakończyła się działalność Towarzystwa w Jeździeckim Ośrodku Rekreacyjnym w Myślęcinku.
+								Do tego momentu przeprowadzono ponad <strong>2017 zajęć</strong> hipoterapeutycznych.
+							</p>
+						</div>
+					</div>
+
+					<!-- Styczeń 2006 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							I<br/>2006
+						</div>
+						<div class="ml-6 card p-6 flex-1 border-l-4 border-accent-400">
+							<div class="inline-block bg-accent-100 text-accent-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+								Kamień milowy
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Przeprowadzka do Czarnowczyny</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Towarzystwo przeniosło się do nowej siedziby w <strong>Czarnowczynie, gm. Osielsko,
+								ul. Na Skarpie 7</strong> (dzierżawa od rodziny Kuffel). Rozpoczął się nowy rozdział
+								w historii organizacji.
+							</p>
+						</div>
+					</div>
+
+					<!-- 9 lutego 2006 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							9 II<br/>2006
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Bal karnawałowy</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Bal karnawałowy zorganizowany wspólnie z <strong>Zespołem Szkół Specjalnych nr 30</strong>.
+							</p>
+						</div>
+					</div>
+
+					<!-- 17 marca 2006 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							17 III<br/>2006
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Prezentacja na SALMED 2006</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Towarzystwo zaprezentowało swoją działalność na targach <strong>SALMED 2006 w Poznaniu</strong>,
+								jednych z najważniejszych targów medycznych w Polsce.
+							</p>
+						</div>
+					</div>
+
+					<!-- Czerwiec 2006 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							VI<br/>2006
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Konferencja w Łodzi i spływ kajakowy</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Udział w konferencji <strong>"Max — koń, który leczy"</strong> w Łodzi.
+								Organizacja spływu kajakowego jako formy integracji środowiska.
+							</p>
+						</div>
+					</div>
+
+					<!-- Sierpień 2006 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							VIII<br/>2006
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Warsztaty w Jaksicach</h3>
+							<p class="text-gray-700 leading-relaxed">
+								10–16 sierpnia odbyły się warsztaty prowadzone przez <strong>mgr. Jana Krupińskiego</strong>,
+								poświęcone hipoterapii dzieci z uszkodzeniem ośrodkowego układu nerwowego (OUN).
+							</p>
+						</div>
+					</div>
+
+					<!-- 24 września 2006 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							24 IX<br/>2006
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Spływ kajakowy na Brdzie</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Spływ kajakowy na rzece Brdzie zgromadził ponad <strong>30 uczestników</strong>,
+								w tym <strong>11 dzieci</strong>. Wydarzenie integracyjne łączące aktywność na świeżym
+								powietrzu z budowaniem społeczności wokół Towarzystwa.
+							</p>
+						</div>
+					</div>
+
+					<!-- Październik 2006 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							X<br/>2006
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Seminarium w Opolu i przywrócenie prawa stażowego</h3>
+							<p class="text-gray-700 leading-relaxed">
+								27–29 października — udział w III Międzynarodowym Seminarium Hipoterapeutycznym w Opolu.
+								Dnia <strong>27 października 2006</strong> Polskie Towarzystwo Hipoterapeutyczne
+								<strong>przywróciło Towarzystwu prawo prowadzenia staży</strong>.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Future Plans -->
+		<!-- ============================================ -->
+		<!-- SECTION: 2007 — Umocnienie pozycji -->
+		<!-- ============================================ -->
+		<section class="mb-16">
+			<h2 class="text-3xl font-bold text-gray-900 mb-10 pb-3 border-b-2 border-primary-200 font-display">
+				2007 — Umocnienie pozycji
+			</h2>
+
+			<div class="relative">
+				<div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-200"></div>
+
+				<div class="space-y-10">
+					<!-- 1 stycznia 2007 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							1 I<br/>2007
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">"Bal na Dzikim Zachodzie"</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Bal karnawałowy pod hasłem <strong>"Bal na Dzikim Zachodzie"</strong> odbył się
+								w <strong>Zespole Szkół Specjalnych nr 30</strong>. Kontynuacja tradycji
+								organizowania imprez integracyjnych dla podopiecznych.
+							</p>
+						</div>
+					</div>
+
+					<!-- 10 marca 2007 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							10 III<br/>2007
+						</div>
+						<div class="ml-6 card p-6 flex-1 border-l-4 border-accent-400">
+							<div class="inline-block bg-accent-100 text-accent-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+								Kamień milowy
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Jeden z ośmiu ośrodków stażowych w Polsce</h3>
+							<p class="text-gray-700 leading-relaxed">
+								PTHip zatwierdziło sprawozdanie Towarzystwa. Organizacja została oficjalnie potwierdzona jako
+								jeden z <strong>ośmiu ośrodków stażowych w Polsce</strong> z uprawnieniami
+								do prowadzenia staży od 1997 roku.
+							</p>
+						</div>
+					</div>
+
+					<!-- 15 marca 2007 -->
+					<div class="relative flex items-start">
+						<div class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xs z-10 text-center leading-tight">
+							15 III<br/>2007
+						</div>
+						<div class="ml-6 card p-6 flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Walne Zebranie w Bydgostia-Lotto</h3>
+							<p class="text-gray-700 leading-relaxed">
+								Walne Zebranie w <strong>RTW Bydgostia-Lotto</strong> — zatwierdzenie sprawozdania
+								za rok 2006 oraz przyjęcie nowego statutu organizacji.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================ -->
+		<!-- SECTION: Sponsorzy -->
+		<!-- ============================================ -->
+		<section class="mb-16">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200 font-display">
+				Sponsorzy i partnerzy (2005)
+			</h2>
+
+			<p class="text-gray-700 leading-relaxed mb-6">
+				Działalność Towarzystwa była możliwa dzięki wsparciu wielu instytucji i firm.
+				Wśród sponsorów, którzy wsparli organizację w 2005 roku, znaleźli się:
+			</p>
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+				<div class="card p-5 text-center hover:border-primary-200">
+					<p class="text-gray-800 font-medium text-sm">Fundacja Jolanty Kwaśniewskiej "Porozumienie bez barier"</p>
+				</div>
+				<div class="card p-5 text-center hover:border-primary-200">
+					<p class="text-gray-800 font-medium text-sm">Browary "Grupy Żywiec" — Browar w Bydgoszczy</p>
+				</div>
+				<div class="card p-5 text-center hover:border-primary-200">
+					<p class="text-gray-800 font-medium text-sm">Wodociągi Miejskie i Kanalizacja w Bydgoszczy</p>
+				</div>
+				<div class="card p-5 text-center hover:border-primary-200">
+					<p class="text-gray-800 font-medium text-sm">Zakłady Cukiernicze "Jutrzenka"</p>
+				</div>
+				<div class="card p-5 text-center hover:border-primary-200">
+					<p class="text-gray-800 font-medium text-sm">MAKRO w Bydgoszczy</p>
+				</div>
+				<div class="card p-5 text-center hover:border-primary-200">
+					<p class="text-gray-800 font-medium text-sm">Gimnazjum nr 9 w Bydgoszczy</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
 		<section class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-center text-white">
-			<div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-				<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-				</svg>
-			</div>
-			<h2 class="text-3xl font-bold mb-4">Plany na przyszłość</h2>
+			<h2 class="text-3xl font-bold mb-4">Budujemy tę historię razem</h2>
 			<p class="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
-				Planujemy dalszy rozwój naszej działalności, modernizację obiektów oraz wprowadzenie
-				nowych programów terapeutycznych. Naszym celem jest pomoc jeszcze większej liczbie osób
-				w regionie i rozszerzenie współpracy z instytucjami medycznymi.
+				Nasza historia to przede wszystkim ludzie — podopieczni, rodzice, terapeuci, wolontariusze
+				i sponsorzy. Dołącz do nas i współtwórz kolejne rozdziały.
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
-				<a href="/oferta/" class="btn bg-white text-primary-600 hover:bg-gray-100 px-6 py-3 inline-flex items-center">
+				<a href="/towarzystwo/kalendarium/" class="btn bg-white text-primary-600 hover:bg-gray-100 px-6 py-3 inline-flex items-center">
 					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
 					</svg>
-					Zobacz naszą ofertę
+					Kalendarium wydarzeń
 				</a>
 				<a href="/kontakt/" class="btn border-2 border-white text-white hover:bg-white hover:text-primary-600 px-6 py-3 inline-flex items-center">
 					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

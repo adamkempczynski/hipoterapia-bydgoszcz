@@ -6,197 +6,411 @@ import PageHero from '../../components/PageHero.astro';
 <MainLayout title="Statut Towarzystwa">
 	<PageHero
 		title="Statut Towarzystwa"
-		subtitle="Bydgoskiego Towarzystwa Hipoterapii i Psychoterapii"
+		subtitle={`Bydgoskiego Towarzystwa Hipoterapeutycznego \u201EMy\u015Bl\u0119cinek\u201D`}
 		breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'Towarzystwo', href: '/towarzystwo/' }, { label: 'Statut' }]}
 	/>
 
 	<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-		<!-- Statute Content -->
 		<div class="space-y-12">
-			<!-- Rozdział I -->
+
+			<!-- ROZDZIAŁ I -->
 			<section class="card p-8">
 				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
-					ROZDZIAŁ I - Postanowienia ogólne
+					ROZDZIAŁ I — Nazwa, teren działania, siedziba
 				</h2>
 
 				<div class="space-y-6">
 					<div>
 						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 1</h3>
-						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
-							<li>Bydgoskie Towarzystwo Hipoterapii i Psychoterapii, zwane dalej "Towarzystwem", jest stowarzyszeniem działającym na podstawie przepisów ustawy z dnia 7 kwietnia 1989 roku Prawo o stowarzyszeniach oraz niniejszego Statutu.</li>
-							<li>Towarzystwo posiada osobowość prawną.</li>
-							<li>Towarzystwo może działać na terenie całego kraju z siedzibą w Bydgoszczy.</li>
-						</ol>
+						<p class="text-gray-700 leading-relaxed">
+							Stowarzyszenie nosi nazwę: &bdquo;Bydgoskie Towarzystwo Hipoterapeutyczne Myślęcinek&rdquo;, zwane dalej Towarzystwem.
+						</p>
 					</div>
 
 					<div>
 						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 2</h3>
-						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
-							<li>Towarzystwo używa nazwy: "Bydgoskie Towarzystwo Hipoterapii i Psychoterapii".</li>
-							<li>Towarzystwo może używać skrótu nazwy: "BTHiP".</li>
-							<li>Siedzibą Towarzystwa jest miasto Bydgoszcz.</li>
-						</ol>
+						<p class="text-gray-700 leading-relaxed">
+							Terenem działania Towarzystwa jest obszar Rzeczypospolitej Polskiej, a w zakresie współpracy międzynarodowej — zagranica.
+						</p>
 					</div>
 
 					<div>
 						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 3</h3>
-						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
-							<li>Towarzystwo jest organizacją pożytku publicznego w rozumieniu przepisów o działalności pożytku publicznego i o wolontariacie.</li>
-							<li>Towarzystwo prowadzi działalność statutową w sferze zadań publicznych określonych w art. 4 ustawy o działalności pożytku publicznego i o wolontariacie.</li>
-						</ol>
+						<p class="text-gray-700 leading-relaxed">
+							Siedzibą Towarzystwa jest miasto Bydgoszcz.
+						</p>
 					</div>
+				</div>
+			</section>
 
+			<!-- ROZDZIAŁ II -->
+			<section class="card p-8">
+				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					ROZDZIAŁ II — Przepisy ogólne
+				</h2>
+
+				<div class="space-y-6">
 					<div>
 						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 4</h3>
-						<p class="text-gray-700 mb-3">Terenem działania Towarzystwa jest:</p>
-						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
-							<li>w zakresie działalności podstawowej - terytorium Rzeczypospolitej Polskiej;</li>
-							<li>w zakresie działalności gospodarczej - terytorium Rzeczypospolitej Polskiej;</li>
-							<li>w zakresie współpracy międzynarodowej - zagranica.</li>
-						</ol>
+						<p class="text-gray-700 leading-relaxed">
+							Towarzystwo posiada osobowość prawną.
+						</p>
 					</div>
 
 					<div>
 						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 5</h3>
-						<p class="text-gray-700">Towarzystwo działa na czas nieograniczony.</p>
+						<p class="text-gray-700 leading-relaxed">
+							Towarzystwo prowadzi działalność pożytku publicznego na rzecz osób niepełnosprawnych — dzieci, młodzieży, osób dorosłych oraz ich rodzin.
+						</p>
 					</div>
-				</div>
-			</section>
 
-			<!-- Rozdział II -->
-			<section class="card p-8">
-				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
-					ROZDZIAŁ II - Cele i zasady działania
-				</h2>
-
-				<div class="space-y-6">
 					<div>
 						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 6</h3>
-						<p class="text-gray-700 mb-3">Celem Towarzystwa jest:</p>
-						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
-							<li>Prowadzenie działalności rehabilitacyjnej, terapeutycznej i edukacyjnej na rzecz osób niepełnosprawnych, w szczególności z wykorzystaniem hipoterapii.</li>
-							<li>Promocja i rozwój hipoterapii jako metody rehabilitacji i terapii wspomaganej zwierzętami.</li>
-							<li>Wsparcie społeczne, psychologiczne i materialne osób niepełnosprawnych i ich rodzin.</li>
-							<li>Działania na rzecz równych szans i integracji społecznej osób niepełnosprawnych.</li>
-							<li>Upowszechnianie wiedzy o niepełnosprawności i metodach jej rehabilitacji.</li>
-							<li>Organizacja szkoleń, kursów i warsztatów z zakresu hipoterapii i rehabilitacji.</li>
-							<li>Współpraca z jednostkami służby zdrowia, oświaty i organizacjami pozarządowymi.</li>
-						</ol>
+						<p class="text-gray-700 leading-relaxed">
+							Towarzystwo zrzesza osoby zainteresowane wspieraniem rehabilitacji za pomocą hipoterapii.
+						</p>
 					</div>
 
 					<div>
 						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 7</h3>
-						<p class="text-gray-700 mb-3">Towarzystwo realizuje swoje cele poprzez:</p>
-						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
-							<li>Prowadzenie zajęć hipoterapeutycznych indywidualnych i grupowych.</li>
-							<li>Organizację warsztatów terapii zajęciowej i integracji sensorycznej.</li>
-							<li>Prowadzenie poradnictwa psychologicznego i pedagogicznego.</li>
-							<li>Organizację form wypoczynku, rekreacji i turystyki dla osób niepełnosprawnych.</li>
-							<li>Prowadzenie działalności edukacyjnej i informacyjnej.</li>
-							<li>Organizację konferencji, seminariów i szkoleń specjalistycznych.</li>
-							<li>Wydawanie publikacji i materiałów informacyjnych.</li>
-							<li>Współpracę z instytucjami krajowymi i zagranicznymi.</li>
-							<li>Pozyskiwanie środków finansowych na realizację celów statutowych.</li>
-						</ol>
+						<p class="text-gray-700 leading-relaxed">
+							Działalność Towarzystwa opiera się na pracy społecznej ogółu członków.
+						</p>
 					</div>
 
 					<div>
 						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 8</h3>
-						<p class="text-gray-700">Działalność Towarzystwa jest jawna i przejrzysta. Towarzystwo publikuje roczne sprawozdania ze swojej działalności zgodnie z obowiązującymi przepisami prawa.</p>
+						<p class="text-gray-700 leading-relaxed">
+							Towarzystwo może zatrudniać pracowników oraz korzystać z pomocy wolontariuszy do prowadzenia swoich spraw.
+						</p>
 					</div>
-				</div>
-			</section>
 
-			<!-- Rozdział III -->
-			<section class="card p-8">
-				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
-					ROZDZIAŁ III - Członkowie
-				</h2>
-
-				<div class="space-y-6">
 					<div>
 						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 9</h3>
-						<p class="text-gray-700 mb-3">Członkami Towarzystwa mogą być:</p>
-						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
-							<li>osoby fizyczne, które ukończyły 16 lat;</li>
-							<li>osoby prawne;</li>
-							<li>jednostki organizacyjne nieposiadające osobowości prawnej.</li>
-						</ol>
+						<p class="text-gray-700 leading-relaxed">
+							Towarzystwo może posługiwać się godłem i pieczęcią zgodnie z obowiązującymi przepisami.
+						</p>
 					</div>
 
 					<div>
 						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 10</h3>
-						<p class="text-gray-700 mb-3">Towarzystwo może mieć członków:</p>
-						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
-							<li>zwyczajnych;</li>
-							<li>wspierających;</li>
-							<li>honorowych.</li>
-						</ol>
+						<p class="text-gray-700 leading-relaxed">
+							Towarzystwo współdziała z Polskim Towarzystwem Hipoterapeutycznym oraz innymi organizacjami na zasadzie dobrowolności i równości.
+						</p>
 					</div>
 
 					<div>
 						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 11</h3>
-						<p class="text-gray-700 mb-3">Członkiem zwyczajnym może być osoba fizyczna, która:</p>
-						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
-							<li>złożyła pisemną deklarację członkowską;</li>
-							<li>została przyjęta uchwałą Zarządu;</li>
-							<li>opłaciła składkę członkowską.</li>
-						</ol>
+						<p class="text-gray-700 leading-relaxed">
+							Towarzystwo może prowadzić działalność gospodarczą. Dochód z działalności gospodarczej przeznaczany jest w całości na realizację celów statutowych.
+						</p>
 					</div>
+				</div>
+			</section>
 
+			<!-- ROZDZIAŁ III -->
+			<section class="card p-8">
+				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					ROZDZIAŁ III — Cele i sposoby działania
+				</h2>
+
+				<div class="space-y-6">
 					<div>
 						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 12</h3>
-						<p class="text-gray-700 mb-3">Członek zwyczajny ma prawo do:</p>
+						<p class="text-gray-700 mb-3">Celami Towarzystwa są:</p>
 						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
-							<li>czynnego i biernego prawa wyborczego do organów Towarzystwa;</li>
-							<li>uczestniczenia w zebraniach i podejmowaniu uchwał;</li>
-							<li>korzystania z dorobku i osiągnięć Towarzystwa;</li>
-							<li>otrzymywania informacji o działalności Towarzystwa;</li>
-							<li>składania wniosków dotyczących działalności Towarzystwa.</li>
+							<li>Działalność na rzecz osób niepełnosprawnych — wsparcie rehabilitacyjne, terapeutyczne i społeczne.</li>
+							<li>Ochrona i promocja zdrowia.</li>
+							<li>Nauka, edukacja, oświata i wychowanie.</li>
+							<li>Turystyka i rekreacja.</li>
+							<li>Upowszechnianie kultury fizycznej i sportu.</li>
+							<li>Organizowanie i promowanie wolontariatu.</li>
 						</ol>
 					</div>
 
 					<div>
 						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 13</h3>
-						<p class="text-gray-700 mb-3">Członek zwyczajny ma obowiązek:</p>
+						<p class="text-gray-700 mb-3">Towarzystwo realizuje swoje cele poprzez działalność nieodpłatną i odpłatną:</p>
+
+						<p class="text-gray-700 font-medium mt-4 mb-2">Działalność nieodpłatna pożytku publicznego:</p>
 						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
-							<li>przestrzegania Statutu i uchwał organów Towarzystwa;</li>
-							<li>regularnego opłacania składek członkowskich;</li>
-							<li>aktywnego uczestnictwa w realizacji celów Towarzystwa;</li>
-							<li>dbania o dobre imię Towarzystwa.</li>
+							<li>Edukacja hipoterapeutyczna — szerzenie wiedzy o hipoterapii jako metodzie rehabilitacji.</li>
+							<li>Organizowanie imprez integracyjnych dla osób niepełnosprawnych i ich rodzin.</li>
+							<li>Promocja i organizacja wolontariatu.</li>
+						</ol>
+
+						<p class="text-gray-700 font-medium mt-4 mb-2">Działalność odpłatna pożytku publicznego:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Prowadzenie zajęć terapeutycznych z zakresu hipoterapii.</li>
+							<li>Organizowanie i prowadzenie szkoleń z zakresu hipoterapii.</li>
+							<li>Organizowanie imprez rekreacyjnych i sportowych.</li>
+							<li>Organizowanie obozów i wyjazdów rehabilitacyjnych.</li>
 						</ol>
 					</div>
 				</div>
 			</section>
 
-			<!-- Download Section -->
-			<section class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-white text-center">
-				<div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-					<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-					</svg>
+			<!-- ROZDZIAŁ IV -->
+			<section class="card p-8">
+				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					ROZDZIAŁ IV — Członkowie, ich prawa i obowiązki
+				</h2>
+
+				<div class="space-y-6">
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 14</h3>
+						<p class="text-gray-700 mb-3">Członkowie Towarzystwa dzielą się na:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>członków zwyczajnych,</li>
+							<li>członków wspierających,</li>
+							<li>członków honorowych.</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 15</h3>
+						<p class="text-gray-700 leading-relaxed">
+							Członkiem zwyczajnym Towarzystwa może być osoba dorosła posiadająca pełną zdolność do czynności prawnych, niepozbawiona praw publicznych.
+						</p>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 16</h3>
+						<p class="text-gray-700 leading-relaxed">
+							Członkiem wspierającym może być osoba fizyczna dorosła lub osoba prawna, która udziela Towarzystwu stałej pomocy materialnej, finansowej lub organizacyjnej.
+						</p>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 17</h3>
+						<p class="text-gray-700 leading-relaxed">
+							Członkiem honorowym może zostać osoba szczególnie zasłużona dla realizacji celów Towarzystwa.
+						</p>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 18</h3>
+						<p class="text-gray-700 mb-3">Przyjęcie w poczet członków Towarzystwa następuje:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Członków zwyczajnych i wspierających — uchwałą Zarządu, na podstawie pisemnej deklaracji.</li>
+							<li>Członków honorowych — uchwałą Walnego Zebrania Członków, na wniosek Zarządu.</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 19</h3>
+						<p class="text-gray-700 mb-3">Członek zwyczajny Towarzystwa ma prawo:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Biernego i czynnego prawa wyborczego do władz Towarzystwa.</li>
+							<li>Współtworzenia programu działalności Towarzystwa.</li>
+							<li>Zgłaszania wniosków i postulatów dotyczących działalności Towarzystwa.</li>
+							<li>Korzystania ze szkoleń organizowanych przez Towarzystwo.</li>
+							<li>Wglądu w dokumenty finansowe Towarzystwa.</li>
+							<li>Odwołania się od uchwały Zarządu do Walnego Zebrania Członków w terminie 14 dni od otrzymania uchwały.</li>
+							<li>Korzystania ze zniżek w opłatach za zajęcia i imprezy organizowane przez Towarzystwo pod warunkiem terminowego opłacania składek członkowskich.</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 20</h3>
+						<p class="text-gray-700 leading-relaxed">
+							Członkowie wspierający i honorowi mają te same prawa co członkowie zwyczajni, z wyjątkiem biernego i czynnego prawa wyborczego do władz Towarzystwa.
+						</p>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 21</h3>
+						<p class="text-gray-700 mb-3">Członkowie Towarzystwa są obowiązani:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Przestrzegać postanowień Statutu, regulaminów i uchwał władz Towarzystwa.</li>
+							<li>Propagować cele Towarzystwa i aktywnie uczestniczyć w ich realizacji.</li>
+							<li>Brać udział w pracach Towarzystwa.</li>
+							<li>Regularnie opłacać składki członkowskie (członkowie wspierający i honorowi są zwolnieni ze składek).</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 22</h3>
+						<p class="text-gray-700 mb-3">Członkostwo w Towarzystwie ustaje na skutek:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Dobrowolnej rezygnacji złożonej na piśmie Zarządowi.</li>
+							<li>Uchwały Zarządu podjętej w przypadku naruszenia postanowień Statutu, regulaminów lub uchwał władz Towarzystwa.</li>
+							<li>Uchwały Zarządu w przypadku nieusprawiedliwionego zalegania z opłatą składek członkowskich przez okres 12 miesięcy po uprzednim upomnieniu.</li>
+							<li>Utraty praw publicznych na mocy prawomocnego wyroku sądu.</li>
+							<li>Śmierci członka lub utraty osobowości prawnej przez członka wspierającego będącego osobą prawną.</li>
+						</ol>
+					</div>
 				</div>
-				<h3 class="text-2xl font-bold mb-4">Pobierz pełny statut</h3>
-				<p class="text-primary-100 mb-6 max-w-2xl mx-auto">
-					Kompletny dokument statutu w wersji PDF do pobrania i wydruku.
-				</p>
-				<div class="flex flex-col sm:flex-row justify-center gap-4 text-sm text-primary-200 mb-8">
-					<span>PDF • 12 stron • 1.8 MB</span>
-					<span>Ostatnia aktualizacja: 15 marca 2024</span>
-				</div>
-				<a href="/uploads/docs/statut-towarzystwa.pdf" class="btn bg-white hover:bg-gray-100 text-primary-600 px-8 py-4 text-lg inline-flex items-center" target="_blank">
-					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-					</svg>
-					Pobierz pełny statut PDF
-				</a>
 			</section>
 
-			<!-- Legal Information -->
+			<!-- ROZDZIAŁ V -->
+			<section class="card p-8">
+				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					ROZDZIAŁ V — Władze Towarzystwa
+				</h2>
+
+				<div class="space-y-6">
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 23</h3>
+						<p class="text-gray-700 mb-3">Władzami Towarzystwa są:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Walne Zebranie Członków.</li>
+							<li>Zarząd.</li>
+							<li>Komisja Rewizyjna.</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 24</h3>
+						<p class="text-gray-700 mb-3">Walne Zebranie Członków:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Walne Zebranie Członków może być zwyczajne lub nadzwyczajne.</li>
+							<li>Zwyczajne Walne Zebranie Członków zwoływane jest przez Zarząd raz w roku jako zebranie sprawozdawcze.</li>
+							<li>Nadzwyczajne Walne Zebranie Członków może być zwoływane z inicjatywy Zarządu, na wniosek Komisji Rewizyjnej lub na pisemny wniosek co najmniej 1/3 ogółu członków zwyczajnych.</li>
+							<li>O terminie, miejscu i porządku obrad Walnego Zebrania Członków Zarząd zawiadamia członków co najmniej 30 dni przed terminem zebrania.</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 25</h3>
+						<p class="text-gray-700 leading-relaxed">
+							W Walnym Zebraniu Członków uczestniczą członkowie zwyczajni z głosem stanowiącym. Członkowie wspierający i honorowi uczestniczą z głosem doradczym.
+						</p>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 26</h3>
+						<p class="text-gray-700 mb-3">Zasady podejmowania uchwał przez Walne Zebranie Członków:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Uchwały Walnego Zebrania Członków podejmowane są zwykłą większością głosów.</li>
+							<li>W pierwszym terminie wymagana jest obecność co najmniej 50% uprawnionych do głosowania.</li>
+							<li>W drugim terminie uchwały podejmowane są bez względu na liczbę obecnych.</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 27</h3>
+						<p class="text-gray-700 mb-3">Do kompetencji Walnego Zebrania Członków należy:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Uchwalanie zmian w Statucie Towarzystwa.</li>
+							<li>Podjęcie uchwały o rozwiązaniu Towarzystwa.</li>
+							<li>Rozpatrywanie spraw organizacyjnych Towarzystwa.</li>
+							<li>Wybór i odwoływanie władz Towarzystwa (Zarządu i Komisji Rewizyjnej).</li>
+							<li>Rozpatrywanie odwołań od uchwał Zarządu.</li>
+							<li>Uchwalanie regulaminów wewnętrznych.</li>
+							<li>Zatwierdzanie sprawozdań z działalności Zarządu i Komisji Rewizyjnej.</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 28</h3>
+						<p class="text-gray-700 mb-3">Zarząd Towarzystwa:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Kadencja Zarządu trwa 3 lata.</li>
+							<li>Walne Zebranie Członków wybiera Prezesa Zarządu. Zarząd spośród swoich członków wybiera wiceprezesa, sekretarza i skarbnika.</li>
+							<li>Zarząd może dokooptować nowych członków w miejsce ustępujących w liczbie nieprzekraczającej 1/3 ogólnej liczby członków Zarządu.</li>
+							<li>Decyzje Zarządu zapadają przy udziale Prezesa oraz obecności co najmniej połowy członków Zarządu.</li>
+							<li>Zebrania Zarządu odbywają się nie rzadziej niż raz na kwartał.</li>
+							<li>Członkowie Zarządu są zwolnieni z opłacania składek członkowskich.</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 29</h3>
+						<p class="text-gray-700 mb-3">Do obowiązków Zarządu należy:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Kierowanie bieżącą działalnością Towarzystwa i reprezentowanie go na zewnątrz.</li>
+							<li>Realizacja uchwał Walnego Zebrania Członków.</li>
+							<li>Przyjmowanie i usuwanie członków Towarzystwa.</li>
+							<li>Ustalanie wysokości składek członkowskich.</li>
+							<li>Składanie rocznych sprawozdań z działalności Towarzystwa.</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 30</h3>
+						<p class="text-gray-700 mb-3">Komisja Rewizyjna:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Kadencja Komisji Rewizyjnej trwa 3 lata.</li>
+							<li>Komisja Rewizyjna składa się z 3 osób.</li>
+							<li>Członkowie Komisji Rewizyjnej nie mogą być jednocześnie członkami Zarządu ani pozostawać z nimi w stosunku pokrewieństwa, powinowactwa lub podległości z tytułu zatrudnienia.</li>
+							<li>Decyzje Komisji Rewizyjnej podejmowane są przy pełnym składzie, zwykłą większością głosów.</li>
+						</ol>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 31</h3>
+						<p class="text-gray-700 mb-3">Do kompetencji Komisji Rewizyjnej należy:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Kontrola zgodności działalności Towarzystwa z przepisami prawa, Statutem i uchwałami Walnego Zebrania Członków.</li>
+							<li>Przeprowadzanie corocznych audytów działalności i gospodarki finansowej Towarzystwa.</li>
+							<li>Składanie sprawozdań na Walnym Zebraniu Członków wraz z wnioskami dotyczącymi udzielenia absolutorium Zarządowi.</li>
+							<li>Występowanie z wnioskiem o zwołanie nadzwyczajnego Walnego Zebrania Członków.</li>
+						</ol>
+					</div>
+				</div>
+			</section>
+
+			<!-- ROZDZIAŁ VI -->
+			<section class="card p-8">
+				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					ROZDZIAŁ VI — Majątek Towarzystwa
+				</h2>
+
+				<div class="space-y-6">
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 32</h3>
+
+						<p class="text-gray-700 mb-3">Majątek Towarzystwa stanowią nieruchomości, ruchomości, gotówka i papiery wartościowe.</p>
+
+						<p class="text-gray-700 font-medium mt-4 mb-2">Źródła przychodów Towarzystwa:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Składki członkowskie.</li>
+							<li>Darowizny, zapisy i spadki.</li>
+							<li>Ofiarność publiczna.</li>
+							<li>Dochody z działalności gospodarczej.</li>
+						</ol>
+						<p class="text-gray-700 mt-3">Całość dochodów przeznaczana jest na realizację celów statutowych Towarzystwa.</p>
+
+						<p class="text-gray-700 font-medium mt-4 mb-2">Zabrania się:</p>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Udzielania pożyczek lub zabezpieczania zobowiązań majątkiem Towarzystwa w stosunku do jego członków, członków organów lub pracowników oraz osób, z którymi pracownicy pozostają w związku małżeńskim albo w stosunku pokrewieństwa lub powinowactwa w linii prostej, pokrewieństwa lub powinowactwa w linii bocznej do drugiego stopnia albo są związani z tytułu przysposobienia, opieki lub kurateli, zwanych dalej &bdquo;osobami bliskimi&rdquo;.</li>
+							<li>Przekazywania majątku Towarzystwa na rzecz jego członków, członków organów lub pracowników oraz ich osób bliskich, na zasadach innych niż w stosunku do osób trzecich, w szczególności jeżeli przekazanie to następuje bezpłatnie lub na preferencyjnych warunkach.</li>
+							<li>Wykorzystywania majątku na rzecz członków, członków organów lub pracowników oraz ich osób bliskich na zasadach innych niż w stosunku do osób trzecich, chyba że to wykorzystanie bezpośrednio wynika ze statutowego celu Towarzystwa.</li>
+							<li>Zakupu na szczególnych zasadach towarów lub usług od podmiotów, w których uczestniczą członkowie Towarzystwa, członkowie jego organów lub pracownicy oraz ich osoby bliskie.</li>
+						</ol>
+
+						<p class="text-gray-700 mt-4">
+							Zarząd zarządza majątkiem Towarzystwa. Dokumenty dotyczące zobowiązań majątkowych wymagają podpisu przewodniczącego lub wiceprzewodniczącego Zarządu oraz skarbnika.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- ROZDZIAŁ VII -->
+			<section class="card p-8">
+				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-primary-200">
+					ROZDZIAŁ VII — Postanowienia końcowe
+				</h2>
+
+				<div class="space-y-6">
+					<div>
+						<h3 class="text-lg font-semibold text-primary-700 mb-3">§ 33</h3>
+						<ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed">
+							<li>Zmiana Statutu wymaga uchwały Walnego Zebrania Członków podjętej większością 2/3 głosów przy obecności co najmniej 50% uprawnionych do głosowania.</li>
+							<li>Podjęcie uchwały o rozwiązaniu Towarzystwa wymaga większości 2/3 głosów przy obecności co najmniej 50% uprawnionych do głosowania.</li>
+							<li>Likwidację Towarzystwa przeprowadza Komisja Likwidacyjna powołana przez Walne Zebranie Członków.</li>
+							<li>Majątek zlikwidowanego Towarzystwa przekazuje się organizacjom działającym na rzecz osób niepełnosprawnych, wskazanym w uchwale Walnego Zebrania Członków o rozwiązaniu Towarzystwa.</li>
+						</ol>
+					</div>
+				</div>
+			</section>
+
+			<!-- Informacje prawne -->
 			<section class="card p-8">
 				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Informacje prawne</h2>
 
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 					<div class="border-t-4 border-primary-500 pt-6">
 						<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
 							<svg class="w-5 h-5 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -207,24 +421,7 @@ import PageHero from '../../components/PageHero.astro';
 						<ul class="space-y-2 text-gray-700">
 							<li><strong>KRS:</strong> 0000120586</li>
 							<li><strong>Sąd rejestrowy:</strong> Sąd Rejonowy w Bydgoszczy</li>
-							<li><strong>Data rejestracji:</strong> 20 kwietnia 2010</li>
-							<li><strong>NIP:</strong> 123-456-78-90</li>
-							<li><strong>REGON:</strong> 123456789</li>
-						</ul>
-					</div>
-
-					<div class="border-t-4 border-primary-500 pt-6">
-						<h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-							<svg class="w-5 h-5 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-							</svg>
-							Status OPP
-						</h3>
-						<ul class="space-y-2 text-gray-700">
-							<li><strong>Data wpisu do rejestru OPP:</strong> 15 maja 2012</li>
-							<li><strong>Numer wpisu:</strong> KRS: 0000120586</li>
-							<li><strong>Cel szczegółowy 1,5%:</strong> Działalność na rzecz osób niepełnosprawnych</li>
-							<li><strong>Obszar działania:</strong> Powiat bydgoski i okolice</li>
+							<li><strong>Data rejestracji:</strong> 28 marca 1995</li>
 						</ul>
 					</div>
 
@@ -243,11 +440,17 @@ import PageHero from '../../components/PageHero.astro';
 						</ul>
 					</div>
 				</div>
+
+				<div class="mt-8 pt-6 border-t border-gray-200 text-center">
+					<p class="text-sm text-gray-500">
+						Statut uchwalony dnia 18 października 2007 roku w Bydgoszczy.
+					</p>
+				</div>
 			</section>
 
-			<!-- Contact Section -->
+			<!-- Kontakt -->
 			<section class="bg-gray-50 rounded-2xl p-8">
-				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Kontakt w sprawach prawnych</h2>
+				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Kontakt w sprawach statutowych</h2>
 
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 					<div class="card p-6">
@@ -255,12 +458,12 @@ import PageHero from '../../components/PageHero.astro';
 							<svg class="w-5 h-5 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
 							</svg>
-							Sprawy statutowe i organizacyjne
+							Wiceprezes Zarządu
 						</h3>
 						<div class="text-gray-700 leading-relaxed">
-							<p class="font-medium text-primary-700 mb-2">Prezes Zarządu - Weronika Kiełtyka-Wydmuch</p>
-							<p>Tel: <a href="tel:+48123456789" class="text-primary-600 hover:text-primary-700">+48 123 456 789</a></p>
-							<p>Email: <a href="mailto:prezes@hipoterapia.bydgoszcz.pl" class="text-primary-600 hover:text-primary-700">prezes@hipoterapia.bydgoszcz.pl</a></p>
+							<p class="font-medium text-primary-700 mb-2">Ewa Ziętak</p>
+							<p>Tel: <a href="tel:+48727912331" class="text-primary-600 hover:text-primary-700">727-912-331</a></p>
+							<p>Email: <a href="mailto:hipoterapia.bydgoszcz@poczta.onet.pl" class="text-primary-600 hover:text-primary-700">hipoterapia.bydgoszcz@poczta.onet.pl</a></p>
 						</div>
 					</div>
 
@@ -269,17 +472,17 @@ import PageHero from '../../components/PageHero.astro';
 							<svg class="w-5 h-5 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
 							</svg>
-							Sprawy formalne i administracyjne
+							Siedziba Towarzystwa
 						</h3>
 						<div class="text-gray-700 leading-relaxed">
-							<p class="font-medium text-primary-700 mb-2">Biuro Towarzystwa</p>
-							<p>ul. Gdańska 173-175, 85-674 Bydgoszcz</p>
-							<p>Tel: <a href="tel:+48123456790" class="text-primary-600 hover:text-primary-700">+48 123 456 790</a></p>
-							<p>Email: <a href="mailto:biuro@hipoterapia.bydgoszcz.pl" class="text-primary-600 hover:text-primary-700">biuro@hipoterapia.bydgoszcz.pl</a></p>
+							<p class="font-medium text-primary-700 mb-2">Bydgoskie Towarzystwo Hipoterapeutyczne &bdquo;Myślęcinek&rdquo;</p>
+							<p>ul. Gdańska 173-175</p>
+							<p>85-674 Bydgoszcz</p>
 						</div>
 					</div>
 				</div>
 			</section>
+
 		</div>
 	</div>
 </MainLayout>

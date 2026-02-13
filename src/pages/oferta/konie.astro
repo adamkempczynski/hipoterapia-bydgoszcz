@@ -3,224 +3,254 @@ import MainLayout from '../../layouts/MainLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 ---
 
-<MainLayout title="Nasze konie">
+<MainLayout title="Nasze Konie">
 	<PageHero
-		title="Nasze konie"
+		title="Nasze Konie"
 		subtitle="Najważniejsi członkowie naszego zespołu terapeutycznego — specjalnie przeszkoleni do pracy z osobami niepełnosprawnymi"
 		breadcrumbs={[{ label: 'Strona główna', href: '/' }, { label: 'Oferta', href: '/oferta/' }, { label: 'Konie' }]}
 	/>
-	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+	<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
 		<!-- Active Horses -->
-		<section class="mb-12">
+		<section class="mb-16">
 			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
-				Poznaj nasze konie terapeutyczne
+				Aktywne konie terapeutyczne
 			</h2>
 
-			<div class="space-y-8">
-				<!-- Nepal -->
-				<div class="card p-6 border-l-4 border-green-500">
-					<div class="flex items-start space-x-4">
-						<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-							<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<!-- Windsor -->
+				<div class="card p-6 border-t-4 border-primary-500">
+					<div class="flex items-center mb-4">
+						<div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+							<svg class="w-7 h-7 text-primary-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
 							</svg>
 						</div>
-						<div class="flex-1">
-							<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-								<h3 class="text-2xl font-bold text-gray-900">Nepal</h3>
-								<div class="inline-block bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-									Wałach, ur. 2014
-								</div>
-							</div>
-							<p class="text-gray-700 leading-relaxed mb-4">
-								Nasz najnowszy członek zespołu, który dołączył do nas niedawno. Nepal to spokojny
-								i cierpliwy koń rasy huculskiej, idealny do pracy z dziećmi i osobami z niepełnosprawnościami.
-								Hucuły są znane ze swojego łagodnego charakteru i wytrzymałości.
-							</p>
-							<div class="bg-gray-50 p-4 rounded-lg">
-								<h4 class="font-semibold text-gray-900 mb-2">Cechy charakterystyczne:</h4>
-								<ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
-									<li>Rasa: Hucuł</li>
-									<li>Wiek: 10 lat (doświadczony koń w sile wieku)</li>
-									<li>Charakter: Spokojny, cierpliwy, łagodny</li>
-									<li>Specjalizacja: Praca z dziećmi i osobami z niepełnosprawnościami</li>
-								</ul>
-							</div>
+						<div>
+							<h3 class="text-2xl font-bold text-gray-900">Windsor</h3>
+							<span class="inline-block bg-primary-600 text-white px-3 py-0.5 rounded-full text-xs font-medium mt-1">
+								Aktywny
+							</span>
 						</div>
 					</div>
+					<div class="space-y-2 text-sm text-gray-700">
+						<div class="flex justify-between border-b border-gray-100 pb-1">
+							<span class="font-medium text-gray-500">Rasa</span>
+							<span>Haflinger</span>
+						</div>
+						<div class="flex justify-between border-b border-gray-100 pb-1">
+							<span class="font-medium text-gray-500">Płeć</span>
+							<span>Wałach</span>
+						</div>
+						<div class="flex justify-between">
+							<span class="font-medium text-gray-500">Data urodzenia</span>
+							<span>7.05.2005</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Dunaj -->
+				<div class="card p-6 border-t-4 border-primary-500">
+					<div class="flex items-center mb-4">
+						<div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+							<svg class="w-7 h-7 text-primary-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+							</svg>
+						</div>
+						<div>
+							<h3 class="text-2xl font-bold text-gray-900">Dunaj</h3>
+							<span class="inline-block bg-primary-600 text-white px-3 py-0.5 rounded-full text-xs font-medium mt-1">
+								Aktywny
+							</span>
+						</div>
+					</div>
+					<div class="space-y-2 text-sm text-gray-700">
+						<div class="flex justify-between border-b border-gray-100 pb-1">
+							<span class="font-medium text-gray-500">Rasa</span>
+							<span>Kuc</span>
+						</div>
+						<div class="flex justify-between border-b border-gray-100 pb-1">
+							<span class="font-medium text-gray-500">Płeć</span>
+							<span>Wałach</span>
+						</div>
+						<div class="flex justify-between">
+							<span class="font-medium text-gray-500">Data urodzenia</span>
+							<span>2004</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Nepal -->
+				<div class="card p-6 border-t-4 border-primary-500">
+					<div class="flex items-center mb-4">
+						<div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+							<svg class="w-7 h-7 text-primary-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+							</svg>
+						</div>
+						<div>
+							<h3 class="text-2xl font-bold text-gray-900">Nepal</h3>
+							<span class="inline-block bg-primary-600 text-white px-3 py-0.5 rounded-full text-xs font-medium mt-1">
+								Aktywny
+							</span>
+						</div>
+					</div>
+					<div class="space-y-2 text-sm text-gray-700">
+						<div class="flex justify-between border-b border-gray-100 pb-1">
+							<span class="font-medium text-gray-500">Rasa</span>
+							<span>Huculski</span>
+						</div>
+						<div class="flex justify-between border-b border-gray-100 pb-1">
+							<span class="font-medium text-gray-500">Płeć</span>
+							<span>Wałach</span>
+						</div>
+						<div class="flex justify-between border-b border-gray-100 pb-1">
+							<span class="font-medium text-gray-500">Data urodzenia</span>
+							<span>14.05.2014</span>
+						</div>
+					</div>
+					<p class="text-gray-600 text-sm mt-4 leading-relaxed">
+						Spokojny i cierpliwy, doskonały w pracy z dziećmi i osobami niepełnosprawnymi.
+					</p>
+				</div>
+
+				<!-- Ataman -->
+				<div class="card p-6 border-t-4 border-primary-500">
+					<div class="flex items-center mb-4">
+						<div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+							<svg class="w-7 h-7 text-primary-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+							</svg>
+						</div>
+						<div>
+							<h3 class="text-2xl font-bold text-gray-900">Ataman</h3>
+							<span class="inline-block bg-primary-600 text-white px-3 py-0.5 rounded-full text-xs font-medium mt-1">
+								Aktywny
+							</span>
+						</div>
+					</div>
+					<div class="space-y-2 text-sm text-gray-700">
+						<div class="flex justify-between border-b border-gray-100 pb-1">
+							<span class="font-medium text-gray-500">Rasa</span>
+							<span>Huculski</span>
+						</div>
+						<div class="flex justify-between border-b border-gray-100 pb-1">
+							<span class="font-medium text-gray-500">Płeć</span>
+							<span>Wałach</span>
+						</div>
+						<div class="flex justify-between border-b border-gray-100 pb-1">
+							<span class="font-medium text-gray-500">Data urodzenia</span>
+							<span>6.06.2013</span>
+						</div>
+					</div>
+					<p class="text-gray-600 text-sm mt-4 leading-relaxed">
+						Najnowszy członek zespołu terapeutycznego.
+					</p>
 				</div>
 			</div>
 		</section>
 
 		<!-- Memorial Section -->
-		<section class="mb-12">
-			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-gray-300">
-				Wspomnienie
+		<section class="mb-16">
+			<h2 class="text-3xl font-bold text-gray-700 mb-8 pb-3 border-b-2 border-gray-300">
+				Pamięci naszych koni
 			</h2>
 
-			<div class="bg-gray-50 border-l-4 border-gray-400 p-6 rounded-lg">
-				<div class="flex items-start space-x-4">
+			<div class="bg-gray-50 border border-gray-200 rounded-2xl p-8">
+				<div class="flex items-start space-x-5">
 					<div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0">
-						<svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+						<svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
 						</svg>
 					</div>
 					<div class="flex-1">
-						<h3 class="text-xl font-bold text-gray-800 mb-2">Tofik (2003-2024)</h3>
-						<div class="text-gray-600 text-sm mb-4">✝ Z szacunkiem wspominamy</div>
-						<p class="text-gray-700 leading-relaxed">
-							Z wielkim szacunkiem wspominamy Tofika, który przez 21 lat wiernie służył
-							w naszym ośrodku. Był pierwszym koniem, który rozpoczął pracę terapeutyczną
-							w naszym Towarzystwie. Tofik odszedł w 2024 roku, pozostawiając po sobie
-							niezatarte wspomnienia u setek osób, którym pomagał.
+						<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+							<h3 class="text-2xl font-bold text-gray-800">Tofik</h3>
+							<span class="text-gray-500 text-sm font-medium mt-1 sm:mt-0">ur. 1998 — zm. 21.08.2022</span>
+						</div>
+						<div class="space-y-2 text-sm text-gray-600 mb-4">
+							<div class="flex justify-between border-b border-gray-200 pb-1">
+								<span class="font-medium text-gray-500">Rasa</span>
+								<span>Huculski / koń małopolski</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="font-medium text-gray-500">Płeć</span>
+								<span>Wałach</span>
+							</div>
+						</div>
+						<p class="text-gray-600 leading-relaxed">
+							Pierwszy koń terapeutyczny Bydgoskiego Towarzystwa Hipoterapeutycznego.
+							Pozyskany 13 stycznia 2001 roku dzięki subsydium z Urzędu Miasta Bydgoszczy.
+							Przez ponad 20 lat wiernie służył pacjentom Towarzystwa, pomagając setkom osób.
+							Tofik odszedł 21 sierpnia 2022 roku, pozostawiając po sobie niezatarte wspomnienia
+							u wszystkich, którym pomagał.
 						</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Horse Care -->
-		<section class="mb-12">
+		<!-- Horse Care (shortened) -->
+		<section class="mb-16">
 			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
 				Opieka nad końmi
 			</h2>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-				<div class="card p-6">
-					<div class="flex items-center mb-4">
-						<svg class="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+				<div class="card p-5">
+					<div class="flex items-center mb-3">
+						<svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 						</svg>
-						<h3 class="text-lg font-bold text-gray-900">Opieka weterynaryjna</h3>
+						<h3 class="text-sm font-bold text-gray-900">Opieka weterynaryjna</h3>
 					</div>
-					<ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
+					<ul class="list-disc list-inside space-y-1 text-gray-600 text-xs">
 						<li>Regularne badania weterynaryjne</li>
 						<li>Szczepienia profilaktyczne</li>
-						<li>Kontrola stanu zdrowia</li>
-						<li>Profesjonalna opieka podologiczna</li>
+						<li>Opieka podologiczna</li>
 					</ul>
 				</div>
 
-				<div class="card p-6">
-					<div class="flex items-center mb-4">
-						<svg class="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<div class="card p-5">
+					<div class="flex items-center mb-3">
+						<svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
 						</svg>
-						<h3 class="text-lg font-bold text-gray-900">Codzienna pielęgnacja</h3>
+						<h3 class="text-sm font-bold text-gray-900">Codzienna pielęgnacja</h3>
 					</div>
-					<ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
-						<li>Regularne szczotkowanie i czyszczenie</li>
+					<ul class="list-disc list-inside space-y-1 text-gray-600 text-xs">
+						<li>Szczotkowanie i czyszczenie</li>
 						<li>Właściwe karmienie i pojenie</li>
-						<li>Spacery i ruch na świeżym powietrzu</li>
-						<li>Dbanie o czystość i higienę</li>
+						<li>Ruch na świeżym powietrzu</li>
 					</ul>
 				</div>
 
-				<div class="card p-6">
-					<div class="flex items-center mb-4">
-						<svg class="w-6 h-6 text-purple-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<div class="card p-5">
+					<div class="flex items-center mb-3">
+						<svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-2m-12 0H3m2 0h2M9 7h6m-6 4h6m-6 4h6"></path>
 						</svg>
-						<h3 class="text-lg font-bold text-gray-900">Szkolenie terapeutyczne</h3>
+						<h3 class="text-sm font-bold text-gray-900">Szkolenie terapeutyczne</h3>
 					</div>
-					<ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
-						<li>Specjalistyczne przygotowanie do pracy z niepełnosprawnymi</li>
-						<li>Trening reakcji na różne sytuacje</li>
-						<li>Nauka tolerancji na nietypowe zachowania</li>
-						<li>Certyfikacja jako koń terapeutyczny</li>
+					<ul class="list-disc list-inside space-y-1 text-gray-600 text-xs">
+						<li>Przygotowanie do pracy z pacjentami</li>
+						<li>Trening reakcji na sytuacje</li>
+						<li>Tolerancja na nietypowe zachowania</li>
 					</ul>
 				</div>
 
-				<div class="card p-6">
-					<div class="flex items-center mb-4">
-						<svg class="w-6 h-6 text-red-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<div class="card p-5">
+					<div class="flex items-center mb-3">
+						<svg class="w-5 h-5 text-red-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
 						</svg>
-						<h3 class="text-lg font-bold text-gray-900">Bezpieczeństwo</h3>
+						<h3 class="text-sm font-bold text-gray-900">Bezpieczeństwo</h3>
 					</div>
-					<ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
-						<li>Stałe monitorowanie zachowania koni</li>
+					<ul class="list-disc list-inside space-y-1 text-gray-600 text-xs">
+						<li>Monitorowanie zachowania koni</li>
 						<li>Kontrola sprzętu jeździeckiego</li>
-						<li>Bezpieczne warunki przebywania</li>
-						<li>Procedury awaryjne i pierwszej pomocy</li>
+						<li>Procedury pierwszej pomocy</li>
 					</ul>
-				</div>
-			</div>
-		</section>
-
-		<!-- Selection Criteria -->
-		<section class="mb-12">
-			<h2 class="text-3xl font-bold text-gray-900 mb-8 pb-3 border-b-2 border-primary-200">
-				Kryteria wyboru koni terapeutycznych
-			</h2>
-
-			<div class="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6">
-				<p class="text-gray-700 leading-relaxed">
-					Nie każdy koń nadaje się do pracy terapeutycznej. Nasze konie są starannie
-					dobierane pod kątem charakteru, temparamentu i zdolności do pracy z osobami niepełnosprawnymi.
-				</p>
-			</div>
-
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-				<div class="space-y-4">
-					<h3 class="text-xl font-bold text-gray-900 mb-4">Cechy charakteru</h3>
-					<div class="space-y-3">
-						<div class="flex items-start">
-							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-							</svg>
-							<span class="text-gray-700 text-sm">Spokojny i zrównoważony temperament</span>
-						</div>
-						<div class="flex items-start">
-							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-							</svg>
-							<span class="text-gray-700 text-sm">Cierpliwość i tolerancja</span>
-						</div>
-						<div class="flex items-start">
-							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-							</svg>
-							<span class="text-gray-700 text-sm">Łagodność w kontakcie z ludźmi</span>
-						</div>
-						<div class="flex items-start">
-							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-							</svg>
-							<span class="text-gray-700 text-sm">Brak skłonności do płoszenia się</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="space-y-4">
-					<h3 class="text-xl font-bold text-gray-900 mb-4">Wymagania fizyczne</h3>
-					<div class="space-y-3">
-						<div class="flex items-start">
-							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-							</svg>
-							<span class="text-gray-700 text-sm">Zdrowie i kondycja fizyczna</span>
-						</div>
-						<div class="flex items-start">
-							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-							</svg>
-							<span class="text-gray-700 text-sm">Odpowiedni wzrost i budowa</span>
-						</div>
-						<div class="flex items-start">
-							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-							</svg>
-							<span class="text-gray-700 text-sm">Stabilne i równe chody</span>
-						</div>
-						<div class="flex items-start">
-							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-							</svg>
-							<span class="text-gray-700 text-sm">Wiek między 8 a 18 lat</span>
-						</div>
-					</div>
 				</div>
 			</div>
 		</section>
