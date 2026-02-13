@@ -16,7 +16,7 @@
 
 3. **Access the admin panel:**
    ```
-   http://localhost:4322/admin/
+   http://localhost:4321/admin/
    ```
 
 4. **No authentication required** in local mode - the CMS will work directly with your local files.
@@ -54,11 +54,14 @@ Admin panel entry point:
 - `local_backend: true` enables testing without Git
 - Run `npm run cms` to start local backend on port 8081
 
-### ✅ Editorial Workflow
+### Editorial Workflow (currently disabled)
+Editorial workflow is available but currently commented out in `config.yml`. When enabled (`publish_mode: editorial_workflow`), it provides:
 - **Draft**: Work in progress posts
 - **In Review**: Ready for review
 - **Ready**: Approved and ready to publish
 - All managed through Git branches
+
+Currently, all saves go directly to the `main` branch.
 
 ### ✅ Polish Language
 - Interface translated to Polish
@@ -120,8 +123,8 @@ Admin panel entry point:
    - GitHub → Settings → Developer settings → OAuth Apps
    - New OAuth App:
      - Name: `Hipoterapia CMS`
-     - Homepage: `https://hipoterapia.bydgoszcz.pl`
-     - Callback: `https://hipoterapia.bydgoszcz.pl/admin/`
+     - Homepage: `https://nowa.hipoterapia.bydgoszcz.pl`
+     - Callback: `https://nowa.hipoterapia.bydgoszcz.pl/admin/`
 
 2. **Save Credentials:**
    - Client ID
@@ -131,7 +134,7 @@ Admin panel entry point:
    ```yaml
    backend:
      name: github
-     repo: username/repository-name
+     repo: adamkempczynski/hipoterapia-bydgoszcz
      branch: main
    ```
 
@@ -159,7 +162,7 @@ Location: `src/content/aktualnosci/`
 title: "Post Title"                    # Required
 pubDate: 2025-06-29                    # Required (YYYY-MM-DD)
 description: "Short description"       # Optional
-category: "biwaki-wycieczki"          # Required (select from dropdown)
+category: "biwaki-wycieczki"          # Optional (select from dropdown)
 gallery:                               # Optional (list of image paths)
   - "/uploads/folder/image1.webp"
   - "/uploads/folder/image2.webp"
@@ -443,4 +446,4 @@ For technical support:
 
 ---
 
-*Last updated: 2025-11-18*
+*Last updated: 2026-02-13*

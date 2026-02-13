@@ -1,10 +1,10 @@
-# Robots.txt for hipoterapia.bydgoszcz.pl
+# Robots.txt for nowa.hipoterapia.bydgoszcz.pl
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://hipoterapia.bydgoszcz.pl/sitemap.xml
+Sitemap: https://nowa.hipoterapia.bydgoszcz.pl/sitemap.xml
 
 # Crawl-delay (in seconds) - optional, remove if not needed
 Crawl-delay: 1

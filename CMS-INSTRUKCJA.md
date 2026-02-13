@@ -28,7 +28,7 @@ Decap CMS to nowoczesny system zarządzania treścią, który:
 ### Wersja produkcyjna (po wdrożeniu)
 Panel administracyjny będzie dostępny pod adresem:
 ```
-https://hipoterapia.bydgoszcz.pl/admin/
+https://nowa.hipoterapia.bydgoszcz.pl/admin/
 ```
 
 ### Wymagania
@@ -92,8 +92,8 @@ Jeśli nie korzystasz z Netlify, możesz skonfigurować GitHub OAuth:
 #### 1. Utwórz GitHub OAuth App
 - GitHub → Settings → Developer settings → OAuth Apps → New OAuth App
 - **Application name**: Hipoterapia CMS
-- **Homepage URL**: `https://hipoterapia.bydgoszcz.pl`
-- **Authorization callback URL**: `https://hipoterapia.bydgoszcz.pl/admin/`
+- **Homepage URL**: `https://nowa.hipoterapia.bydgoszcz.pl`
+- **Authorization callback URL**: `https://nowa.hipoterapia.bydgoszcz.pl/admin/`
 
 #### 2. Zapisz Client ID i Client Secret
 
@@ -102,7 +102,7 @@ Edytuj `public/admin/config.yml`:
 ```yaml
 backend:
   name: github
-  repo: twoj-username/nazwa-repo
+  repo: adamkempczynski/hipoterapia-bydgoszcz
   branch: main
 ```
 
@@ -322,8 +322,8 @@ Jeśli masz problemy z panelem CMS, skontaktuj się z administratorem techniczny
 **Przydatne linki:**
 - [Dokumentacja Decap CMS](https://decapcms.org/docs/)
 - [Markdown Guide](https://www.markdownguide.org/basic-syntax/)
-- [Repozytorium projektu](https://github.com/twoj-username/nazwa-repo)
+- [Repozytorium projektu](https://github.com/adamkempczynski/hipoterapia-bydgoszcz)
 
 ---
 
-*Ostatnia aktualizacja: 2025-11-18*
+*Ostatnia aktualizacja: 2026-02-13*
