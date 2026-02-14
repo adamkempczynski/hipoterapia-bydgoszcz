@@ -4,11 +4,7 @@ import Gallery from '../../components/Gallery.astro';
 import PageHero from '../../components/PageHero.astro';
 import ScrollReveal from '../../components/ScrollReveal.astro';
 
-// Helper: generate sequential paths /uploads/{dir}/{1..count}.webp
-const seq = (dir: string, count: number) =>
-	Array.from({ length: count }, (_, i) => `/uploads/${dir}/${i + 1}.webp`);
-
-// Current galleries (2024-2025) — existing on the site
+// Current galleries displayed inline (2024-2025, already on the site)
 const currentGalleries = [
 	{
 		title: "Zabawa Mikołajkowa 2025",
@@ -20,6 +16,7 @@ const currentGalleries = [
 			"/uploads/zabawa_mikolajkowa_2025/zabawa_mikolajkowa3.webp",
 		],
 		id: "zabawa-mikolajkowa-2025",
+		postUrl: "/aktualnosci/wpis/zabawa-mikolajkowa-2025/",
 	},
 	{
 		title: "Spływ kajakowy 2025",
@@ -97,98 +94,23 @@ const currentGalleries = [
 	},
 ];
 
-// Archive galleries from old site (2005-2008)
-const archiveGalleries = [
-	{
-		title: "Spływ kajakowy 2008",
-		description: "Spływ kajakowy na Brdzie \u2014 8 czerwca 2008",
-		year: 2008,
-		images: seq("splyw_2008", 77),
-		id: "splyw-2008",
-	},
-	{
-		title: "Mecz piłkarski 2008",
-		description: "Mecz charytatywny \u2014 10 maja 2008",
-		year: 2008,
-		images: seq("mecz_2008", 56),
-		id: "mecz-2008",
-	},
-	{
-		title: "Pożegnanie lata 2007",
-		description: "Impreza na zakończenie lata \u2014 23 września 2007",
-		year: 2007,
-		images: seq("pozegnanie_lata_2007", 52),
-		id: "pozegnanie-lata-2007",
-	},
-	{
-		title: "Biwak czerwcowy 2007",
-		description: "Biwak integracyjny \u2014 16-17 czerwca 2007",
-		year: 2007,
-		images: seq("biwak_06_2007", 46),
-		id: "biwak-06-2007",
-	},
-	{
-		title: "Mecz piłkarski 2007",
-		description: "Mecz charytatywny \u2014 27 kwietnia 2007",
-		year: 2007,
-		images: seq("mecz_pilkarski_2007", 52),
-		id: "mecz-pilkarski-2007",
-	},
-	{
-		title: "Osielsko \u2014 wiosna 2007",
-		description: "Zajęcia hipoterapeutyczne w Osielsku, wiosna 2007",
-		year: 2007,
-		images: seq("osielsko_wiosna_2007", 10),
-		id: "osielsko-wiosna-2007",
-	},
-	{
-		title: "Spływ na Brdzie",
-		description: "Wielki spływ kajakowy na rzece Brdzie",
-		year: 2006,
-		images: seq("splyw_na_brdzie", 105),
-		id: "splyw-na-brdzie",
-	},
-	{
-		title: "Bal na Dzikim Zachodzie",
-		description: "Bal kostiumowy w stylu Dzikiego Zachodu",
-		year: 2006,
-		images: seq("bal_na_dzikim_zachodzie", 48),
-		id: "bal-na-dzikim-zachodzie",
-	},
-	{
-		title: "Piknik kajakarski",
-		description: "Piknik i sp\u0142yw kajakowy z uczestnikami i wolontariuszami",
-		year: 2006,
-		images: seq("piknik_kajakarski", 42),
-		id: "piknik-kajakarski",
-	},
-	{
-		title: "Zajęcia w Osielsku",
-		description: "Zajęcia hipoterapeutyczne w ośrodku w Osielsku",
-		year: 2006,
-		images: seq("zdjecia_osielsko", 41),
-		id: "zdjecia-osielsko",
-	},
-	{
-		title: "Bal karnawałowy",
-		description: "Doroczny bal karnawałowy Towarzystwa",
-		year: 2006,
-		images: seq("bal_karnawalowy", 20),
-		id: "bal-karnawalowy",
-	},
-	{
-		title: "Myślęcinek 1995\u20132005",
-		description: "Archiwalne zdjęcia z pierwszej dekady działalności Towarzystwa",
-		year: 2005,
-		images: [1,2,3,4,5,6,7,8,12,13,14,15,17,20,21,24,25].map(n => `/uploads/archiwum_1995_2005/${n}.webp`),
-		id: "archiwum-1995-2005",
-	},
+// Archive events — each links to its own aktualności post
+const archiveEvents = [
+	{ title: "Spływ kajakowy 2008", date: "8 czerwca 2008", photos: 77, slug: "splyw-kajakowy-2008", thumb: "/uploads/splyw_2008/1.webp" },
+	{ title: "Mecz piłkarski 2008", date: "10 maja 2008", photos: 56, slug: "mecz-pilkarski-2008", thumb: "/uploads/mecz_2008/1.webp" },
+	{ title: "Pożegnanie lata 2007", date: "23 września 2007", photos: 52, slug: "pozegnanie-lata-2007", thumb: "/uploads/pozegnanie_lata_2007/1.webp" },
+	{ title: "Biwak czerwcowy 2007", date: "16\u201317 czerwca 2007", photos: 46, slug: "biwak-czerwcowy-2007", thumb: "/uploads/biwak_06_2007/1.webp" },
+	{ title: "Mecz piłkarski 2007", date: "27 kwietnia 2007", photos: 52, slug: "mecz-pilkarski-2007", thumb: "/uploads/mecz_pilkarski_2007/1.webp" },
+	{ title: "Osielsko \u2014 wiosna 2007", date: "wiosna 2007", photos: 10, slug: "osielsko-wiosna-2007", thumb: "/uploads/osielsko_wiosna_2007/1.webp" },
+	{ title: "Spływ na Brdzie", date: "~2006", photos: 105, slug: "splyw-na-brdzie-archiwum", thumb: "/uploads/splyw_na_brdzie/1.webp" },
+	{ title: "Bal na Dzikim Zachodzie", date: "~2006", photos: 48, slug: "bal-na-dzikim-zachodzie", thumb: "/uploads/bal_na_dzikim_zachodzie/1.webp" },
+	{ title: "Piknik kajakarski", date: "~2006", photos: 42, slug: "piknik-kajakarski-archiwum", thumb: "/uploads/piknik_kajakarski/1.webp" },
+	{ title: "Zajęcia w Osielsku", date: "~2006", photos: 41, slug: "zajecia-osielsko-archiwum", thumb: "/uploads/zdjecia_osielsko/1.webp" },
+	{ title: "Bal karnawałowy", date: "~2006", photos: 20, slug: "bal-karnawalowy-archiwum", thumb: "/uploads/bal_karnawalowy/1.webp" },
+	{ title: "Myślęcinek 1995\u20132005", date: "1995\u20132005", photos: 17, slug: "archiwum-myslecinek-1995-2005", thumb: "/uploads/archiwum_1995_2005/1.webp" },
 ];
 
-const totalCurrentPhotos = currentGalleries.reduce((sum, g) => sum + g.images.length, 0);
-const totalArchivePhotos = archiveGalleries.reduce((sum, g) => sum + g.images.length, 0);
-const totalPhotos = totalCurrentPhotos + totalArchivePhotos;
-const totalEvents = currentGalleries.length + archiveGalleries.length;
+const totalArchivePhotos = archiveEvents.reduce((sum, e) => sum + e.photos, 0);
 ---
 
 <MainLayout
@@ -219,12 +141,12 @@ const totalEvents = currentGalleries.length + archiveGalleries.length;
 			</div>
 		</div>
 
-		<!-- Current galleries (2024-2025) -->
+		<!-- Current galleries (2024-2025) — displayed inline -->
 		{currentGalleries.map((gallery, i) => (
 			<ScrollReveal animation="up" delay={i % 2 === 1 ? 150 : 0}>
 			<section class="mb-16">
 				<div class="card-warm p-8">
-					<div class="flex items-center mb-6">
+					<div class="flex items-center justify-between mb-6">
 						<div>
 							<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{gallery.title}</h2>
 							<p class="text-gray-600">{gallery.description}</p>
@@ -236,41 +158,48 @@ const totalEvents = currentGalleries.length + archiveGalleries.length;
 			</ScrollReveal>
 		))}
 
-		<!-- Archive section header -->
+		<!-- Archive section -->
 		<ScrollReveal animation="up">
 		<section class="mb-12">
-			<div class="text-center">
+			<div class="text-center mb-10">
 				<h2 class="section-heading mb-4">
 					Archiwum <span class="text-primary-600">fotograficzne</span>
 				</h2>
 				<p class="text-gray-600 max-w-2xl mx-auto mb-2">
-					Zdjęcia z wydarzeń Towarzystwa z lat 2005&ndash;2008 &mdash; przeniesione z poprzedniej strony internetowej.
+					Zdjęcia z wydarzeń Towarzystwa z lat 1995&ndash;2008 &mdash; przeniesione z poprzedniej strony internetowej.
+					Kliknij wydarzenie, aby zobaczyć pełną galerię.
 				</p>
-				<p class="text-sm text-gray-400">{totalArchivePhotos} zdjęć z {archiveGalleries.length} wydarzeń</p>
+				<p class="text-sm text-gray-400">{totalArchivePhotos} zdjęć z {archiveEvents.length} wydarzeń</p>
+			</div>
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+				{archiveEvents.map((event) => (
+					<a href={`/aktualnosci/wpis/${event.slug}/`} class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 no-underline">
+						<div class="relative overflow-hidden h-48">
+							<img
+								src={event.thumb}
+								alt={event.title}
+								class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+								loading="lazy"
+							/>
+							<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+							<div class="absolute bottom-3 left-3 right-3">
+								<h3 class="text-white font-bold text-lg leading-tight">{event.title}</h3>
+								<p class="text-white/80 text-sm mt-1">{event.date}</p>
+							</div>
+							<div class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-full">
+								{event.photos} zdjęć
+							</div>
+						</div>
+					</a>
+				))}
 			</div>
 		</section>
 		</ScrollReveal>
 
-		<!-- Archive galleries -->
-		{archiveGalleries.map((gallery, i) => (
-			<ScrollReveal animation="up" delay={i % 2 === 1 ? 150 : 0}>
-			<section class="mb-16">
-				<div class="card-warm p-8">
-					<div class="flex items-center mb-6">
-						<div>
-							<h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-1">{gallery.title}</h2>
-							<p class="text-gray-600 text-sm">{gallery.description} &bull; {gallery.images.length} zdjęć</p>
-						</div>
-					</div>
-					<Gallery imagePaths={gallery.images} galleryId={gallery.id} />
-				</div>
-			</section>
-			</ScrollReveal>
-		))}
-
 		<!-- Stats -->
 		<ScrollReveal animation="scale">
-		<section class="mb-16">
+		<section class="mb-16 mt-16">
 			<div class="bg-gradient-to-r from-primary-700 to-primary-800 rounded-2xl p-8 text-white">
 				<div class="text-center mb-8">
 					<h2 class="font-display text-2xl md:text-3xl font-bold mb-4">
@@ -283,11 +212,11 @@ const totalEvents = currentGalleries.length + archiveGalleries.length;
 
 				<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
 					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-						<div class="text-3xl md:text-4xl font-bold mb-2 text-accent-300">{totalPhotos}</div>
+						<div class="text-3xl md:text-4xl font-bold mb-2 text-accent-300">600+</div>
 						<div class="text-primary-100 text-sm">Zdjęć w galerii</div>
 					</div>
 					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-						<div class="text-3xl md:text-4xl font-bold mb-2 text-accent-300">{totalEvents}</div>
+						<div class="text-3xl md:text-4xl font-bold mb-2 text-accent-300">18</div>
 						<div class="text-primary-100 text-sm">Różnych wydarzeń</div>
 					</div>
 					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">

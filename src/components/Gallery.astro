@@ -25,9 +25,8 @@ const { imagePaths, galleryId } = Astro.props;
         style="opacity: 0;"
       >
         <img
-          src={path}
+          data-src={path}
           alt=""
-          loading="lazy"
           class="gallery-image w-full h-64 md:h-72 object-cover group-hover:scale-110 transition-transform duration-500"
           data-item-index={index}
         />
@@ -153,34 +152,34 @@ const { imagePaths, galleryId } = Astro.props;
             const galleryItem = wrapper?.querySelector('.gallery-item');
             const skeleton = wrapper?.querySelector('.skeleton-loader');
 
+            // Zacznij ładować obraz (przenieś data-src → src)
+            const realSrc = img.getAttribute('data-src');
+            if (realSrc && !img.src) {
+              img.src = realSrc;
+            }
+
             // Sprawdź czy obraz już załadowany
             if (img.complete && img.naturalHeight !== 0) {
-              // Obraz już załadowany (z cache)
               skeleton?.classList.add('loaded');
               galleryItem?.classList.add('loaded');
             } else {
-              // Czekaj na załadowanie obrazu
               img.addEventListener('load', () => {
                 skeleton?.classList.add('loaded');
                 galleryItem?.classList.add('loaded');
               });
 
-              // Obsługa błędu ładowania
               img.addEventListener('error', () => {
                 skeleton?.classList.add('loaded');
                 galleryItem?.classList.add('loaded');
-                console.warn('Failed to load image:', img.src);
               });
             }
 
-            // Przestań obserwować ten obraz
             observer.unobserve(img);
           }
         });
       },
       {
-        // Zacznij ładować gdy obraz jest 50px od viewportu
-        rootMargin: '50px',
+        rootMargin: '200px',
         threshold: 0.01
       }
     );
