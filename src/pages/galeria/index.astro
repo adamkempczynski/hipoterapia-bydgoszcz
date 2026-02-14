@@ -3,6 +3,192 @@ import MainLayout from '../../layouts/MainLayout.astro';
 import Gallery from '../../components/Gallery.astro';
 import PageHero from '../../components/PageHero.astro';
 import ScrollReveal from '../../components/ScrollReveal.astro';
+
+// Helper: generate sequential paths /uploads/{dir}/{1..count}.webp
+const seq = (dir: string, count: number) =>
+	Array.from({ length: count }, (_, i) => `/uploads/${dir}/${i + 1}.webp`);
+
+// Current galleries (2024-2025) — existing on the site
+const currentGalleries = [
+	{
+		title: "Zabawa Mikołajkowa 2025",
+		description: "Świąteczna zabawa mikołajkowa dla uczestników hipoterapii i ich rodzin.",
+		images: [
+			"/uploads/zabawa_mikolajkowa_2025/zabawa_mikolajkowa0.webp",
+			"/uploads/zabawa_mikolajkowa_2025/zabawa_mikolajkowa1.webp",
+			"/uploads/zabawa_mikolajkowa_2025/zabawa_mikolajkowa2.webp",
+			"/uploads/zabawa_mikolajkowa_2025/zabawa_mikolajkowa3.webp",
+		],
+		id: "zabawa-mikolajkowa-2025",
+	},
+	{
+		title: "Spływ kajakowy 2025",
+		description: "Wspaniała integracja na wodzie \u2014 spływ kajakowy z uczestnikami i rodzinami.",
+		images: [
+			"/uploads/splyw_2025/splyw_2025_01.webp",
+			"/uploads/splyw_2025/splyw_2025_02.webp",
+			"/uploads/splyw_2025/splyw_2025_03.webp",
+			"/uploads/splyw_2025/splyw_2025_04.webp",
+			"/uploads/splyw_2025/splyw_2025_05.webp",
+			"/uploads/splyw_2025/splyw_2025_06.webp",
+			"/uploads/splyw_2025/splyw_2025_07.webp",
+			"/uploads/splyw_2025/splyw_2025_08.webp",
+		],
+		id: "splyw-2025",
+	},
+	{
+		title: "Bal Jubileuszowy 2025",
+		description: "Eleganckie święto z okazji 30-lecia działalności Towarzystwa.",
+		images: [
+			"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_01.webp",
+			"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_02.webp",
+			"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_03.webp",
+			"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_04.webp",
+			"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_05.webp",
+			"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_06.webp",
+			"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_07.webp",
+			"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_08.webp",
+			"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_09.webp",
+			"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_10.webp",
+			"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_11.webp",
+		],
+		id: "bal-jubileuszowy-2025",
+	},
+	{
+		title: "Mecz piłki nożnej z Zeelandią",
+		description: "Sportowa rywalizacja i integracja podczas meczu piłkarskiego \u2014 28.09.2024",
+		images: [
+			"/uploads/mecz_28_09_2024/mecz2024-1.webp",
+			"/uploads/mecz_28_09_2024/mecz2024-2.webp",
+			"/uploads/mecz_28_09_2024/mecz2024-3.webp",
+			"/uploads/mecz_28_09_2024/mecz2024-4.webp",
+			"/uploads/mecz_28_09_2024/mecz2024-5.webp",
+		],
+		id: "mecz-zeelandia-2024",
+	},
+	{
+		title: "Biwak w Jarużynie 2024",
+		description: "Letni obóz z końmi w malowniczej okolicy Jarużyna.",
+		images: [
+			"/uploads/biwak_jaruzyn_2024/biwak1.webp",
+			"/uploads/biwak_jaruzyn_2024/biwak2.webp",
+			"/uploads/biwak_jaruzyn_2024/biwak3.webp",
+			"/uploads/biwak_jaruzyn_2024/biwak4.webp",
+			"/uploads/biwak_jaruzyn_2024/biwak5.webp",
+			"/uploads/biwak_jaruzyn_2024/biwak6.webp",
+			"/uploads/biwak_jaruzyn_2024/biwak7.webp",
+			"/uploads/biwak_jaruzyn_2024/biwak8.webp",
+		],
+		id: "biwak-jaruzyn-2024",
+	},
+	{
+		title: "Spływ kajakowy 2024",
+		description: "Spływ kajakowy z czerwca 2024 roku \u2014 9.06.2024",
+		images: [
+			"/uploads/splyw_09_06_2024/splyw1_09_06_2024.webp",
+			"/uploads/splyw_09_06_2024/splyw2_09_06_2024.webp",
+			"/uploads/splyw_09_06_2024/splyw3_09_06_2024.webp",
+			"/uploads/splyw_09_06_2024/splyw4_09_06_2024.webp",
+			"/uploads/splyw_09_06_2024/splyw5_09_06_2024.webp",
+			"/uploads/splyw_09_06_2024/splyw6_09_06_2024.webp",
+			"/uploads/splyw_09_06_2024/splyw7_09_06_2024.webp",
+		],
+		id: "splyw-czerwiec-2024",
+	},
+];
+
+// Archive galleries from old site (2005-2008)
+const archiveGalleries = [
+	{
+		title: "Spływ kajakowy 2008",
+		description: "Spływ kajakowy na Brdzie \u2014 8 czerwca 2008",
+		year: 2008,
+		images: seq("splyw_2008", 77),
+		id: "splyw-2008",
+	},
+	{
+		title: "Mecz piłkarski 2008",
+		description: "Mecz charytatywny \u2014 10 maja 2008",
+		year: 2008,
+		images: seq("mecz_2008", 56),
+		id: "mecz-2008",
+	},
+	{
+		title: "Pożegnanie lata 2007",
+		description: "Impreza na zakończenie lata \u2014 23 września 2007",
+		year: 2007,
+		images: seq("pozegnanie_lata_2007", 52),
+		id: "pozegnanie-lata-2007",
+	},
+	{
+		title: "Biwak czerwcowy 2007",
+		description: "Biwak integracyjny \u2014 16-17 czerwca 2007",
+		year: 2007,
+		images: seq("biwak_06_2007", 46),
+		id: "biwak-06-2007",
+	},
+	{
+		title: "Mecz piłkarski 2007",
+		description: "Mecz charytatywny \u2014 27 kwietnia 2007",
+		year: 2007,
+		images: seq("mecz_pilkarski_2007", 52),
+		id: "mecz-pilkarski-2007",
+	},
+	{
+		title: "Osielsko \u2014 wiosna 2007",
+		description: "Zajęcia hipoterapeutyczne w Osielsku, wiosna 2007",
+		year: 2007,
+		images: seq("osielsko_wiosna_2007", 10),
+		id: "osielsko-wiosna-2007",
+	},
+	{
+		title: "Spływ na Brdzie",
+		description: "Wielki spływ kajakowy na rzece Brdzie",
+		year: 2006,
+		images: seq("splyw_na_brdzie", 105),
+		id: "splyw-na-brdzie",
+	},
+	{
+		title: "Bal na Dzikim Zachodzie",
+		description: "Bal kostiumowy w stylu Dzikiego Zachodu",
+		year: 2006,
+		images: seq("bal_na_dzikim_zachodzie", 48),
+		id: "bal-na-dzikim-zachodzie",
+	},
+	{
+		title: "Piknik kajakarski",
+		description: "Piknik i sp\u0142yw kajakowy z uczestnikami i wolontariuszami",
+		year: 2006,
+		images: seq("piknik_kajakarski", 42),
+		id: "piknik-kajakarski",
+	},
+	{
+		title: "Zajęcia w Osielsku",
+		description: "Zajęcia hipoterapeutyczne w ośrodku w Osielsku",
+		year: 2006,
+		images: seq("zdjecia_osielsko", 41),
+		id: "zdjecia-osielsko",
+	},
+	{
+		title: "Bal karnawałowy",
+		description: "Doroczny bal karnawałowy Towarzystwa",
+		year: 2006,
+		images: seq("bal_karnawalowy", 20),
+		id: "bal-karnawalowy",
+	},
+	{
+		title: "Myślęcinek 1995\u20132005",
+		description: "Archiwalne zdjęcia z pierwszej dekady działalności Towarzystwa",
+		year: 2005,
+		images: [1,2,3,4,5,6,7,8,12,13,14,15,17,20,21,24,25].map(n => `/uploads/archiwum_1995_2005/${n}.webp`),
+		id: "archiwum-1995-2005",
+	},
+];
+
+const totalCurrentPhotos = currentGalleries.reduce((sum, g) => sum + g.images.length, 0);
+const totalArchivePhotos = archiveGalleries.reduce((sum, g) => sum + g.images.length, 0);
+const totalPhotos = totalCurrentPhotos + totalArchivePhotos;
+const totalEvents = currentGalleries.length + archiveGalleries.length;
 ---
 
 <MainLayout
@@ -33,195 +219,56 @@ import ScrollReveal from '../../components/ScrollReveal.astro';
 			</div>
 		</div>
 
+		<!-- Current galleries (2024-2025) -->
+		{currentGalleries.map((gallery, i) => (
+			<ScrollReveal animation="up" delay={i % 2 === 1 ? 150 : 0}>
+			<section class="mb-16">
+				<div class="card-warm p-8">
+					<div class="flex items-center mb-6">
+						<div>
+							<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{gallery.title}</h2>
+							<p class="text-gray-600">{gallery.description}</p>
+						</div>
+					</div>
+					<Gallery imagePaths={gallery.images} galleryId={gallery.id} />
+				</div>
+			</section>
+			</ScrollReveal>
+		))}
+
+		<!-- Archive section header -->
 		<ScrollReveal animation="up">
-		<section class="mb-16">
-			<div class="card-warm p-8">
-				<div class="flex items-center mb-6">
-					<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-						</svg>
-					</div>
-					<div>
-						<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Spływ kajakowy 2025</h2>
-						<p class="text-gray-600">Wspaniała integracja na wodzie - spływ kajakowy z uczestnikami i rodzinami.</p>
-					</div>
-				</div>
-				<Gallery imagePaths={[
-					"/uploads/splyw_2025/splyw_2025_01.webp",
-					"/uploads/splyw_2025/splyw_2025_02.webp",
-					"/uploads/splyw_2025/splyw_2025_03.webp",
-					"/uploads/splyw_2025/splyw_2025_04.webp",
-					"/uploads/splyw_2025/splyw_2025_05.webp",
-					"/uploads/splyw_2025/splyw_2025_06.webp",
-					"/uploads/splyw_2025/splyw_2025_07.webp",
-					"/uploads/splyw_2025/splyw_2025_08.webp"
-				]} galleryId="splyw-2025" />
+		<section class="mb-12">
+			<div class="text-center">
+				<h2 class="section-heading mb-4">
+					Archiwum <span class="text-primary-600">fotograficzne</span>
+				</h2>
+				<p class="text-gray-600 max-w-2xl mx-auto mb-2">
+					Zdjęcia z wydarzeń Towarzystwa z lat 2005&ndash;2008 &mdash; przeniesione z poprzedniej strony internetowej.
+				</p>
+				<p class="text-sm text-gray-400">{totalArchivePhotos} zdjęć z {archiveGalleries.length} wydarzeń</p>
 			</div>
 		</section>
 		</ScrollReveal>
 
-		<ScrollReveal animation="up" delay={150}>
-		<section class="mb-16">
-			<div class="card-warm p-8">
-				<div class="flex items-center mb-6">
-					<div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-						<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-						</svg>
-					</div>
-					<div>
-						<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Bal Jubileuszowy 2025</h2>
-						<p class="text-gray-600">Eleganckie święto z okazji jubileuszu działalności Towarzystwa.</p>
-					</div>
-				</div>
-				<Gallery imagePaths={[
-					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_01.webp",
-					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_02.webp",
-					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_03.webp",
-					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_04.webp",
-					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_05.webp",
-					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_06.webp",
-					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_07.webp",
-					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_08.webp",
-					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_09.webp",
-					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_10.webp",
-					"/uploads/bal_jubileuszowy_2025/bal_jubileuszowy_2025_11.webp"
-				]} galleryId="bal-jubileuszowy-2025" />
-			</div>
-		</section>
-		</ScrollReveal>
-
-		<ScrollReveal animation="up">
-		<section class="mb-16">
-			<div class="card-warm p-8">
-				<div class="flex items-center mb-6">
-					<div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-						<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-						</svg>
-					</div>
-					<div>
-						<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Mecz piłki nożnej z Zeelandią</h2>
-						<p class="text-gray-600">Sportowa rywalizacja i integracja podczas meczu piłkarskiego - 28.09.2024</p>
-					</div>
-				</div>
-				<Gallery imagePaths={[
-					"/uploads/mecz_28_09_2024/mecz2024-1.webp",
-					"/uploads/mecz_28_09_2024/mecz2024-2.webp",
-					"/uploads/mecz_28_09_2024/mecz2024-3.webp",
-					"/uploads/mecz_28_09_2024/mecz2024-4.webp",
-					"/uploads/mecz_28_09_2024/mecz2024-5.webp"
-				]} galleryId="mecz-zeelandia-2024" />
-			</div>
-		</section>
-		</ScrollReveal>
-
-		<ScrollReveal animation="up" delay={150}>
-		<section class="mb-16">
-			<div class="card-warm p-8">
-				<div class="flex items-center mb-6">
-					<div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-						<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-						</svg>
-					</div>
-					<div>
-						<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Biwak w Jarużynie 2024</h2>
-						<p class="text-gray-600">Letni obóz z końmi w malowniczej okolicy Jarużyna.</p>
-					</div>
-				</div>
-				<Gallery imagePaths={[
-					"/uploads/biwak_jaruzyn_2024/biwak1.webp",
-					"/uploads/biwak_jaruzyn_2024/biwak2.webp",
-					"/uploads/biwak_jaruzyn_2024/biwak3.webp",
-					"/uploads/biwak_jaruzyn_2024/biwak4.webp",
-					"/uploads/biwak_jaruzyn_2024/biwak5.webp",
-					"/uploads/biwak_jaruzyn_2024/biwak6.webp",
-					"/uploads/biwak_jaruzyn_2024/biwak7.webp",
-					"/uploads/biwak_jaruzyn_2024/biwak8.webp"
-				]} galleryId="biwak-jaruzyn-2024" />
-			</div>
-		</section>
-		</ScrollReveal>
-
-		<ScrollReveal animation="up">
-		<section class="mb-16">
-			<div class="card-warm p-8">
-				<div class="flex items-center mb-6">
-					<div class="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mr-4">
-						<svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-						</svg>
-					</div>
-					<div>
-						<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Spływ kajakowy 2024</h2>
-						<p class="text-gray-600">Wcześniejszy spływ kajakowy z czerwca 2024 roku - 9.06.2024</p>
-					</div>
-				</div>
-				<Gallery imagePaths={[
-					"/uploads/splyw_09_06_2024/splyw1_09_06_2024.webp",
-					"/uploads/splyw_09_06_2024/splyw2_09_06_2024.webp",
-					"/uploads/splyw_09_06_2024/splyw3_09_06_2024.webp",
-					"/uploads/splyw_09_06_2024/splyw4_09_06_2024.webp",
-					"/uploads/splyw_09_06_2024/splyw5_09_06_2024.webp",
-					"/uploads/splyw_09_06_2024/splyw6_09_06_2024.webp",
-					"/uploads/splyw_09_06_2024/splyw7_09_06_2024.webp"
-				]} galleryId="splyw-czerwiec-2024" />
-			</div>
-		</section>
-		</ScrollReveal>
-
-		<ScrollReveal animation="up" delay={150}>
-		<section class="mb-16">
-			<div class="card-warm p-8">
-				<div class="text-center mb-8">
-					<h2 class="section-heading mb-4">
-						Archiwum <span class="text-primary-600">wydarzeń</span>
-					</h2>
-					<p class="text-gray-600 max-w-2xl mx-auto">
-						Wybrane momenty z historii naszego Towarzystwa
-					</p>
-				</div>
-
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-					<div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-						<div class="relative overflow-hidden">
-							<img src="/uploads/wydarzenia/wielkanoc2022.png" alt="Uczestnicy hipoterapii podczas świątecznego spotkania wielkanocnego" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" />
-							<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-						</div>
-						<div class="p-6">
-							<h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">Wielkanoc 2022</h3>
-							<p class="text-gray-600 text-sm leading-relaxed">Świąteczne spotkanie z uczestnikami hipoterapii.</p>
+		<!-- Archive galleries -->
+		{archiveGalleries.map((gallery, i) => (
+			<ScrollReveal animation="up" delay={i % 2 === 1 ? 150 : 0}>
+			<section class="mb-16">
+				<div class="card-warm p-8">
+					<div class="flex items-center mb-6">
+						<div>
+							<h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-1">{gallery.title}</h2>
+							<p class="text-gray-600 text-sm">{gallery.description} &bull; {gallery.images.length} zdjęć</p>
 						</div>
 					</div>
-
-					<div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-						<div class="relative overflow-hidden">
-							<img src="/uploads/wydarzenia/balony.png" alt="Dzieci podczas integracyjnej zabawy z kolorowymi balonami" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" />
-							<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-						</div>
-						<div class="p-6">
-							<h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">Kolorowe święto</h3>
-							<p class="text-gray-600 text-sm leading-relaxed">Radosne wydarzenie z balonami dla najmłodszych.</p>
-						</div>
-					</div>
-
-					<div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-						<div class="relative overflow-hidden">
-							<img src="/uploads/index_na_koniu.webp" alt="Dziecko siedzące na koniu podczas zajęć hipoterapeutycznych w Bydgoszczy" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" />
-							<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-						</div>
-						<div class="p-6">
-							<h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">Zajęcia hipoterapeutyczne</h3>
-							<p class="text-gray-600 text-sm leading-relaxed">Codzienne zajęcia z naszymi terapeutycznymi końmi.</p>
-						</div>
-					</div>
+					<Gallery imagePaths={gallery.images} galleryId={gallery.id} />
 				</div>
-			</div>
-		</section>
-		</ScrollReveal>
+			</section>
+			</ScrollReveal>
+		))}
 
+		<!-- Stats -->
 		<ScrollReveal animation="scale">
 		<section class="mb-16">
 			<div class="bg-gradient-to-r from-primary-700 to-primary-800 rounded-2xl p-8 text-white">
@@ -236,26 +283,27 @@ import ScrollReveal from '../../components/ScrollReveal.astro';
 
 				<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
 					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-						<div class="text-3xl md:text-4xl font-bold mb-2 text-accent-300">71</div>
+						<div class="text-3xl md:text-4xl font-bold mb-2 text-accent-300">{totalPhotos}</div>
 						<div class="text-primary-100 text-sm">Zdjęć w galerii</div>
 					</div>
 					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-						<div class="text-3xl md:text-4xl font-bold mb-2 text-accent-300">6</div>
+						<div class="text-3xl md:text-4xl font-bold mb-2 text-accent-300">{totalEvents}</div>
 						<div class="text-primary-100 text-sm">Różnych wydarzeń</div>
 					</div>
 					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-						<div class="text-2xl md:text-3xl font-bold mb-2 text-accent-300">2024-2025</div>
-						<div class="text-primary-100 text-sm">Lata wydarzeń</div>
+						<div class="text-2xl md:text-3xl font-bold mb-2 text-accent-300">1995&ndash;2025</div>
+						<div class="text-primary-100 text-sm">30 lat historii</div>
 					</div>
 					<div class="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-						<div class="text-3xl md:text-4xl font-bold mb-2 text-accent-300">66MB</div>
-						<div class="text-primary-100 text-sm">Wspomnień</div>
+						<div class="text-3xl md:text-4xl font-bold mb-2 text-accent-300">30</div>
+						<div class="text-primary-100 text-sm">Lat działalności</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		</ScrollReveal>
 
+		<!-- CTA -->
 		<ScrollReveal animation="up">
 		<section>
 			<div class="card-warm p-8 text-center">
