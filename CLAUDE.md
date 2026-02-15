@@ -99,7 +99,7 @@ src/
 │   │   └── numer-konta.astro        # Dane do wpłat / darowizn
 │   │
 │   ├── kontakt/
-│   │   └── index.astro              # Kontakt — formularz (Web3Forms), mapa, godziny
+│   │   └── index.astro              # Kontakt — formularz (Netlify Forms), mapa, godziny
 │   │
 │   ├── onas/
 │   │   └── index.astro              # O nas
@@ -287,7 +287,7 @@ Wszystkie strony używają `MainLayout.astro` z prop `title`. Layout zapewnia na
 - **Netlify** (`netlify.toml`): build command, cache na uploads, redirect
 - **TypeScript** (`tsconfig.json`): alias `@` → `/src`
 - **Brak lintingu/testów**: projekt nie używa ESLint, Prettier ani frameworka testowego
-- **Formularz kontaktowy**: Web3Forms (wymaga klucza API — aktualnie placeholder `YOUR_ACCESS_KEY_HERE` w `kontakt/index.astro`)
+- **Formularz kontaktowy**: Netlify Forms (formularz `name="kontakt"`, powiadomienia e-mail konfigurowane w panelu Netlify → Forms → Notifications)
 
 ## File-based Routing
 

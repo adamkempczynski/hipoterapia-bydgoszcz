@@ -2,27 +2,21 @@
 
 ## Formularz Kontaktowy
 
-Formularz kontaktowy używa [Web3Forms](https://web3forms.com/) - darmowego serwisu do obsługi formularzy.
+Formularz kontaktowy używa **Netlify Forms** — wbudowanej funkcji Netlify, bez zewnętrznych serwisów.
 
-### Krok 1: Uzyskaj Access Key
+Zgłoszenia są zapisywane w panelu Netlify (Forms) i mogą być wysyłane jako powiadomienia e-mail.
 
-1. Odwiedź [https://web3forms.com/](https://web3forms.com/)
-2. Wpisz swój adres email
-3. Otrzymasz wiadomość z access key
+### Konfiguracja powiadomień e-mail
 
-### Krok 2: Skonfiguruj Formularz
+1. Wejdź na [app.netlify.com](https://app.netlify.com/) → projekt **hipoterapiabydgoszcz**
+2. **Site configuration** → **Forms** → **Form notifications**
+3. **Add notification** → **Email notification**
+4. Wpisz adres e-mail, na który mają przychodzić wiadomości
 
-W pliku `src/pages/kontakt/index.astro` znajdź linię:
+### Limity
 
-```html
-<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-```
-
-Zamień `YOUR_ACCESS_KEY_HERE` na otrzymany klucz.
-
-### Krok 3: Testuj
-
-Po wdrożeniu na produkcji, przetestuj formularz wysyłając wiadomość testową.
+- Darmowy plan: **100 zgłoszeń/miesiąc**
+- Ochrona przed spamem: honeypot (`bot-field`)
 
 ---
 

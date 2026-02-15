@@ -72,7 +72,7 @@ Dokumentacja CMS:
 
 ## Konfiguracja
 
-- [SETUP.md](SETUP.md) — formularz kontaktowy (Web3Forms), optymalizacja obrazów
+- [SETUP.md](SETUP.md) — formularz kontaktowy (Netlify Forms), optymalizacja obrazów
 - [CLAUDE.md](CLAUDE.md) — pełna dokumentacja architektury, komponentów, konwencji
 
 ## Deployment
