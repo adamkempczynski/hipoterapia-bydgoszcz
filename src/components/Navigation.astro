@@ -71,7 +71,7 @@ function isActive(href: string): boolean {
   <div class="mobile-menu-backdrop fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity duration-300 lg:hidden"></div>
 
   <!-- Mobile Navigation Panel -->
-  <div class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-50 translate-x-full transition-transform duration-300 ease-out lg:hidden">
+  <div class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-50 invisible translate-x-full transition-[transform,visibility] duration-300 ease-out lg:hidden">
     <div class="p-6">
       <div class="flex justify-between items-center mb-8">
         <div class="flex items-center space-x-3">
@@ -129,7 +129,7 @@ function isActive(href: string): boolean {
     }, { passive: true });
 
     function openMenu() {
-      menu?.classList.remove('translate-x-full');
+      menu?.classList.remove('invisible', 'translate-x-full');
       backdrop?.classList.remove('hidden');
       requestAnimationFrame(() => {
         backdrop?.classList.remove('opacity-0');
@@ -144,7 +144,10 @@ function isActive(href: string): boolean {
       menu?.classList.add('translate-x-full');
       backdrop?.classList.remove('opacity-100');
       backdrop?.classList.add('opacity-0');
-      setTimeout(() => backdrop?.classList.add('hidden'), 300);
+      setTimeout(() => {
+        backdrop?.classList.add('hidden');
+        menu?.classList.add('invisible');
+      }, 300);
       iconOpen?.classList.remove('hidden');
       iconClose?.classList.add('hidden');
       document.body.style.overflow = '';
