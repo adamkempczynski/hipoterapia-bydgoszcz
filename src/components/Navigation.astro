@@ -66,48 +66,48 @@ function isActive(href: string): boolean {
       </div>
     </div>
   </div>
+</nav>
 
-  <!-- Mobile Navigation Overlay -->
-  <div class="mobile-menu-backdrop fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity duration-300 lg:hidden"></div>
+<!-- Mobile Navigation Overlay (outside nav to avoid backdrop-filter containing block) -->
+<div class="mobile-menu-backdrop fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity duration-300 lg:hidden"></div>
 
-  <!-- Mobile Navigation Panel -->
-  <div class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-50 invisible translate-x-full transition-[transform,visibility] duration-300 ease-out lg:hidden">
-    <div class="p-6">
-      <div class="flex justify-between items-center mb-8">
-        <div class="flex items-center space-x-3">
-          <img src="/uploads/logos/logo_bw.webp" alt="" class="w-10 h-10" />
-          <span class="font-display font-bold text-gray-900">Menu</span>
-        </div>
-        <button class="mobile-menu-close p-2 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors" aria-label="Zamknij menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
+<!-- Mobile Navigation Panel (outside nav to avoid backdrop-filter containing block) -->
+<div class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-50 invisible translate-x-full transition-[transform,visibility] duration-300 ease-out lg:hidden">
+  <div class="p-6">
+    <div class="flex justify-between items-center mb-8">
+      <div class="flex items-center space-x-3">
+        <img src="/uploads/logos/logo_bw.webp" alt="" class="w-10 h-10" />
+        <span class="font-display font-bold text-gray-900">Menu</span>
       </div>
-      <div class="space-y-1">
-        {navItems.map(item => (
-          <a
-            href={item.href}
-            class:list={[
-              'block px-4 py-3 rounded-xl font-medium text-lg transition-all duration-200',
-              isActive(item.href)
-                ? 'text-primary-700 bg-primary-50'
-                : 'text-gray-600 hover:text-primary-600 hover:bg-primary-50/50',
-            ]}
-          >
-            {item.label}
-          </a>
-        ))}
-      </div>
+      <button class="mobile-menu-close p-2 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors" aria-label="Zamknij menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="space-y-1">
+      {navItems.map(item => (
+        <a
+          href={item.href}
+          class:list={[
+            'block px-4 py-3 rounded-xl font-medium text-lg transition-all duration-200',
+            isActive(item.href)
+              ? 'text-primary-700 bg-primary-50'
+              : 'text-gray-600 hover:text-primary-600 hover:bg-primary-50/50',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </div>
 
-      <!-- Mobile CTA -->
-      <div class="mt-8 pt-6 border-t border-gray-100">
-        <p class="text-sm text-gray-500 mb-2">Wesprzyj nas</p>
-        <p class="text-sm font-mono text-primary-600 font-bold">KRS: 0000120586</p>
-      </div>
+    <!-- Mobile CTA -->
+    <div class="mt-8 pt-6 border-t border-gray-100">
+      <p class="text-sm text-gray-500 mb-2">Wesprzyj nas</p>
+      <p class="text-sm font-mono text-primary-600 font-bold">KRS: 0000120586</p>
     </div>
   </div>
-</nav>
+</div>
 
 <script>
   function initNavigation() {

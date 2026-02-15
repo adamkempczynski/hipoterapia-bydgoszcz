@@ -116,12 +116,30 @@ import ScrollReveal from '../../components/ScrollReveal.astro';
 
 			<!-- Contact Form -->
 			<ScrollReveal animation="right">
-			<div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 h-fit sticky top-24">
+			<div id="formularz" class="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 h-fit sticky top-24">
 				<h2 class="font-display text-2xl font-bold text-gray-900 mb-6">Napisz do nas</h2>
-				<form class="space-y-5" action="https://api.web3forms.com/submit" method="POST">
-					<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-					<input type="hidden" name="subject" value="Nowa wiadomość z formularza kontaktowego">
-					<input type="hidden" name="from_name" value="Hipoterapia Bydgoszcz - Formularz">
+
+				<!-- Success message (hidden by default) -->
+				<div id="form-success" class="hidden p-6 text-center">
+					<div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+						</svg>
+					</div>
+					<h3 class="font-display text-xl font-bold text-gray-900 mb-2">Wiadomość wysłana!</h3>
+					<p class="text-gray-600">Dziękujemy za kontakt. Odpowiemy w ciągu 1-2 dni roboczych.</p>
+				</div>
+
+				<!-- Error message (hidden by default) -->
+				<div id="form-error" class="hidden mb-4 p-4 bg-red-50 border-l-4 border-red-400 rounded-r-lg">
+					<p class="text-sm text-red-800">
+						<span class="font-medium">Błąd:</span> Nie udało się wysłać wiadomości. Spróbuj ponownie lub skontaktuj się telefonicznie.
+					</p>
+				</div>
+
+				<form id="contact-form" class="space-y-5" name="kontakt" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+					<input type="hidden" name="form-name" value="kontakt">
+					<p class="hidden"><label>Nie wypełniaj: <input name="bot-field"></label></p>
 
 					<div>
 						<label for="name" class="block text-sm font-medium text-gray-700 mb-1.5">Imię i nazwisko *</label>
@@ -170,12 +188,12 @@ import ScrollReveal from '../../components/ScrollReveal.astro';
 						</label>
 					</div>
 
-					<button type="submit" class="btn btn-primary btn-lg w-full">
+					<button type="submit" id="submit-btn" class="btn btn-primary btn-lg w-full">
 						Wyślij wiadomość
 					</button>
 				</form>
 
-				<div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
+				<div id="form-info" class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
 					<p class="text-sm text-blue-800">
 						<span class="font-medium">Ważne:</span> Na wiadomości odpowiadamy w ciągu 1-2 dni roboczych.
 						W pilnych sprawach prosimy o kontakt telefoniczny.
@@ -268,3 +286,38 @@ import ScrollReveal from '../../components/ScrollReveal.astro';
 		</ScrollReveal>
 	</div>
 </MainLayout>
+
+<script>
+	const form = document.getElementById('contact-form') as HTMLFormElement;
+	const successMsg = document.getElementById('form-success');
+	const errorMsg = document.getElementById('form-error');
+	const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+	const infoMsg = document.getElementById('form-info');
+
+	form?.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		errorMsg?.classList.add('hidden');
+		submitBtn.disabled = true;
+		submitBtn.textContent = 'Wysyłanie...';
+
+		try {
+			const response = await fetch('/', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				body: new URLSearchParams(new FormData(form) as any).toString(),
+			});
+
+			if (response.ok) {
+				form.classList.add('hidden');
+				infoMsg?.classList.add('hidden');
+				successMsg?.classList.remove('hidden');
+			} else {
+				throw new Error('Błąd serwera');
+			}
+		} catch {
+			errorMsg?.classList.remove('hidden');
+			submitBtn.disabled = false;
+			submitBtn.textContent = 'Wyślij wiadomość';
+		}
+	});
+</script>
