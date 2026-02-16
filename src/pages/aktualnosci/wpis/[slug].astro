@@ -18,6 +18,9 @@ type Props = {
 const { post } = Astro.props;
 const { Content } = await post.render();
 
+// Determine OG image: use post.image, or first gallery image, or fallback to default
+const ogImage = post.data.image || (post.data.gallery && post.data.gallery.length > 0 ? post.data.gallery[0] : undefined);
+
 const categories = {
   'biwaki-wycieczki': 'Biwaki i wycieczki',
   'wydarzenia-sportowe': 'Wydarzenia sportowe',
@@ -30,7 +33,11 @@ const shareUrl = `https://nowa.hipoterapia.bydgoszcz.pl/aktualnosci/wpis/${post.
 const shareTitle = post.data.title;
 ---
 
-<MainLayout title={post.data.title}>
+<MainLayout
+  title={post.data.title}
+  description={post.data.description}
+  ogImage={ogImage}
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
   <article class="card">
     <header class="post-header">

@@ -26,7 +26,7 @@ const { imagePaths, galleryId } = Astro.props;
       >
         <img
           data-src={path}
-          alt=""
+          alt={`Zdjęcie z galerii ${galleryId} - obraz ${index + 1}`}
           class="gallery-image w-full h-64 md:h-72 object-cover group-hover:scale-110 transition-transform duration-500"
           data-item-index={index}
         />

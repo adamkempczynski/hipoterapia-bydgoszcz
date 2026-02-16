@@ -116,6 +116,7 @@ const totalArchivePhotos = archiveEvents.reduce((sum, e) => sum + e.photos, 0);
 <MainLayout
   title="Galeria"
   description="Galeria zdjęć z zajęć hipoterapii w Bydgoszczy - zobacz nasze wydarzenia, spływy kajakowe, biwaki i codzienne zajęcia rehabilitacyjne z terapeutycznymi końmi."
+  ogImage={currentGalleries[0]?.images[0]}
 >
 	<PageHero
 		title="Galeria zdjęć"
