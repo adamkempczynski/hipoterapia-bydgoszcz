@@ -41,9 +41,9 @@ const ogImageUrl = ogImage || defaultOgImage;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="canonical" href={`https://nowa.hipoterapia.bydgoszcz.pl${Astro.url.pathname}`} />
 
-		<!-- Preload fonts for faster rendering -->
-		<link rel="preload" href="https://api.fontshare.com/v2/css?f=cal-sans@1&display=swap" as="style" />
-		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" />
+		<!-- Fonts with font-display:swap for better performance -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
+		<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f=cal-sans@1&display=swap" />
 
 		<title>{title} | Hipoterapia Bydgoszcz</title>
 
@@ -61,7 +61,7 @@ const ogImageUrl = ogImage || defaultOgImage;
 
 		<Footer />
 
-		<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+		<script is:inline src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
 		<script type="text/javascript">
 			document.addEventListener('DOMContentLoaded', function() {
 				const lightbox = GLightbox({
