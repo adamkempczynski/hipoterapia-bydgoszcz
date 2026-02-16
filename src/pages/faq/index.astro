@@ -2,6 +2,7 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import ScrollReveal from '../../components/ScrollReveal.astro';
+import FAQSchema from '../../components/FAQSchema.astro';
 
 const faqs = [
 	{
@@ -120,6 +121,9 @@ const faqs = [
 	title="FAQ - Najczęściej zadawane pytania"
 	description="Odpowiedzi na najczęściej zadawane pytania dotyczące hipoterapii w Bydgoszczy. Dowiedz się więcej o organizacji zajęć, kosztach i przygotowaniu do terapii."
 >
+	<!-- FAQ Schema for SEO -->
+	<FAQSchema faqs={faqs} />
+
 	<PageHero
 		title="Najczęściej zadawane pytania"
 		subtitle="Znajdź odpowiedzi na pytania dotyczące hipoterapii, organizacji zajęć i naszego Towarzystwa"

@@ -1,0 +1,138 @@
+---
+/**
+ * Schema.org Structured Data for SEO
+ * LocalBusiness + Organization + WebSite schemas
+ */
+const currentYear = new Date().getFullYear();
+---
+
+<!-- LocalBusiness Schema - for local SEO and Google Maps -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://nowa.hipoterapia.bydgoszcz.pl/#localbusiness",
+  "name": "Bydgoskie Towarzystwo Hipoterapeutyczne Myślęcinek",
+  "alternateName": "BTH Myślęcinek",
+  "description": "Profesjonalna hipoterapia w Bydgoszczy dla dzieci i dorosłych z niepełnosprawnościami. Terapia z udziałem koni prowadzona przez certyfikowanych hipoterapeutów od 1995 roku.",
+  "url": "https://nowa.hipoterapia.bydgoszcz.pl",
+  "logo": "https://nowa.hipoterapia.bydgoszcz.pl/uploads/logos/logo_bw.webp",
+  "image": [
+    "https://nowa.hipoterapia.bydgoszcz.pl/uploads/logos/logo_bw.webp",
+    "https://nowa.hipoterapia.bydgoszcz.pl/uploads/index_na_koniu.webp"
+  ],
+  "telephone": "+48727912331",
+  "email": "hipoterapia.bydgoszcz@poczta.onet.pl",
+  "priceRange": "52-60 PLN",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Gdańska 173-175",
+    "addressLocality": "Bydgoszcz",
+    "postalCode": "85-674",
+    "addressCountry": "PL",
+    "addressRegion": "Kujawsko-Pomorskie"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.140474,
+    "longitude": 18.018722
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Bydgoszcz"
+  },
+  "hasMap": "https://www.google.com/maps/place/53.140474,18.018722",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "15:30",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Hipoterapia",
+        "description": "Zajęcia terapeutyczne z końmi dla osób z niepełnosprawnościami"
+      },
+      "price": "52-60",
+      "priceCurrency": "PLN"
+    }
+  ],
+  "additionalType": "https://schema.org/MedicalBusiness",
+  "sameAs": [
+    "https://www.facebook.com/bthip.myslecinek/"
+  ],
+  "foundingDate": "1995",
+  "slogan": "Profesjonalna hipoterapia w Bydgoszczy od 1995 roku"
+}
+</script>
+
+<!-- Organization Schema - for brand recognition -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://nowa.hipoterapia.bydgoszcz.pl/#organization",
+  "name": "Bydgoskie Towarzystwo Hipoterapeutyczne Myślęcinek",
+  "legalName": "Bydgoskie Towarzystwo Hipoterapeutyczne Myślęcinek",
+  "alternateName": "BTH Myślęcinek",
+  "url": "https://nowa.hipoterapia.bydgoszcz.pl",
+  "logo": "https://nowa.hipoterapia.bydgoszcz.pl/uploads/logos/logo_bw.webp",
+  "foundingDate": "1995",
+  "foundingLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bydgoszcz",
+      "addressCountry": "PL"
+    }
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+48727912331",
+    "contactType": "customer service",
+    "email": "hipoterapia.bydgoszcz@poczta.onet.pl",
+    "areaServed": "PL",
+    "availableLanguage": "Polish"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Gdańska 173-175",
+    "addressLocality": "Bydgoszcz",
+    "postalCode": "85-674",
+    "addressCountry": "PL"
+  },
+  "sameAs": [
+    "https://www.facebook.com/bthip.myslecinek/"
+  ],
+  "nonprofitStatus": "NonprofitOPP",
+  "taxID": "0000120586",
+  "description": "Organizacja pożytku publicznego (OPP) prowadząca hipoterapię dla dzieci i dorosłych z niepełnosprawnościami w Bydgoszczy od 1995 roku."
+}
+</script>
+
+<!-- WebSite Schema - for site-wide search -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://nowa.hipoterapia.bydgoszcz.pl/#website",
+  "url": "https://nowa.hipoterapia.bydgoszcz.pl",
+  "name": "Hipoterapia Bydgoszcz - BTH Myślęcinek",
+  "description": "Profesjonalna hipoterapia w Bydgoszczy. Terapia z udziałem koni dla dzieci i dorosłych z niepełnosprawnościami.",
+  "publisher": {
+    "@id": "https://nowa.hipoterapia.bydgoszcz.pl/#organization"
+  },
+  "inLanguage": "pl-PL"
+}
+</script>

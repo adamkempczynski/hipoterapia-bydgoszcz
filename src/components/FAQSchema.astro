@@ -1,0 +1,40 @@
+---
+/**
+ * FAQPage Schema.org structured data
+ * Generates FAQ schema from question/answer data
+ */
+
+interface Question {
+  q: string;
+  a: string;
+}
+
+interface FAQCategory {
+  category: string;
+  questions: Question[];
+}
+
+interface Props {
+  faqs: FAQCategory[];
+}
+
+const { faqs } = Astro.props;
+
+// Flatten all questions from all categories
+const allQuestions = faqs.flatMap(category =>
+  category.questions.map(qa => ({
+    "@type": "Question",
+    "name": qa.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": qa.a
+    }
+  }))
+);
+---
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": allQuestions
+}, null, 2)} />
