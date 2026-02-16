@@ -22,7 +22,7 @@ const ogImageUrl = ogImage || defaultOgImage;
 		<meta charset="UTF-8" />
 		<meta name="description" content={description || defaultDescription} />
 		<meta name="keywords" content="hipoterapia Bydgoszcz, terapia z końmi Bydgoszcz, rehabilitacja dzieci z autyzmem, hipoterapia dla dzieci z mózgowym porażeniem dziecięcym, terapia zajęciowa z końmi, organizacja pożytku publicznego Bydgoszcz, hipoterapia zespół Downa, zajęcia rehabilitacyjne z końmi, ośrodek jeździecki Jarużyn, niepełnosprawność dzieci terapia" />
-		<meta name="author" content="Bydgoskie Towarzystwo Hipoterapii i Psychoterapii" />
+		<meta name="author" content="Bydgoskie Towarzystwo Hipoterapeutyczne Myślęcinek" />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
@@ -40,6 +40,11 @@ const ogImageUrl = ogImage || defaultOgImage;
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="canonical" href={`https://nowa.hipoterapia.bydgoszcz.pl${Astro.url.pathname}`} />
+
+		<!-- Preconnect to external domains for faster resource loading -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://cdn.jsdelivr.net" />
 
 		<!-- Fonts with font-display:swap for better performance -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
